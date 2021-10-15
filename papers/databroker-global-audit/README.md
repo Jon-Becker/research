@@ -1,6 +1,7 @@
 # Databroker.global Audit
 
-  October 15, 2021&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
+  ##### October 15, 2021&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
+  &nbsp;
   
   ![databroker](https://www.databroker.global/images/Databroker_social-share.jpg?fw)
 
@@ -17,8 +18,6 @@
   The contents of this audit are based on the whitepaper provided by Databroker.global within their [GitHub](https://github.com/databrokerglobal/Polygon-migration/issues/1). In order to provide a quality report of the security and efficiency of their smart contract, I have studied their whitepaper extensively to get a feel for how their system is supposed to function.
 
 # 0x01. Severity Level Reference
-
-  The following severity levels have been attributed to issues found within the contract during the audit.
 
   ![CRITICAL](https://docs.google.com/drawings/u/1/d/s2A5dPyYYIXwJ5wiEwp8ZnA/image?w=90&h=25&rev=1&drawingRevisionAccessToken=7H_rczXZngANng&ac=1&parent=1saSVpT2Ixd58q-DZlTtzfkNizuTTE4yVoGuWz_AatZM)
 
