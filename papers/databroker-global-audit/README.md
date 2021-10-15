@@ -1,7 +1,6 @@
 # Databroker.global Audit
 
   ##### October 15, 2021&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
-  &nbsp;
   
   ![databroker](https://www.databroker.global/images/Databroker_social-share.jpg?fw)
 
