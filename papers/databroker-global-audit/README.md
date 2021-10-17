@@ -18,23 +18,56 @@
 
 # 0x01. Severity Level Reference
 
-  ![CRITICAL](https://docs.google.com/drawings/u/1/d/s2A5dPyYYIXwJ5wiEwp8ZnA/image?w=90&h=25&rev=1&drawingRevisionAccessToken=7H_rczXZngANng&ac=1&parent=1saSVpT2Ixd58q-DZlTtzfkNizuTTE4yVoGuWz_AatZM)
+  ![CRITICAL](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/critical.png)
 
-  Issues marked with a critical severity tag must be fixed as soon as possible. These issues may break the contract altogether if not resolved.
 
-  ![HIGH](https://docs.google.com/drawings/u/1/d/srm9H82jO6eLz-fpDkkQ0cQ/image?w=89&h=25&rev=1&drawingRevisionAccessToken=yfeRMAXlt_upVA&ac=1&parent=1saSVpT2Ixd58q-DZlTtzfkNizuTTE4yVoGuWz_AatZM)
+  ![HIGH](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png)
 
   Issues marked with a high severity tag should be fixed as soon as possible, because it is likely they will cause problems in production if left unresolved.
   
-  ![MEDIUM](https://docs.google.com/drawings/u/1/d/sEmSjs6cE220FaTcacbrXDw/image?w=90&h=25&rev=1&drawingRevisionAccessToken=RkVJ-7o2vH0yWw&ac=1&parent=1saSVpT2Ixd58q-DZlTtzfkNizuTTE4yVoGuWz_AatZM)
+  ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png)
 
   Issues marked with a medium severity tag should be fixed soon, but it is not extremely urgent. These issues have the potential to cause problems in production.
 
-  ![LOW](https://docs.google.com/drawings/u/1/d/s0QKztd2tlTd_k8qM4aEjcQ/image?w=90&h=25&rev=1&drawingRevisionAccessToken=f3JNpSAGakWFtw&ac=1&parent=1saSVpT2Ixd58q-DZlTtzfkNizuTTE4yVoGuWz_AatZM)
+  ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)
 
-  Issues marked with a low severity tag can remain unfixed but should be fixed sometime in the future. These are unlikely to cause any problems in production, but resolving them could improve contract efficiency.
+  Issues marked with a low severity tag can remain unfixed. These are unlikely to cause any problems in production, but resolving them could improve contract efficiency.
   
 
 # 0x02. Security Issues
 
-  * Issue One
+  - **Timestamp Dependence** [ [SWC-116](https://swcregistry.io/docs/SWC-116) ] [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L152) ]
+    
+    ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
+    
+    Timestamps can be manipulated by the miner. It is generally safe to use ``block.timestamp``, since [Geth](https://github.com/ethereum/go-ethereum/blob/4e474c74dc2ac1d26b339c32064d0bac98775e77/consensus/ethash/consensus.go#L45) and [Parity](https://github.com/paritytech/parity-ethereum/blob/73db5dda8c0109bb6bc1392624875078f973be14/ethcore/src/verification/verification.rs#L296-L307) reject timestamps that are more than 15 seconds in the future. Since Databroker uses a 30 day timelock, this shouldn't be a problem, but should be kept in mind.
+    
+
+  - **Floating Pragma** [ [SWC-103](https://swcregistry.io/docs/SWC-103) ] [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L1) ]
+  
+    ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
+    
+    Contracts should be deployed using the exact compiler version that they have been tested the most with in order to prevent being deployed with a compiler version that may have undiscovered bugs or vulneravilities. This is best practice when deploying contracts.
+  
+  - **Check Deal platformAddress** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L131-L185) ]
+  
+    ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
+    
+    When calling ``createDeal``it is best practice to ensure that ``platformAddress`` is not ``0x0`` or ``address.this()``. Adding a modifier that requires these two conditions would prevent token loss.
+
+    ```
+    modifier validDestination( address platformAddress ) {
+        require(platformAddress != address(0x0));
+        require(platformAddress != address(this) );
+        _;
+    }
+    ```
+
+# 0x03. Performance Issues
+
+  - **Computed Constant** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L49-L50) ]
+
+    It is typically good practice to write the value of predefined constants if you know them before compiling. Using functions such as ``keccak256()`` when you can compute the hash beforehand is excessive and will waste gas.
+
+    bytes32 private constant OWNER_ROLE = keccak256("OWNER_ROLE");
+    bytes32 private constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
