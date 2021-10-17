@@ -36,6 +36,12 @@
 
 # 0x02. Security Issues
 
+  - **Deals Auto-flagged as Accepted.** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L169) ]
+    
+    ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png) 
+    
+    When calling ``createDeal(...)``, a new ``Deal`` object is created with the ``accepted`` bool set to true. This should automatically be set to false, since the buyer has not accepted the deal yet. Although there is a timelock implemented, it is bad practice to mark this deal as accepted before the buyer has called ``acceptDeal()``. If the timelock were to expire before the buyer had the opportunity to ``declineDeal()``, the seller would be able to request a payout without the proper flow being handled.
+
   - **Timestamp Dependence** [ [SWC-116](https://swcregistry.io/docs/SWC-116) ] [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L152) ]
     
     ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
@@ -65,9 +71,22 @@
 
 # 0x03. Performance Issues
 
+  - **Contract Size** [ [EIP-170](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md) ]
+
+    The raw contract code exceeds 24576 bytes, and may not deploy on mainnet correctly if not optimized. It may need to be optimized in order to deploy it.
+
   - **Computed Constant** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L49-L50) ]
 
     It is typically good practice to write the value of predefined constants if you know them before compiling. Using functions such as ``keccak256()`` when you can compute the hash beforehand is excessive and will waste gas.
-
+    ```
     bytes32 private constant OWNER_ROLE = keccak256("OWNER_ROLE");
     bytes32 private constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
+    ```
+    ```
+    bytes32 private constant OWNER_ROLE = "b19546dff01e856fb3f010c267a7b1c60363cf8a4664e21cc89c26224620214e";
+    bytes32 private constant ADMIN_ROLE = "a49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775";
+    ```
+
+  - **BuyerID and SellerID Can be The Same** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L131-L185) ]
+
+    Assuming you do not want users to be able to create deals with themselves, there should be a require statement after ``line 142`` that requires ``buyerId`` and ``sellerId`` to be different from eachother. This shouldn't cause problems with the contract itself, but would reduce gas consumption.

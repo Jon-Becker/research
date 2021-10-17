@@ -175,7 +175,7 @@ contract DatabrokerDeals is
     _pendingDeals.add(dealIndex);
 
     _userToDealIndexes[sellerId].push(dealIndex);
-    if (sellerId != buyerId) {
+    if (sellerId != buyerId) { // TODO: create deal where seller is same as buyer? fuzz this.
       _userToDealIndexes[buyerId].push(dealIndex);
     }
 
