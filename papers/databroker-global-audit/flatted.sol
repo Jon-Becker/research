@@ -237,7 +237,7 @@ contract DatabrokerDeals is
     );
 
     _pendingDeals.remove(dealIndex);
-    deal.payoutCompleted = true;
+    deal.payoutCompleted = true; //possible reentrancy?
 
     emit Payout(
       dealIndex,
