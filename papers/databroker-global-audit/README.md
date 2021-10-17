@@ -37,7 +37,98 @@
 
 # 0x02. Security Issues
 
-  - **Deals Auto-flagged as Accepted.** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L169) ]
+  - **Payout is Vulnerable To Reentrancy**  [ [SWC-107](https://swcregistry.io/docs/SWC-107) ] [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L239-L240) ]
+    
+    ![CRITICAL](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/critical.png) 
+    
+    Although ``payout(...)`` requires the role ``ADMIN_ROLE`` in order to be called, it is vulnerable to reentrancy when called because a [state change](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L239-L240) is made after [external calls](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L221-L237) are made. This allows this ``payout(...)`` function to be called multiple times before the deal is marked as completed.
+
+    In order to properly fix this, the state change should be moved above the external calls. Should the require statements fail after these state changes, they will be reverted.
+
+    ```
+    _swapTokens(
+      sellerAmountInDTX,
+      sellerAmountOutMin,
+      DTXToUSDTPath,
+      _payoutWalletAddress,
+      block.timestamp + _uinswapDeadline
+    );
+
+    require(
+      _dtxToken.transfer(_dtxStakingAddress, stakingCommission),
+      "DTX transfer failed for _dtxStakingAddress"
+    );
+
+    require(
+      _dtxToken.transfer(deal.platformAddress, databrokerCommission),
+      "DTX transfer failed for platformAddress"
+    );
+
+    _pendingDeals.remove(dealIndex);
+    deal.payoutCompleted = true;
+    ```
+
+    Becomes:
+    ```
+    _pendingDeals.remove(dealIndex);
+    deal.payoutCompleted = true;
+
+    _swapTokens(
+      sellerAmountInDTX,
+      sellerAmountOutMin,
+      DTXToUSDTPath,
+      _payoutWalletAddress,
+      block.timestamp + _uinswapDeadline
+    );
+
+    require(
+      _dtxToken.transfer(_dtxStakingAddress, stakingCommission),
+      "DTX transfer failed for _dtxStakingAddress"
+    );
+
+    require(
+      _dtxToken.transfer(deal.platformAddress, databrokerCommission),
+      "DTX transfer failed for platformAddress"
+    );
+    ```
+
+
+  - **settleDeclinedDeal is Vulnerable To Reentrancy**  [ [SWC-107](https://swcregistry.io/docs/SWC-107) ] [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L367-L368) ]
+    
+    ![CRITICAL](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/critical.png) 
+    
+    Although ``settleDeclinedDeal(...)`` requires the role ``ADMIN_ROLE``, it is vulnerable to reentrancy when called because a [state change](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L367-L368) is made after [external calls](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L359-L365) are made. This allows this ``settleDeclinedDeal(...)`` function to be called multiple times before the deal is marked as completed.
+
+    In order to properly fix this, the state change should be moved above the external calls. Should the require statements fail after these state changes, they will be reverted.
+
+    ```
+    _swapTokens(
+      amountsIn[0],
+      buyerAmountOutMin,
+      DTXToUSDTPath,
+      _payoutWalletAddress,
+      block.timestamp + _uinswapDeadline
+    );
+
+    deal.payoutCompleted = true;
+    _pendingDeals.remove(dealIndex);
+    ```
+
+    Becomes:
+    ```
+    deal.payoutCompleted = true;
+    _pendingDeals.remove(dealIndex);
+
+    _swapTokens(
+      amountsIn[0],
+      buyerAmountOutMin,
+      DTXToUSDTPath,
+      _payoutWalletAddress,
+      block.timestamp + _uinswapDeadline
+    );
+    ```
+
+  - **Deals Auto-flagged As Accepted** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L169) ]
     
     ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png) 
     
@@ -60,7 +151,7 @@
   
     ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
     
-    When calling ``createDeal``it is best practice to ensure that ``platformAddress`` is not ``0x0`` or ``address.this()``. Adding a modifier that requires these two conditions would prevent token loss.
+    When calling ``createDeal`` it is best practice to ensure that ``platformAddress`` is not ``0x0`` or ``address.this()``. Adding a modifier that requires these two conditions would prevent token loss.
 
     ```
     modifier validDestination( address platformAddress ) {
@@ -88,6 +179,14 @@
     bytes32 private constant ADMIN_ROLE = "a49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775";
     ```
 
-  - **BuyerID and SellerID Can be The Same** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L131-L185) ]
+  - **Seller Can Also Be The Buyer** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L131-L185) ]
 
     Assuming you do not want users to be able to create deals with themselves, there should be a require statement after ``line 142`` that requires ``buyerId`` and ``sellerId`` to be different from eachother. This shouldn't cause problems with the contract itself, but would reduce gas consumption.
+
+  - **Documentation Issues** 
+        
+    Proper [NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) documentation missing from all functions within ``DatabrokerDeals.sol``. Consider adding additional documentation, including inline documentation for ease of readibility for consumers.
+
+  - **Variable Issues** 
+        
+    The variable ``_uinswapDeadline`` is misspelled and should be corrected to ``_uniswapDeadline`` in order to maintain professionalism and keep the contract readable and coherent for consumers.
