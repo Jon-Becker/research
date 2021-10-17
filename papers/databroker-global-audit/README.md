@@ -20,6 +20,7 @@
 
   ![CRITICAL](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/critical.png)
 
+  Issues marked with a critical severity tag must be fixed as soon as possible. These issues may break the contract altogether if not resolved.
 
   ![HIGH](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png)
 
