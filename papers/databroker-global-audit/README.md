@@ -1,6 +1,6 @@
 # Databroker.global Audit
 
-  ##### October 15, 2021&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
+  ##### October 17, 2021&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
   
   ![databroker](https://www.databroker.global/images/Databroker_social-share.jpg?fw)
 
@@ -10,7 +10,7 @@
 
 ### Disclaimer
 
-  As of October 15, 2021, this smart contract has been audited to the best of my abilities keeping security patterns & best practices in mind. The findings of this audit are not guaranteed to be exhaustive, and there may still be issues within the contract itself. I take no responsibility for Databroker's contract security, and only act as a third-party auditer.
+  As of October 17, 2021, this smart contract has been audited to the best of my abilities keeping security patterns & best practices in mind. The findings of this audit are not guaranteed to be exhaustive, and there may still be issues within the contract itself. I take no responsibility for Databroker's contract security, and only act as a third-party auditer.
 
 ### Documentation & Whitepaper
 
@@ -161,7 +161,7 @@
     }
     ```
 
-# 0x03. Performance Issues
+# 0x03. Performance & Best Practice Issues
 
   - **Contract Size** [ [EIP-170](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md) ]
 
@@ -190,3 +190,68 @@
   - **Variable Issues** 
         
     The variable ``_uinswapDeadline`` is misspelled and should be corrected to ``_uniswapDeadline`` in order to maintain professionalism and keep the contract readable and coherent for consumers.
+
+  - **Contract Readability & Consistency** 
+        
+    This contract uses many different coding styles that should be made uniform for ease of readibity for the consumer. For example, this contract has some functions structured as
+
+    ```
+    function payout(uint256 dealIndex) public whenNotPaused hasAdminRole {
+      ...
+    }
+    ```
+
+    while others may be
+    ```
+    function calculateTransferAmount(
+      uint256 dealIndex,
+      address[] memory DTXToUSDTPath
+    )
+      public
+      view
+      isDealIndexValid(dealIndex)
+      returns (
+        uint256,
+        uint256,
+        uint256
+      )
+    {
+      ...
+    }
+    ```
+
+    or
+
+    ```
+    function createDeal(
+      string memory did,
+      address buyerId,
+      address sellerId,
+      bytes32 dataUrl,
+      uint256 amountInUSDT,
+      uint256 amountOutMin,
+      uint256 platformPercentage,
+      uint256 stakingPercentage,
+      uint256 lockPeriod,
+      address platformAddress
+    ) public whenNotPaused hasAdminRole {
+      ...
+    }
+    ```
+
+    These coding styles must be made uniform in order to allow for users to read and interpret your code with ease.
+
+# 0x04. Conclusion
+
+  A total of 12 issues & recommendations were found within ``DatabrokerDeals.sol``, two of which were of critical severity and one of which was of medium severity. The remaining nine issues were either of low severity or were recommendations in order to adhere to solidity best practice.
+
+  _As of October 17, 2021, the above audit reflects my current understanding of solidity best practices and security to the best of my knowledge._
+
+----
+
+### 0x05 Resources & Citations
+
+  - [Consensys Best Practices](https://consensys.github.io/smart-contract-best-practices/)
+  - [SWC Registry](https://swcregistry.io)
+  - [Ethereum Improvement Proposals](https://eips.ethereum.org)
+  - [OpenZeppelin Documentation](https://docs.openzeppelin.com/contracts/4.x/)
