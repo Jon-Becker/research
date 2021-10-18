@@ -10,7 +10,7 @@
 
 ### Disclaimer
 
-  As of October 17, 2021, this smart contract has been audited to the best of my abilities keeping security patterns & best practices in mind. The findings of this audit are not guaranteed to be exhaustive, and there may still be issues within the contract itself. I take no responsibility for Databroker's contract security, and only act as a third-party auditer.
+  As of October 17, 2021, this smart contract has been audited to the best of my abilities keeping security patterns & best practices in mind. The findings of this audit are not guaranteed to be exhaustive, and there may still be issues within the contract itself. I take no responsibility for Databroker's contract security, and only act as a third-party auditor.
 
 ### Documentation & Whitepaper
 
@@ -145,7 +145,7 @@
   
     ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
     
-    Contracts should be deployed using the exact compiler version that they have been tested the most with in order to prevent being deployed with a compiler version that may have undiscovered bugs or vulneravilities. This is best practice when deploying contracts.
+    Contracts should be deployed using the exact compiler version that they have been tested the most with in order to prevent being deployed with a compiler version that may have undiscovered bugs or vulnerabilities. This is best practice when deploying contracts.
   
   - **Check Deal platformAddress** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L131-L185) ]
   
@@ -181,11 +181,11 @@
 
   - **Seller Can Also Be The Buyer** [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L131-L185) ]
 
-    Assuming you do not want users to be able to create deals with themselves, there should be a require statement after ``line 142`` that requires ``buyerId`` and ``sellerId`` to be different from eachother. This shouldn't cause problems with the contract itself, but would reduce gas consumption.
+    Assuming you do not want users to be able to create deals with themselves, there should be a require statement after ``line 142`` that requires ``buyerId`` and ``sellerId`` to be different from each other. This shouldn't cause problems with the contract itself, but would reduce gas consumption.
 
   - **Documentation Issues** 
         
-    Proper [NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) documentation missing from all functions within ``DatabrokerDeals.sol``. Consider adding additional documentation, including inline documentation for ease of readibility for consumers.
+    Proper [NatSpec](https://docs.soliditylang.org/en/develop/natspec-format.html) documentation missing from all functions within ``DatabrokerDeals.sol``. Consider adding additional documentation, including inline documentation for ease of readability for consumers.
 
   - **Variable Issues** 
         
@@ -193,7 +193,7 @@
 
   - **Contract Readability & Consistency** 
         
-    This contract uses many different coding styles that should be made uniform for ease of readibity for the consumer. For example, this contract has some functions structured as
+    This contract uses many different coding styles that should be made uniform for ease of readabity for the consumer. For example, this contract has some functions structured as
 
     ```
     function payout(uint256 dealIndex) public whenNotPaused hasAdminRole {
