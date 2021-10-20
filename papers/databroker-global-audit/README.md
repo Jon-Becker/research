@@ -45,6 +45,8 @@
 
     In order to properly fix this, the state change should be moved above the external calls. Should the require statements fail after these state changes, they will be reverted.
 
+    Fixed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17).
+
     ```
     _swapTokens(
       sellerAmountInDTX,
@@ -101,6 +103,8 @@
 
     In order to properly fix this, the state change should be moved above the external calls. Should the require statements fail after these state changes, they will be reverted.
 
+    Fixed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17).
+
     ```
     _swapTokens(
       amountsIn[0],
@@ -152,6 +156,8 @@
     ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png) 
     
     When calling ``createDeal`` it is best practice to ensure that ``platformAddress`` is not ``0x0`` or ``address.this()``. Adding a modifier that requires these two conditions would prevent token loss.
+    
+    Partially addressed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17). Still does not account for ``address(this)``.
 
     ```
     modifier validDestination( address platformAddress ) {
@@ -189,7 +195,9 @@
 
   - **Variable Issues** 
         
-    The variable ``_uinswapDeadline`` is misspelled and should be corrected to ``_uniswapDeadline`` in order to maintain professionalism and keep the contract readable and coherent for consumers.
+    The variable ``_uinswapDeadline`` is misspelled and should be corrected to ``_uniswapDeadline`` in order to maintain professionalism and keep the contract readable and coherent for consumers.``
+
+    Fixed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17).
 
   - **Contract Readability & Consistency** 
         
