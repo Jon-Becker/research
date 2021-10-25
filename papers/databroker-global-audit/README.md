@@ -257,7 +257,7 @@
 
 ----
 
-### 0x05 Resources & Citations
+### 0x05. Resources & Citations
 
   - [Consensys Best Practices](https://consensys.github.io/smart-contract-best-practices/)
   - [SWC Registry](https://swcregistry.io)
