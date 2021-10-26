@@ -9,9 +9,20 @@
   The full source for this PoC can be found within the  [Jon-Becker/Ethereum-Recurring-Payments](https://github.com/Jon-Becker/ethereum-recurring-payments/tree/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9) GitHub repository. The repository version I will reference in this write-up is ``e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9``.
 
 # 0x01. Abstract
-  The recurring payment implementation I will explore throughout this paper is an extension of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) Token Standard's ``approve(...)``, called ``recurringApproval(...)``
+  The recurring payment implementation I will explore throughout this paper is an application of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) Token Standard's ``approve(...)`` function. An unlimited allowance (``2^256-1``) is approved to the subscription contract address, which periodically allows the ``_payee`` to call a timelocked proxy of ERC-20's ``transferFrom(...)`` method.
+  
 
 # 0x02. Detailed Analysis
+### Pros:
+
+  - ``_spender`` must only call 2 transactions to create a Subscription; ``approve(...)`` and ``createSubscription(...)``.The burden is on the payee to call the ``transferFrom(...)`` proxy, meaning they must pay the gas fees to process future payments.
+  - Subscriptions can be cancelled at any time, by either the ``_spender`` or the ``_payee``.
+
+### Cons:
+
+- This approach requires an unlimited<sup>*</sup> approval to the smart contract handling the recurring payments.
+  - \* Technically, this approval can be any amount as long as the ``_spender`` approves at least enough to pay for a minimum of 2 transactions. Although unlimited approvals of ERC-20 tokens are against Solidity best practice, this PoC allows for recurring payments on ethereum in a generally secure manner, where the only potential losses lie in the smart contract's integrity.
+- We rely on ``block.timestamp`` for the timelock. This is generally not an issue, but should be noted.
 
 # 0x04. Conclusion
 
