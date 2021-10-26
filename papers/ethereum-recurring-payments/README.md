@@ -14,7 +14,7 @@
 
 # 0x02. Detailed Analysis
 
-## Consequences
+### Consequences
 
 #### Pros:
 
@@ -27,9 +27,9 @@
   - \* Technically, this approval can be any amount as long as the ``_spender`` approves at least enough to pay for a minimum of 2 transactions. Although unlimited approvals of ERC-20 tokens are against Solidity best practice, this PoC allows for recurring payments on Ethereum in a generally secure manner, where the only potential losses lie in the smart contract's integrity.
 - We rely on ``block.timestamp`` for the timelock. This is generally not an issue, but should be noted.
 
-## Specification
+### Specification
 ```
-spdx lic aaaaaa
+
 ```
 
 # 0x04. Conclusion
@@ -40,5 +40,5 @@ spdx lic aaaaaa
 
 ### 0x05. Resources & Citations
 
-  - Fabian Vogelsteller, Vitalik Buterin, "EIP-20: Token Standard," Ethereum Improvement Proposals, no. 20, November 2015. [Online serial]. Available: https://eips.ethereum.org/IPS/eip-2E0.
+  - Fabian Vogelsteller, Vitalik Buterin, "EIP-20: Token Standard," Ethereum Improvement Proposals, no. 20, November 2015. [Online serial]. Available: https://eips.ethereum.org/EIPS/eip-20.
   - Kevin Owocki, Andrew Redden, Scott Burke, Kevin Seagraves, Luka Kacil, Štefan Šimec, Piotr Kosiński, ankit raj, John Griffin, Nathan Creswell, "EIP-1337: Subscriptions on the blockchain," Ethereum Improvement Proposals, no. 1337, August 2018. [Online serial]. Available: https://eips.ethereum.org/EIPS/eip-1337.
