@@ -13,20 +13,28 @@
   
 
 # 0x02. Detailed Analysis
-### Pros:
 
-  - ``_spender`` must only call 2 transactions to create a Subscription; ``approve(...)`` and ``createSubscription(...)``.The burden is on the payee to call the ``transferFrom(...)`` proxy, meaning they must pay the gas fees to process future payments.
+## Consequences
+
+#### Pros:
+
+  - ``_spender`` must only call 2 transactions to create a subscription; ``approve(...)`` and ``createSubscription(...)``.The burden is on the payee to call the ``transferFrom(...)`` proxy, meaning they must pay the gas fees to process future payments.
   - Subscriptions can be cancelled at any time, by either the ``_spender`` or the ``_payee``.
 
-### Cons:
+#### Cons:
 
 - This approach requires an unlimited<sup>*</sup> approval to the smart contract handling the recurring payments.
-  - \* Technically, this approval can be any amount as long as the ``_spender`` approves at least enough to pay for a minimum of 2 transactions. Although unlimited approvals of ERC-20 tokens are against Solidity best practice, this PoC allows for recurring payments on ethereum in a generally secure manner, where the only potential losses lie in the smart contract's integrity.
+  - \* Technically, this approval can be any amount as long as the ``_spender`` approves at least enough to pay for a minimum of 2 transactions. Although unlimited approvals of ERC-20 tokens are against Solidity best practice, this PoC allows for recurring payments on Ethereum in a generally secure manner, where the only potential losses lie in the smart contract's integrity.
 - We rely on ``block.timestamp`` for the timelock. This is generally not an issue, but should be noted.
+
+## Specification
+```
+spdx lic aaaaaa
+```
 
 # 0x04. Conclusion
 
-  This method of allowing smart-contracts to recursively call ``transferFrom(...)`` based on an automatic, timelocked ``allowance`` update enables subscriptions on the blockchain, one of the most important aspects when it comes to running a service or business. The approach this PoC takes is also trustless, and can be revoked any time by the owner, allowing for a truly decentralized form of recurring payments & subscriptions on Ethereum.
+  This method of allowing smart-contracts to recursively call ``transferFrom(...)`` based on an timelocked proxy function enables subscriptions on the blockchain, one of the most important aspects when it comes to running a service or business. The approach this PoC takes is also trustless, and can be revoked any time by the owner, allowing for a truly decentralized form of recurring payments & subscriptions on Ethereum.
 
 ----
 
