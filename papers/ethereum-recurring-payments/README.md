@@ -6,7 +6,7 @@
 
   Recurring payments on the blockchain have been a topic of discussion for some time. First introduced in [EIP-1337](https://eips.ethereum.org/EIPS/eip-1337) in 2018, the proposal never really caught on. My approach to recurring payments on Ethereum takes a simpler approach than EIP-1337 did, which may help it have a larger impact on the community.
 
-  The full source for this PoC can be found within the  [Jon-Becker/Ethereum-Recurring-Payments](https://github.com/Jon-Becker/ethereum-recurring-payments/tree/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9) GitHub repository. The repository version I will reference in this write-up is ``e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9``.
+  The full source for this PoC can be found within the  [Jon-Becker/Ethereum-Recurring-Payments](https://github.com/Jon-Becker/ethereum-recurring-payments/tree/4aed03acb40f01628c7f57fcdd99c898b659a058) GitHub repository. The repository version I will reference in this write-up is ``4aed03acb40f01628c7f57fcdd99c898b659a058``.
 
 # 0x01. Abstract
   The recurring payment implementation I will explore throughout this paper is an application of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) Token Standard's ``approve(...)`` function. An unlimited allowance (``2^256-1``) is approved to the subscription contract address, which periodically allows the ``_payee`` to call a timelocked proxy of ERC-20's ``transferFrom(...)`` method.
