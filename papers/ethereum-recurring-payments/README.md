@@ -28,9 +28,79 @@
 - We rely on ``block.timestamp`` for the timelock. This is generally not an issue, but should be noted.
 
 ### Specification
-```
 
-```
+#### Methods
+
+- **getSubscription**
+
+  Returns the Subscription of ``_customer`` to ``_payee``.
+
+  ```
+  function getSubscription(address _customer, address _payee) public view returns(Subscription memory)
+  ```
+- **subscriptionTimeRemaining**
+
+  Returns the time in seconds remaining until the subscription payment may be charged again.
+
+  ```
+  function subscriptionTimeRemaining(address _customer, address _payee) public view returns(uint256)
+  ```
+- **createSubscription**
+
+  Creates a Subscription which allows ``_payee`` to charge the caller ``_subscriptionCost`` every ``_subscriptionPeriod``, until the Subscription is cancelled.
+
+  This may only be called by the customer, and will automatically charge them for the first billing period. Requires an approval to the subscription contract address of ``_subscriptionCost * 2``.
+
+  Emits a ``Transfer``, ``NewSubscription``, and ``SubscriptionPaid`` event. 
+
+  ```
+  function createSubscription(address _payee, uint256 _subscriptionCost, address _token, string memory _name, string memory _description, uint256 _subscriptionPeriod ) public virtual
+  ```
+- **cancelSubscription**
+
+  Cancels a subscription between ``_customer`` and ``_payee`` and disallows further ``executePayment(...)`` calls.
+
+  This can be called by either party.
+
+  ```
+  function cancelSubscription(address _customer, address _payee ) public virtual
+  ```
+- **executePayment**
+
+  Charges ``_customer`` for the subscription between ``_customer`` and the payee a total of ``_subscriptionCost``, given that they have enough token balance and ``_subscriptionPaid`` is ``false``.
+
+  This must be called by the payee.
+
+  ```
+  function executePayment(address _customer) public virtual
+  ```
+- **_subscriptionPaid**
+
+  An internal function that returns ``true`` if the subscription between ``_customer`` and ``_payee`` has been paid for the current period, or ``false`` if otherwise.
+  ```
+  function _subscriptionPaid(address _customer, address _payee) internal view returns(bool)
+  ```
+
+#### Events
+
+- **NewSubscription**
+
+  MUST be called whenever a new subscription is created.
+  ```
+  event NewSubscription(Customer, Payee, Allowance, TokenAddress, Name, Description, LastExecutionDate, SubscriptionPeriod);
+  ```
+- **SubscriptionCancelled**
+
+  MUST be called whenever a new subscription is cancelled.
+  ```
+  event SubscriptionCancelled(Customer, Payee);
+  ```
+- **SubscriptionPaid**
+
+  MUST be called whenever a new subscription is paid.
+  ```
+  event SubscriptionPaid(Customer, Payee, PaymentDate, PaymentAmount, NextPaymentDate);
+  ```
 
 # 0x04. Conclusion
 
