@@ -10,4 +10,4 @@
 
   # 0x01. Wireframing
 
-  NOTE: THIS PAPER IS STILL BEING WRITTEN.
+  ![Wireframe](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/decentralized-insurance/1.png?fw)
