@@ -2,7 +2,7 @@
 
   ##### February 19, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
   
-  ![Insurance on EVM](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/preview.png?fw)
+  ![OpenSea](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/preview.png?fw)
 
   OpenSea, the world's largest and most used NFT exchange suffered a major attack on 2/19/2022 which cost users over 640 ETH worth of NFTs. Additionally, Etherscan may have suffered a coordinated DDoS attack in wake of this exploit in an attempt to block users from revoking access to their NFTs.
 
