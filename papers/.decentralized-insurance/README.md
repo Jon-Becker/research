@@ -1,3 +1,4 @@
+
 # Decentralized Insurance on Ethereum
 
   ##### February 15, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
@@ -11,3 +12,5 @@
   # 0x01. Wireframing
 
   ![Wireframe](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.decentralized-insurance/1.png?fw)
+
+  
