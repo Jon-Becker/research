@@ -2,7 +2,7 @@
 
   ##### February 15, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
   
-  ![Insurance on EVM](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/decentralized-insurance/preview.png?fw)
+  ![Insurance on EVM](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.decentralized-insurance/preview.png?fw)
 
   One of the fundamental parts of any financial systems is the concept of insurance — the ability to purchase protection on your assets in case of eventual loss or damage. This research paper explores the possibility of a completely decentralized and automated insurance protocol on the Ethereum Virtual Machine.
 
@@ -10,4 +10,4 @@
 
   # 0x01. Wireframing
 
-  ![Wireframe](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/decentralized-insurance/1.png?fw)
+  ![Wireframe](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.decentralized-insurance/1.png?fw)
