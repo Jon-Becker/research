@@ -2,7 +2,7 @@
 
   ##### February 19, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
   
-  ![Insurance on EVM](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.opensea-attack/preview.png?fw)
+  ![Insurance on EVM](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/preview.png?fw)
 
   OpenSea, the world's largest and most used NFT exchange suffered a major attack on 2/19/2022 which cost users over 640 ETH worth of NFTs. Additionally, Etherscan may have suffered a coordinated DDoS attack in wake of this exploit in an attempt to block users from revoking access to their NFTs.
 
@@ -16,7 +16,7 @@
 
     When taking a look at the decompiled bytecode, this assumption of a phishing attack is strengthened, as it appears to be a targeted attack with a switch case for each victim built into the smart contract.
 
-     ![Switch Cases](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.opensea-attack/1.png)
+     ![Switch Cases](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/1.png)
 
      Each switch case seems to be based on ``msg.data`` that is sent to the contract, which returns a different fallback function for each case.
 
@@ -26,7 +26,7 @@
 
     The events emitted by this transaction tell the same story: The attacker was able to call WyvernExchange.atomicMatch_ on behalf of the victims, transferring NFTs to himself for a grand total of 0 ETH.
 
-    ![Events Emitted](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.opensea-attack/2.png?fw)
+    ![Events Emitted](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/2.png?fw)
 
   # 0x02. Future Prevention
 
@@ -50,7 +50,7 @@
 
       In order to check if an email was spoofed, just make sure it has a valid certificate attached.
 
-      ![TLS](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.opensea-attack/3.png)
+      ![TLS](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/3.png)
   
   - Don't click links without checking them first.
     - In all modern browsers, hovering over a link will give you the ability to check where you're being taken. If this domain isn't familiar to you, don't click the link. If something is urgent, go log-in to your account and check there.
