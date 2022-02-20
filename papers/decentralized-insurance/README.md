@@ -4,7 +4,7 @@
   
   ![Insurance on EVM](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.opensea-attack/preview.png?fw)
 
-  OpenSea, the world's largest and most used NFT exchange suffered a major attack on 2/19/2022 which cost users over 640 ETH worth of NFTs. Additionally, Etherscan may have sufferred a coordinated DDoS attack in wake of this exploit in an attempt to block users from revoking access to their NFTs.
+  OpenSea, the world's largest and most used NFT exchange suffered a major attack on 2/19/2022 which cost users over 640 ETH worth of NFTs. Additionally, Etherscan may have suffered a coordinated DDoS attack in wake of this exploit in an attempt to block users from revoking access to their NFTs.
 
   In this write-up, I'll take a look at the <a href="https://etherscan.io/address/0xa2c0946aD444DCCf990394C5cBe019a858A945bD">smart contract</a> (<a href="https://ethervm.io/decompile/0xa2c0946aD444DCCf990394C5cBe019a858A945bD">Decompiled</a>) used in this attack, and break down the inner workings of what it's doing at each step. I aim to figure out how this attack happened, as well as how it can be prevented in the future.
 
@@ -14,7 +14,7 @@
 
   - The transaction begins with <a href="https://etherscan.io/address/0x3e0defb880cd8e163bad68abe66437f99a7a8a74">the attacker</a> interacting with his contract with some calldata, which appears to be a signature for a token sale. At this time, I believe that this signature was somehow phished and stored from the victims in this attack. 
 
-    When taking a look at the decompiled bytecode, this assumption of a phishing attack is strengthened, as it appears to be a targetted attack with a switch case for each victim built into the smart contract.
+    When taking a look at the decompiled bytecode, this assumption of a phishing attack is strengthened, as it appears to be a targeted attack with a switch case for each victim built into the smart contract.
 
      ![Switch Cases](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.opensea-attack/1.png)
 
@@ -22,7 +22,7 @@
 
   - This fallback function builds a staticcall to WyvernExchange.atomicMatch_ , which essentially begins the transfer process from the victim, ``janclarin.eth``, to the attacker, all for a cost of 0 ETH. 
 
-    Since the attacker's contract is calling this function, providing the calldata for both ``calldataBuy``, ``calldataSell``, which came directly from ``msg.data``, we can conclude that this was indeed a targetted phishing attack.
+    Since the attacker's contract is calling this function, providing the calldata for both ``calldataBuy``, ``calldataSell``, which came directly from ``msg.data``, we can conclude that this was indeed a targeted phishing attack.
 
     The events emitted by this transaction tell the same story: The attacker was able to call WyvernExchange.atomicMatch_ on behalf of the victims, transferring NFTs to himself for a grand total of 0 ETH.
 
