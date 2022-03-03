@@ -13,4 +13,12 @@
 
   ![Wireframe](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.decentralized-insurance/1.png?fw)
 
-  
+  The basic wireframe for the insurance protocol involves two main parties; insurance buyers and sellers.
+
+  - Insurance Buyers
+    - May deposit an amount of wETH into the protocol in exchange for an amount of insurance tokens, ```$iVULN```. These tokens have an expiration date, 1 month for example.
+  - Insurance Sellers
+    - May deposit an amount of wETH into the protocol in exchange for an amount of insurer tokens, ```$dINS```. Token holders may collect yield based on pool profits from insurance buyers.
+
+  In the case that an insurance buyer makes a claim on their ``$iVULN``:
+  - An amount of insurance funds locked until claim resolved
