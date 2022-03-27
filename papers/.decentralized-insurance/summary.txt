@@ -1,1 +1,0 @@
-One of the fundamental parts of any financial systems is the concept of insurance — the ability to purchase protection on your assets in case of eventual loss or damage. This research paper explores the possibility of a completely decentralized and automated insurance protocol on the Ethereum Virtual Machine.

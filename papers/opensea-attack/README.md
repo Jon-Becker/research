@@ -64,7 +64,7 @@
   - https://www.cisa.gov/uscert/report-phishing
   - https://safebrowsing.google.com/safebrowsing/report_phish/?hl=en
 
-  # 0x03 Resources & Citations
+  # 0x03. Resources & Citations
 
   - OpenSea article image [https://www.ultcube88.com/](https://www.ultcube88.com/wp-content/uploads/2021/10/20210915_OpenSea.jpg)
   - Solidity Decompiler [https://ethervm.io/decompile/](https://ethervm.io/decompile/)
