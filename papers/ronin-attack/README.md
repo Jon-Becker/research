@@ -36,7 +36,7 @@
 
   # 0x02. Prevention
 
-  This attack outlines a complete security failure on behalf of the Ronin Network. With $625M at stake, a security team should be checking and double checking for possible attack vectors at all times.
+  This attack outlines a complete security failure on behalf of the Ronin Network. With $625M at stake, a security team should be checking and double checking for possible attack vectors at all times. Forgetting to remove access to signatures is inexcusable.
 
   This attack was enabled by the single fact that the Axie DAO did not remove Sky Mavis' access to sign on their behalf. This essentially voided all decentralization of the DAO, since one backdoor on the Sky Mavis system allowed this to happen. Instead of being a multi-signature transaction, it really only required one.
 
