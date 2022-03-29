@@ -2,7 +2,7 @@
 
   ##### March 29, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev) 
   
-  ![Preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.ronin-attack/preview.png?fw)
+  ![Preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/ronin-attack/preview.png?fw)
 
   Axie Infinity's Ronin Network fell victim to a $625M exploit on 03/23/2022. This paper takes a look at how this attack happened, and how it can be prevented in the future.
 
@@ -28,7 +28,7 @@
 
   The first signature was reportedly obtained through a backdoor within the Ronin gas-free RPC node, according to the [official statement](https://roninblockchain.substack.com/p/community-alert-ronin-validators?s=w). Through an exploit in Sky Mavis' system, the attacker also obtained four *additional* signatures because the Ronin Network did not revoke Sky Mavis' access to sign transactions on behalf of Axie DAO.
 
-  ![EVM Trace](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/.ronin-attack/1.png)
+  ![EVM Trace](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/ronin-attack/1.png)
 
   From this <a href="https://ethtx.info/mainnet/0xc28fad5e8d5e0ce6a2eaf67b6687be5d58113e16be590824d6cfa1a94467d0b7/">transaction trace</a>, we can see that the attacker did in fact provide 5 valid signatures, obtained through these backdoors.
 
