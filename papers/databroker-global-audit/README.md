@@ -8,32 +8,18 @@
 
   The goal of this audit is to review Databroker's ``DatabrokerDeals.sol`` smart contract and find and demonstrate potential security issues within the solidity contract. This report will also focus on current Solidity & security best practices.
 
-### Disclaimer
-
-  As of October 17, 2021, this smart contract has been audited to the best of my abilities keeping security patterns & best practices in mind. The findings of this audit are not guaranteed to be exhaustive, and there may still be issues within the contract itself. I take no responsibility for Databroker's contract security, and only act as a third-party auditor.
-
 ### Documentation & Whitepaper
 
   The contents of this audit are based on the whitepaper provided by Databroker.global within their [GitHub](https://github.com/databrokerglobal/Polygon-migration/issues/1). In order to provide a quality report of the security and efficiency of their smart contract, I have studied their whitepaper extensively to get a feel for how their system is supposed to function.
 
 # 0x01. Severity Level Reference
 
-  ![CRITICAL](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/critical.png)
-
-  Issues marked with a critical severity tag must be fixed as soon as possible. These issues may break the contract altogether if not resolved.
-
-  ![HIGH](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png)
-
-  Issues marked with a high severity tag should be fixed as soon as possible, because it is likely they will cause problems in production if left unresolved.
-  
-  ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png)
-
-  Issues marked with a medium severity tag should be fixed soon, but it is not extremely urgent. These issues have the potential to cause problems in production.
-
-  ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)
-
-  Issues marked with a low severity tag can remain unfixed. These are unlikely to cause any problems in production, but resolving them could improve contract efficiency.
-  
+  | Severity Level                                                                                     | Description                                                                                                                                                               |
+  | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | ![CRITICAL](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/critical.png) | Findings marked with a critical severity tag must be fixed as soon as possible. These issues may break the contract altogether if not resolved.                           |
+  | ![HIGH](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png)         | Findings marked with a high severity tag should be fixed as soon as possible, because it is likely they will cause problems in production if left unresolved.             |
+  | ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png)     | Findings marked with a medium severity tag should be fixed soon, but it is not extremely urgent. These issues have the potential to cause problems in production.         |
+  | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)           | Findings marked with a low severity tag can remain unfixed. These are unlikely to cause any problems in production, but resolving them could improve contract efficiency. |  
 
 # 0x02. Security Issues
 
@@ -253,7 +239,7 @@
 
   A total of 12 issues & recommendations were found within ``DatabrokerDeals.sol``, two of which were of critical severity and one of which was of medium severity. The remaining nine issues were either of low severity or were recommendations in order to adhere to solidity best practice.
 
-  _As of October 17, 2021, the above audit reflects my current understanding of solidity best practices and security to the best of my knowledge._
+  _Note that as of the date of publishing, the contents of this document reflect my current understanding of known security patterns regarding smart contract security. The findings of this audit should not be considered to be exhaustive, and there may still be issues within the contract itself. This audit is not a guarantee of security. I take no responsibility for future contract security, and only act as a third-party auditor._
 
 ----
 
