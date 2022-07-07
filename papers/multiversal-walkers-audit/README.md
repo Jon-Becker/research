@@ -2,9 +2,9 @@
 
   ##### July 8, 2021&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
   
-  ![mv](https://pbs.twimg.com/media/FWCk9NUXkAE6fuW?format=png&name=4096x4096)
+  ![mv](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/multiversal-walkers-audit/preview.png?fw)
 
-  The Multiversal Walkers team asked me to review and audit their contracts in preparation for their mint. I reviewed their contracts and published this audit with my findings.
+  The Multiversal Walkers team asked me to audit their contracts in preparation for their mint. I reviewed their contracts and published this audit with my findings.
 
   This audit was performed on the [CuzzoLabs/WalkersAudit](https://github.com/CuzzoLabs/WalkersAudit/tree/1cea55314174a2d0e91b2a76564150944ee22694) GitHub repository. The repository version used for this audit was commit ``1cea55314174a2d0e91b2a76564150944ee22694``.
 
@@ -29,18 +29,76 @@
 
 # 0x02. Table of Contents
 
-  | Severity Level | Finding Title | Code Reference |
-  | :------------: | :------------ | :------------- |
-  | CRITICAL      | CRITICAL      | CRITICAL      |
+  | Severity | Finding Title | Code Reference |
+  | -------- | :------------ | :------------- |
+  | ![HIGH](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png)     | Logic Inconsistency | [FERC1155Distributor.sol L59](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L59) & [FERC1155Distributor.sol L83](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L83) |
+  | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)      | Timestamp Dependence | [FERC1155Distributor.sol L100](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L100) |
+  | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)      | Documentation Issues | [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol) & [FERC1155Distributor.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol) |
+  | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)      | Lack of Event Emission | [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol) & [FERC1155Distributor.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol) |
+  | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)      | Floating Pragma | [Walkers.sol L2](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L2) & [FERC1155Distributor.sol L2](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L2) |
+
+# 0x03. Security Findings
+
+  - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png" height="24px"> Logic Inconsistency
+
+  Within ``Walkers.sol``, the minting functions ``publicMint()`` and ``multilistMint()`` do not have a check for whether or not the caller is an EOA. Both contracts and EOAs are allowed to mint Walkers. However, within ``FERC1155Distributor.sol``, there is a check for whether or not the caller is an EOA.
+
+  A user could potentially mint Walkers using a contract (such as gnosis), and then be unable to claim their FERC1155 tokens using the contract. Either ``publicMint()`` or ``multilistMint()`` should be updated to block non EOA accounts from minting Walkers, or this check should be removed within ``FERC1155Distributor.sol``.
+
+  - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Timestamp Dependence
+
+  Timestamps can be manipulated by the miner. It is generally safe to use ``block.timestamp``, since [Geth](https://github.com/ethereum/go-ethereum/blob/4e474c74dc2ac1d26b339c32064d0bac98775e77/consensus/ethash/consensus.go#L45) and [Parity](https://github.com/paritytech/parity-ethereum/blob/73db5dda8c0109bb6bc1392624875078f973be14/ethcore/src/verification/verification.rs#L296-L307) reject timestamps that are more than 15 seconds in the future. 
   
+  Since Multiversal Walkers uses a 7 day timelock for claiming free FERC tokens, this shouldn't be a problem. However, if a miner does change the timestamp to a future date which would affect the timelock, a user could potentially claim a token before the timelock is met.
 
-# 0x03. Security Issues
+# 0x04. Best-practice Findings
 
-# 0x04. Best Practice Issues
+  - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Documentation Issues 
+
+    Functions should be documented according to the [NatSpec Standard](https://docs.soliditylang.org/en/v0.8.10/natspec-format.html#tags). In both ``Walkers.sol`` and ``FERC1155Distributor.sol``, many functions are missing complete NatSpec documentation, or documentation altogether.
+
+    All functions should include the ``@return`` and ``@param`` tags, where appropriate according to NatSpec. For example, the following function is missing the ``@param`` tag in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L98-L115):
+
+    ```js
+      /// @notice Function used to mint Walkers during the public mint.
+      /// @dev No explicit check of `quantity` is required as signatures are created ahead of time.
+      function publicMint(uint256 quantity, bytes calldata signature) external payable {
+        ...
+      }
+    ```
+
+    should become
+
+    ```js
+      /// @notice Function used to mint Walkers during the public mint.
+      /// @dev No explicit check of `quantity` is required as signatures are created ahead of time.
+      /// @param quantity The number of Walkers to mint.
+      /// @param signature The signature, signed by _signer, used to validate the mint.
+      function publicMint(uint256 quantity, bytes calldata signature) external payable {
+        ...
+      }
+    ```
+
+  - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Lack of Event Emission
+
+    The following functions do not emit events despite taking important action within the contract:
+
+    - ``setPublicTokens()`` in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L157-L163)
+    - ``setSaleState()`` in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L165-L172) & [FERC1155Distributor.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L149-L152)
+    - ``setSigner()`` in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L174-L177) & [FERC1155Distributor.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L142-L145)
+    - ``setBaseTokenURI()`` in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L179-L182)
+
+    Consider adding event emissions after these sensitive contract events take place. This is best-practice, and allows for off-chain analysis and tracking of the contract’s activity. 
+
+  - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Floating Pragma
+
+    Contracts should be deployed using the exact compiler version that they have been tested the most with in order to prevent being deployed with a compiler version that may have undiscovered bugs or vulnerabilities. This is [best practice](https://swcregistry.io/docs/SWC-103) when deploying contracts.
+
+    In this case, change ``^0.8.10`` to ``8.1.0`` in both ``Walkers.sol`` and ``FERC1155Distributor.sol``.
 
 # 0x05. Conclusion
 
-  A total of 12 issues & recommendations were found within ``DatabrokerDeals.sol``, two of which were of critical severity and one of which was of medium severity. The remaining nine issues were either of low severity or were recommendations in order to adhere to solidity best practice.
+  A total of five issues & recommendations were found within the contracts in scope, one of which was of high severity. The remaining four issues were either of low severity or were recommendations in order to adhere to solidity best practice.
 
   _Note that as of the date of publishing, the contents of this document reflect my current understanding of known security patterns regarding smart contract security. The findings of this audit should not be considered to be exhaustive, and there may still be issues within the contract itself. This audit is not a guarantee of security. I take no responsibility for future contract security, and only act as a third-party auditor._
 
@@ -52,3 +110,4 @@
   - [SWC Registry](https://swcregistry.io)
   - [Ethereum Improvement Proposals](https://eips.ethereum.org)
   - [OpenZeppelin Documentation](https://docs.openzeppelin.com/contracts/4.x/)
+  - [NatSpec Documentation](https://docs.soliditylang.org/en/v0.8.10/natspec-format.html#tags)
