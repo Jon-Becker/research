@@ -51,6 +51,8 @@
   
   Since Multiversal Walkers uses a 7 day timelock for claiming free FERC tokens, this shouldn't be a problem. However, if a miner does change the timestamp to a future date which would affect the timelock, a user could potentially claim a token before the timelock is met.
 
+  _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/CuzzoLabs/WalkersAudit/tree/a26b9988ea7c1a2b2c3f28260f2c1d886558f310), this issue has been addressed. Multiversal Walkers has opted to block all EOA accounts across all contracts._
+
 # 0x04. Best-practice Findings
 
   - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Documentation Issues 
@@ -79,6 +81,8 @@
       }
     ```
 
+    _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/CuzzoLabs/WalkersAudit/tree/a26b9988ea7c1a2b2c3f28260f2c1d886558f310), this issue has been addressed.
+
   - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Lack of Event Emission
 
     The following functions do not emit events despite taking important action within the contract:
@@ -88,13 +92,17 @@
     - ``setSigner()`` in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L174-L177) & [FERC1155Distributor.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L142-L145)
     - ``setBaseTokenURI()`` in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L179-L182)
 
-    Consider adding event emissions after these sensitive contract events take place. This is best-practice, and allows for off-chain analysis and tracking of the contract’s activity. 
+    Consider adding event emissions after these sensitive contract events take place. This is best-practice, and allows for off-chain analysis and tracking of the contract’s activity.
+
+    _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/CuzzoLabs/WalkersAudit/tree/a26b9988ea7c1a2b2c3f28260f2c1d886558f310), this issue has been addressed. Owner interactions that modify the contract state are now emitted as events._
 
   - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Floating Pragma
 
     Contracts should be deployed using the exact compiler version that they have been tested the most with in order to prevent being deployed with a compiler version that may have undiscovered bugs or vulnerabilities. This is [best practice](https://swcregistry.io/docs/SWC-103) when deploying contracts.
 
-    In this case, change ``^0.8.10`` to ``8.1.0`` in both ``Walkers.sol`` and ``FERC1155Distributor.sol``.
+    In this case, change ``^0.8.10`` to ``0.8.10`` in both ``Walkers.sol`` and ``FERC1155Distributor.sol``.
+
+    _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/CuzzoLabs/WalkersAudit/tree/a26b9988ea7c1a2b2c3f28260f2c1d886558f310), this issue has been addressed.
 
 # 0x05. Conclusion
 
