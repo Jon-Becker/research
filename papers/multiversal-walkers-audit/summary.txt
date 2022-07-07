@@ -1,0 +1,1 @@
+The Multiversal Walkers team asked me to audit their contracts in preparation for their mint. I reviewed their contracts and published this audit with my findings.
