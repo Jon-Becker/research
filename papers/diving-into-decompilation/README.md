@@ -1,12 +1,12 @@
 # Diving Into Smart Contract Decompilation
 
-  ##### January 17, 2023&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
+  ##### January 19, 2023&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
   
   ![Heimdall Header](https://raw.githubusercontent.com/Jon-Becker/heimdall-rs/main/preview.png?fw)
 
   The Heimdall-rs decompilation module is a powerful tool for understanding the inner workings of Ethereum smart contracts. It allows users to convert raw bytecode into human-readable Solidity code and its corresponding Application Binary Interface (ABI). In this article, we will delve deep into the inner workings of the decompilation module, examining how it performs this conversion at a low level and exploring its various features and capabilities.
 
-  Please keep in mind that this article talks about how heimdall-rs performs decompilation. This may not be the same as how other decompilers work. If you have any suggestions or corrections, please feel free to open an issue or pull request on [GitHub](https://github.com/Jon-Becker/heimdall-rs.! Thank you!
+  Please keep in mind that this article talks about how heimdall-rs performs decompilation. This may not be the same as how other decompilers work. If you have any suggestions or corrections, please feel free to open an issue or pull request on [GitHub](https://github.com/Jon-Becker/heimdall-rs)! Thank you!
 
 # 0x01. Introduction
 
@@ -14,19 +14,19 @@
 
   - Machine code or bytecode is designed to be executed by a computer, not read by humans. As a result, it can be ambiguous and difficult to interpret.
   - Bytecode does not contain information about variable and function names, making it difficult to understand the purpose of different parts of the code.
-  - Bytecode does not contain all the information that the original source code had, like comments, variable and function names, types, etc.
+  - Bytecode does not contain all the information that the original source code had, such as comments, variable and function names, types, etc.
   - Bytecode is not a linear representation of the source code, for multiple reasons such as compiler optimizations, making it even more challenging to decompile effectively.
 
   In order to make this complex, convoluted process easier to understand, I've broken the overall decompilation process into four main steps, which we will explore in detail in the following sections:
 
-  - **Disassembly**: The process of converting bytecode into it's assembly representation.
+  - **Disassembly**: The process of converting bytecode into its assembly representation.
   - **Symbolic Execution**: The process of generating a branch-like control flow graph (CFG) from the disassembled code.
   - **Branch Analysis**: The process of analyzing and translating the CFG into a higher-level representation.
   - **Post-Processing**: The process of cleaning up the output and making it more readable.
 
 # 0x02. Disassembly
 
-  The first step in the decompilation process is to convert the bytecode into a more human-readable assembly representation. This is done to allow the decompiler to find and analyze the different parts of the smart-contract, such as functions.
+  The first step in the decompilation process is to convert the bytecode into a more human-readable assembly representation. This is done to allow the decompiler to find and analyze the different parts of the smart-contract's overall structure.
 
   Assembly is a low-level representation of the bytecode, where each instruction is represented by a mnemonic and its corresponding arguments. Each instruction has roughly 3 parts:
 
@@ -61,11 +61,11 @@
   ...
   ```
 
-## The Solidity Dispatcher
+  ## The Solidity Dispatcher
 
-  Heimdall-rs uses this disassembled code to search for `JUMPI` statements in the dispatch lookup table, which is used to determine the function that is being called. In the Ethereum Virtual Machine (EVM), functions are called by passing a function selector as the first 4 bytes of the calldata. The function selector is a hash of the function signature, which is the function name and its corresponding arguments. For example, the function signature `transfer(address,uint256)` would be converted into the function selector `0xa9059cbb`.
+  Heimdall-rs uses this disassembled code to search for `JUMPI` statements in the dispatch lookup table, which is used to determine the function that is being called. In the Ethereum Virtual Machine (EVM), functions are called by passing a function selector as the first 4 bytes of the calldata. The function selector is the first 4 bytes of the keccak256 hash of the function signature, which is the function name and its corresponding arguments. For example, the function signature `transfer(address,uint256)` would be converted into the function selector `0xa9059cbb`.
 
-  The dispatch lookup table is a mapping of function selectors to the corresponding function address (as a program counter). It is used to determine which function is being called by the first 4 bytes of the calldata. Typically, `CALLDATALOAD(0)` is used to load the first 4 bytes of the calldata, and then the function selector is compared to the function selectors in the dispatch lookup table to determine which function is being called. If a match is found, the program jumps to the corresponding location in the bytecode.
+  The dispatch lookup table is a mapping of function selectors to the corresponding function address (as a program counter). It is used to determine which function is being called by the first 4 bytes of the calldata. Typically, `AND(PUSH4(0xFFFFFFFF), CALLDATALOAD(0))` is used to load the first 4 bytes of the calldata, and then the function selector is compared to the function selectors in the dispatch lookup table to determine which function is being called. If a match is found, the program jumps to the corresponding location in the bytecode.
 
   For example, the following assembly shows this dispatch table in action for the WETH contract *[0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)*:
 
@@ -93,13 +93,13 @@
 
 # 0x03. Symbolic Execution
 
-  The second step in the decompilation process is to generate a control flow graph (CFG) from the disassembled code. A CFG is a directed graph that represents the control flow of a program. Each node in the graph represents a block of instructions that are executed sequentially. Each edge in the graph represents a jump or branch, which is a conditional jump to another basic block. The CFG is used to represent the control flow of the program, and is used to determine the different paths that the program can take.
+  The second step in the decompilation process is to generate a control flow graph (CFG) from the disassembled code. A CFG is a directed graph that represents the control flow of a program. Each node in the graph represents a block of instructions that are executed sequentially. Each edge in the graph represents a jump or branch, which is a conditional jump to another basic block. The CFG is used to represent the control flow of the program and is used to determine the different paths that the program can take.
 
   This CFG is generated by heimdall-rs by executing the bytecode in a custom EVM implementation specifically designed for decompilation and bytecode analysis. Whenever the EVM encounters a `JUMPI` instruction, a new branch is created in the CFG. A new VM is created for each branch, and the program is executed until terminated. This process is repeated until all branches have been explored, and the CFG is complete.
 
   <details>
   <summary>
-    This process can be seen in the following code snippit from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/main/heimdall/src/decompile/util.rs#L279-L420">heimdall-rs</a>:
+    This process can be seen in the following code snippet from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/main/heimdall/src/decompile/util.rs#L279-L420">heimdall-rs</a>:
   </summary>
 
   ```rust
@@ -214,7 +214,7 @@
 
   Aside from the loop detection, this code is fairly straightforward. The VM is stepped through until a `JUMPI` instruction is encountered. The VM is then cloned, and the instruction pointer is set to the jump destination. The cloned VM is then passed to the `recursive_map` function, which will recursively step through the bytecode until it reaches a `JUMPI` instruction. This process is repeated until all branches have been explored, and the CFG is complete. 
 
-  Loop detection is still something that needs to be improved upon. The current method of detecting loops is to check if the path taken so far matches a regular expression that matches the pattern of a loop. This method is not perfect, and can be fooled by certain bytecode patterns.
+  Loop detection is still something that needs to be improved upon. The current method of detecting loops is to check if the path taken so far matches a regular expression that matches the pattern of a loop. This method is not perfect and can be fooled by certain bytecode patterns.
 </details>
   
 # 0x04. Branch Analysis
@@ -223,9 +223,9 @@
 
   ### The WrappedOpcode Struct
 
-  As stated earlier, decompilation and symbolic execution are powered by my custom EVM implementation. This implementation introduces `WrappedOpcodes` which are essentially opcodes with additional information. This information includes the instruction pointer, the inputs, and the outputs of the opcode. This information is used to generate the CFG, and is also used to generate the decompiled code.
+  As stated earlier, decompilation and symbolic execution are powered by my custom EVM implementation. This implementation introduces `WrappedOpcodes` which are essentially opcodes with additional information. This information includes the instruction pointer, the inputs, and the outputs of the opcode. This information is used to generate the CFG and is also used to generate the decompiled code.
 
-  This struct can be seen in the following code snippit from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/main/common/src/ether/evm/opcodes.rs#L163-L193">heimdall-rs</a>:
+  This struct can be seen in the following code snippet from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/main/common/src/ether/evm/opcodes.rs#L163-L193">heimdall-rs</a>:
   
   ```rust
   // enum allows for Wrapped Opcodes to contain both raw U256 and Opcodes as inputs
@@ -377,9 +377,9 @@
   (32 + memory[64]) - storage[1]
   ```
 
-  This process of solidifying (converting to solidity) a `WrappedOpcode` is done recursively, and is done for every `WrappedOpcode` in the CFG. This allows for the decompiler to generate the solidity code for any given contract.
+  This process of solidifying (converting to solidity) a `WrappedOpcode` is done recursively and is done for every `WrappedOpcode` in the CFG. This allows for the decompiler to generate the solidity code for any given contract.
 
-  In heimdall-rs, this process is done in the `solidify` function of the `WrappedOpcode` struct. This function can be seen in the following code snippit from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/8157fae82bcf3b16a74e8fcb7ed0e53a62f56001/common/src/ether/solidity.rs#L24">heimdall-rs</a>:
+  In heimdall-rs, this process is done in the `solidify` function of the `WrappedOpcode` struct. This function can be seen in the following code snippet from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/8157fae82bcf3b16a74e8fcb7ed0e53a62f56001/common/src/ether/solidity.rs#L24">heimdall-rs</a>:
 
   ```rust
   pub fn solidify(&self) -> String {
@@ -420,7 +420,7 @@
 
   ## Analyzing a CFG branch
 
-  The CFG branch analysis is done by the `analyze` function of the `VMTrace` struct. This function can be viewed in the following code snippit from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/main/heimdall/src/decompile/analyze.rs#L1">analyze.rs</a>. This function iterates over the operations in each branch of the `VMTrace` generated by symbolic execution and performs the bulk of the decompilation through the following steps:
+  The CFG branch analysis is done by the `analyze` function of the `VMTrace` struct. This function can be viewed in the following code snippet from <a href="https://github.com/Jon-Becker/heimdall-rs/blob/main/heimdall/src/decompile/analyze.rs#L1">analyze.rs</a>. This function iterates over the operations in each branch of the `VMTrace` generated by symbolic execution and performs the bulk of the decompilation through the following steps:
 
   ### Determining Function Visibility
 
@@ -497,11 +497,11 @@
       if (!<condition>) revert CustomError_<selector>();
       ```
 
-      Again, these are saved for ABI generation, and will be resolved at a later stage.
+      Again, these are saved for ABI generation and will be resolved at a later stage.
 
   #### RETURN
 
-  The `RETURN` opcode is translated to the corresponding `return` statement in solidity. We use this opcopde to determine the return type of the function with the following heuristics:
+  The `RETURN` opcode is translated to the corresponding `return` statement in solidity. We use this opcode to determine the return type of the function with the following heuristics:
 
   1. If the return data is checked with an `ISZERO` we can assume that the return type is `bool`.
   2. If there are bitwise operations on the return data, we can perform our variable size checks to determine potential typings.
@@ -575,7 +575,7 @@
 
   ### Determining Variable Types
 
-  In most programming languages, variables and arguments have a type associated with them. When a program or smart contract is compiled, these types are often removed and replaced with bitwise masking operations. For example, an `address` in solidity is a 20-byte value. When compiled, the bytecode will often use bitwise masking operations to ensure that the value is exactly 20 bytes. This is done to save space in the bytecode, and to make the bytecode more efficient.
+  In most programming languages, variables and arguments have a type associated with them. When a program or smart contract is compiled, these types are often removed and replaced with bitwise masking operations. For example, an `address` in solidity is a 20-byte value. When compiled, the bytecode will often use bitwise masking operations to ensure that the value is exactly 20 bytes. This is done to save space in the bytecode and to make the bytecode more efficient.
 
   We can use this heuristic to infer the types of variables and arguments in a smart contract, for example:
 
@@ -583,23 +583,23 @@
   AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4))
   ```
 
-  is understood by the decompiler to an argument in the first slot of calldata (since the first 4 bytes of calldata are used for the function selector). We know that this argument is likely a variable with type existing in {`address`, `uint160`, `bytes20`}. 
+  is understood by the decompiler to be an argument in the first slot of calldata (since the first 4 bytes of calldata are used for the function selector). We know that this argument is likely a variable with type existing in {`address`, `uint160`, `bytes20`}. 
 
   We can use this heuristic to infer the *size* of any variable or argument in the smart contract. In order to settle on a type within the set of possibilities, we need to watch for how the smart-contract interacts with the value.
 
-  For example, the decompiler assumes that the following is an `address`, since it's used as an address further in the program.
+  For example, the decompiler assumes that the following is an `address` since it's used as an address further in the program.
 
   ```rust
   STATICCALL(GAS(), AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4)), ...)
   ```
 
-  Additionally, the decompiler assumes that the following is a `uint256`, since it's used in arithmetic operations further in the program.
+  Additionally, the decompiler assumes that the following is a `uint256` since it's used in arithmetic operations further in the program.
 
   ```rust
   ADD(PUSH1(0xFF), AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4)))
   ```
 
-  The same can be said for `bytes` types. For example, the decompiler assumes that the following is a `bytes32`, since it's used in bitwise operations further in the program.
+  The same can be said for `bytes` types. For example, the decompiler assumes that the following is a `bytes32` since it's used in bitwise operations further in the program.
 
   ```rust
   BYTE(0, AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4)))
@@ -627,7 +627,7 @@
 
   ### Handling Precompiled Contracts
 
-  The EVM has a number of precompiled contracts that can perform certain operations, such as recovering the signer of a message. Heimdall-rs has support for these precompiled contracts, and can convert the external calls to their corresponding solidity functions.
+  The EVM has a number of precompiled contracts that can perform certain operations, such as recovering the signer of a message. Heimdall-rs has support for these precompiled contracts and can convert the external calls to their corresponding solidity functions.
 
   Handling these is very simple. Whenever the decompiler comes across an external call, it's checked if the `to` address is a precompiled contract. If it is, the decompiler can decode the calldata and convert the call to a solidity function call.
 
@@ -731,15 +731,15 @@
 
   ### Recursively Analyze Child Branches
 
-  The final step of branch analysis is to analyze the child branches of each `VMTrace`. Once all branches are analyzed, the logic of the contract should be fully extracted and is ready for post-processing.
+  The final step of branch analysis is to analyze the child branches of each `VMTrace`. Once all branches are analyzed, the logic of the contract should be fully extracted and ready for post-processing.
 
-  ## Post-Processing
+# 0x05. Post-Processing
 
   The final step of decompiling is post-processing. This step is responsible for cleaning up the decompiled code and making it more readable. It's also responsible for assigning readable names to variables, as well as resolving function, event, and error selectors.
 
   ### Resolving Selectors
 
-  The first step of post-processing is to resolve selectors for functions, errors, and events. This is done by using Samczsun's [Ethereum Signature Database](https://sig.eth.samczsun.com/) API to resolve the selectors, and find their matching signatures. Once we have a list of potential signatures for each selector, we check if they match the arguments of the function, event, or error. If they do, we replace the selector with the signature.
+  The first step of post-processing is to resolve selectors for functions, errors, and events. This is done by using Samczsun's [Ethereum Signature Database](https://sig.eth.samczsun.com/) API to resolve the selectors and find their matching signatures. Once we have a list of potential signatures for each selector, we check if they match the arguments of the function, event, or error. If they do, we replace the selector with the signature.
 
   For example, the following selector:
 
@@ -867,4 +867,4 @@
   
   ## Conclusion
 
-  That's it! We've now successfully decompiled a contract. The final step is to write the decompiled code to a file, and we're done! Hopefully this article has shed some light on how decompilers work, and how they can be used to analyze smart contracts. If you have any questions, feel free to reach out to me on [Twitter](https://twitter.com/BeckerrJon).
+  That's it! We've now successfully decompiled a contract. The final step is to write the decompiled code to a file, and we're done! Hopefully, this article has shed some light on how decompilers work, and how they can be used to analyze smart contracts. If you have any questions, feel free to reach out to me on [Twitter](https://twitter.com/BeckerrJon).
