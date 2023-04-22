@@ -14,12 +14,6 @@
 
   - The transaction begins with <a href="https://etherscan.io/address/0x3e0defb880cd8e163bad68abe66437f99a7a8a74">the attacker</a> interacting with his contract with some calldata, which appears to be a signature for a token sale. At this time, I believe that this signature was somehow phished and stored from the victims in this attack. 
 
-    ~~When taking a look at the decompiled bytecode, this assumption of a phishing attack is strengthened, as it appears to be a targeted attack with a switch case for each victim built into the smart contract.~~
-
-     ![Switch Cases](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/opensea-attack/1.png)
-
-     After speaking with the CTO of OpenSea, <a href="https://twitter.com/NadavAHollander">Nadav Hollander</a>, we concluded that this idea of a switch case was not accurate. As of 03/02/2022, the above code structure is believed to parse the calldata and build the ``WyvernExchange.atomicMatch_`` call, using *pre-signed, valid calldata* that was phished from targets.
-
   - This fallback function builds a staticcall to ``WyvernExchange.atomicMatch_`` , which essentially begins the transfer process from the victim, ``janclarin.eth``, to the attacker, all for a cost of 0 ETH. 
 
     Since the attacker's contract is calling this function, providing the calldata for both ``calldataBuy``, ``calldataSell``, which came directly from ``msg.data``, we can conclude that this was indeed a targeted phishing attack.
