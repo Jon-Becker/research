@@ -8,7 +8,7 @@
 
   In this research paper I will take a look at [the transaction](https://etherscan.io/tx/0x6a3d8584a6272a1d73ff297592b401fe10d3a90fd385efff55f68f32f29ecf61) that was used to mint these tokens as well as the [Adidas' code](https://etherscan.io/address/0x28472a58a490c5e09a238847f66a68a47cc76f0f#code) that was exploited.
 
-# 0x01. Minting
+## Minting
   
   Within Adidas' smart contract code, we can find the ``purchase(){...}`` function which performs a check to see if the msg.sender has minted more than ``maxTxPublic`` tokens, 2 in this case. After making this check, ``_purchase(){...}`` is called, which performs some more simple checks before minting the token.
 
@@ -40,7 +40,7 @@
 
   After paying for all 330 NFTs, including gas fees, this singular transaction cost an astounding ``93.39 Ethereum``. At a current floor price of ``0.851 Ethereum``, however, this user has unrealized gains of over ``190 Ethereum``.
 
-# 0x02. Fixing the Contract
+## Fixing the Contract
 
   In order to prevent this sort of thing from happening in the future, NFT minting drops should have checks to ensure that the minting addresses are not contract addresses. There are a few methods to doing this, which I will explore below.
 
@@ -93,7 +93,7 @@
 
 ----
 
-### 0x05. Resources & Citations
+### Resources & Citations
 
   - Adidas Steps Into the Metaverse by Partnering With NFT Projects Bored Ape Yacht Club, Punks Comic [https://news.bitcoin.com](https://news.bitcoin.com/adidas-steps-into-the-metaverse-by-partnering-with-nft-projects-bored-ape-yacht-club-punks-comic/)
   - Solidity Documentation [https://docs.soliditylang.org/](https://docs.soliditylang.org/en/v0.4.24/security-considerations.html#tx-origin)

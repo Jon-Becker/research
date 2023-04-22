@@ -8,11 +8,11 @@
 
   The full source for this PoC can be found within the  [Jon-Becker/Ethereum-Recurring-Payments](https://github.com/Jon-Becker/ethereum-recurring-payments/tree/4aed03acb40f01628c7f57fcdd99c898b659a058) GitHub repository. The repository version I will reference in this write-up is ``4aed03acb40f01628c7f57fcdd99c898b659a058``.
 
-# 0x01. Abstract
+## Abstract
   The recurring payment implementation I will explore throughout this paper is an application of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) Token Standard's ``approve(...)`` function. An unlimited allowance (``2^256-1``) is approved to the subscription contract address, which periodically allows the ``_payee`` to call a timelocked proxy of ERC-20's ``transferFrom(...)`` method.
   
 
-# 0x02. Detailed Analysis
+## Detailed Analysis
 
 ### Consequences
 
@@ -102,13 +102,13 @@
   event SubscriptionPaid(Customer, Payee, PaymentDate, PaymentAmount, NextPaymentDate);
   ```
 
-# 0x04. Conclusion
+## Conclusion
 
   This method of allowing smart-contracts to recursively call ``transferFrom(...)`` based on an timelocked proxy function enables subscriptions on the blockchain, one of the most important aspects when it comes to running a service or business. The approach this PoC takes is also trustless, and can be revoked any time by the owner, allowing for a truly decentralized form of recurring payments & subscriptions on Ethereum.
 
 ----
 
-### 0x05. Resources & Citations
+### Resources & Citations
 
   - Fabian Vogelsteller, Vitalik Buterin, "EIP-20: Token Standard," Ethereum Improvement Proposals, no. 20, November 2015. [Online serial]. Available: https://eips.ethereum.org/EIPS/eip-20.
   - Kevin Owocki, Andrew Redden, Scott Burke, Kevin Seagraves, Luka Kacil, Štefan Šimec, Piotr Kosiński, ankit raj, John Griffin, Nathan Creswell, "EIP-1337: Subscriptions on the blockchain," Ethereum Improvement Proposals, no. 1337, August 2018. [Online serial]. Available: https://eips.ethereum.org/EIPS/eip-1337.

@@ -8,7 +8,7 @@
 
   In this write-up, I'll take a look at the <a href="https://etherscan.io/address/0xa2c0946aD444DCCf990394C5cBe019a858A945bD">smart contract</a> (<a href="https://ethervm.io/decompile/0xa2c0946aD444DCCf990394C5cBe019a858A945bD">Decompiled</a>) used in this attack, and break down the inner workings of what it's doing at each step. I aim to figure out how this attack happened, as well as how it can be prevented in the future.
 
-  # 0x01. Technical Breakdown
+  # Technical Breakdown
 
   The transaction I am going to break down can be found on <a href="https://etherscan.io/tx/0x12906e3623d1c211ac4af750b1987ae61671c5e61fcc01dbf8bdcb1513e13d5a">Etherscan</a>. In order to get a better look at what's happening behind the scenes, I'll also use <a href="https://ethtx.info/mainnet/0x12906e3623d1c211ac4af750b1987ae61671c5e61fcc01dbf8bdcb1513e13d5a/">ethtx.info</a>.
 
@@ -24,7 +24,7 @@
 
   - After further investigation, it appears the calldata also included the address of ``WyvernExchange``, so this malicious contract *could* be used on forks or future updates of ``WyvernExchange``.
 
-  # 0x02. Future Prevention
+  # Future Prevention
 
   Phishing attacks will be around forever as long as there are people who fall for it. In order to stop these attacks, people need to know more about how these attacks work, how to spot them, and how to report them.
 
@@ -58,7 +58,7 @@
   - https://www.cisa.gov/uscert/report-phishing
   - https://safebrowsing.google.com/safebrowsing/report_phish/?hl=en
 
-  # 0x03. Resources & Citations
+  # Resources & Citations
 
   - OpenSea article image [https://www.ultcube88.com/](https://www.ultcube88.com/wp-content/uploads/2021/10/20210915_OpenSea.jpg)
   - Solidity Decompiler [https://ethervm.io/decompile/](https://ethervm.io/decompile/)

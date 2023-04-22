@@ -8,7 +8,7 @@
 
   Please keep in mind that this article talks about how heimdall-rs performs decompilation. This may not be the same as how other decompilers work. If you have any suggestions or corrections, please feel free to open an issue or pull request on [GitHub](https://github.com/Jon-Becker/heimdall-rs)! Thank you!
 
-# 0x01. Introduction
+## Introduction
 
   Decompilation is the process of converting machine code or bytecode into a higher-level, human-readable representation. However, it is not a straightforward task for several reasons:
 
@@ -24,7 +24,7 @@
   - **Branch Analysis**: The process of analyzing and translating the CFG into a higher-level representation.
   - **Post-Processing**: The process of cleaning up the output and making it more readable.
 
-# 0x02. Disassembly
+## Disassembly
 
   The first step in the decompilation process is to convert the bytecode into a more human-readable assembly representation. This is done to allow the decompiler to find and analyze the different parts of the smart-contract's overall structure.
 
@@ -91,7 +91,7 @@
 
   From this, we can see that the function selector for `0x06fdde03` *(`name()`)* tells the EVM to jump to program counter `0xb9`, and the function selector for `0x095ea7b3` *(`approve(address,uint256)`)* tells the EVM to jump to program counter `0x147`. Heimdall-rs' decompile module searches through this dispatch lookup table to find all function selectors and their corresponding locations in bytecode, allowing for the symbolic execution and branch analysis steps to be performed.
 
-# 0x03. Symbolic Execution
+## Symbolic Execution
 
   The second step in the decompilation process is to generate a control flow graph (CFG) from the disassembled code. A CFG is a directed graph that represents the control flow of a program. Each node in the graph represents a block of instructions that are executed sequentially. Each edge in the graph represents a jump or branch, which is a conditional jump to another basic block. The CFG is used to represent the control flow of the program and is used to determine the different paths that the program can take.
 
@@ -217,7 +217,7 @@
   Loop detection is still something that needs to be improved upon. The current method of detecting loops is to check if the path taken so far matches a regular expression that matches the pattern of a loop. This method is not perfect and can be fooled by certain bytecode patterns.
 </details>
   
-# 0x04. Branch Analysis
+## Branch Analysis
 
   Once the CFG is generated, the next step is to analyze the branches of the CFG. This is where the real decompilation begins, and translation from opcode to solidity begins.
 
@@ -733,7 +733,7 @@
 
   The final step of branch analysis is to analyze the child branches of each `VMTrace`. Once all branches are analyzed, the logic of the contract should be fully extracted and ready for post-processing.
 
-# 0x05. Post-Processing
+## Post-Processing
 
   The final step of decompiling is post-processing. This step is responsible for cleaning up the decompiled code and making it more readable. It's also responsible for assigning readable names to variables, as well as resolving function, event, and error selectors.
 

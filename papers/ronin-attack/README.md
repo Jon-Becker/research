@@ -8,7 +8,7 @@
 
   In this write-up, I'll take a look at the <a href="https://etherscan.io/address/0x098b716b8aaf21512996dc57eb0615e2383e2f96">attacker</a>'s account used in this attack, and try to break down how this attack happened.
 
-  # 0x01. Attack Overview
+  # Attack Overview
 
   On 03/29/2022, the Ronin Network <a href="https://roninblockchain.substack.com/p/community-alert-ronin-validators?s=w">announced</a> that it fell victim to an attack which cost a total of 173,600 Ethereum and 25.5M USDC.
 
@@ -34,7 +34,7 @@
 
   Since ` MainchainValidator.checkThreshold() ` passed, this transaction was executed and 173,600 ETH was transferred to the attacker.
 
-  # 0x02. Prevention
+  # Prevention
 
   This attack outlines a complete security failure on behalf of the Ronin Network. With $625M at stake, a security team should be checking and double checking for possible attack vectors at all times. Forgetting to remove access to signatures is inexcusable.
 
@@ -42,7 +42,7 @@
 
   When dealing with multi-signature transactions, it's important to keep each private key distributed and secure. Ideally, keys should be stored offline, and should never be stored on devices connected to the internet. They should also never be granted to anyone else, which would kill the point of a multi-sig transaction.
 
-  # 0x03. Resources & Citations
+  # Resources & Citations
 
   - Article image [https://roninwallet.io/](https://roninwallet.io/wp-content/uploads/2021/06/roninpreview-scaled.jpeg)
   - Ronin Announcement [https://roninblockchain.substack.com/](https://roninblockchain.substack.com/p/community-alert-ronin-validators?s=w)

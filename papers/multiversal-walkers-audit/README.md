@@ -18,7 +18,7 @@
 
   The contents of this audit are based on the scope provided by the Multiversal Walkers team within their [GitHub](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/README.md#L3). In order to provide a quality report of the security and efficiency of their smart contract, I have studied their whitepaper extensively to get a feel for how their system is supposed to function.
 
-# 0x01. Severity Level Reference
+## Severity Level Reference
 
   | Severity Level                                                                                     | Description                                                                                                                                                               |
   | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@
   | ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png)     | Findings marked with a medium severity tag should be fixed soon, but it is not extremely urgent. These issues have the potential to cause problems in production.         |
   | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)           | Findings marked with a low severity tag can remain unfixed. These are unlikely to cause any problems in production, but resolving them could improve contract efficiency. |
 
-# 0x02. Table of Contents
+## Table of Contents
 
   | Severity | Finding Title | Code Reference |
   | -------- | :------------ | :------------- |
@@ -37,7 +37,7 @@
   | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)      | Lack of Event Emission | [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol) & [FERC1155Distributor.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol) |
   | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)      | Floating Pragma | [Walkers.sol L2](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L2) & [FERC1155Distributor.sol L2](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/FERC1155Distributor.sol#L2) |
 
-# 0x03. Security Findings
+## Security Findings
 
   - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/high.png" height="24px"> Logic Inconsistency
 
@@ -53,7 +53,7 @@
 
   _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/CuzzoLabs/WalkersAudit/tree/a26b9988ea7c1a2b2c3f28260f2c1d886558f310), this issue has been addressed. Multiversal Walkers has opted to block all EOA accounts across all contracts._
 
-# 0x04. Best-practice Findings
+## Best-practice Findings
 
   - ### <img src="https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png" height="24px"> Documentation Issues 
 
@@ -104,7 +104,7 @@
 
     _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/CuzzoLabs/WalkersAudit/tree/a26b9988ea7c1a2b2c3f28260f2c1d886558f310), this issue has been addressed.
 
-# 0x05. Conclusion
+## Conclusion
 
   A total of five issues & recommendations were found within the contracts in scope, one of which was of high severity. The remaining four issues were either of low severity or were recommendations in order to adhere to solidity best practice.
 
@@ -112,7 +112,7 @@
 
 ----
 
-### 0x06. Resources & Citations
+### Resources & Citations
 
   - [Consensys Best Practices](https://consensys.github.io/smart-contract-best-practices/)
   - [SWC Registry](https://swcregistry.io)

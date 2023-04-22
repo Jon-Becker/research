@@ -12,7 +12,7 @@
 
   The contents of this audit are based on the whitepaper provided by Databroker.global within their [GitHub](https://github.com/databrokerglobal/Polygon-migration/issues/1). In order to provide a quality report of the security and efficiency of their smart contract, I have studied their whitepaper extensively to get a feel for how their system is supposed to function.
 
-# 0x01. Severity Level Reference
+## Severity Level Reference
 
   | Severity Level                                                                                     | Description                                                                                                                                                               |
   | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,7 +21,7 @@
   | ![MEDIUM](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/medium.png)     | Findings marked with a medium severity tag should be fixed soon, but it is not extremely urgent. These issues have the potential to cause problems in production.         |
   | ![LOW](https://raw.githubusercontent.com/Jon-Becker/research/main/assets/images/low.png)           | Findings marked with a low severity tag can remain unfixed. These are unlikely to cause any problems in production, but resolving them could improve contract efficiency. |  
 
-# 0x02. Security Issues
+## Security Issues
 
   - **Payout is Vulnerable To Reentrancy**  [ [SWC-107](https://swcregistry.io/docs/SWC-107) ] [ [Code Reference](https://github.com/databrokerglobal/Polygon-migration/blob/e3cfa08c0298ba96e7d15c08f50b1f2982cfa0e9/hardhat-mainnet/contracts/DatabrokerDeals.sol#L239-L240) ]
     
@@ -153,7 +153,7 @@
     }
     ```
 
-# 0x03. Performance & Best Practice Issues
+## Performance & Best Practice Issues
 
   - **Contract Size** [ [EIP-170](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md) ]
 
@@ -235,7 +235,7 @@
 
     These coding styles must be made uniform in order to allow for users to read and interpret your code with ease.
 
-# 0x04. Conclusion
+## Conclusion
 
   A total of 12 issues & recommendations were found within ``DatabrokerDeals.sol``, two of which were of critical severity and one of which was of medium severity. The remaining nine issues were either of low severity or were recommendations in order to adhere to solidity best practice.
 
@@ -243,7 +243,7 @@
 
 ----
 
-### 0x05. Resources & Citations
+### Resources & Citations
 
   - [Consensys Best Practices](https://consensys.github.io/smart-contract-best-practices/)
   - [SWC Registry](https://swcregistry.io)
