@@ -1,0 +1,5 @@
+{
+    "title": "Adidas Originals NFT Drop Postmortem",
+    "summary": "Adidas recently partnered with popular NFT brands gmoney, Bored Ape Yacht Club, and PUNKS Comics to release a collection of NFTs called \"Into The Metaverse\". For their mint, Adidas set a limit of two NFTs per address, yet someone managed to mint 330 tokens in one singular transaction.",
+    "date": "December 18, 2021"
+}
