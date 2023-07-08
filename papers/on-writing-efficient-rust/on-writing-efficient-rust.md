@@ -1,6 +1,6 @@
 # Mastering Rust: Maximizing Rust Performance by Doing Less
 
-##### 2023-06-27 by Jonathan Becker
+##### 2023-06-27 By [Jonathan Becker](https://jbecker.dev)
 
 [preview](preview.png)
 
