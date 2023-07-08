@@ -1,0 +1,6 @@
+{
+    "title": "Understanding Zero-Knowledge: The Basics of ZK Proofs",
+    "summary": "Zero-knowledge proofs are a fascinating concept in the world of cryptography, allowing for secure verification of information without divulging any details about the information itself. Despite their seemingly impossible nature, these proofs are made possible through intricate mathematical algorithms and cryptographic techniques. In this technical article, we will delve into the basics of ZK proofs, exploring their inner workings and potential applications in various fields such as cryptocurrency and beyond.",
+    "date": "April 27, 2023",
+    "ignore": true
+}
