@@ -51,7 +51,7 @@ In short, the board's 64 squares are represented as a `u64`, with each bit being
 While the `chess` crate provides a `Board` struct that represents the game state, we are going to be using our own `Board` struct that wraps the `chess` crate's `Board` struct, and provides additional functionality for our minimax algorithm. For now, let's just implement the `Display` trait so we can print the board to the console.
 
 <details>
-<summary>Click to expand the code</summary>
+<summary>`Board::display`</summary>
 
 ```rust
 impl Display for Board {
@@ -91,13 +91,141 @@ impl Display for Board {
     }
 }
 ```
+
 </details>
 
-
-One thing to keep in mind when writing rust code is that string operations are *SLOW*. You should generally avoid strings wherever possible, and always allocate the exact amount of memory needed for the string. In this case, we are using `String::with_capacity` to allocate the exact amount of memory needed for the output string.
+One thing to keep in mind when writing rust code is that string operations are **SLOW**. You should generally avoid strings wherever possible, and always allocate the exact amount of memory needed for the string. In this case, we are using `String::with_capacity` to allocate the exact amount of memory needed for the output string.
 
 ### Evaluating the Board
 
 Now that we have a way to print the board, let's implement a function that evaluates the board and returns a score. This score will be used by the minimax algorithm to determine the best move.
 
 #### Determining the Game Phase
+
+Here's where we can start using the magic of bitboards. We are going to use the number of pieces remaining on the board to determine the current game phase. This will allow us to use different evaluation functions for each phase of the game, which should lead to better performance.
+
+Let's add a function to our `Board` struct that returns the current game phase. We only want to count minor and major pieces (Knights, Bishops, Rooks, and Queens), so we'll exclude pawns and kings from the count. We can use bitwise operations to get a bitboard of all pieces, then another bitboard of all kings and pawns, and finally use the number of bits in the resulting bitboard to determine the game phase.
+
+<details>
+<summary>`Board::game_phase`</summary>
+
+```rust
+    #[inline(always)]
+    pub fn game_phase(&self) -> GamePhase {
+
+        // Get a color blind bitboard of all pieces. This will have a `1` in every square that has either a white or black piece.
+        let all_pieces = self.board.combined();
+
+        // The bitboard should look like this:
+        //
+        // X X X X X X X X
+        // X X X X X X X X
+        // . . . . . . . .
+        // . . . . . . . .
+        // . . . . . . . .
+        // . . . . . . . .
+        // X X X X X X X X
+        // X X X X . X X X
+
+
+        // Now get a bitboard of all kings and pawns. This will have a `1` in every square that has either a white or black king or pawn.
+        let invalid_pieces = self.board.pieces(Piece::King) | self.board.pieces(Piece::Pawn);
+
+        // Now we can use bitwise operations to get a bitboard of all non-pawn, non-king pieces.
+        let valid_pieces = all_pieces & !invalid_pieces;
+
+        // The bitboard now looks like this:
+        //
+        // X X X X . X X X
+        // . . . . . . . .
+        // . . . . . . . .
+        // . . . . . . . .
+        // . . . . . . . .
+        // . . . . . . . .
+        // . . . . . . . .
+        // X X X X . X X X
+
+        // Now we can count the number of bits in the bitboard, which will give us the number of non-pawn, non-king pieces.
+        let num_pieces = valid_pieces.0.count_ones();
+
+        // Now we can use the number of pieces to determine the game phase.
+        // https://www.chess.com/forum/view/general/opening--middle-game--end-game#comment-6210629
+        if num_pieces > 12 {
+            GamePhase::Early
+        } else if num_pieces > 6 {
+            GamePhase::Middle
+        } else {
+            GamePhase::End
+        }
+    }
+```
+
+</details>
+
+This implementation is very efficient, as it only uses bitwise operations and a single call to `count_ones`. This is a great example of how Rust's low-level control allows us to write efficient code without sacrificing safety. Benchmarking this function shows that it runs in around 600 nanoseconds, which means it can run around 1.6 million times per second. If that's not "blazingly fast", I don't know what is.
+
+```rust
+benchmark_game_phase:
+    617ns ± 548ns per run ( with 100,000 runs ).
+```
+
+#### Evaluating the Board
+
+Now that we have a way to determine the game phase, let's implement a function that evaluates the board and returns a score. We are going to use a different evaluation function for each phase of the game, which should lead to better performance. In chess, a negative score means black is winning, and a positive score means white is winning. As the score approaches zero, the game is closer to a draw.
+
+Let's start by implementing a simple function that returns the material score of the board.
+
+<details>
+<summary>`Board::evaluate_material`</summary>
+
+```rust
+/// The weights for each piece type.
+struct PieceWeights {
+    pawn: f32,
+    knight: f32,
+    bishop: f32,
+    rook: f32,
+    queen: f32,
+}
+
+
+/// Evaluate the material on the board. Simply counts the number of pieces of each type and multiplies it by the weight for that piece type.
+fn evaluate_material(&self, piece_weights: PieceWeights) -> f32 {
+    let mut score = 0.0;
+
+    // Get a bitboard of all white and black pieces.
+    let white_pieces = self.board.color_combined(Color::White);
+    let black_pieces = self.board.color_combined(Color::Black);
+
+    // Add the score for each white piece type.
+    score += (self.board.pieces(chess::Piece::Pawn) & white_pieces).0.count_ones() as f32 *
+        piece_weights.pawn;
+    score += (self.board.pieces(chess::Piece::Knight) & white_pieces).0.count_ones() as f32 *
+        piece_weights.knight;
+    score += (self.board.pieces(chess::Piece::Bishop) & white_pieces).0.count_ones() as f32 *
+        piece_weights.bishop;
+    score += (self.board.pieces(chess::Piece::Rook) & white_pieces).0.count_ones() as f32 *
+        piece_weights.rook;
+    score += (self.board.pieces(chess::Piece::Queen) & white_pieces).0.count_ones() as f32 *
+        piece_weights.queen;
+
+    // Subtract the score for each black piece type.
+    score -= (self.board.pieces(chess::Piece::Pawn) & black_pieces).0.count_ones() as f32 *
+        piece_weights.pawn;
+    score -= (self.board.pieces(chess::Piece::Knight) & black_pieces).0.count_ones() as f32 *
+        piece_weights.knight;
+    score -= (self.board.pieces(chess::Piece::Bishop) & black_pieces).0.count_ones() as f32 *
+        piece_weights.bishop;
+    score -= (self.board.pieces(chess::Piece::Rook) & black_pieces).0.count_ones() as f32 *
+        piece_weights.rook;
+    score -= (self.board.pieces(chess::Piece::Queen) & black_pieces).0.count_ones() as f32 *
+        piece_weights.queen;
+
+    score
+}
+```
+</details>
+
+Again, we take advantage of bitboards to efficiently count the number of pieces on the board. We also use a `PieceWeights` struct to allow us to easily tweak the weights for each piece type based on the game phase. For example, nights might be worth less than bishops in the endgame due to mobility. 
+
+This function is very efficient, as it only uses bitwise operations and calls to `count_ones`.
