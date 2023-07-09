@@ -30,7 +30,7 @@ The first step in the decompilation process is to convert the bytecode into a mo
 
 Assembly is a low-level representation of the bytecode, where each instruction is represented by a mnemonic and its corresponding arguments. Each instruction has roughly 3 parts:
 
-```
+```asm
 <program_counter> <opcode> <arguments>
 ```
 
@@ -38,13 +38,13 @@ The program counter is the index of the instruction in the bytecode. The opcode 
 
 For example, the following bytecode from _[0x1bf797219482a29013d804ad96d1c6f84fba4c45](https://etherscan.io/address/0x1bf797219482a29013d804ad96d1c6f84fba4c45)_:
 
-```text
+```bin
 731bf797219482a29013d804ad96d1c6f84fba4c45301460806040...9d5ef505ae7230ffc3d88c49ceeb7441e0029
 ```
 
 Would be converted into the following assembly:
 
-```text
+```asm
 20 PUSH20 1bf797219482a29013d804ad96d1c6f84fba4c45
 21 ADDRESS
 22 EQ
@@ -69,7 +69,7 @@ The dispatch lookup table is a mapping of function selectors to the correspondin
 
 For example, the following assembly shows this dispatch table in action for the WETH contract _[0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)_:
 
-```text
+```asm
 14 PUSH1 00
 15 CALLDATALOAD
 45 PUSH29 0100000000000000000000000000000000000000000000000000000000

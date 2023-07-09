@@ -12,7 +12,7 @@ In this research paper I will take a look at [the transaction](https://etherscan
 
 Within Adidas' smart contract code, we can find the `purchase(){...}` function which performs a check to see if the msg.sender has minted more than `maxTxPublic` tokens, 2 in this case. After making this check, `_purchase(){...}` is called, which performs some more simple checks before minting the token.
 
-```
+```solidity
   function purchase(uint256 amount) external payable whenNotPaused {
       require(block.timestamp >= purchaseWindowOpens && block.timestamp <= purchaseWindowCloses, "Purchase: window closed");
       require(purchaseTxs[msg.sender] < maxTxPublic , "max tx amount exceeded");
@@ -54,7 +54,7 @@ In order to prevent this sort of thing from happening in the future, NFT minting
 
     You can also use the following statement to prevent contracts from interacting with your code.
 
-    ```
+    ```solidity
     require(msg.sender == tx.origin)
     ```
 
@@ -62,7 +62,7 @@ In order to prevent this sort of thing from happening in the future, NFT minting
 
 After implementing these changes, the resulting code becomes:
 
-```
+```solidity
   modifier isNotContract (address _addr){
     uint len;
     assembly {

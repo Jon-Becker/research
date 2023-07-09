@@ -62,7 +62,7 @@ _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/Cuzz
 
     All functions should include the `@return` and `@param` tags, where appropriate according to NatSpec. For example, the following function is missing the `@param` tag in [Walkers.sol](https://github.com/CuzzoLabs/WalkersAudit/blob/1cea55314174a2d0e91b2a76564150944ee22694/src/Walkers.sol#L98-L115):
 
-    ```js
+    ```solidity
       /// @notice Function used to mint Walkers during the public mint.
       /// @dev No explicit check of `quantity` is required as signatures are created ahead of time.
       function publicMint(uint256 quantity, bytes calldata signature) external payable {
@@ -72,7 +72,7 @@ _As of commit [a26b9988ea7c1a2b2c3f28260f2c1d886558f310](https://github.com/Cuzz
 
     should become
 
-    ```js
+    ```solidity
       /// @notice Function used to mint Walkers during the public mint.
       /// @dev No explicit check of `quantity` is required as signatures are created ahead of time.
       /// @param quantity The number of Walkers to mint.

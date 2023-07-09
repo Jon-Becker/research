@@ -116,7 +116,7 @@ Let's add a function to our `Board` struct that returns the current game phase. 
         // Get a color blind bitboard of all pieces. This will have a `1` in every square that has either a white or black piece.
         let all_pieces = self.board.combined();
 
-        // The bitboard should look like this:
+        // The bitboard should look like this for a standard chess starting position:
         //
         // X X X X X X X X
         // X X X X X X X X
@@ -134,7 +134,7 @@ Let's add a function to our `Board` struct that returns the current game phase. 
         // Now we can use bitwise operations to get a bitboard of all non-pawn, non-king pieces.
         let valid_pieces = all_pieces & !invalid_pieces;
 
-        // The bitboard now looks like this:
+        // The bitboard now looks like this for a standard chess starting position:
         //
         // X X X X . X X X
         // . . . . . . . .
@@ -172,6 +172,9 @@ benchmark_game_phase:
 #### Evaluating the Board
 
 Now that we have a way to determine the game phase, let's implement a function that evaluates the board and returns a score. We are going to use a different evaluation function for each phase of the game, which should lead to better performance. In chess, a negative score means black is winning, and a positive score means white is winning. As the score approaches zero, the game is closer to a draw.
+
+
+##### Material Score
 
 Let's start by implementing a simple function that returns the material score of the board.
 
@@ -226,6 +229,14 @@ fn evaluate_material(&self, piece_weights: PieceWeights) -> f32 {
 ```
 </details>
 
-Again, we take advantage of bitboards to efficiently count the number of pieces on the board. We also use a `PieceWeights` struct to allow us to easily tweak the weights for each piece type based on the game phase. For example, nights might be worth less than bishops in the endgame due to mobility. 
+Again, we take advantage of bitboards to efficiently count the number of pieces on the board. We also use a `PieceWeights` struct to allow us to easily tweak the weights for each piece type based on the game phase. For example, nights might be worth less than bishops in the endgame due to mobility. This function is very efficient, as it only uses bitwise operations and calls to `count_ones`. Nice.
 
-This function is very efficient, as it only uses bitwise operations and calls to `count_ones`.
+Now that we can evaluate the material on the board, we can start on
+
+##### Positional Score
+
+Simply counting the number of pieces on the board is not enough to determine the best move. We also need to take into account the position of each piece. For example, a knight in the center of the board is more valuable than a knight on the edge of the board, because it has more places to jump to. Let's implement a function that evaluates the positional score of the board.
+
+We can start by defining a sort of "heatmap" for each piece type. This heatmap will be used to determine the positional score of each piece. We can use a 2D array to represent the heatmap, with each element representing the score for a given square. We can then use the piece type and color to index into the heatmap and get the score for a given square.
+
+Each phase of the game will have a different heatmap, as the value of each square changes based on the game phase. For example, the center of the board is more valuable in the early game, as it allows for more mobility. In the endgame, the center of the board is less valuable, as there are fewer pieces on the board and the king is more vulnerable.

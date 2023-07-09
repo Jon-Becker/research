@@ -33,7 +33,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     Fixed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17).
 
-    ```
+    ```solidity
     _swapTokens(
       sellerAmountInDTX,
       sellerAmountOutMin,
@@ -58,7 +58,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     Becomes:
 
-    ```
+    ```solidity
     _pendingDeals.remove(dealIndex);
     deal.payoutCompleted = true;
 
@@ -91,7 +91,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     Fixed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17).
 
-    ```
+    ```solidity
     _swapTokens(
       amountsIn[0],
       buyerAmountOutMin,
@@ -106,7 +106,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     Becomes:
 
-    ```
+    ```solidity
     deal.payoutCompleted = true;
     _pendingDeals.remove(dealIndex);
 
@@ -145,7 +145,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     Partially addressed in [827b1d5a87d311197ea872da50f4230ed1811f17](https://github.com/databrokerglobal/Polygon-migration/tree/827b1d5a87d311197ea872da50f4230ed1811f17). Still does not account for `address(this)`.
 
-    ```
+    ```solidity
     modifier validDestination( address platformAddress ) {
         require(platformAddress != address(0x0));
         require(platformAddress != address(this) );
@@ -163,12 +163,12 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     It is typically good practice to write the value of predefined constants if you know them before compiling. Using functions such as `keccak256()` when you can compute the hash beforehand is excessive and will waste gas.
 
-    ```
+    ```solidity
     bytes32 private constant OWNER_ROLE = keccak256("OWNER_ROLE");
     bytes32 private constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
     ```
 
-    ```
+    ```solidity
     bytes32 private constant OWNER_ROLE = "b19546dff01e856fb3f010c267a7b1c60363cf8a4664e21cc89c26224620214e";
     bytes32 private constant ADMIN_ROLE = "a49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775";
     ```
@@ -191,7 +191,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     This contract uses many different coding styles that should be made uniform for ease of readabity for the consumer. For example, this contract has some functions structured as
 
-    ```
+    ```solidity
     function payout(uint256 dealIndex) public whenNotPaused hasAdminRole {
       ...
     }
@@ -199,7 +199,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     while others may be
 
-    ```
+    ```solidity
     function calculateTransferAmount(
       uint256 dealIndex,
       address[] memory DTXToUSDTPath
@@ -219,7 +219,7 @@ The contents of this audit are based on the whitepaper provided by Databroker.gl
 
     or
 
-    ```
+    ```solidity
     function createDeal(
       string memory did,
       address buyerId,

@@ -35,7 +35,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     Returns the Subscription of `_customer` to `_payee`.
 
-    ```
+    ```solidity
     function getSubscription(address _customer, address _payee) public view returns(Subscription memory)
     ```
 
@@ -43,7 +43,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     Returns the time in seconds remaining until the subscription payment may be charged again.
 
-    ```
+    ```solidity
     function subscriptionTimeRemaining(address _customer, address _payee) public view returns(uint256)
     ```
 
@@ -55,7 +55,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     Emits a `Transfer`, `NewSubscription`, and `SubscriptionPaid` event.
 
-    ```
+    ```solidity
     function createSubscription(address _payee, uint256 _subscriptionCost, address _token, string memory _name, string memory _description, uint256 _subscriptionPeriod ) public virtual
     ```
 
@@ -65,7 +65,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     This can be called by either party.
 
-    ```
+    ```solidity
     function cancelSubscription(address _customer, address _payee ) public virtual
     ```
 
@@ -75,7 +75,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     This must be called by the payee.
 
-    ```
+    ```solidity
     function executePayment(address _customer) public virtual
     ```
 
@@ -83,7 +83,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     An internal function that returns `true` if the subscription between `_customer` and `_payee` has been paid for the current period, or `false` if otherwise.
 
-    ```
+    ```solidity
     function _subscriptionPaid(address _customer, address _payee) internal view returns(bool)
     ```
 
@@ -93,7 +93,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     MUST be called whenever a new subscription is created.
 
-    ```
+    ```solidity
     event NewSubscription(Customer, Payee, Allowance, TokenAddress, Name, Description, LastExecutionDate, SubscriptionPeriod);
     ```
 
@@ -101,7 +101,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     MUST be called whenever a new subscription is cancelled.
 
-    ```
+    ```solidity
     event SubscriptionCancelled(Customer, Payee);
     ```
 
@@ -109,7 +109,7 @@ The recurring payment implementation I will explore throughout this paper is an 
 
     MUST be called whenever a new subscription is paid.
 
-    ```
+    ```solidity
     event SubscriptionPaid(Customer, Payee, PaymentDate, PaymentAmount, NextPaymentDate);
     ```
 
