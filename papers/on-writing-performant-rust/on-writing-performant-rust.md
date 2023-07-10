@@ -91,7 +91,7 @@ benchmark_resize_images_concurrently:
 
 The memory hierarchy refers to the different levels of memory in a computer system, ranging from fast but small caches to slower but larger main memory. Accessing data from higher levels of the hierarchy is faster than accessing data from lower levels.
 
-![memory heirarchy](./1.png)
+![memory heirarchy](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/on-writing-efficient-rust/1.png)
 
 When writing efficient Rust code, it's important to minimize cache misses by optimizing your data structures and algorithms. This involves organizing your data in a way that maximizes spatial locality (accessing nearby memory locations) and temporal locality (reusing recently accessed data).
 
