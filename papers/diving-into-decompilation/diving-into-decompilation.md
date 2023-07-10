@@ -1,7 +1,5 @@
 # Diving Into Smart Contract Decompilation
 
-##### January 19, 2023&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
-
 ![Heimdall Header](https://raw.githubusercontent.com/Jon-Becker/heimdall-rs/main/preview.png?fw)
 
 The Heimdall-rs decompilation module is a powerful tool for understanding the inner workings of Ethereum smart contracts. It allows users to convert raw bytecode into human-readable Solidity code and its corresponding Application Binary Interface (ABI). In this article, we will delve deep into the inner workings of the decompilation module, examining how it performs this conversion at a low level and exploring its various features and capabilities.
@@ -367,13 +365,13 @@ SUB(
 
 Which can be simplified further to
 
-```rust
+```yul
 SUB(ADD(32, MLOAD(64)), SLOAD(1))
 ```
 
 And could be represented in solidity\* as
 
-```rust
+```solidity
 (32 + memory[64]) - storage[1]
 ```
 
@@ -426,7 +424,7 @@ The CFG branch analysis is done by the `analyze` function of the `VMTrace` struc
 
 The decompiler first determines whether or not the current opcode will modify the visibility of the function. In solidity, functions that are `pure` cannot read or write from the state via the following opcodes:
 
-```solidity
+```yul
 BALANCE, ORIGIN, CALLER, GASPRICE, EXTCODESIZE, EXTCODECOPY, BLOCKHASH, COINBASE, TIMESTAMP, NUMBER, DIFFICULTY, GASLIMIT, CHAINID, SELFBALANCE, BASEFEE, SLOAD, SSTORE, CREATE, SELFDESTRUCT, CALL, CALLCODE, DELEGATECALL, STATICCALL, CREATE2
 ```
 
@@ -434,7 +432,7 @@ If the current opcode is within this set of state-modifying opcodes, the `Functi
 
 Similarly, functions that are `view` cannot write to the state via the following opcodes:
 
-```solidity
+```yul
 SSTORE, CREATE, SELFDESTRUCT, CALL, CALLCODE, DELEGATECALL, STATICCALL, CREATE2
 ```
 
@@ -583,7 +581,7 @@ In most programming languages, variables and arguments have a type associated wi
 
 We can use this heuristic to infer the types of variables and arguments in a smart contract, for example:
 
-```rust
+```yul
 AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4))
 ```
 
@@ -593,19 +591,19 @@ We can use this heuristic to infer the _size_ of any variable or argument in the
 
 For example, the decompiler assumes that the following is an `address` since it's used as an address further in the program.
 
-```rust
+```yul
 STATICCALL(GAS(), AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4)), ...)
 ```
 
 Additionally, the decompiler assumes that the following is a `uint256` since it's used in arithmetic operations further in the program.
 
-```rust
+```yul
 ADD(PUSH1(0xFF), AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4)))
 ```
 
 The same can be said for `bytes` types. For example, the decompiler assumes that the following is a `bytes32` since it's used in bitwise operations further in the program.
 
-```rust
+```yul
 BYTE(0, AND(PUSH20(0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF), CALLDATALOAD(4)))
 ```
 

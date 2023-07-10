@@ -1,7 +1,5 @@
 # Multiversal Walkers Audit
 
-##### July 8, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
-
 ![mv](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/multiversal-walkers-audit/preview.png?fw)
 
 The Multiversal Walkers team asked me to audit their contracts in preparation for their mint. I reviewed their contracts and published this audit with my findings.

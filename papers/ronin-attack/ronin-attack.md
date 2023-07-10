@@ -1,7 +1,5 @@
 # Ronin Network Drained for $625M
 
-##### March 29, 2022&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;By [Jonathan Becker](https://jbecker.dev)
-
 ![Preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/ronin-attack/preview.png?fw)
 
 Axie Infinity's Ronin Network fell victim to a $625M exploit on 03/23/2022. This paper takes a look at how this attack happened, and how it can be prevented in the future.
