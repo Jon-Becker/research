@@ -78,14 +78,19 @@ fn resize_images_in_parallel() {
 }
 ```
 
-In this code, we take advantage of being able to use multiple CPU cores by handling the resize task at the same time for all the images. This can significantly speed up your code, and you should try to use it wherever it proves effective. Benchmarking the above functions, we can see that the parallel version is much faster than the sequential one:
+In this code, we take advantage of being able to use multiple CPU cores by handling the resize task at the same time for all the images. This can significantly speed up your code, and you should try to use it wherever it proves effective.
+
+<details>
+<summary>benchmark</summary>
 
 ```text
 benchmark_resize_images_concurrently:
     104.509ms ± 25.90ms per run ( with 100_000 runs ).
-  benchmark_resize_images_in_parallel:
+benchmark_resize_images_in_parallel:
     219.319ms ± 71.21ms per run ( with 100_000 runs ).
 ```
+
+</details>
 
 ### Memory Hierarchy
 
@@ -174,6 +179,80 @@ In this code snippet, we use the `iter()` method to create an iterator over the 
 By using iterators and closures instead of creating intermediate vectors, we avoid unnecessary memory allocations and copying. This can help improve cache performance by reducing memory accesses.
 
 Optimizing cache behavior is an important aspect of writing efficient Rust code. By organizing your data in a cache-friendly manner, using data structures designed for cache efficiency like packed SIMD, and avoiding unnecessary memory allocations and copying, your code will literally be "blazingly fast".
+
+## Profiling and Benchmarking
+
+Profiling and benchmarking your code is an essential step in optimizing its performance. Profiling allows you to identify bottlenecks and areas of improvement in your code, while benchmarking helps you measure the impact of optimizations and compare different implementations.
+
+### Profiling
+
+Profiling involves analyzing the runtime behavior of your code to identify hotspots or areas that consume a significant amount of time or resources. There are several profiling tools available for Rust, such as [perf](https://perf.wiki.kernel.org/index.php/Main_Page), [Valgrind](http://valgrind.org/), and [flamegraph](https://github.com/flamegraph-rs/flamegraph). We'll talk more about Valgrind when we discuss [inlining](#inlining-functions).
+
+One popular profiling tool for Rust is `cargo flamegraph`, which generates flame graphs based on CPU profiler data. Flame graphs provide a visual representation of where time is spent in your code, making it easier to pinpoint performance bottlenecks.
+
+To use `cargo flamegraph`, first install it via
+
+```bash
+cargo install flamegraph
+```
+
+Then, you can use flamegraph to test your rust binaries:
+
+```bash
+cargo flamegraph --deterministic --bin=heimdall -- decompile 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 -d -vvv --include-sol --skip-resolving
+```
+
+Which produces the following `flamegraph.svg`:
+
+![flamegraph.svg](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/on-writing-performant-rust/2.png?fw)
+
+As you can see, the flame graph provides a visual representation of the time spent in different parts of your code. Within a flame graph:
+
+-   Each box represents a stack frame, which are typically function calls.
+-   The height represents the stack depth, with the most recent stack frames on the top and older ones towards the bottom. Children reside above the function that called them. For example, `heimdall_common::ether::evm::disassemble::disassemble` was called by `heimdall::decompile::decompile`, so it appears above it on the flame graph.
+-   The width of a box represents the total time a function is being processed, or one of its children is being processed. You can hover over a box for more details, and click on a box to expand it.
+-   The color doesn't matter and are randomized, unless you use the `--deterministic` flag which will keep function/color consistency across runs.
+
+In this example, you can see that most of the processing time is spent within `heimdall::decompile::decompile`, with a suspiciously large box for `regex::compile::Compiler::compile`, which indicates that there is room for improvement here, possibly by using [lazy_static](https://docs.rs/lazy_static/latest/lazy_static/) or some other optimization.
+
+### Benchmarking
+
+Benchmarking involves measuring the performance of your code to compare different implementations or optimizations. Rust provides a built-in benchmarking framework called [Criterion](https://bheisler.github.io/criterion.rs/book/index.html).
+
+To use Criterion, add it as a dependency in your `Cargo.toml`:
+
+```toml
+[dev-dependencies]
+criterion = { version = "0.5.3", features = ["html_reports"] }
+
+[[bench]]
+name = "my_benchmark"
+```
+
+Then, you can write your benchmark in `./benches/my_benchmark`:
+
+```rust
+use criterion::{black_box, criterion_group, criterion_main, Criterion};
+
+fn fibonacci(n: u64) -> u64 {
+    match n {
+        0 => 1,
+        1 => 1,
+        n => fibonacci(n-1) + fibonacci(n-2),
+    }
+}
+
+fn criterion_benchmark(c: &mut Criterion) {
+    c.bench_function("fib 20", |b| b.iter(|| fibonacci(black_box(20))));
+}
+
+criterion_group!(benches, criterion_benchmark);
+criterion_main!(benches);
+```
+
+Finally, run this benchmark with `cargo bench`.
+
+Always remember to benchmark your code when making optimizations to ensure that the changes you make actually improve performance. If the benchmarks don't show a speed improvement significant enough to warrant the optimization, it's probably not worth including.
 
 ## Optimizing Algorithms and Data Structures
 
@@ -275,74 +354,307 @@ For example, let's say you wanted to sort a list of $10,000$ items. If you use a
 
 Understanding the time complexity of different algorithms allows you to choose the most efficient one for your specific problem. It's important to consider factors like the size of your input and any constraints or requirements you have when selecting an algorithm. For more on time and space complexity, check out [this article](https://levelup.gitconnected.com/a-beginners-guide-to-analysing-time-and-space-complexity-31e1677f5f5b).
 
-## Profiling and Benchmarking
+### Memory Optimization
 
-Profiling and benchmarking your code is an essential step in optimizing its performance. Profiling allows you to identify bottlenecks and areas of improvement in your code, while benchmarking helps you measure the impact of optimizations and compare different implementations.
+In addition to optimizing algorithms and data structures, memory optimization is another important aspect of writing efficient Rust code. By minimizing memory usage and maximizing cache locality, you can improve the performance of your code.
 
-### Profiling
+#### Specify Capacity When Known
 
-Profiling involves analyzing the runtime behavior of your code to identify hotspots or areas that consume a significant amount of time or resources. There are several profiling tools available for Rust, such as [perf](https://perf.wiki.kernel.org/index.php/Main_Page), [Valgrind](http://valgrind.org/), and [flamegraph](https://github.com/flamegraph-rs/flamegraph).
+In Rust, you can use the `Vec` type for dynamic arrays. When adding elements to a `Vec`, it automatically manages the underlying buffer and reallocates it when necessary. However, this reallocation process involves allocating new memory, copying existing elements over, and deallocating the old buffer.
 
-One popular profiling tool for Rust is `cargo flamegraph`, which generates flame graphs based on CPU profiler data. Flame graphs provide a visual representation of where time is spent in your code, making it easier to pinpoint performance bottlenecks.
-
-To use `cargo flamegraph`, first install it via
-
-```bash
-cargo install flamegraph
-```
-
-Then, you can use flamegraph to test your rust binaries:
-
-```bash
-cargo flamegraph --deterministic --bin=heimdall -- decompile 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 -d -vvv --include-sol --skip-resolving
-```
-
-Which produces the following `flamegraph.svg`:
-
-![flamegraph.svg](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/on-writing-performant-rust/2.png?fw)
-
-As you can see, the flame graph provides a visual representation of the time spent in different parts of your code. The width of each box represents the amount of time spent in that function, while the height represents the call stack depth. Likewise, the color of each box can indicate different metrics such as CPU usage or memory allocation.
-
-In this example, you can see that most of the time is spent within `heimdall::decompile::decompile`, with a suspiciously large box for `regex::compile::Compiler::compile`, which indicates that there is room for improvement here, possibly by using [lazy_static](https://docs.rs/lazy_static/latest/lazy_static/) or some other optimization.
-
-### Benchmarking
-
-Benchmarking involves measuring the performance of your code to compare different implementations or optimizations. Rust provides a built-in benchmarking framework called [Criterion](https://bheisler.github.io/criterion.rs/book/index.html).
-
-To use Criterion, add it as a dependency in your `Cargo.toml`:
-
-```toml
-[dev-dependencies]
-criterion = { version = "0.5.3", features = ["html_reports"] }
-
-[[bench]]
-name = "my_benchmark"
-```
-
-Then, you can write your benchmark in `./benches/my_benchmark`:
+To avoid unnecessary reallocations, you can preallocate a `Vec` with an initial capacity using the `with_capacity` method:
 
 ```rust
-use criterion::{black_box, criterion_group, criterion_main, Criterion};
+let mut vec = Vec::with_capacity(100);
+```
 
-fn fibonacci(n: u64) -> u64 {
-    match n {
-        0 => 1,
-        1 => 1,
-        n => fibonacci(n-1) + fibonacci(n-2),
+By providing an initial capacity that matches or exceeds your expected number of elements, you can reduce or eliminate reallocations during runtime. This type of optimization also works with data structures that reallocate memory, such as `String` and `HashMap`.
+
+For example, if you know that you will be adding 100 elements to a `Vec`, you can use the `with_capacity` method to preallocate the necessary memory:
+
+```rust
+let mut vec = Vec::with_capacity(100);
+
+for i in 0..100 {
+    vec.push(i);
+}
+```
+
+In this case, the `Vec` is initialized with a capacity of 100, so it does not need to reallocate memory during the loop. This can improve performance by avoiding unnecessary memory allocations and copying.
+
+<details>
+<summary>benchmark</summary>
+
+```text
+benchmark_vec_with_capacity:
+    348μs 233ns ± 181μs 355ns per run ( with 100000 runs ).
+benchmark_vec_many_reallocations:
+    361μs 826ns ± 151μs 918ns per run ( with 100000 runs ).
+```
+
+</details>
+
+#### Use Buffers When Possible
+
+Additionally, consider reusing existing buffers instead of creating new ones whenever possible. This avoids unnecessary allocations and deallocations:
+
+```rust
+fn iterate_with_buffer() {
+    let mut buffer = Vec::new();
+
+    for i in 0..1000 {
+        buffer.clear();
+        buffer.push(i);
     }
 }
 
-fn criterion_benchmark(c: &mut Criterion) {
-    c.bench_function("fib 20", |b| b.iter(|| fibonacci(black_box(20))));
+fn iterate_with_new_vec() {
+    for i in 0..1000 {
+        let mut buffer = Vec::new();
+        buffer.push(i);
+    }
 }
-
-criterion_group!(benches, criterion_benchmark);
-criterion_main!(benches);
 ```
 
-Finally, run this benchmark with `cargo bench`.
+In this example, the `iterate_with_buffer()` function uses the same vector for each loop and clearing it, while `iterate_with_new_vec()` creates a new vector for each loop. Using the existing vector allows you to reuse already allocated memory, avoiding any unnecessary allocations.
 
-Always remember to benchmark your code when making optimizations to ensure that the changes you make actually improve performance. If the benchmarks don't show a speed improvement significant enough to warrant the optimization, it's probably not worth including.
+<details>
+<summary>benchmark</summary>
+
+```text
+benchmark_iterate_with_buffer:
+    1μs 37ns ± 958ns per run ( with 100000 runs ).
+benchmark_iterate_with_new_vec:
+    42μs 615ns ± 6μs 992ns per run ( with 100000 runs ).
+```
+
+</details>
+
+#### Avoid Unnecessary Cloning
+
+In Rust, cloning an object creates a deep copy of the object, which can be expensive in terms of memory and performance. Therefore, it is important to avoid unnecessary cloning whenever possible.
+
+One way to avoid unnecessary cloning is by using references instead of owned values. References allow you to borrow a value without taking ownership of it. This means that you can access and manipulate the value without creating a new copy.
+
+For example, consider the following code:
+
+```rust
+fn do_something_inefficiently() {
+    fn process_vec(vec: Vec<i32>) -> i32 {
+        vec.iter().sum()
+    }
+
+    let vec = (0..1000).collect::<Vec<u128>>()
+
+    for _ in 0..10_000 {
+        process_vec(vec.clone());
+    }
+}
+
+fn do_something_with_speed() {
+    fn process_vec(vec: &Vec<i32>) -> i32 {
+        vec.iter().sum()
+    }
+
+    let vec = (0..1000).collect::<Vec<u128>>()
+
+    for _ in 0..10_000 {
+        process_vec(&vec);
+    }
+}
+```
+
+By passing a reference (`&`) to `vec`, you avoid cloning it and instead allow the function to borrow it temporarily. This eliminates unnecessary memory allocations and copying, improving performance.
+
+<details>
+<summary>benchmark</summary>
+
+```text
+benchmark_do_something_inefficiently:
+    35ns ± 77ns per run ( with 100000 runs ).
+  benchmark_do_something_with_speed:
+    30ns ± 105ns per run ( with 100000 runs ).
+```
+
+</details>
+
+#### Use Enum Variants for Different Data Types
+
+If you have a collection that can contain different types of elements, consider using an enum to represent the different variants. This allows you to store elements with different types in the same collection without wasting memory on padding or alignment requirements.
+
+For example:
+
+```rust
+enum Element {
+    Integer(i32),
+    Float(f32),
+}
+
+fn main() {
+    let mut elements: Vec<Element> = Vec::new();
+    elements.push(Element::Integer(5));
+    elements.push(Element::Float(3.14));
+
+    for element in elements {
+        match element {
+            Element::Integer(i) => println!("Integer: {}", i),
+            Element::Float(f) => println!("Float: {}", f),
+        }
+    }
+}
+```
+
+In this example, the `Element` enum has two variants: `Integer` and `Float`. Each variant can hold a different type of value (`i32` or `f32`). We can create a vector of `Element`s and push different variants into it. Then, we can iterate over the vector and pattern match on each element to perform specific actions based on its variant.
+
+Using an enum with variants allows us to have a collection that can store different types of values without wasting memory. This is especially useful when dealing with heterogeneous data structures or when you want to represent multiple possibilities in a single variable.
+
+#### Use Cows
+
+Another way to optimize memory usage in Rust is to use the `Cow`, or "clone on write" type. The `Cow` type allows you to have a value that can be either borrowed or owned, depending on whether it needs to be modified.
+
+When you have a value that may or may not need modification, using `Cow` can help avoid unnecessary cloning and memory allocations. The `Cow` type provides two variants: `Borrowed`, which holds a reference to the original value, and `Owned`, which holds an owned copy of the value.
+
+Here's an example:
+
+```rust
+use std::borrow::Cow;
+
+fn process_string(s: Cow<str>) {
+    if s.len() > 10 {
+        println!("Long string: {}", s);
+    } else {
+        println!("Short string: {}", s);
+    }
+}
+
+fn main() {
+    let short_string = "hello";
+    let long_string = "this is a very long string";
+
+    process_string(Cow::Borrowed(short_string));
+    process_string(Cow::Borrowed(long_string));
+
+    let cloned_long_string = long_string.to_owned();
+
+    process_string(Cow::Owned(cloned_long_string));
+}
+```
+
+In this example, the `process_string` function takes a `Cow<str>` as its parameter. It checks the length of the string and prints either "Long string" or "Short string" depending on its length.
+
+In the `main` function, we create two string variables: `short_string` and `long_string`. We then pass these strings to the `process_string` function using the `Cow::Borrowed` variant of `Cow`. Since these strings do not need modification, they are borrowed rather than cloned.
+
+Next, we create a new variable called `cloned_long_string`, which is an owned copy of the original long string. We pass this cloned string to the `process_string` function using the `Cow::Owned` variant of `Cow`.
+
+By using the appropriate variant of `Cow`, we avoid unnecessary cloning and memory allocations. If a value does not need modification, it can be borrowed instead of being owned. Only when a value needs to be modified do we create an owned copy.
+
+This allows us to optimize memory usage by minimizing unnecessary cloning and allocation operations. For more information on `Cow`s, check out this [article](https://deterministic.space/secret-life-of-cows.html).
+
+#### Avoid Collecting for Another Iteration
+
+When working with collections in Rust, it's important to consider using iterators instead of collecting the collection into another data structure just for the purpose of iterating over it again. This can help optimize memory usage and improve performance.
+
+For example, let's say we have a `Vec` of numbers and we want to find the sum of all even numbers:
+
+```rust
+fn sum_of_even_numbers(numbers: Vec<i32>) -> i32 {
+    let even_numbers: Vec<i32> = numbers.into_iter().filter(|&x| x % 2 == 0).collect();
+    even_numbers.iter().sum()
+}
+```
+
+In this code, we first create a new `Vec` called `even_numbers` by filtering out all odd numbers from the original `numbers` vector. We then use the `iter()` method to create an iterator over the `even_numbers` vector and calculate their sum using the `sum()` method.
+
+However, this approach is not memory-efficient because it requires creating a new vector (`even_numbers`) just for iteration purposes. Instead, we can directly iterate over the filtered elements without collecting them into another data structure:
+
+```rust
+fn sum_of_even_numbers(numbers: Vec<i32>) -> i32 {
+    numbers.into_iter().filter(|&x| x % 2 == 0).sum()
+}
+```
+
+In this updated code, we directly iterate over the filtered elements using the `into_iter()` method and calculate their sum using the `sum()` method. This avoids creating a new vector and improves memory efficiency.
+
+Note: The `into_iter()` method is used instead of `iter()` because we want to consume the original vector and take ownership of its elements.
+
+#### Use .get(i) over \[i]
+
+When accessing elements in an array or vector, it is generally more memory-efficient to use the `.get(i)` method instead of the `[i]` indexing syntax. The `.get(i)` method returns an `Option` type that represents either a reference to the element at index `i`, or `None` if the index is out of bounds.
+
+Using `.get(i)` allows you to handle cases where the index is out of bounds without causing a panic. This can be useful when working with user input or dynamically changing data.
+
+For example:
+
+```rust
+fn main() {
+    let vec = vec![1, 2, 3];
+
+    // Using indexing syntax
+    let element = vec[1];
+    println!("Element: {}", element);
+
+    // Using .get(i)
+    if let Some(element) = vec.get(1) {
+        println!("Element: {}", element);
+    } else {
+        println!("Index out of bounds");
+    }
+}
+```
+
+In this example, both methods will print the value at index 1 (`2`). However, if you were to use an invalid index like `vec[10]`, it would cause a panic and crash your program. On the other hand, using `.get(10)` would return `None` and allow you to handle the error gracefully.
+
+### Inlining
+
+Inlining is a compiler optimization technique that replaces a function call with the actual body of the function. This can improve performance by reducing the overhead of function calls and enabling further optimizations.
+
+In Rust, you can use the `#[inline]` attribute to suggest to the compiler that a function should be inlined. The compiler may choose to honor this suggestion or not, depending on various factors such as code size and performance impact.
+
+Here's an example:
+
+```rust
+#[inline]
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn main() {
+    let result = add(1, 2);
+    println!("Result: {}", result);
+}
+```
+
+In this code, we define a simple `add` function that takes two integers and returns their sum. We annotate it with `#[inline]` to suggest inlining. When calling this function in the `main` function, the compiler may choose to inline it instead of generating a separate call instruction.
+
+Inlining can improve performance by eliminating the overhead of function calls. It allows for better optimization opportunities such as constant propagation and loop unrolling. However, it can also increase code size if used excessively.
+
+It's important to note that using the `#[inline]` attribute does not guarantee that a function will be inlined. The compiler makes the final decision based on its own heuristics and optimization strategies.
+
+Inlining should be used judiciously. It is most effective for small, frequently called functions where the cost of the function call overhead outweighs any potential benefits of code size reduction. Inlining larger functions or functions with complex control flow may lead to increased code size and reduced cache locality, which can negatively impact performance.
+
+In addition to the `#[inline]` attribute, Rust also provides an `#[inline(always)]` attribute. This attribute forces inlining of a function regardless of the compiler's heuristics. However, it should be used sparingly as it can lead to excessive code duplication and larger binary sizes.
+
+#### Cachegrind
+
+Cachegrind is a profiling tool that is part of the Valgrind suite. It simulates a CPU cache hierarchy and provides detailed information about cache misses, cache hits, and other cache-related performance metrics.
+
+Cachegrind works by instrumenting the program's binary code to track memory accesses. It simulates the behavior of different levels of caches (L1, L2, etc.) and records statistics about cache hits and misses.
+
+To use Cachegrind with Rust programs, you can first compile your program with debug symbols using the `--debug` flag:
+
+```
+cargo rustc -- --emit=asm -C opt-level=3 --debug
+```
+
+This will generate assembly code for your Rust program. You can then run Cachegrind on this assembly code using the `valgrind` command:
+
+```
+valgrind --tool=cachegrind ./target/debug/my_program
+```
+
+Cachegrind will execute your program and collect data about cache behavior. After execution completes, it will generate a report that includes information such as total number of instructions executed, number of cache misses at each level, and average cost per instruction.
+
+By analyzing this report, you can identify areas in your code where there are a high number of cache misses, indicating potential performance bottlenecks. You can then optimize these areas to improve cache utilization and overall program performance. You can also use cachegrind to tell if a function is inlined or not.
 
 ## Rust Build Configuration
 
@@ -409,3 +721,9 @@ Here are some commonly used compiler flags:
 -   `-C target-cpu`: Specifies the target CPU architecture. This allows the compiler to generate machine code optimized for a specific CPU. For example, setting `target-cpu` to `native` will tell the compiler to look for optimizations for this machines CPU.
 -   `-C debuginfo`: Controls whether debug information is included in the generated binary. Disabling debug info (`-C debuginfo=0`) can reduce binary size but makes debugging more difficult.
 -   `-C panic=abort`: Changes how panics are handled by aborting instead of unwinding, which can improve performance at the cost of not being
+
+## Conclusion
+
+Writing efficient code in Rust goes beyond merely adhering to the language's rules. It requires a deep understanding of the underlying hardware architecture, careful optimization of algorithms and data structures, minimizing memory allocations, leveraging parallelism, and proficiently profiling your code to pinpoint bottlenecks. In this article, we explored a range of techniques and best practices that can significantly enhance the performance of your Rust programs.
+
+Hopefully, this article has helped you become a better (and more performant) rustacean. If you have any questions or suggestions, feel free to reach out to me on [Twitter](https://twitter.com/BeckerrJon). Thank you!
