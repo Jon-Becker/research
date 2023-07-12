@@ -546,31 +546,6 @@ fn sum_of_even_numbers(numbers: Vec<i32>) -> i32 {
 
 In this updated code, we directly iterate over the filtered elements using the `into_iter()` method and calculate their sum using the `sum()` method. This avoids creating a new vector and improves memory efficiency.
 
-#### Use .get(i) over \[i]
-
-When accessing elements in an array or vector, it is generally more memory-efficient to use the `.get(i)` method instead of the `[i]` indexing syntax. The `.get(i)` method returns an `Option` type that represents either a reference to the element at index `i`, or `None` if the index is out of bounds.
-
-Using `.get(i)` allows you to handle cases where the index is out of bounds without causing a panic. This can be useful when working with user input or dynamically changing data. For example:
-
-```rust
-fn main() {
-    let vec = vec![1, 2, 3];
-
-    // Using indexing syntax
-    let element = vec[1];
-    println!("Element: {}", element);
-
-    // Using .get(i)
-    if let Some(element) = vec.get(1) {
-        println!("Element: {}", element);
-    } else {
-        println!("Index out of bounds");
-    }
-}
-```
-
-In this example, both methods will print the value at index 1. However, if you were to use an invalid index like `vec[10]`, it would cause a panic and crash your program. On the other hand, using `.get(10)` would return `None` and allow you to handle the error gracefully.
-
 ### Inlining
 
 Inlining is a compiler optimization technique that replaces a function call with the actual body of the function, which can improve performance by reducing the overhead of function calls and enabling further optimizations.
