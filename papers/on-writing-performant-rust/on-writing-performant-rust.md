@@ -8,13 +8,13 @@ This article assumes that you have basic knowledge of Rust, including its syntax
 
 ## Understanding Hardware Architecture
 
-In order to start writing more efficient Rust code, you should first have a basic understanding of a machines underlying hardware architecture, including the CPU, memory hierarchy, and the cache. Understanding these concepts can help you make more informed decisions about how you structure your code and data to take advantage of the hardware's capabilities.
+In order to start writing more efficient Rust code, you should first have a basic understanding of a machines underlying hardware architecture, including the CPU, memory hierarchy, and caching. Understanding these concepts can help you make more informed decisions about how you structure your code and data, allowing you to take advantage of your hardware's capabilities.
 
 ### The CPU
 
 The CPU is basically the computer's processing powerhouse. It executes instructions and carries out calculations, making it one of the most important components when it comes to performance.
 
-The CPU consists of multiple cores, each capable of executing instructions independently. In order to fully utilize the CPU's capabilities, it's important to write code that takes advantage of parallelism and concurrency where possible.
+The CPU consists of multiple cores, each capable of executing instructions independently. In order to fully utilize these cores, it's important to write code that takes advantage of parallelism and executes multiple processes at the same time.
 
 Let's say we have a large collection of images that need to be resized. If we do so sequentially, it'll take a long time since each iteration has to wait for the previous one to finish. For example, this function handles image resizing sequentially in a `for` loop:
 
@@ -42,7 +42,7 @@ fn resize_images_sequentially() {
 }
 ```
 
-Using parallelism, we can distribute the resizing task across many CPUs cores, allowing us to process multiple images simultaneously. Lucky for us, Rust's standard library comes packed with [helpful multithreading features](https://doc.rust-lang.org/book/ch16-00-concurrency.html), so we can start easily implement multithreading in a memory-safe way. Here's the same function as before, but this time it uses threads to resize the images in parallel:
+Using parallelism, we can distribute the resizing task across many CPUs cores, allowing us to process multiple images simultaneously. Lucky for us, Rust's standard library comes packed with [helpful multithreading features](https://doc.rust-lang.org/book/ch16-00-concurrency.html), so we can start easily implementing multithreading in a memory-safe way:
 
 ```rust
 fn resize_images_in_parallel() {
@@ -98,7 +98,7 @@ Memory hierarchy refers to the different levels of memory in a computer system, 
 
 ![memory heirarchy](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/on-writing-performant-rust/1.png?fw)
 
-When writing efficient Rust code, it's important to minimize cache misses by optimizing the data structures and algorithms that you use in your program. This involves organizing your data in a way that maximizes spatial locality (accessing nearby memory locations) and temporal locality (reusing recently accessed data).
+When writing efficient Rust code, it's important to minimize cache misses by organizing your data in a way that maximizes spatial locality (accessing nearby memory locations) and temporal locality (reusing recently accessed data).
 
 A simple example of this is using structs to group related data together, which can improve spatial locality because struct elements are more likely to reside close to eachother, reducing cache misses. Rather than doing something like:
 
@@ -126,7 +126,7 @@ let xyz = XYZ { x: 1, y: 2, z: 3 };
 
 This allows you to access the variables in a more cache-friendly manner, improving spatial locality and reducing cache misses. Keep in mind that you should only use this technique when it makes sense for your program. If you don't need to access the variables together, then there's no point in grouping them into a struct.
 
-Another technique is to use try using slices instead of linked lists or other dynamic data structures wherever possible. Slices provide better spatial locality because the elements are stored next to each other in memory, so accessing them is faster than accessing elements scattered throughout memory.
+Another technique is to use try using slices instead of linked lists or other dynamic data structures wherever possible. Slices provide better spatial locality because the elements are stored next to each other in memory, so accessing them is typically faster.
 
 For example, consider a program that needs to iterate over a collection of integers. Instead of using a linked list:
 
@@ -151,19 +151,19 @@ for item in &array {
 }
 ```
 
-By using a slice here, you are accessing adjacent elements in memory, which improves spatial locality and reduces cache misses If you had used a linked list, the elements could be scattered throughout memory, potentially resulting in more cache misses and slower processing time.
+By using a slice here, you are accessing adjacent elements in memory, which improves spatial locality and reduces cache misses. If you had used a linked list, the elements could be scattered throughout memory, potentially resulting in more cache misses and slower processing time.
 
 Overall, understanding the memory hierarchy and optimizing your code accordingly can lead to significant performance improvements. By paying attention to how you use and access data in memory, you can effortlessly improve your code.
 
 ### The Cache
 
-The cache is a small but extremely fast type of memory that stores frequently accessed data. It acts as a buffer between the CPU and main memory, allowing for faster access to data stored in its registers.
+As briefly mentioned, the cache is a small but extremely fast type of memory which acts as a buffer between the CPU and main memory, allowing for faster access to data stored in its registers.
 
-One way to optimize cache behavior is by using data structures that have good cache locality. As mentioned earlier, slices are a great choice because they store elements next to each other in memory. This means that accessing elements in an array is more likely to result in cache hits, which can improve performance.
+One way to optimize cache behavior is by using data structures that have good cache locality. As mentioned earlier, slices are a great choice because they store elements next to each other in memory. This means that accessing elements in a slice is more likely to result in cache hits, which can greatly improve efficiency.
 
 Another technique is to use data structures that are designed for cache efficiency, such as the [packed_simd](https://github.com/rust-lang/packed_simd) crate. Packed SIMD (Single Instruction, Multiple Data) allows you to perform computations on multiple values simultaneously, which can greatly improve performance. By utilizing packed SIMD instructions, you can process large amounts of data with fewer instructions and reduce memory accesses.
 
-By understanding what the cache is and how it works, you can make more informed decisions about how you structure your code and data to take advantage of its capabilities, which can lead to significant performance improvements.
+By understanding what the cache is and how it works, you can make more informed decisions about how you structure your code and data to take advantage of its capabilities, ultimately leading to significant performance improvements.
 
 ## Profiling and Benchmarking
 
@@ -171,9 +171,9 @@ Profiling and benchmarking your code is an essential step in optimizing its perf
 
 ### Profiling
 
-Profiling involves analyzing the runtime behavior of your code to identify areas that consume a significant amount of time or resources. There are several profiling tools available for Rust, such as [perf](https://perf.wiki.kernel.org/index.php/Main_Page), [Valgrind](http://valgrind.org/), and [flamegraph](https://github.com/flamegraph-rs/flamegraph). We'll talk more about Valgrind when we discuss [inlining](#inlining). For now, let's talk about flamegraph.
+Profiling involves analyzing the runtime behavior of your code to identify areas that consume a significant amount of time or resources. There are several profiling tools available for Rust, such as [perf](https://perf.wiki.kernel.org/index.php/Main_Page), [Valgrind](http://valgrind.org/), and [flamegraph](https://github.com/flamegraph-rs/flamegraph). We'll talk more about Valgrind when we discuss [inlining](#inlining) functions but for now, let's talk about flamegraph.
 
-Flamegraph is a popular profiling tool for Rust which generates a visual graph of your program's runtime stack trace. These graphs, called flame graphs, provide a visual representation of where time is spent in your code, making it easier to pinpoint performance bottlenecks.
+Flamegraph is a popular profiling tool for Rust which generates a visual graph of your program's runtime stack trace. These graphs, called flame graphs _(graphs plural is weird)_, provide a visual representation of where time is spent in your code, making it easier to pinpoint performance bottlenecks.
 
 To get started with flamegraph, first install it via:
 
@@ -194,7 +194,7 @@ Which produces the following `flamegraph.svg`:
 As you can see, the flame graph provides a visual representation of the time spent in different parts of your code. Within a flame graph:
 
 -   Each box represents a stack frame, or a function call.
--   The height represents the stack depth, with the most recent stack frames on the top and older ones towards the bottom. Children reside above the function that called them. For example, `heimdall_common::ether::evm::disassemble::disassemble` was called by `heimdall::decompile::decompile`, so it appears above the decompile frame on the flame graph.
+-   The height represents the stack depth, with the most recent stack frames on the top and older ones towards the bottom. Child frames reside above the function that called them. For example, `heimdall_common::ether::evm::disassemble::disassemble` was called by `heimdall::decompile::decompile`, so it appears above the decompile frame on the flame graph.
 -   The width of a frame represents the total time a function, or one of its children, is being processed. You can hover over a frame for more details, and click on a frame to expand it for a more granular view.
 -   The color of each frame doesn't matter and is randomized, unless you use the `--deterministic` flag which will keep function/color consistency across runs.
 
@@ -245,25 +245,25 @@ Always remember to benchmark your code when making optimizations to ensure that 
 
 ## Optimizing Algorithms and Data Structures
 
-Another key aspect of writing efficient Rust code is optimizing the algorithms and data structures that you use within your programs. By choosing the right algorithms and data structures for your problem, you can significantly improve the efficiency of your code.
+Another key aspect of writing efficient Rust code is optimizing the algorithms and data structures that you use within your programs.
 
 ### Choosing the Right Data Structure
 
-The choice of algorithm can have a huge impact on the performance of your code. Some algorithms are inherently more efficient than others for certain types of problems. It's important to choose an algorithm that is well-suited to your problem domain.
+The choice of algorithm can have a huge impact on the performance of your code. Some algorithms are inherently more efficient than others for certain types of problems, which is why it's important to choose an algorithm that is well-suited to your problem.
 
-For example, the standard `HashMap` data structure in Rust is implemented as a hash table, which provides constant-time average case lookup, insertion, and deletion operations. However, for special use cases, other data structures with similar functionality might work better here. If you need to maintain a sorted collection of elements and frequently perform range queries or insertions/deletions at arbitrary positions, a balanced binary search tree like `BTreeSet` or `BTreeMap` may be more appropriate. These data structures provide logarithmic-time operations for these types of operations, which can be more efficient than hash tables in some cases.
+For example, the standard `HashMap` data structure in Rust is implemented as a hash table, which provides constant-time average case lookup, insertion, and deletion. This type will generally work well for a large set of use cases, which is why it's the go-to data structure for many developers. However, other data structures with similar functionality might work better for specific problems, such as `BTreeSet` or `BTreeMap`, which excel at maintaining sorted collection of elements. These data structures provide logarithmic-time operations for these types of operations, which can be more efficient than the standard `HashMap` in specific cases.
 
 Make sure to carefully consider which data structure is best suited for your problem, as choosing the right data structure can have a huge impact on the performance of your code.
 
 ### Optimizing Algorithms and Functions
 
-In addition to choosing the right data structure, optimizing the algorithms and functions you use can also greatly improve the efficiency of your programs.
+In addition to choosing the right data structure, optimizing the algorithms you use can also greatly improve the efficiency of your programs.
 
 #### Caching Results
 
 One common optimization technique is caching function results. If a function may be called multiple times with the same input, you can cache the result and return it instead of recomputing it every time. This can be especially useful for reducing the amount of expensive computations that need to be performed.
 
-Let's say you have an expensive function that performs a database query and returns it's result. If you call this function multiple times with the same input, you can simply save the result and return it instead of expensively recomputing the result every time. This can significantly improve the performance and efficiency of your code. _It's important to keep in mind that if the data changes, you'll need to invalidate the cache and recompute the result._
+Let's say you have an expensive function that performs a database query and returns it's result. If you call this function multiple times with the same input, you can simply save the result and return it instead of expensively recomputing the result every time, which can significantly improve the performance and efficiency of your code. _It's important to keep in mind that if the data changes, you'll need to invalidate the cache and recompute the result._
 
 ```rust
 use std::collections::HashMap;
@@ -298,7 +298,7 @@ fn main() {
 }
 ```
 
-Running the above code, we can see that the database query is only performed once, even though we called the `get_data_from_database` function multiple times with the same input. This is because we cache the result and return it instead of recomputing it every time, saving us from performing the expensive lookup multiple times.
+Running the above code, we can see that the database query is only performed once, even though we called the `get_data_from_database` function multiple times with the same input. This is because we cache the result and return it instead of recomputing it every time, saving us from performing the expensive lookup unnecessarily.
 
 ```text
 Performing database query for ID 42
@@ -313,13 +313,15 @@ Data: Data for ID 42
 
 Understanding the time complexity of your algorithms is crucial for writing efficient code. Time complexity describes how the runtime of an algorithm grows as the size of the input increases. By choosing algorithms with better time complexity, you can significantly improve the performance of your code.
 
-For example, let's say you wanted to sort a list of $10,000$ items. If you use a simple bubble sort algorithm, which has a time complexity of $O(n^2)$, it would take an average of $100,000,000$ operations to sort the list. However, if you use a more efficient sorting algorithm like quicksort, which has an average time complexity of $O(n\ log\ n)$, it would take roughly $130,000$ operations, which is significantly faster.
+For example, let's say you wanted to sort a list of $10,000$ items. If you use a simple bubble sort algorithm, which has an average-case time complexity of $O(n^2)$, it would take significantly longer than using a more efficient sorting algorithm like quicksort, which has an average time complexity of $O(n\ log\ n)$.
 
-Understanding the time complexity of different algorithms allows you to choose the most efficient one for your specific problem. It's important to consider factors like the size of your input and any constraints or requirements you have when selecting an algorithm. For more on time and space complexity, check out [this article](https://levelup.gitconnected.com/a-beginners-guide-to-analysing-time-and-space-complexity-31e1677f5f5b).
+![Big-O chart](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/on-writing-performant-rust/3.png?fw)
+
+Understanding the time complexity of different algorithms allows you to choose the most efficient one for your specific problem. When choosing an algorithm, it's important to consider factors like the size of your input and any constraints or requirements you have in order to optimize for performance. For a more detailed look at time and space complexity, check out [this article](https://levelup.gitconnected.com/a-beginners-guide-to-analysing-time-and-space-complexity-31e1677f5f5b).
 
 ### Memory Optimization
 
-In addition to optimizing algorithms and data structures, memory optimization is another important aspect of writing efficient Rust code. By minimizing memory usage and maximizing cache locality, you can drastically improve the performance of your programs.
+In addition to optimizing algorithms and data structures, memory optimization is another important aspect of writing efficient Rust code.
 
 #### Specify Capacity When Known
 
@@ -331,9 +333,7 @@ To avoid unnecessary reallocations, you can preallocate a `Vec` with an initial 
 let mut vec = Vec::with_capacity(100);
 ```
 
-By providing an initial capacity that matches or exceeds your expected number of elements, you can reduce or eliminate reallocations during runtime. This type of optimization also works with data structures that reallocate memory, such as `String` and `HashMap`.
-
-For example, if you know that you will be adding 100 elements to a `Vec`, you can use the `with_capacity` method to preallocate the necessary memory:
+By providing an initial capacity that matches or exceeds your expected number of elements, you can reduce or eliminate reallocations during runtime. This type of optimization also works with data structures that reallocate memory, such as `String`s, `HashMap`s, etc:
 
 ```rust
 let mut vec = Vec::with_capacity(100);
@@ -343,7 +343,7 @@ for i in 0..100 {
 }
 ```
 
-In this case, the `Vec` is initialized with a capacity of 100, so it does not need to reallocate memory during the loop. This can improve performance by avoiding unnecessary memory allocations and copying.
+In this case, the `Vec` is initialized with a capacity of 100, so it does not need to reallocate memory during the loop, and as a result, runs faster:
 
 <details>
 <summary>benchmark</summary>
@@ -395,7 +395,7 @@ benchmark_iterate_with_new_vec:
 
 #### Avoid Unnecessary Cloning
 
-In Rust, cloning an object creates a deep copy of the object, which can be expensive in terms of memory and performance. Therefore, it is important to avoid unnecessary cloning whenever possible.
+In Rust, cloning an object creates a deep copy of the object, which can be expensive in terms of memory and performance. Therefore, it's important to avoid unnecessary cloning whenever possible.
 
 One way to avoid unnecessary cloning is by using references instead of owned values. References allow you to borrow a value without taking ownership of it, which means you can access a read-only version of the value without needing to clone it:
 
@@ -465,7 +465,7 @@ fn main() {
 }
 ```
 
-In this example, the `Element` enum has two variants: `Integer` and `Float`, which can each hold a different type. Here, we create a vector of `Element`s and push different variants into it, which we can then iterate over and operate on seamlessly.
+In this example, the `Element` enum has two variants: `Integer` and `Float`, which can each hold a different type. Here, we create a vector of `Element`s and push different types into it, which we can then iterate over and operate on seamlessly.
 
 Using an enum with variants allows us to have a collection that can store different types of values without wasting memory. This is especially useful when dealing with heterogeneous data structures or when you want to represent multiple possibilities in a single variable.
 
@@ -481,7 +481,7 @@ For example, let's take a look at chess bitboards. A chess bitboard is a 64-bit 
 
 This bitboard represents the starting position in chess, with the first 8 bits representing the first row, the next 8 bits representing the second row, and so on. Each bit is set to 1 if the square is occupied and 0 if it is empty.
 
-By combining bitboards, you can represent the state of the entire chessboard in just a few 64-bit integers. Allowing you to perform operations on the entire board at once, which can significantly improve performance. For more on bitboards, check out [this article](https://www.chessprogramming.org/Bitboards).
+By combining bitboards, you can represent the state of the entire chessboard in just a few 64-bit integers, allowing you to perform operations on the entire board at once, which can significantly improve performance. For more on bitboards, check out [this article](https://www.chessprogramming.org/Bitboards). _I strongly recommend checking this out. Bitboards are extremely cool, and the whole game of chess can be reduced to math and bitwise operations._
 
 #### Use Cows
 
@@ -515,7 +515,7 @@ fn main() {
 
 In this example, the `process_string` function takes a `Cow<&str>` as its parameter, checks the length of the string and prints either "Long string" or "Short string" depending on its length.
 
-In the `main` function, we create two string variables: `short_string` and `long_string`, which we then pass to the `process_string` function using `Cow::Borrowed`. Since these strings do not need modification, they are borrowed rather than cloned. Next, we create a new variable called `cloned_long_string`, which is an owned copy of the original long string. We pass this cloned string to the `process_string` function using the `Cow::Owned` variant, since we needed a mutable copy of the string.
+Here, we create two string variables: `short_string` and `long_string`, which we then pass to the `process_string` function using `Cow::Borrowed`. Since these strings do not need modification, they are borrowed rather than cloned. Next, we create a new variable called `cloned_long_string`, which is an owned copy of the original long string. We pass this cloned string to the `process_string` function using the `Cow::Owned` variant, since we needed a mutable copy of the string.
 
 By using the appropriate variant of `Cow`, we avoid unnecessary cloning and memory allocations. If a value does not need modification, it can be borrowed instead of being owned. Only when a value needs to be modified do we create an owned copy. For more information on `Cow`s, check out this [article](https://deterministic.space/secret-life-of-cows.html).
 
