@@ -173,6 +173,8 @@ Profiling and benchmarking your code is an essential step in optimizing its perf
 
 Profiling involves analyzing the runtime behavior of your code to identify areas that consume a significant amount of time or resources. There are several profiling tools available for Rust, such as [perf](https://perf.wiki.kernel.org/index.php/Main_Page), [Valgrind](http://valgrind.org/), and [flamegraph](https://github.com/flamegraph-rs/flamegraph). We'll talk more about Valgrind when we discuss [inlining](#inlining) functions but for now, let's talk about flamegraph.
 
+#### Flamegraph
+
 Flamegraph is a popular profiling tool for Rust which generates a visual graph of your program's runtime stack trace. These graphs, called flame graphs _(graphs plural is weird)_, provide a visual representation of where time is spent in your code, making it easier to pinpoint performance bottlenecks.
 
 To get started with flamegraph, first install it via:
