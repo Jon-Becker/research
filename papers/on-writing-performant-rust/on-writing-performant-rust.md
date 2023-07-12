@@ -685,7 +685,7 @@ Hopefully, this article has helped you become a better (and more performant) rus
 -   Pascal Hertleif, "The Secret Life of Cows", Deterministic Space, Jun 2018. Available: https://deterministic.space/secret-life-of-cows.html
 -   Unknown, "Bitboards", Chess Programming Wiki, Mar 2022. Available: https://www.chessprogramming.org/Bitboards
 -   Rust Team, Clippy, GitHub, Jul 2021. Available: https://github.com/rust-lang/rust-clipp
--   Tara Dwyer, "A Beginner’s Guide to Analysing Time and Space Complexity", Medium, Jun 2023. Available: https://levelup.gitconnected.com/a-beginners-guide-to-analysing-time-and-space-complexity-31e1677f5f5b
+-   Tara Dwyer, "A Beginner's Guide to Analysing Time and Space Complexity", Medium, Jun 2023. Available: https://levelup.gitconnected.com/a-beginners-guide-to-analysing-time-and-space-complexity-31e1677f5f5b
 -   Brook Heisler, Criterion, GitHub, Jan 2021. Available: https://bheisler.github.io/criterion.rs/book/index.html
 -   flamegraph-rs, Flamegraph, GitHub, Jun 2023. Available: https://github.com/flamegraph-rs/flamegraph
 -   Valgrind Developers, Valgrind, Valgrind, Jul 2023. Available: http://valgrind.org/
