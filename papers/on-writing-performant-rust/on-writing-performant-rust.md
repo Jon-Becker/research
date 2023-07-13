@@ -647,7 +647,7 @@ Here are some commonly used compiler flags:
 
 -   `-C target-cpu`: Specifies the target CPU architecture. This allows the compiler to generate machine code optimized for a specific CPU. For example, setting `target-cpu` to `native` will tell the compiler to look for optimizations for this machines CPU.
 -   `-C debuginfo`: Controls whether debug information is included in the generated binary. Disabling debug info can reduce binary size but makes debugging more difficult.
--   `-C panic=abort`: Changes how panics are handled by aborting instead of unwinding, which can improve performance at the cost of not being
+-   `-C panic=abort`: Changes how panics are handled by aborting instead of unwinding, which can improve performance at the cost of not being able to catch panics with `catch_unwind`.
 
 ## Conclusion
 
