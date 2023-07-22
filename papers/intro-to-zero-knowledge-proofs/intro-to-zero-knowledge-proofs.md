@@ -1,13 +1,16 @@
 # Understanding Zero-Knowledge: The Basics of ZK Proofs
 
-![zk](./preview.png)
+![zk](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/intro-to-zero-knowledge-proofs/preview.png?fw)
 
 Zero-knowledge proofs are a fascinating concept in the world of cryptography, allowing for secure verification of information without divulging any details about the information itself. Despite their seemingly impossible nature, these proofs are made possible through intricate mathematical algorithms and cryptographic techniques. In this technical article, we will delve into the basics of ZK proofs, exploring their inner workings and potential applications in various fields such as cryptocurrency and beyond.
 
 ## Importance of Zero-Knowledge Proofs
 In today's digital age, data privacy and security have never been more important. With the increasing amount of sensitive information being shared online, it is crucial to have secure methods for verifying and authenticating data without compromising its confidentiality. Zero-knowledge proofs allow for this level of security by enabling parties to prove the validity of a statement without revealing any additional information beyond what is necessary. This means that sensitive data can be protected while still allowing for verification and authentication.
 
-For example, zero-knowledge proofs can be used to confirm the legitimacy of a financial transaction without disclosing any confidential details about the parties involved, as demonstrated by [ZCash](https://z.cash/) or EVM protocols such as TornadoCash. Beyond cryptocurrency and finance, zero-knowledge proofs have diverse applications. They can be used in voting systems to ensure accurate vote counting while maintaining voter anonymity. In supply chain management, they can verify product authenticity and origin without revealing sensitive information about the manufacturer or supplier. In healthcare, zero-knowledge proofs could securely share medical records between providers while protecting patient privacy.
+For example, zero-knowledge proofs can be used to confirm the legitimacy of a financial transaction without disclosing any confidential details about the parties involved, as demonstrated by [ZCash](https://z.cash/) or EVM protocols such as TornadoCash. 
+
+Fix:
+Beyond cryptocurrency and finance, zero-knowledge proofs have diverse applications. They can be used in voting systems to ensure accurate vote counting while maintaining voter anonymity. In supply chain management, they can verify product authenticity and origin without revealing sensitive information about the manufacturer or supplier. In healthcare, zero-knowledge proofs could securely share medical records between providers while protecting patient privacy.
 
 Overall, zero-knowledge proofs have vast potential across various industries where data privacy and security are paramount concerns.
 
