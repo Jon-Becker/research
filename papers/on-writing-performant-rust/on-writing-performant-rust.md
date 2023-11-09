@@ -84,7 +84,7 @@ Parallelism and concurrency can significantly speed up your code, and you should
 <summary>benchmark</summary>
 
 ```text
-benchmark_resize_images_concurrently:
+benchmark_resize_images_sequentially:
     104.509ms ± 25.90ms per run ( with 100_000 runs ).
 benchmark_resize_images_in_parallel:
     219.319ms ± 71.21ms per run ( with 100_000 runs ).
