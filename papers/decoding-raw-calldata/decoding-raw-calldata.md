@@ -838,9 +838,14 @@ We can now use this to determine the function's signature and decode the rest of
 
 Everything looks good! We've successfully decoded the raw calldata, including it's dynamic types!
 
+_Note: The sizes of parameters, namely the 
+first `uint16` and the `uint16[]` are smaller than the original `uint256` and `uint32[]`. This is fine, and there's nothing we can do about it._
+
 ## Conclusion
 
-todo
+In this paper, we've covered how to decode raw calldata, including dynamic types -- all without the contracts ABI or signature resolution. This functionality is automated in heimdall-rs, and I can't wait to see what you create with it!
+
+_Note: It's probable that this method is not 100% accurate, and can be iterated on and improved. If you notice any edge cases or bugs that I'm missing, please let me know by [opening an issue or PR](https://heimdall.rs)._
 
 ---
 
