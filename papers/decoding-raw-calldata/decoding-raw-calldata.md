@@ -834,23 +834,7 @@ potential_inputs = [ParamType::Uint(16), ParamType::Array(Box::new(ParamType::Ui
 
 We can now use this to determine the function's signature and decode the rest of the calldata.
 
-```sh
-[381] heimdall::decode(0x8be6524600000000000000000000000000000000000000000000000000000000...0000000000000000)
-    │
-    ├─ name:      Unresolved_8be65246
-    ├─ signature: Unresolved_8be65246(uint16, uint16[], bytes10, bytes)
-    ├─ selector:  0x8be65246
-    ├─ calldata:  292 bytes
-    │
-    ├─ input 0:   uint    291
-    ├─       1:   [
-    │                uint    1110
-    │                uint    1929
-    │             ]
-    ├─       2:   bytes   0x31323334353637383930
-    ├─       3:   bytes   0x48656c6c6f2c20776f726c6421
-    └─ ← ()
-```
+![result](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/decoding-raw-calldata/1.png?fw)
 
 Everything looks good! We've successfully decoded the raw calldata, including it's dynamic types!
 
