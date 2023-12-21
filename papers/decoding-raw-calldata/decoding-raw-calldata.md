@@ -6,6 +6,8 @@ With the release of [heimdall-rs 0.7.0](https://github.com/Jon-Becker/heimdall-r
 
 _Note: knowledge of the EVM and Solidity/Vyper is assumed, but not required._
 
+> **_Disclaimer:_** The method presented in this paper is not perfect and may still have some ambiguity when it comes to decoding types. However, without the ABI or signature, this is the best we can do.
+
 ## Brief: EVM Calldata
 
 When interacting with an EVM contract, a caller must provide a set of arguments in order to invoke a function call. These arguments are encoded into a byte array known as the calldata, which is passed to the contract as part of the transaction. The contract can then access the calldata, and decode<sup>1</sup> it into its constituent types.
