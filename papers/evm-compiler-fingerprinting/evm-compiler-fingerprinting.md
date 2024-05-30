@@ -4,11 +4,11 @@
 
 Despite what you might think, compilers are not black boxes. They are complex, deterministic systems that produce machine code from high-level programming languages through a series of well-defined steps. This means that the output of a compiler is not just a random sequence of bytes, but a structured and predictable representation of the original source code. In fact, the output of a compiler is just as much a reflection of the compiler itself as it is of the source code it was given.
 
-In this highly theoretical paper, we'll dive into EVM bytecode and examine distinct patterns and markers left by different major EVM compilers. We'll also explore the potential for using these patterns to identify the compiler used to generate a given contract's bytecode.
+In this experimental paper, we will dive into EVM bytecode and examine distinct patterns and markers left by different major EVM compilers. We will also explore the potential for using these patterns to identify the compiler used to generate a given contract's bytecode.
 
 ## Brief: EVM Bytecode and Compilers
 
-The compiler generates EVM bytecode by translating high-level code, such as Solidity, into a series of instructions (opcodes) that represent the program's logic. Compilers are extremely complex systems that can be broken down into several stages:
+Compilers generate EVM bytecode by translating high-level code, such as Solidity, into a series of instructions (opcodes) that represent the program's logic. Compilers are extremely complex systems that can be broken down into several stages:
 
 1. **Lexical Analysis**: The compiler reads the source code and converts it into a stream of tokens. This may also be referred to as tokenization.
 2. **Syntax Analysis**: The compiler parses the tokens and builds an abstract syntax tree (AST) that represents the structure of the program.
@@ -30,7 +30,7 @@ The Solidity compiler, solc, typically uses the following sequences of opcodes a
 -   `0x60 0x80 0x60 0x40 0x52` (indicates solc `0.4.22+`)
 -   `0x60 0x60 0x60 0x40 0x52` (indicates solc `0.4.11-0.4.21`)
 
-The solidity compiler begins execution by initializing memory that the program will use. For those interested, the exact Solidity memory layout can be found [here](https://docs.soliditylang.org/en/latest/internals/layout_in_memory.html).
+The Solidity compiler begins execution by initializing memory that the program will use. For those interested, the exact Solidity memory layout can be found [here](https://docs.soliditylang.org/en/latest/internals/layout_in_memory.html).
 
 #### Vyper
 
@@ -39,7 +39,7 @@ The Vyper compiler typically uses the following sequences of opcodes as the firs
 -   `0x60 0x04 0x36 0x10 0x15` (indicates vyper `0.2.0-0.2.4,0.2.11-0.3.3`)
 -   `0x34 0x15 0x61 0x00 0x0a` (indicates vyper `0.2.5-0.2.8`)
 
-The vyper compiler begins execution immediately in it's dispatcher, which is why the first few opcodes are different from Solidity.
+The Vyper compiler begins execution immediately in it's dispatcher, which is why the first few opcodes are different from Solidity.
 
 ### CBOR Encoding
 
@@ -52,12 +52,12 @@ However, this metadata is not always present in the bytecode as users can opt to
 
 ## Methodology
 
-If we can already roughly identify the compiler used to generate a contract's bytecode by examining the _first few operations_ in the bytecode, how accurate can we be if we examine the _entire bytecode_? The process we'll take to answer this question is as follows:
+If we can already roughly identify the compiler used to generate a contract's bytecode by examining the _first few operations_ in the bytecode, how much more accurate can we be if we examine the _entire bytecode_? The process we will take to answer this question is as follows:
 
 1. **Data Collection**: We collect a random sample of $5,000$ verified contract bytecode for both Solidity and Vyper from Etherscan.
 2. **Data Classification**: Using the known heuristics and patterns, we classify the contracts into three groups: Solidity, Vyper, and Unknown.
 3. **Pattern Analysis**: We analyze the bytecode of the contracts in each group to identify distinct patterns and markers that can be used to fingerprint the compiler.
-4. **Results**: Using the patterns and markers identified, we re-classify the contracts and evaluate the accuracy of our classification algorithm against known compiler versions.
+4. **Results**: Using the patterns and markers identified, we reclassify the contracts and evaluate the accuracy of our classification algorithm against known compiler versions.
 
 > _Note: I've opted not to take AI/ML approach to this problem as I would rather be able to reason about the patterns and markers left by the compilers rather than rely on a black-box model which simply outputs a prediction._
 
@@ -80,11 +80,11 @@ address,compiler_version
 0xa6ead154167d2e712936b8ebc22b66903c46047c,v0.5.17+commit.d19bba13
 ```
 
-We can then fetch the bytecode for each contract using JSON-RPC, and we'll prune pushed bytes from the bytecode since they make pattern discovery more complicated. For example, `0x60 0x80 0x60 0x40` (`PUSH1 0x80 PUSH1 0x40`) would become `0x60 0x60` (`PUSH1 PUSH1`).
+We can then fetch the bytecode for each contract using JSON-RPC, and we will prune pushed bytes from the bytecode since they make pattern discovery more complicated. For example, `0x60 0x80 0x60 0x40` (`PUSH1 0x80 PUSH1 0x40`) would become `0x60 0x60` (`PUSH1 PUSH1`).
 
 ### 2. Data Classification
 
-Now that we have a list of contracts and their bytecode, we'll use the known heuristics to classify the contracts, and then compare the results to the actual compiler version to determine the accuracy of our initially known heuristics.
+Now that we have a list of contracts and their bytecode, we will use the known heuristics to classify the contracts, and then compare the results to the actual compiler version to determine the accuracy of our initially known heuristics.
 
 <details>
     <summary>View `detect_compiler.rs`</summary>
@@ -200,19 +200,19 @@ Out of curiosity, I also ran the classification function using only CBOR encoded
 
 ### 3. Pattern Analysis
 
-In order to improve our classification algorithm's accuracy, we'll analyze the pruned bytecode of each contract for both Solidity and Vyper with the hope of identifying distinct patterns that can be used to fingerprint the compiler. We'll focus on sequences of 5 operations, as these are long enough to be unique but short enough to be common. Here's the general process we'll follow:
+In order to improve our classification algorithm's accuracy, we will analyze the pruned bytecode of each contract for both Solidity and Vyper with the hope of identifying distinct patterns that can be used to fingerprint the compiler. We will focus on sequences of five operations, as these are long enough to be unique but short enough to be common. Here's the general process we will follow:
 
-1. Given a list of contracts generated by a known compiler, for each contract:
-    1. Extract all unique sequences of 5 operations from the bytecode.
+1. Given a list of contracts generated by known compilers, for each contract:
+    1. Extract all unique sequences of five operations from the bytecode.
     2. Count the frequency of each sequence in all contracts generated by this compiler. So, if a sequence occurs in $1000$ out of $5000$ contracts, its frequency would be $20\%$.
-2. We want the top 10 ascending and descending sequences by frequency for each compiler, so 40 sequences in total.
-3. We'll then compare the sequences for Solidity and Vyper to see if there are any distinct patterns that can be used to fingerprint the compiler. For example, sequences which occur frequently in Solidity contracts but rarely in Vyper contracts could be used as a fingerprint for Solidity.
+2. We want the most compiler-specific sequences, so we will calculate the percentage of contracts generated by each compiler that contain each sequence, and sort the sequences by this percentage, filtering out sequences that are not strong enough heuristics to be used confidently.
+3. We will then compare the sequences for Solidity and Vyper to see if there are any distinct patterns that can be used to fingerprint the compiler. For example, sequences which occur frequently in Solidity contracts but rarely in Vyper contracts could be used as a fingerprint for Solidity.
 
-Note: we don't look for longer sequences, as if a sequence of 6 operations exists, a subset sequence of 5 operations will also exist and is more likely to be found in other contracts. For example, if `0x60 0x80 0x60 0x40 0x52 0x60` exists in the bytecode, then `0x60 0x80 0x60 0x40 0x52` also must exist within the bytecode, and is more likely to be found in other contracts due to its shorter length.
+Note: we don't look for longer sequences, as if a sequence of six operations exists, a subset sequence of five operations will also exist and is more likely to be found in other contracts. For example, if `0x60 0x80 0x60 0x40 0x52 0x60` exists in the bytecode, then `0x60 0x80 0x60 0x40 0x52` also must exist within the bytecode, and is more likely to be found in other contracts due to its shorter length.
 
 ### 4. Results
 
-After performing pattern analysis, we're left with the following sequences, along with their frequency in all contracts and the percentage of contracts generated by each compiler that contain the sequence:
+After performing pattern analysis, we are left with the following sequences, along with their frequency in all contracts and the percentage of contracts generated by each compiler that contain the sequence:
 
 | Sequence       | Assembly                           | Frequency | Vyper        | Solc         |
 | -------------- | ---------------------------------- | --------- | ------------ | ------------ |
@@ -230,7 +230,7 @@ After performing pattern analysis, we're left with the following sequences, alon
 
 ## Findings
 
-Given our set of sequences, we can now modify our classification function which uses these sequences to detect the compiler used to generate a contract's bytecode. We'll do this with a simple confidence heuristic: if a contract contains a sequence that is more common in Solidity contracts, we'll classify it as a Solidity contract, and vice versa for Vyper contracts. Luckily, our sequences are pretty much compiler-specific and exclusive, so we can be confident in our classification.
+Given our set of sequences, we can now modify our classification function which uses these sequences to detect the compiler used to generate a contract's bytecode. We will do this with a simple confidence heuristic: if a contract contains a sequence that is more common in Solidity contracts, we will classify it as a Solidity contract, and vice versa for Vyper contracts. Luckily, our sequences are pretty much compiler-specific and exclusive, so we can be confident in our classification.
 
 <details>
     <summary>View `detect_compiler_new.rs`</summary>
@@ -352,17 +352,17 @@ pub fn detect_compiler_new(bytecode: &[u8]) -> (Compiler, String) {
 
 </details>
 
-With our new classification function in place, we re-analyze the $6,599$ non-proxy contracts and find that we're able to classify $6,476$ contracts with an improved accuracy of $98.1\%$! While this is only a marginal improvement over our initial classification algorithm, it's still a step in the right direction and only a few contracts away from perfect accuracy.
+With our new classification function in place, we reanalyze the $6,599$ non-proxy contracts and find that we are able to classify $6,476$ contracts with an improved accuracy of $98.1\%$! While this is only a marginal improvement over our initial classification algorithm, it's still a step in the right direction and only a few contracts away from perfect accuracy.
 
 ### Proxy Contracts
 
-Through our analysis, it also became trivial to detect proxy contracts, which are contracts that delegate their logic to another contract. The pruned bytecode of these contracts is almost always:
+Through our analysis, it also became easy to detect proxy contracts, which are minimal contracts that delegate their logic to another contract. The pruned bytecode of these contracts is almost always:
 
 ```assembly
 0x363d3d373d3d3d363d735af43d82803e903d916057fd5bf3
 ```
 
-so, we can modify our classification function to detect these contracts with near-perfect accuracy.
+so, we can modify our classification function to detect these contracts with near-perfect accuracy. These contracts are typically not generated by a compiler, but rather by manually written assembly, so they are not classified as Solidity or Vyper contracts.
 
 <details>
     <summary>View `detect_compiler_new_with_proxies.rs`</summary>
@@ -495,27 +495,28 @@ pub fn detect_compiler_new(bytecode: &[u8]) -> (Compiler, String) {
 
 ## Potential Applications
 
-The ability to fingerprint the compiler used to generate a contract's bytecode has several potential applications:
+The ability to fingerprint the compiler used to generate a contract's bytecode has several potential applications, including:
 
-1. Vulnerability Scope Analysis: In July 2023, a critical vulnerability was discovered in the Vyper compiler which lead to [a series of exploits](https://hackmd.io/@vyperlang/HJUgNMhs2), affecting contracts compiled with Vyper versions `0.2.15`, `0.2.16`, and `0.3.0`. A heuristic to identify contracts compiled with these versions may have helped to identify and mitigate the impact of the vulnerability sooner.
+1. <b>Vulnerability Scope Analysis</b>: In July 2023, a critical vulnerability was discovered in the Vyper compiler which lead to [a series of exploits](https://hackmd.io/@vyperlang/HJUgNMhs2), affecting contracts compiled with Vyper versions `0.2.15`, `0.2.16`, and `0.3.0`. A heuristic to identify contracts compiled with these versions may have helped to identify and mitigate the impact of the vulnerability sooner.
 
     _Note: A bytecode-specific heuristic would be more effective than searching for all verified contracts as it would also be able to identify unverified contracts._
 
-2. Smart-Contract Analysis: When working with unverified contract bytecode, it can be useful to know which compiler was used to generate the bytecode. Tools such as [heimdall](./repo/heimdall-rs)'s decompiler can use this information to provide more accurate decompilation results.
+2. <b>Smart-Contract Analysis</b>: When working with unverified contract bytecode, it can be useful to know which compiler was used to generate the bytecode. Tools such as [heimdall](./repo/heimdall-rs)'s decompiler can use this information to provide more accurate decompilation results.
+3. <b>Compiler Optimization and Development</b>: Understanding the specific patterns left by different compilers can help in the optimization and development of new compilers. Developers can analyze these patterns to identify inefficiencies and areas for improvement, leading to more efficient compiler designs.
 
 ## Future Work
 
 While our current approach is able to classify contracts with a high degree of accuracy, there are several areas for future work:
 
--   Memory Layout Analysis: By analyzing the memory layout of contracts generated by different compilers, we may be able to identify additional patterns that can be used to fingerprint the compiler.
--   Machine Learning: While we opted not to take an AI/ML approach to this problem, it may be interesting to see how well a model could perform at classifying contracts based on their bytecode.
--   Additional Compilers: Our current analysis focused on Solidity and Vyper, but there are many other compilers, such as Huff that generate EVM bytecode. By analyzing contracts generated by these compilers, we may be able to identify additional patterns that can be used to fingerprint the compiler.
+-   <b>Memory Layout Analysis</b>: By analyzing the memory layout of contracts generated by different compilers, we may be able to identify additional patterns that can be used to fingerprint the compiler.
+-   <b>Machine Learning</b>: While we opted not to take an AI/ML approach to this problem, it may be interesting to see how well a model could perform at classifying contracts based on their bytecode.
+-   <b>Additional Compilers</b>: Our current analysis focused on Solidity and Vyper, but there are many other compilers, such as Huff, that generate EVM bytecode. By analyzing contracts generated by these compilers, we may be able to identify additional patterns that can be used to fingerprint the compiler.
 
 ## Conclusion
 
-In this paper, we've explored the problem of fingerprinting the compiler used to generate a contract's bytecode. By analyzing the bytecode of contracts generated by Solidity and Vyper, we were able to identify distinct patterns that can be used to fingerprint the compiler, and implement a classification algorithm that can classify contract bytecode with a high degree of accuracy.
+In this paper, we've explored the problem of fingerprinting the compiler used to generate a contract's bytecode. By analyzing the bytecode of contracts generated by Solidity and Vyper, we were able to identify distinct patterns that can be used to fingerprint the compiler, and implemented a classification algorithm that can detect the compiler used to generate a given contract's bytecode with a high degree of accuracy. Our approach not only enhances our understanding of the compilation process but also provides a practical tool for smart contract analysis and security, and will be replacing [heimdall](./repo/heimdall-rs)'s current classification algorithm which is used to improve decompilation accuracy. Future work can further refine these techniques as well as extend them to additional compilers, improving the robustness and applicability of compiler fingerprinting in the EVM ecosystem.
 
 #### Acknowledgements
 
--   [Etherscan](https://etherscan.io) for providing the data used in this analysis, and for their continued support of the Ethereum community.
+-   [Etherscan](https://etherscan.io) for providing the data used in this analysis.
 -   [Ian Guimaraes](https://x.com/iankguimaraes) for brainstorming ideas and providing feedback on this paper.
