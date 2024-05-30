@@ -1,6 +1,6 @@
 {
     "title": "Bytecode, Heuristics, and Compiler Fingerprinting",
     "summary": "In this highly theoretical paper, we'll dive into EVM bytecode and examine distinct patterns and markers left by different major EVM compilers. We'll also explore the potential for using these patterns to identify the compiler used to generate a given contract's bytecode.",
-    "date": "May 24, 2024",
+    "date": "May 31, 2024",
     "ignore": true
 }

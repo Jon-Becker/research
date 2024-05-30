@@ -1,4 +1,4 @@
-#  t l d r
+# t l d r
 
 ![preview](https://img.freepik.com/premium-vector/seamless-greek-key-luxury-background-pattern-texture_231786-8994.jpg?fw)
 
@@ -21,14 +21,14 @@ Through this process, the compiler leaves distinct patterns and markers in the g
 
 ### Existing Known Heuristics
 
-One of the most well-known heuristics for identifying the compiler used to generate a given contract's bytecode is by examining the first few operations in the bytecode. 
+One of the most well-known heuristics for identifying the compiler used to generate a given contract's bytecode is by examining the first few operations in the bytecode.
 
 #### Solidity
 
 Solc typically uses the following sequences of opcodes as the first few instructions in the bytecode:
 
-- `0x60 0x80 0x60 0x40 0x52` (indicates solc `0.4.22+`)
-- `0x60 0x60 0x60 0x40 0x52` (indicates solc `0.4.11-0.4.21`)
+-   `0x60 0x80 0x60 0x40 0x52` (indicates solc `0.4.22+`)
+-   `0x60 0x60 0x60 0x40 0x52` (indicates solc `0.4.11-0.4.21`)
 
 The solidity compiler begins execution by initializing memory that the program will use. For those interested, the exact Solidity memory layout can be found [here](https://docs.soliditylang.org/en/latest/internals/layout_in_memory.html).
 
@@ -36,8 +36,8 @@ The solidity compiler begins execution by initializing memory that the program w
 
 Vyper typically uses the following sequences of opcodes as the first few instructions in the bytecode:
 
-- `0x60 0x04 0x36 0x10 0x15` (indicates vyper `0.2.0-0.2.4,0.2.11-0.3.3`)
-- `0x34 0x15 0x61 0x00 0x0a` (indicates vyper `0.2.5-0.2.8`)
+-   `0x60 0x04 0x36 0x10 0x15` (indicates vyper `0.2.0-0.2.4,0.2.11-0.3.3`)
+-   `0x34 0x15 0x61 0x00 0x0a` (indicates vyper `0.2.5-0.2.8`)
 
 The vyper compiler begins execution immediately in it's dispatcher, which is why the first few opcodes are different from Solidity.
 
@@ -52,9 +52,9 @@ However, this metadata is not always present in the bytecode as users can opt to
 
 ## Methodology
 
-If we can already roughly identify the compiler used to generate a contract's bytecode by examining the *first few operations* in the bytecode, how accurate can we be if we examine the *entire bytecode*? The process we'll take to answer this question is as follows:
+If we can already roughly identify the compiler used to generate a contract's bytecode by examining the _first few operations_ in the bytecode, how accurate can we be if we examine the _entire bytecode_? The process we'll take to answer this question is as follows:
 
-1. **Data Collection**: We collect a random sample of 5,000 verified contract bytecode for both Solidity and Vyper from Etherscan.
+1. **Data Collection**: We collect a random sample of $5,000$ verified contract bytecode for both Solidity and Vyper from Etherscan.
 2. **Data Classification**: Using the known heuristics and patterns, we classify the contracts into three groups: Solidity, Vyper, and Unknown.
 3. **Pattern Analysis**: We analyze the bytecode of the contracts in each group to identify distinct patterns and markers that can be used to fingerprint the compiler.
 4. **Results**: Using the patterns and markers identified, we will re-classify the contracts and evaluate the accuracy of our fingerprinting method. The goal is to reduce the number of contracts classified as "Unknown" and increase the accuracy of the classification.
@@ -63,7 +63,7 @@ If we can already roughly identify the compiler used to generate a contract's by
 
 ### 1. Data Collection
 
-We collected a random sample of 5,000 verified contracts for both Solidity and Vyper from Etherscan, saving their exact compiler version in a CSC. 
+We collected a random sample of $5,000$ verified contracts for both Solidity and Vyper from Etherscan, saving their exact compiler version in a CSV.
 
 Those interested can view the full raw data [here](https://gist.github.com/Jon-Becker/fc0869c1a1090f3b4211d0d888bdd95a), but here's a slice of the data:
 
@@ -84,7 +84,92 @@ We can then fetch the bytecode for each contract using JSON-RPC. We'll also prun
 
 ### 2. Data Classification
 
-Now that we have a list of contracts and their pruned bytecode, we'll use the known heuristics to classify the contracts, and save this mapping to [contracts.json](https://gist.github.com/Jon-Becker/9e5c9eb38236ac5d7baf8893527eb3d4). We used known heuristics rather than exact compiler versions from Etherscan to ensure that we have an accurate benchmark for where our classification accuracy is at now.
+Now that we have a list of contracts and their bytecode, we'll use the known heuristics to classify the contracts, and then compare the results to the actual compiler version to determine the accuracy of our initially known heuristics.
+
+<details>
+    <summary>View `detect_compiler.rs`</summary>
+
+```rust
+/// Detect the compiler used to generate the given bytecode.
+pub fn detect_compiler(bytecode: &[u8]) -> (Compiler, String) {
+    let mut compiler = Compiler::Unknown;
+    let mut version = "unknown".to_string();
+
+    // check the prefix of the bytecode against known compiler patterns
+    if bytecode.starts_with(&[
+        0x36, 0x60, 0x00, 0x60, 0x00, 0x37, 0x61, 0x10, 0x00, 0x60, 0x00, 0x36, 0x60, 0x00, 0x73,
+    ]) {
+        compiler = Compiler::Vyper;
+        version = "proxy".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x04, 0x36, 0x10, 0x15]) {
+        compiler = Compiler::Vyper;
+        version = "0.2.0-0.2.4,0.2.11-0.3.3".to_string();
+    } else if bytecode.starts_with(&[0x34, 0x15, 0x61, 0x00, 0x0a]) {
+        compiler = Compiler::Vyper;
+        version = "0.2.5-0.2.8".to_string();
+    } else if bytecode.starts_with(&[0x73, 0x1b, 0xf7, 0x97]) {
+        compiler = Compiler::Solc;
+        version = "0.4.10-0.4.24".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x80, 0x60, 0x40, 0x52]) {
+        compiler = Compiler::Solc;
+        version = "0.4.22+".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x60, 0x60, 0x40, 0x52]) {
+        compiler = Compiler::Solc;
+        version = "0.4.11-0.4.21".to_string();
+    } else if bytecode.contains_slice(&[0x76, 0x79, 0x70, 0x65, 0x72]) {
+        compiler = Compiler::Vyper;
+    } else if bytecode.contains_slice(&[0x73, 0x6f, 0x6c, 0x63]) {
+        compiler = Compiler::Solc;
+    }
+
+    // check for cbor encoded compiler metadata
+    // https://cbor.io
+    if bytecode.contains_slice(&[0x73, 0x6f, 0x6c, 0x63, 0x43]) {
+        let compiler_version = bytecode.split_by_slice(&[0x73, 0x6f, 0x6c, 0x63, 0x43]);
+
+        if compiler_version.len() > 1 {
+            if let Some(encoded_version) = compiler_version.get(1).and_then(|last| last.get(0..3)) {
+                version = encoded_version
+                    .iter()
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(".");
+                compiler = Compiler::Solc;
+            }
+
+            trace!(
+                "exact compiler version match found due to cbor encoded metadata: {}",
+                version
+            );
+        }
+    } else if bytecode.contains_slice(&[0x76, 0x79, 0x70, 0x65, 0x72, 0x83]) {
+        let compiler_version = bytecode.split_by_slice(&[0x76, 0x79, 0x70, 0x65, 0x72, 0x83]);
+
+        if compiler_version.len() > 1 {
+            if let Some(encoded_version) = compiler_version.get(1).and_then(|last| last.get(0..3)) {
+                version = encoded_version
+                    .iter()
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(".");
+                compiler = Compiler::Vyper;
+            }
+
+            trace!("exact compiler version match found due to cbor encoded metadata");
+        }
+    }
+
+    debug!("detected compiler {compiler} {version}.");
+
+    (compiler, version.trim_end_matches('.').to_string())
+}
+```
+
+</details>
+
+After running our classification function on the $10,000$ contracts, we can generate a mapping of the contracts to their detected compiler and version:
+
+_Note: we also save unpruned bytecode in an additional mapping of similar structure._
 
 ```json
 {
@@ -107,29 +192,330 @@ Now that we have a list of contracts and their pruned bytecode, we'll use the kn
 }
 ```
 
-Given this mapping, our current accuracy given known heuristics is roughly 62.2%, with our known heuristics covering 6216 contracts out of 10000.
+After analyzing the results of our initial classification function, we end up successfully classifying $6,254$ contracts out of $6,599$ non-proxy contracts; an accuracy of $94.8\%$. This is already a great start, but I believe we can do better.
 
-We can do better.
+If we remove CBOR encoded metadata detection from our classification function entirely, we still get the same result of $98.4\%$, as CBOR encoded metadata is not necessary for our classification function to work and can only help determine the exact compiler version used.
+
+Out of curiosity, I also ran the classification function using only CBOR encoded metadata detection, which resulted in a classification accuracy of $13.8\%$, showing that the metadata is not present in the majority of contracts. Interestingly, the metadata was present in over three times as many solidity contracts ($671$) as vyper contracts ($238$).
 
 ### 3. Pattern Analysis
 
+In order to improve our classification accuracy, we'll analyze the pruned bytecode of each contract for both Solidity and Vyper with the hope of identifying distinct patterns that can be used to fingerprint the compiler. We'll focus on sequences of 5 operations, as these are long enough to be unique but short enough to be common. Here's the general process we'll follow:
 
+1. Given a list of contracts generated by a known compiler, for each contract:
+    1. Extract all unique sequences of 5 operations from the bytecode.
+    2. Count the frequency of each sequence in all contracts generated by this compiler. So, if a sequence occurs in $1000$ out of $5000$ contracts, its frequency would be $20\%$.
+2. We want the top 10 ascending and descending sequences by frequency for each compiler, so 40 sequences in total.
+3. We'll then compare the sequences for Solidity and Vyper to see if there are any distinct patterns that can be used to fingerprint the compiler. For example, sequences which occur frequently in Solidity contracts but rarely in Vyper contracts could be used as a fingerprint for Solidity.
 
+Note: we don't look for longer sequences, as if a sequence of 6 operations exists, a subset sequence of 5 operations will also exist, and is more likely to be found in other contracts. For example, if `0x60 0x80 0x60 0x40 0x52 0x60` exists in the bytecode, then `0x60 0x80 0x60 0x40 0x52` also must exist within the bytecode, and is more likely to be found in other contracts due to its shorter length.
+
+### 4. Results
+
+After performing pattern analysis, we're left with the following sequences, along with their frequency in all contracts and the percentage of contracts generated by each compiler that contain the sequence:
+
+| Sequence       | Assembly                           | Frequency | Vyper        | Solc         |
+| -------------- | ---------------------------------- | --------- | ------------ | ------------ |
+| `0x5460526060` | `SLOAD PUSH1 MSTORE PUSH1 PUSH1`   | 9161      | 31.03%       | <b>0.00%</b> |
+| `0x6054605260` | `PUSH1 SLOAD PUSH1 MSTORE PUSH1`   | 6801      | 30.54%       | <b>0.00%</b> |
+| `0x6152615161` | `PUSH2 MSTORE PUSH2 MLOAD PUSH2`   | 30249     | 28.94%       | <b>0.00%</b> |
+| `0x6151615260` | `PUSH2 MLOAD PUSH2 MSTORE PUSH1`   | 6718      | 28.16%       | <b>0.00%</b> |
+| `0x6152606152` | `PUSH2 MSTORE PUSH1 PUSH2 MSTORE`  | 10146     | 27.34%       | <b>0.00%</b> |
+| `0x9050905081` | `SWAP1 POP SWAP1 POP DUP2`         | 8968      | 27.27%       | <b>0.00%</b> |
+| `0x61527f6152` | `PUSH2 MSTORE PUSH32 PUSH2 MSTORE` | 5651      | 26.56%       | <b>0.00%</b> |
+| `0x8063146157` | `DUP1 PUSH4 EQ PUSH2 JUMPI`        | 27780     | <b>0.00%</b> | 94.47%       |
+| `0x1461578063` | `EQ PUSH2 JUMPI DUP1 PUSH4`        | 23576     | <b>0.00%</b> | 93.71%       |
+| `0x6157806314` | `PUSH2 JUMPI DUP1 PUSH4 EQ`        | 25464     | <b>0.00%</b> | 93.71%       |
+| `0x5780631461` | `JUMPI DUP1 PUSH4 EQ PUSH2`        | 25464     | <b>0.00%</b> | 93.71%       |
 
 ## Findings
 
-TODO
+Given our set of sequences, we can now modify our classification function which uses these sequences to detect the compiler used to generate a contract's bytecode. We'll do this with a simple confidence heuristic: if a contract contains a sequence that is more common in Solidity contracts, we'll classify it as a Solidity contract, and vice versa for Vyper contracts. Luckily, our sequences are pretty much compiler-specific, so we can be confident in our classification.
+
+<details>
+    <summary>View `detect_compiler_new.rs`</summary>
+
+```rust
+/// Detect the compiler used to generate the given bytecode.
+pub fn detect_compiler_new(bytecode: &[u8]) -> (Compiler, String) {
+    let mut compiler = Compiler::Unknown;
+    let mut version = "unknown".to_string();
+
+    // Previously known heuristic: perform prefix check for rough version matching
+    if bytecode.starts_with(&[
+        0x36, 0x60, 0x00, 0x60, 0x00, 0x37, 0x61, 0x10, 0x00, 0x60, 0x00, 0x36, 0x60, 0x00, 0x73,
+    ]) {
+        compiler = Compiler::Vyper;
+        version = "proxy".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x04, 0x36, 0x10, 0x15]) {
+        compiler = Compiler::Vyper;
+        version = "0.2.0-0.2.4,0.2.11-0.3.3".to_string();
+    } else if bytecode.starts_with(&[0x34, 0x15, 0x61, 0x00, 0x0a]) {
+        compiler = Compiler::Vyper;
+        version = "0.2.5-0.2.8".to_string();
+    } else if bytecode.starts_with(&[0x73, 0x1b, 0xf7, 0x97]) {
+        compiler = Compiler::Solc;
+        version = "0.4.10-0.4.24".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x80, 0x60, 0x40, 0x52]) {
+        compiler = Compiler::Solc;
+        version = "0.4.22+".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x60, 0x60, 0x40, 0x52]) {
+        compiler = Compiler::Solc;
+        version = "0.4.11-0.4.21".to_string();
+    } else if bytecode.contains_slice(&[0x76, 0x79, 0x70, 0x65, 0x72]) {
+        compiler = Compiler::Vyper;
+    } else if bytecode.contains_slice(&[0x73, 0x6f, 0x6c, 0x63]) {
+        compiler = Compiler::Solc;
+    }
+
+    // Remove `PUSHN [u8; n]` bytes so we are left with only operations
+    let pruned_bytecode = remove_pushbytes_from_bytecode(Bytes::from_iter(bytecode.iter()))
+        .expect("invalid bytecode");
+
+    // heuristics are in the form of (sequence, solc confidence, vyper confidence)
+    let heuristics = [
+        // Solidity
+        ([0x80, 0x63, 0x14, 0x61, 0x57], 0.9447, 0.0),
+        ([0x14, 0x61, 0x57, 0x80, 0x63], 0.9371, 0.0),
+        ([0x61, 0x57, 0x80, 0x63, 0x14], 0.9371, 0.0),
+        ([0x57, 0x80, 0x63, 0x14, 0x61], 0.9371, 0.0),
+        // Vyper
+        ([0x54, 0x60, 0x52, 0x60, 0x60], 0.00, 0.3103),
+        ([0x60, 0x54, 0x60, 0x52, 0x60], 0.00, 0.3054),
+        ([0x61, 0x52, 0x61, 0x51, 0x61], 0.00, 0.2894),
+        ([0x61, 0x51, 0x61, 0x52, 0x60], 0.00, 0.2816),
+        ([0x61, 0x52, 0x60, 0x61, 0x52], 0.00, 0.2734),
+        ([0x90, 0x50, 0x90, 0x50, 0x81], 0.00, 0.2727),
+        ([0x61, 0x52, 0x7f, 0x61, 0x52], 0.00, 0.2656),
+    ];
+
+    // for each heuristic, check if the bytecode contains the sequence and increment the confidence for that compiler.
+    // the compiler with the highest confidence is chosen
+    let (mut solc_confidence, mut vyper_confidence) = (0.0, 0.0);
+    for (sequence, solc, vyper) in heuristics.iter() {
+        if pruned_bytecode.contains_slice(sequence) {
+            solc_confidence += solc;
+            vyper_confidence += vyper;
+        }
+    }
+
+    // classify the compiler based on the confidence levels
+    if solc_confidence != 0.0 && solc_confidence > vyper_confidence {
+        compiler = Compiler::Solc;
+    } else if vyper_confidence != 0.0 && vyper_confidence > solc_confidence {
+        compiler = Compiler::Vyper;
+    }
+
+    // Previously known heuristic: check for cbor encoded compiler metadata
+    // check for cbor encoded compiler metadata
+    // https://cbor.io
+    if bytecode.contains_slice(&[0x73, 0x6f, 0x6c, 0x63, 0x43]) {
+        let compiler_version = bytecode.split_by_slice(&[0x73, 0x6f, 0x6c, 0x63, 0x43]);
+
+        if compiler_version.len() > 1 {
+            if let Some(encoded_version) = compiler_version.get(1).and_then(|last| last.get(0..3)) {
+                version = encoded_version
+                    .iter()
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(".");
+                compiler = Compiler::Solc;
+            }
+
+            trace!(
+                "exact compiler version match found due to cbor encoded metadata: {}",
+                version
+            );
+        }
+    } else if bytecode.contains_slice(&[0x76, 0x79, 0x70, 0x65, 0x72, 0x83]) {
+        let compiler_version = bytecode.split_by_slice(&[0x76, 0x79, 0x70, 0x65, 0x72, 0x83]);
+
+        if compiler_version.len() > 1 {
+            if let Some(encoded_version) = compiler_version.get(1).and_then(|last| last.get(0..3)) {
+                version = encoded_version
+                    .iter()
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(".");
+                compiler = Compiler::Vyper;
+            }
+
+            trace!("exact compiler version match found due to cbor encoded metadata");
+        }
+    }
+
+    debug!("detected compiler {compiler} {version}.");
+
+    (compiler, version.trim_end_matches('.').to_string())
+}
+```
+
+</details>
+
+With our new classification function in place, we re-analyze the $6,254$ contracts and find that we're able to classify $6,599$ contracts with an accuracy of $98.1\%$, a slight improvement over our initial classification by $3.3\%$. While this may not seem like a significant improvement, it's important to note that we're now able to classify contracts with a higher degree of confidence.
+
+### Proxy Contracts
+
+Through our analysis, it also became trivial to detect proxy contracts, which are contracts that delegate their logic to another contract. The pruned bytecode of these contracts is almost always:
+
+```assembly
+0x363d3d373d3d3d363d735af43d82803e903d916057fd5bf3
+```
+
+so, we can modify our classification function to detect these contracts with near-perfect accuracy.
+
+<details>
+    <summary>View `detect_compiler_new_with_proxies.rs`</summary>
+
+```rust
+/// Detect the compiler used to generate the given bytecode.
+pub fn detect_compiler_new(bytecode: &[u8]) -> (Compiler, String) {
+    let mut compiler = Compiler::Unknown;
+    let mut version = "unknown".to_string();
+
+    // Previously known heuristic: perform prefix check for rough version matching
+    if bytecode.starts_with(&[
+        0x36, 0x60, 0x00, 0x60, 0x00, 0x37, 0x61, 0x10, 0x00, 0x60, 0x00, 0x36, 0x60, 0x00, 0x73,
+    ]) {
+        compiler = Compiler::Vyper;
+        version = "proxy".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x04, 0x36, 0x10, 0x15]) {
+        compiler = Compiler::Vyper;
+        version = "0.2.0-0.2.4,0.2.11-0.3.3".to_string();
+    } else if bytecode.starts_with(&[0x34, 0x15, 0x61, 0x00, 0x0a]) {
+        compiler = Compiler::Vyper;
+        version = "0.2.5-0.2.8".to_string();
+    } else if bytecode.starts_with(&[0x73, 0x1b, 0xf7, 0x97]) {
+        compiler = Compiler::Solc;
+        version = "0.4.10-0.4.24".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x80, 0x60, 0x40, 0x52]) {
+        compiler = Compiler::Solc;
+        version = "0.4.22+".to_string();
+    } else if bytecode.starts_with(&[0x60, 0x60, 0x60, 0x40, 0x52]) {
+        compiler = Compiler::Solc;
+        version = "0.4.11-0.4.21".to_string();
+    } else if bytecode.contains_slice(&[0x76, 0x79, 0x70, 0x65, 0x72]) {
+        compiler = Compiler::Vyper;
+    } else if bytecode.contains_slice(&[0x73, 0x6f, 0x6c, 0x63]) {
+        compiler = Compiler::Solc;
+    }
+
+    // Remove `PUSHN [u8; n]` bytes so we are left with only operations
+    let pruned_bytecode = remove_pushbytes_from_bytecode(Bytes::from_iter(bytecode.iter()))
+        .expect("invalid bytecode");
+
+    // detect minimal proxies
+    if pruned_bytecode.eq(&vec![
+        0x36, 0x3d, 0x3d, 0x37, 0x3d, 0x3d, 0x3d, 0x36, 0x3d, 0x73, 0x5a, 0xf4, 0x3d, 0x82, 0x80,
+        0x3e, 0x90, 0x3d, 0x91, 0x60, 0x57, 0xfd, 0x5b, 0xf3,
+    ]) {
+        compiler = Compiler::Proxy;
+        version = "minimal".to_string();
+    }
+
+    // heuristics are in the form of (sequence, solc confidence, vyper confidence)
+    let heuristics = [
+        // Solidity
+        ([0x80, 0x63, 0x14, 0x61, 0x57], 0.9447, 0.0),
+        ([0x14, 0x61, 0x57, 0x80, 0x63], 0.9371, 0.0),
+        ([0x61, 0x57, 0x80, 0x63, 0x14], 0.9371, 0.0),
+        ([0x57, 0x80, 0x63, 0x14, 0x61], 0.9371, 0.0),
+        // Vyper
+        ([0x54, 0x60, 0x52, 0x60, 0x60], 0.00, 0.3103),
+        ([0x60, 0x54, 0x60, 0x52, 0x60], 0.00, 0.3054),
+        ([0x61, 0x52, 0x61, 0x51, 0x61], 0.00, 0.2894),
+        ([0x61, 0x51, 0x61, 0x52, 0x60], 0.00, 0.2816),
+        ([0x61, 0x52, 0x60, 0x61, 0x52], 0.00, 0.2734),
+        ([0x90, 0x50, 0x90, 0x50, 0x81], 0.00, 0.2727),
+        ([0x61, 0x52, 0x7f, 0x61, 0x52], 0.00, 0.2656),
+    ];
+
+    // for each heuristic, check if the bytecode contains the sequence and increment the confidence for that compiler.
+    // the compiler with the highest confidence is chosen
+    let (mut solc_confidence, mut vyper_confidence) = (0.0, 0.0);
+    for (sequence, solc, vyper) in heuristics.iter() {
+        if pruned_bytecode.contains_slice(sequence) {
+            solc_confidence += solc;
+            vyper_confidence += vyper;
+        }
+    }
+
+    // classify the compiler based on the confidence levels
+    if solc_confidence != 0.0 && solc_confidence > vyper_confidence {
+        compiler = Compiler::Solc;
+    } else if vyper_confidence != 0.0 && vyper_confidence > solc_confidence {
+        compiler = Compiler::Vyper;
+    }
+
+    // Previously known heuristic: check for cbor encoded compiler metadata
+    // check for cbor encoded compiler metadata
+    // https://cbor.io
+    if bytecode.contains_slice(&[0x73, 0x6f, 0x6c, 0x63, 0x43]) {
+        let compiler_version = bytecode.split_by_slice(&[0x73, 0x6f, 0x6c, 0x63, 0x43]);
+
+        if compiler_version.len() > 1 {
+            if let Some(encoded_version) = compiler_version.get(1).and_then(|last| last.get(0..3)) {
+                version = encoded_version
+                    .iter()
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(".");
+                compiler = Compiler::Solc;
+            }
+
+            trace!(
+                "exact compiler version match found due to cbor encoded metadata: {}",
+                version
+            );
+        }
+    } else if bytecode.contains_slice(&[0x76, 0x79, 0x70, 0x65, 0x72, 0x83]) {
+        let compiler_version = bytecode.split_by_slice(&[0x76, 0x79, 0x70, 0x65, 0x72, 0x83]);
+
+        if compiler_version.len() > 1 {
+            if let Some(encoded_version) = compiler_version.get(1).and_then(|last| last.get(0..3)) {
+                version = encoded_version
+                    .iter()
+                    .map(|v| v.to_string())
+                    .collect::<Vec<String>>()
+                    .join(".");
+                compiler = Compiler::Vyper;
+            }
+
+            trace!("exact compiler version match found due to cbor encoded metadata");
+        }
+    }
+
+    debug!("detected compiler {compiler} {version}.");
+
+    (compiler, version.trim_end_matches('.').to_string())
+}
+```
+
+</details>
 
 ## Potential Applications
 
 The ability to fingerprint the compiler used to generate a contract's bytecode has several potential applications:
 
-1. Vulnerability Scope Analysis: In July 2023, a critical vulnerability was discovered in the Vyper compiler which lead to [a series of exploits](https://hackmd.io/@vyperlang/HJUgNMhs2), affecting contracts compiled with Vyper versions `0.2.15`, `0.2.16`,  and `0.3.0`. A heuristic to identify contracts compiled with these versions may have helped to identify and mitigate the impact of the vulnerability sooner. 
+1. Vulnerability Scope Analysis: In July 2023, a critical vulnerability was discovered in the Vyper compiler which lead to [a series of exploits](https://hackmd.io/@vyperlang/HJUgNMhs2), affecting contracts compiled with Vyper versions `0.2.15`, `0.2.16`, and `0.3.0`. A heuristic to identify contracts compiled with these versions may have helped to identify and mitigate the impact of the vulnerability sooner.
 
     _Note: A bytecode-specific heuristic would be more effective than searching for all verified contracts as it would also be able to identify unverified contracts._
 
-2. Smart-Contract Analysis: When working with unverified contract bytecode, it can be useful to know which compiler was used to generate the bytecode. Tools such as [heimdall](https://heimdall.rs)'s decompiler can use this information to provide more accurate decompilation results.
+2. Smart-Contract Analysis: When working with unverified contract bytecode, it can be useful to know which compiler was used to generate the bytecode. Tools such as [heimdall](./repo/heimdall-rs)'s decompiler can use this information to provide more accurate decompilation results.
+
+## Future Work
+
+While our current approach is able to classify contracts with a high degree of accuracy, there are several areas for future work:
+
+-   Memory Layout Analysis: By analyzing the memory layout of contracts generated by different compilers, we may be able to identify additional patterns that can be used to fingerprint the compiler.
+-   Machine Learning: While we opted not to take an AI/ML approach to this problem, it may be interesting to see how well a model could perform at classifying contracts based on their bytecode.
+-   Additional Compilers: Our current analysis focused on Solidity and Vyper, but there are many other compilers, such as Huff that generate EVM bytecode. By analyzing contracts generated by these compilers, we may be able to identify additional patterns that can be used to fingerprint the compiler.
 
 ## Conclusion
 
-TODO
+In this paper, we've explored the problem of fingerprinting the compiler used to generate a contract's bytecode. By analyzing the bytecode of contracts generated by Solidity and Vyper, we were able to identify distinct patterns that can be used to fingerprint the compiler, and implement a classification algorithm that can classify contract bytecode with a high degree of accuracy.
+
+#### Acknowledgements
+
+-   [Etherscan](https://etherscan.io) for providing the data used in this analysis, and for their continued support of the Ethereum community.
+-   [Ian Guimaraes](https://x.com/iankguimaraes) for brainstorming ideas and providing feedback on this paper.
