@@ -1,5 +1,6 @@
 {
     "title": "OpenSea Phishing Postmortem",
     "summary": "OpenSea, the world's largest and most used NFT exchange suffered a major exploit on 2/19/2022 which cost users over 640 ETH worth of NFTs.",
-    "date": "February 19, 2022"
+    "date": "February 19, 2022",
+    "tags": ["ethereum", "exploit", "postmortem"]
 }

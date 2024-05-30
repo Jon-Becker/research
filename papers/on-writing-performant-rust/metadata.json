@@ -2,5 +2,6 @@
     "title": "On Maximizing Your Rust Code's Performance",
     "summary": "In this article, we'll dive into the world of writing efficient Rust code by exploring techniques and best practices that can help dramatically improve the performance of your Rust programs.",
     "date": "July 12, 2023",
-    "ignore": false
+    "ignore": false,
+    "tags": ["rust", "performance", "optimization"]
 }

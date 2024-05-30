@@ -2,5 +2,6 @@
     "title": "Compiler Fingerprinting in EVM Bytecode",
     "summary": "In this experimental paper, we will dive into EVM bytecode and examine distinct patterns and markers left by different major EVM compilers. We'll also explore the potential for using these patterns to identify the compiler used to generate a given contract's bytecode.",
     "date": "May 30, 2024",
-    "ignore": false
+    "ignore": false,
+    "tags": ["evm", "bytecode", "compiler", "ethereum"]
 }

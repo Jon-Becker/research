@@ -2,5 +2,6 @@
     "title": "On Decoding Raw EVM Calldata",
     "summary": "With the 0.7.0 release of Heimdall, the toolkit gained the ability to decode raw EVM calldata. In this article, we'll dive into the inner workings of calldata decoding and explore some of the use cases for this new feature.",
     "date": "Dec 20, 2023",
-    "ignore": false
+    "ignore": false,
+    "tags": ["evm", "calldata", "compiler", "ethereum"]
 }

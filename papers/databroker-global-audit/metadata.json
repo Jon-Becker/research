@@ -1,5 +1,6 @@
 {
     "title": "Databroker.global Smart Contract Audit",
     "summary": "The goal of this audit is to review Databroker's smart contract and find and demonstrate potential security issues within the solidity contract. This report will also focus on current Solidity & security best practices.",
-    "date": "October 17, 2021"
+    "date": "October 17, 2021",
+    "tags": ["audit", "ethereum", "smart contract"]
 }

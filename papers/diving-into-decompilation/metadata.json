@@ -1,5 +1,6 @@
 {
     "title": "Diving Into Smart Contract Decompilation",
     "summary": "In this article, we will delve deep into the inner workings of the heimdall-rs decompilation module, examining how it performs this conversion at a low level and exploring its various features and capabilities.",
-    "date": "January 19, 2023"
+    "date": "January 19, 2023",
+    "tags": ["evm", "bytecode", "compiler", "ethereum"]
 }

@@ -1,5 +1,6 @@
 {
     "title": "Ronin Network Exploit Postmortem",
     "summary": "Axie Infinity's Ronin Network fell victim to a $625M exploit on 03/29/2022. This paper takes a look at how this attack happened, and how it can be prevented in the future.",
-    "date": "March 29, 2022"
+    "date": "March 29, 2022",
+    "tags": ["ethereum", "exploit", "postmortem"]
 }
