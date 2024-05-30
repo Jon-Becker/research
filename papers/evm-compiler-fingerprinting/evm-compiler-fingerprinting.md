@@ -520,3 +520,4 @@ In this paper, we've explored the problem of fingerprinting the compiler used to
 
 -   [Etherscan](https://etherscan.io) for providing the data used in this analysis.
 -   [Ian Guimaraes](https://x.com/iankguimaraes) for brainstorming ideas and providing feedback on this paper.
+-   [bantg](https://x.com/bantg) for his initial work on compiler detection for [vyper contracts](https://t.co/kZuiwLA5AW).
