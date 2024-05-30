@@ -194,7 +194,7 @@ _Note: we also save unpruned bytecode in an additional mapping of similar struct
 
 This initial classification function correctly detects the compiler of $6,254$ contracts out of $6,599$ non-proxy contracts; an accuracy of $94.8\%$. This is already a great start, but I believe we can do better.
 
-Interestingly, if we remove CBOR encoded metadata detection from our classification function entirely, we still get the same result of $98.4\%$, as CBOR encoded metadata is not necessary for our classification function to work and can only help determine the exact compiler version used.
+Interestingly, if we remove CBOR encoded metadata detection from our classification function entirely, we still get the same result of $94.8\%$, as CBOR encoded metadata is not necessary for our classification function to work and can only help determine the exact compiler version used.
 
 Out of curiosity, I also ran the classification function using only CBOR encoded metadata detection, which resulted in a classification accuracy of $13.8\%$, showing that the metadata is not present in the majority of contracts. Interestingly, the metadata was present in over three times as many solidity contracts ($671$) as vyper contracts ($238$).
 
