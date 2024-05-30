@@ -1,6 +1,6 @@
 # Compiler Fingerprinting in EVM Bytecode
 
-![preview](https://img.freepik.com/premium-vector/seamless-greek-key-luxury-background-pattern-texture_231786-8994.jpg?fw)
+![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/evm-compiler-fingerprinting/preview.png?fw)
 
 Despite what you might think, compilers are not black boxes. They are complex, deterministic systems that produce machine code from high-level programming languages through a series of well-defined steps. This means that the output of a compiler is not just a random sequence of bytes, but a structured and predictable representation of the original source code. In fact, the output of a compiler is just as much a reflection of the compiler itself as it is of the source code it was given.
 
