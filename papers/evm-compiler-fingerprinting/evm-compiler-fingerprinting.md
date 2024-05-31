@@ -46,7 +46,7 @@ The Vyper compiler begins execution immediately in it's dispatcher, which is why
 When a contract is compiled, the compiler may include metadata in the bytecode that can be used to identify the exact compiler version used to generate the bytecode. This metadata is encoded in a partial CBOR format:
 
 1. Encode `vyper` or `solc` as hex string: `0x7970657283` and `0x736f6c6343` respectively.
-2. Append the version as a 3-byte hex string: `0x000817` for version `0.8.21`. For example, the metadata `0x736f6c6343000817` would be equivalent to `solc 0.8.21`.
+2. Append the version as a 3-byte hex string: `0x000817` for version `0.8.23`. For example, the metadata `0x736f6c6343000817` would be equivalent to `solc 0.8.23`.
 
 However, this metadata is not always present in the bytecode as users can opt to exclude it from the deployed bytecode.
 
