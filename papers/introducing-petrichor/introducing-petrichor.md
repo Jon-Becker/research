@@ -2,7 +2,7 @@
 
 ![petrichor](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/introducing-petrichor/preview.png?fw)
 
-Petrichor is an advanced writing app that fuels a deeper understanding of your interests. It’s designed for anyone who loves diving deep into research and making unexpected connections between ideas. By merging an intuitive editor, automated semantic linking of documents, and AI-powered assistance, Petrichor helps you stay organized and uncover new insights as you write.
+Petrichor is an advanced writing app that fuels a deeper understanding of your interests. It's designed for anyone who loves diving deep into research and making unexpected connections between ideas. By merging an intuitive editor, automated semantic linking of documents, and AI-powered assistance, Petrichor helps you stay organized and uncover new insights as you write.
 
 Petrichor is available for free while in beta, and can be accessed at [petrichor.md](https://petrichor.md).
 
@@ -10,7 +10,7 @@ Petrichor is available for free while in beta, and can be accessed at [petrichor
 
 I started Petrichor as a side project in December 2024. Having used Obsidian for my personal notes, I admired its knowledge graph feature, but found manually linking my notes and ideas to be tedious. I envisioned a tool that could automate this process, not just to save time, but to enhance creativity by suggesting connections I might not have considered.
 
-I also wanted a way to *talk* to my knowledge base — to ask questions, get feedback, and explore ideas in a more conversational manner. This led to the development of an AI assistant that could understand the context of my writing and provide relevant information and suggestions.
+I also wanted a way to *talk* to my knowledge base -- to ask questions, get feedback, and explore ideas in a more conversational manner. This led to the development of an AI assistant that could understand the context of my writing and provide relevant information and suggestions.
 
 The result is Petrichor, a writing app that combines the best of note-taking, writing, and AI to create a seamless experience for anyone who loves to write and learn.
 
