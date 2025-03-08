@@ -66,6 +66,7 @@ Petrichor is still in its early stages, and we have many exciting features plann
 - **Collaboration**: Enabling real-time collaboration on documents, with features such as comments, suggestions, and more.
 - **Research Agent**: Expanding the capabilities of the AI assistant to enable it to perform long-running tasks, such as researching a topic, summarizing a paper, or generating an annotated bibliography.
 - **Open Source**: I am a strong believer in open source software, and plan to open source Petrichor in the future to enable the community to contribute and extend its capabilities. I am also an advocate for data privacy and security, and open sourcing the code will allow users to self-host their own instance of Petrichor.
+- **PDF Support**: Adding support for importing and exporting PDFs, enabling users to annotate and reference PDFs within Petrichor.
 - **Desktop & Mobile Apps**: While Petrichor is currently a web app, we plan to release desktop and mobile apps to provide a more seamless writing experience across devices.
 
 ## Reporting Issues and Feedback
