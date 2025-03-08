@@ -36,6 +36,8 @@ One of the standout features of Petrichor is automated semantic linking. As you 
 
 Petrichor is also equipped with an AI agent that is fully contextualized with your writing, and can provide tailored suggestions and feedback. Whether you're searching for relevant research papers, requesting help with brainstorming, or seeking clarification on complex topics, the AI assistant is designed to enhance your writing experience.
 
+![Contextualized AI Agent](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/introducing-petrichor/4.png?fw)
+
 ### Daily Insights
 
 Petrichor provides daily insights based on your writing activity, helping you track your progress, identify trends, and discover new connections between your ideas. These insights can be used to fuel further research, spark new ideas, or simply reflect on your writing habits.
