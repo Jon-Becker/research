@@ -8,6 +8,12 @@ The [efficient market hypothesis](https://www.jstor.org/stable/2325486), in its 
 
 We analyzed **72.1 million trades** on Kalshi covering **\$18.26 billion** in notional volume across **7.68 million markets**. What we found challenges the efficient market hypothesis in systematic, predictable ways and reveals a market that functions less like a forecasting tool and more like a casino with better PR.
 
+## Brief: Prediction Markets and Kalshi
+
+Prediction markets are event-based exchanges where participants trade binary contracts on real-world outcomes. These contracts settle at either \$1 or \$0, with their trading price ranging from 0 to 100 cents serving as a proxy for the market's perceived probability. Traders capitalize on discrepancies between the market price and their own forecasts by buying or selling accordingly.
+
+[Kalshi](https://kalshi.com) debuted in 2021 as the first U.S. prediction market regulated by the CFTC, operating under the same legal framework as traditional futures exchanges. While it initially focused on economic and weather-related data, the platform remained a niche venue until 2024. Following a [landmark legal victory](https://media.cadc.uscourts.gov/opinions/docs/2024/10/24-5205-2077790.pdf) over the CFTC, Kalshi secured the right to list political contracts. The ensuing 2024 election cycle triggered a massive surge in volume, and the 2025 introduction of sports markets has since solidified Kalshi's transition into a mainstream financial platform.
+
 ```chart
 {
   "type": "bar",
@@ -39,7 +45,7 @@ We analyzed **72.1 million trades** on Kalshi covering **\$18.26 billion** in no
 }
 ```
 
-Kalshi's growth provides a natural laboratory for studying market efficiency. Quarterly volume grew from \$3.9 million in Q3 2021 to \$8.8 billion in Q4 2025, a 2,200x increase. This explosive growth, particularly the acceleration in 2024-2025, means our dataset captures both a nascent market finding its footing and a maturing market with substantial liquidity.
+This trajectory makes Kalshi an ideal laboratory for studying market efficiency. Quarterly volume grew from \$3.9 million in Q3 2021 to \$8.8 billion in Q4 2025, a 2,200x increase. Our dataset spans both the platform's early days as a nascent exchange and its recent emergence as a liquid, high-volume marketplace.
 
 ## Part I: The Longshot Bias
 
