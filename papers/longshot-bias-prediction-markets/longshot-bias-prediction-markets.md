@@ -2,16 +2,17 @@
 
 ![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/preview.png?fw)
 
-The [efficient market hypothesis](https://www.jstor.org/stable/2325486) suggests that asset prices perfectly aggregate all available information [(Fama, 1970)](https://doi.org/10.2307/2325486). Prediction markets—where contracts pay \$1 if an event occurs and \$0 otherwise—should be the purest test of this theory. A contract trading at 50 cents should reflect exactly a 50% probability.
+Slot machines on the Las Vegas Strip return about 93 cents on the dollar, widely considered some of the worst odds in gambling. On Kalshi, a CFTC-regulated prediction market, over \$1.5 billion has been wagered on longshot contracts that return as low as 43 cents on the dollar. Millions of traders are making bets that offer half the expected value of a slot machine.
 
-We analyzed **72.1 million trades** on Kalshi, a CFTC-regulated prediction market, covering **\$18.26 billion** in notional volume across **7.68 million markets**. What we found challenges the efficient market hypothesis in systematic, predictable ways.
+The [efficient market hypothesis](https://www.jstor.org/stable/2325486) suggests that asset prices perfectly aggregate all available information [(Fama, 1970)](https://doi.org/10.2307/2325486). Prediction markets, where contracts pay \$1 if an event occurs and \$0 otherwise, should be the purest test of this theory. Unlike stocks, there's no ambiguity about intrinsic value: the contract either pays out or it doesn't. A contract trading at 50 cents should reflect exactly a 50% probability.
+
+We analyzed **72.1 million trades** on Kalshi covering **\$18.26 billion** in notional volume across **7.68 million markets**. What we found challenges the efficient market hypothesis in systematic, predictable ways and reveals a market that functions less like a forecasting tool and more like a casino with better PR.
 
 ```chart
 {
   "type": "bar",
   "title": "Kalshi Quarterly Volume",
   "data": [
-    {"quarter": "Q2 '21", "volume": 5},
     {"quarter": "Q3 '21", "volume": 3858544},
     {"quarter": "Q4 '21", "volume": 6501536},
     {"quarter": "Q1 '22", "volume": 8067126},
@@ -38,7 +39,7 @@ We analyzed **72.1 million trades** on Kalshi, a CFTC-regulated prediction marke
 }
 ```
 
-Kalshi's growth provides a natural laboratory for studying market efficiency. Quarterly volume grew from \$3.9 million in Q3 2021 to \$8.8 billion in Q4 2025—a 2,200x increase. This explosive growth, particularly the acceleration in 2024-2025, means our dataset captures both a nascent market finding its footing and a maturing market with substantial liquidity.
+Kalshi's growth provides a natural laboratory for studying market efficiency. Quarterly volume grew from \$3.9 million in Q3 2021 to \$8.8 billion in Q4 2025, a 2,200x increase. This explosive growth, particularly the acceleration in 2024-2025, means our dataset captures both a nascent market finding its footing and a maturing market with substantial liquidity.
 
 ## Part I: The Longshot Bias
 
@@ -270,7 +271,7 @@ The calibration curve reveals the characteristic S-shape predicted by [Prospect 
 }
 ```
 
-The mispricing is severe and asymmetric; at 1 cent, contracts win less than half as often as their price implies. An investor systematically buying 1-cent contracts would lose 57.5% of their expected value. For comparison, slot machines—the casino game most associated with terrible odds—return about 93% to players on the Las Vegas strip. Buying 1-cent prediction market contracts offers roughly half the expected return of pulling a lever at the Bellagio. This isn't noise—with 1.34 million trades at that price level, the statistical significance is overwhelming.
+The mispricing is severe and asymmetric; at 1 cent, contracts win less than half as often as their price implies. An investor systematically buying 1-cent contracts would lose 57.5% of their expected value. For comparison, slot machines, the casino game most associated with terrible odds, return about 93% to players on the Las Vegas strip. Buying 1-cent prediction market contracts offers roughly half the expected return of pulling a lever at the Bellagio. This isn't noise; with 1.34 million trades at that price level, the statistical significance is overwhelming.
 
 The mispricing follows a clear pattern: it's largest at the extremes (particularly low prices), converges toward fair value in the 20-40 cent range, and shows slight underpricing of favorites above 70 cents. This is precisely the shape predicted by [Kahneman and Tversky's probability weighting function](https://doi.org/10.2307/1914185), where humans overweight small probabilities and underweight large ones. [Prelec (1998)](https://doi.org/10.2307/2998573) provides a formal mathematical treatment of this weighting function.
 
@@ -278,7 +279,7 @@ The mispricing follows a clear pattern: it's largest at the extremes (particular
 
 In traditional financial markets, arbitrageurs would eliminate such predictable mispricing. Several factors explain its persistence in prediction markets:
 
-**1. Position Limits and Capital Constraints.** Kalshi imposes position limits, preventing sophisticated traders from fully arbitraging away the bias. Even a \$25,000 position limit on a 5-cent contract yields only \$1,250 of exposure—not enough for institutional capital to care.
+**1. Position Limits and Capital Constraints.** Kalshi imposes position limits, preventing sophisticated traders from fully arbitraging away the bias. Even a \$25,000 position limit on a 5-cent contract yields only \$1,250 of exposure, not enough for institutional capital to care.
 
 **2. Carrying Costs.** Selling overpriced longshots requires locking up capital until market resolution. A trader selling 1-cent contracts must post 99 cents of margin per contract for potentially months. The annualized return, even on a massively mispriced contract, may not compensate for the capital lockup.
 
@@ -399,7 +400,7 @@ The aggregate mispricing data might suggest a market-wide inefficiency. But exam
 }
 ```
 
-Trade frequency spikes dramatically at 1-2 cents—1.41 million trades at 1 cent alone, nearly double the count at any mid-range price. This concentration at extreme low prices cannot be explained by market mechanics; it reflects deliberate preference.
+Trade frequency spikes dramatically at 1-2 cents: 1.41 million trades at 1 cent alone, nearly double the count at any mid-range price. This concentration at extreme low prices cannot be explained by market mechanics; it reflects deliberate preference.
 
 ```chart
 {
@@ -512,11 +513,11 @@ Trade frequency spikes dramatically at 1-2 cents—1.41 million trades at 1 cent
 }
 ```
 
-The behavioral signature becomes unmistakable when examining contracts per trade. At 1 cent, traders purchase an average of **548 contracts per trade**—2.5x more than at 50 cents. The pattern is monotonic: as prices decrease, position sizes increase.
+The behavioral signature becomes unmistakable when examining contracts per trade. At 1 cent, traders purchase an average of **548 contracts per trade**, 2.5x more than at 50 cents. The pattern is monotonic: as prices decrease, position sizes increase.
 
-This is lottery ticket behavior. The psychology is straightforward: at 1 cent per contract, a \$50 bet buys 5,000 contracts. If the event occurs, that \$50 becomes \$5,000—a 100x return. The asymmetric payoff structure activates the same mental accounting that drives Powerball purchases. Traders focus on the potential upside ("I could make \$5,000!") while underweighting the probability ("It's only 1%... but maybe").
+This is lottery ticket behavior. The psychology is straightforward: at 1 cent per contract, a \$50 bet buys 5,000 contracts. If the event occurs, that \$50 becomes \$5,000, a 100x return. The asymmetric payoff structure activates the same mental accounting that drives Powerball purchases. Traders focus on the potential upside ("I could make \$5,000!") while underweighting the probability ("It's only 1%... but maybe").
 
-The aggregate numbers tell the story: traders placed 1.41 million trades at 1 cent, purchasing 773 million contracts, but won only 5,711 times—a win rate of 0.43%. The expected value destruction is massive: these traders collectively bet on outcomes with 1% implied probability that actually occurred 0.43% of the time.
+The aggregate numbers tell the story: traders placed 1.41 million trades at 1 cent, purchasing 773 million contracts, but won only 5,711 times, a win rate of 0.43%. The expected value destruction is massive: these traders collectively bet on outcomes with 1% implied probability that actually occurred 0.43% of the time.
 
 ## Part III: Smart Money vs. Dumb Money
 
@@ -733,7 +734,117 @@ Politics and finance markets show tighter calibration across the price spectrum.
 }
 ```
 
-The category composition explains why aggregate mispricing statistics may understate efficiency in "serious" forecasting domains. Sports—the least calibrated category—represents 69% of total platform volume. Weighted by volume, the platform is primarily a sports betting venue with a forecasting platform attached.
+```chart
+{
+  "type": "treemap",
+  "title": "Kalshi Volume by Category",
+  "data": [
+    {
+      "name": "Sports",
+      "value": 12651757458,
+      "children": [
+        {"name": "NFL Games", "value": 3017237118},
+        {"name": "NCAA Football", "value": 2799948915},
+        {"name": "NBA Games", "value": 1683773756},
+        {"name": "MLB Games", "value": 865058318},
+        {"name": "Tennis", "value": 788723341},
+        {"name": "March Madness", "value": 507300610},
+        {"name": "NHL Games", "value": 344058272},
+        {"name": "Golf", "value": 266149855},
+        {"name": "Other Sports", "value": 2379507273}
+      ]
+    },
+    {
+      "name": "Politics",
+      "value": 2395584635,
+      "children": [
+        {"name": "Presidential", "value": 535948943},
+        {"name": "Popular Vote", "value": 301555511},
+        {"name": "NYC Mayor", "value": 138606356},
+        {"name": "Electoral College", "value": 86308117},
+        {"name": "Gov Shutdown", "value": 89645579},
+        {"name": "Senate Races", "value": 56789905},
+        {"name": "Other Politics", "value": 1186730224}
+      ]
+    },
+    {
+      "name": "Crypto",
+      "value": 836366262,
+      "children": [
+        {"name": "Bitcoin Daily", "value": 465236379},
+        {"name": "Bitcoin Price", "value": 142575482},
+        {"name": "Ethereum Daily", "value": 61474960},
+        {"name": "Ethereum Price", "value": 41772237},
+        {"name": "Other Crypto", "value": 125307204}
+      ]
+    },
+    {
+      "name": "Finance",
+      "value": 700263936,
+      "children": [
+        {"name": "Fed Decisions", "value": 278539309},
+        {"name": "S&P 500", "value": 112828803},
+        {"name": "NASDAQ 100", "value": 103992863},
+        {"name": "Rate Cuts", "value": 34297396},
+        {"name": "Other Finance", "value": 170605565}
+      ]
+    },
+    {
+      "name": "Science/Tech",
+      "value": 542083936,
+      "children": [
+        {"name": "AI/LLMs", "value": 15937266},
+        {"name": "Nobel Prize", "value": 12076482},
+        {"name": "Other Sci/Tech", "value": 514070188}
+      ]
+    },
+    {
+      "name": "Weather",
+      "value": 275954298,
+      "children": [
+        {"name": "NYC Weather", "value": 61719529},
+        {"name": "Chicago Weather", "value": 48669278},
+        {"name": "Austin Weather", "value": 39199934},
+        {"name": "Miami Weather", "value": 29747775},
+        {"name": "LA Weather", "value": 27033427},
+        {"name": "Other Weather", "value": 69584355}
+      ]
+    },
+    {
+      "name": "Entertainment",
+      "value": 104614372,
+      "children": [
+        {"name": "Spotify Charts", "value": 19125002},
+        {"name": "Top Artists", "value": 9333924},
+        {"name": "Oscars", "value": 6519179},
+        {"name": "Taylor Swift", "value": 6086781},
+        {"name": "Other Entertainment", "value": 63549486}
+      ]
+    },
+    {
+      "name": "Other",
+      "value": 406612451
+    },
+    {
+      "name": "Media",
+      "value": 52567868
+    },
+    {
+      "name": "World Events",
+      "value": 37694394
+    },
+    {
+      "name": "Esports",
+      "value": 35512864
+    }
+  ],
+  "nameKey": "name",
+  "valueKey": "value",
+  "yUnit": "dollars"
+}
+```
+
+The category composition explains why aggregate mispricing statistics may understate efficiency in "serious" forecasting domains. Sports, the least calibrated category, represents 69% of total platform volume. Weighted by volume, the platform is primarily a sports betting venue with a forecasting platform attached.
 
 ## Part V: Temporal Dynamics
 
@@ -862,7 +973,7 @@ The 3 AM to 10 AM comparison is striking: despite 10x lower volume, overnight ma
 }
 ```
 
-The evening paradox is notable: 10 PM has both the highest volume AND the largest average trade size (\$144), yet excess returns are still -1.39%. High volume doesn't guarantee efficiency—the composition of that volume matters. Evening trading mixes sophisticated traders closing positions with retail traders making entertainment bets.
+The evening paradox is notable: 10 PM has both the highest volume AND the largest average trade size (\$144), yet excess returns are still -1.39%. High volume doesn't guarantee efficiency; the composition of that volume matters. Evening trading mixes sophisticated traders closing positions with retail traders making entertainment bets.
 
 ### Day of Week Effects
 
@@ -927,9 +1038,9 @@ We measured excess returns conditional on recent price movement (the change over
 | +5 to +10 cents    | -2.04%          | 2.20M    |
 | > +10 cents        | **-5.37%**      | 1.83M    |
 
-Traders who buy after large price increases (>10 cents) suffer **5.37% excess losses**—the worst performance of any category we measured. This is textbook momentum chasing: prices spike on news, retail traders pile in at the top, and mean reversion follows.
+Traders who buy after large price increases (>10 cents) suffer **5.37% excess losses**, the worst performance of any category we measured. This is textbook momentum chasing: prices spike on news, retail traders pile in at the top, and mean reversion follows.
 
-The asymmetry is notable: buying after crashes (-10 cents) yields -2.71% excess returns—bad, but half as bad as buying after spikes. Contrarian strategies don't generate alpha, but they avoid the worst behavioral traps.
+The asymmetry is notable: buying after crashes (-10 cents) yields -2.71% excess returns. Bad, but half as bad as buying after spikes. Contrarian strategies don't generate alpha, but they avoid the worst behavioral traps.
 
 ### Market Timing
 
@@ -995,7 +1106,7 @@ Over 70% of all trading volume occurs in the final 10% of a market's lifetime. T
 }
 ```
 
-Traders entering early (0-10% through lifetime) show excess returns of -1.0%, nearly identical to traders entering late (90-100%) at -1.0%. Entry timing does not predict performance—consistent with the hypothesis that price discovery happens primarily through the market mechanism, not through timing skill.
+Traders entering early (0-10% through lifetime) show excess returns of -1.0%, nearly identical to traders entering late (90-100%) at -1.0%. Entry timing does not predict performance, consistent with the hypothesis that price discovery happens primarily through the market mechanism, not through timing skill.
 
 ## Part VII: Market Duration and Efficiency
 
@@ -1160,7 +1271,7 @@ Trades cluster at psychologically salient prices. The trade ratio (observed trad
 | Other Round (multiples of 5) | 1.01x | 5¢, 15¢, 35¢ |
 | Non-round | 0.97x | 47¢, 63¢, 82¢ |
 
-The 50-cent price—maximum uncertainty—attracts 28% more trades than expected. The 99-cent price attracts 43% more. This clustering is statistically significant (χ²=401,343, p<0.001) and suggests traders anchor on round numbers rather than calculating precise fair values.
+The 50-cent price, maximum uncertainty, attracts 28% more trades than expected. The 99-cent price attracts 43% more. This clustering is statistically significant (χ²=401,343, p<0.001) and suggests traders anchor on round numbers rather than calculating precise fair values.
 
 ### Liquidity and Efficiency
 
@@ -1196,7 +1307,7 @@ The 50-cent price—maximum uncertainty—attracts 28% more trades than expected
 }
 ```
 
-Bid-ask spreads show a striking pattern: widest at 50 cents (maximum uncertainty), narrowest at the extremes. The correlation between spread and volume is ρ = -0.993 (p < 10⁻¹⁰)—nearly perfect negative correlation.
+Bid-ask spreads show a striking pattern: widest at 50 cents (maximum uncertainty), narrowest at the extremes. The correlation between spread and volume is ρ = -0.993 (p < 10⁻¹⁰), nearly perfect negative correlation.
 
 The spread-accuracy relationship (ρ = 1.000) confirms the intuition: wider spreads correlate with worse price accuracy. This creates a feedback loop where illiquid markets remain inefficient because the cost of correcting mispricing exceeds the expected profit.
 
@@ -1220,7 +1331,7 @@ The aggregate wealth transfer is substantial. With \$18.26 billion in volume and
 
 ## Conclusion
 
-Prediction markets are not efficient in the academic sense. They exhibit systematic, predictable biases that persist despite substantial liquidity. The longshot bias alone—a 30-60% mispricing at low prices—represents a deviation from rational expectations that would not survive in traditional financial markets.
+Prediction markets are not efficient in the academic sense. They exhibit systematic, predictable biases that persist despite substantial liquidity. The longshot bias alone, a 30-60% mispricing at low prices, represents a deviation from rational expectations that would not survive in traditional financial markets.
 
 Yet the inefficiency is not random. It follows precise patterns:
 
@@ -1229,11 +1340,11 @@ Yet the inefficiency is not random. It follows precise patterns:
 3. **It's temporal.** Overnight and weekend trading is worse than business hours.
 4. **It's size-dependent.** Small traders subsidize large traders.
 
-These patterns are consistent with a market that successfully aggregates information from sophisticated participants while extracting entertainment value from retail traders. The prediction market, in this view, is both a forecasting mechanism AND a gambling venue—and the two functions coexist because they serve different user populations.
+These patterns are consistent with a market that successfully aggregates information from sophisticated participants while extracting entertainment value from retail traders. The prediction market, in this view, is both a forecasting mechanism AND a gambling venue, and the two functions coexist because they serve different user populations.
 
 For those seeking to use prediction markets as forecasting tools, the implications are clear: focus on politics and finance, trade during business hours, ignore price momentum, and weight large trades more heavily than small ones. For those seeking to profit, the path is equally clear: provide liquidity to retail traders buying overpriced longshots, particularly in sports markets during evening hours.
 
-The efficient market hypothesis may be beautiful, but prediction markets reveal something more interesting: a system where efficiency and inefficiency coexist, segmented by participant sophistication, market category, and time of day. The market knows the truth—it just charges different prices to different people for access to it.
+The efficient market hypothesis may be beautiful, but prediction markets reveal something more interesting: a system where efficiency and inefficiency coexist, segmented by participant sophistication, market category, and time of day. The market knows the truth; it just charges different prices to different people for access to it.
 
 ---
 
