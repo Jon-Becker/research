@@ -1,0 +1,7 @@
+{
+  "title": "The Longshot Bias in Prediction Markets",
+  "summary": "An analysis of 68 million prediction market trades reveals that 'longshot' contracts are systematically overpriced. Small traders consistently lose money on these bets, while large, sophisticated traders earn positive returns by taking the other side.",
+  "date": "March 8, 2025",
+  "ignore": true,
+  "tags": ["calibration", "prediction markets", "behavioral finance", "longshot bias", "market microstructure"]
+}
