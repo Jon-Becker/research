@@ -1,1 +1,1 @@
-An analysis of 68 million prediction market trades reveals that 'longshot' contracts are systematically overpriced. Small traders consistently lose money on these bets, while large, sophisticated traders earn positive returns by taking the other side.
+We analyzed 72 million trades to uncover the psychology of prediction markets. From the pervasive 'longshot bias' to the nocturnal habits of bad traders, this paper explores how human behavior shapes market odds.

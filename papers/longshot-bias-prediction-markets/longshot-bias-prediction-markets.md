@@ -1,65 +1,85 @@
-# The Longshot Bias in Prediction Markets
+# Inside the Mind of the Prediction Market Trader
 
-![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/preview.svg?fw)
+![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/preview.png?fw)
 
-The efficient market hypothesis (EMH) posits that asset prices fully reflect all available information. In the context of prediction markets—where participants trade contracts paying out based on future events—this implies that a contract trading at 30 cents should win exactly 30% of the time. If it doesn't, observing traders should arbitrage the discrepancy until the price aligns with reality.
+The efficient market hypothesis is a beautiful idea. It suggests that asset prices are the perfect aggregation of all available information—rational, unbiased, and notoriously hard to beat.
 
-Yet, decades of behavioral finance research have documented a persistent anomaly known as the **longshot bias**: the tendency for low-probability events to be overpriced. Bettors love longshots. Whether in horse racing, lotteries, or options markets, people systematically overpay for the slim chance of a massive payout.
+But markets aren't made of math; they're made of people. And people love a longshot.
 
-We collected and analyzed a dataset of **67.8 million trades** from the CFTC-regulated prediction market Kalshi, covering over $8 billion in trading volume. The data reveals that prediction markets are not immune to this bias. In fact, they exhibit specific, quantifiable inefficiencies that sophisticated traders can—and do—exploit.
+We analyzed **72.1 million trades** on Kalshi, a CFTC-regulated prediction market, covering over **$18 billion** in trading volume. What we found wasn't a pristine machine of collective intelligence. Instead, we found a market deeply shaped by human psychology—risk-seeking, overreaction, and the eternal hope that *this* lottery ticket is the one that pays off.
+
+Here is what 72 million trades tell us about who we are when money is on the line.
 
 ## The Longshot Bias
 
-Our primary finding is arguably the most robust example of the longshot bias ever documented. When we compare the market price of a contract at the time of a trade to its ultimate resolution, a clear pattern emerges: contracts priced low win far less often than they should.
+The most pervasive anomaly in our data is the **longshot bias**. In a perfectly efficient market, a contract trading at 5 cents (implying a 5% probability) should win exactly 5% of the time.
 
-Specifically, contracts priced at **5 cents** (implying a 5% probability) resolve favorably only **3.5%** of the time. This might sound like a small difference, but in percentage terms, it represents a massive 30% relative overpricing. If you systematically bought these longshots, you would expect to lose nearly a third of your capital.
+In reality, cheap contracts are terrible bets.
 
-![Calibration Curve](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/1.svg?fw)
+![Win Rate Calibration](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/win_rate_by_price.png?fw)
 
-The calibration curve above shows this deviation. The dashed line represents perfect calibration. The solid blue line tracks our empirical data. At the left tail (low prices), the blue line dips significantly below the dashed line. This confirms that these "cheap" options are actually expensive in expected value terms.
+As the chart above shows, contracts priced at 5 cents resolve favorably only **3.5%** of the time. That gap might look small, but it represents a **30% loss** on investment. If you systematically bought every "cheap" contract on the platform, you would essentially be lighting money on fire.
 
-Interestingly, this bias is not symmetric. High-priced favorites (e.g., contracts trading at 95 cents) actually exhibit a slight *reverse* bias, winning slightly more often than their prices imply. This S-shaped deviation aligns perfectly with the probability weighting functions described in Prospect Theory, suggesting that human behavioral biases—specifically the over-weighting of small probabilities—drive market prices even in regulated financial environments.
+Conversely, "safe" bets are slightly underpriced. Contracts above 95 cents win more often than their prices imply. This S-shaped curve perfectly matches the *probability weighting function* from Prospect Theory: humans systematically overweight small probabilities (buying hope) and underweight large ones (fearing certainty).
 
-## Who is Losing Money?
+## Smart Money vs. Dumb Money
 
-If longshots are overpriced, someone must be buying them. And if they are consistently losing money, someone else must be making it. By segmenting our data by trade size, we found a stark divergence in performance.
+If longshots are consistently overpriced, who is buying them? And who is getting rich selling them?
 
-Small trades are consistently unprofitable. Trades under $100 generate negative excess returns of approximately -1.3% on average. This suggests that the "marginal" trader driving the longshot bias is likely a retail participant placing small, speculative bets.
+The answer lies in trade size. When we break down performance by the size of the bet, a stark "Smart Money vs. Dumb Money" dynamic emerges.
 
-![Trade Size Returns](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/2.svg?fw)
+![Trade Size vs Win Rate](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/trade_size_vs_win_rate.png?fw)
 
-On the other end of the spectrum, large trades tell a different story. Trades exceeding **$5,000** achieve positive excess returns. These "whale" trades are not just lucky; they are systematically smarter. The data implies that sophisticated actors are identifying mispriced contracts—likely the overpriced longshots bid up by retail traders—and taking the other side.
+*   **Small trades (<$100)** are consistently unprofitable. These are likely retail traders chasing lottery tickets, systematically overpaying for volatility.
+*   **Whale trades (>$5,000)** generate positive excess returns. These large, sophisticated actors aren't gambling; they are acting as the casino, taking the other side of retail's bad bets.
 
-This size-based heterogeneity provides a mechanism for how the market stays somewhat tethered to reality. While retail flow creates noise and bias, institutional capital acts as a partial corrective force, though evidently not enough to completely eliminate the inefficiency.
+This suggests the market isn't just biased—it's predatory. Sophisticated traders are effectively collecting a "behavioral tax" from retail participants.
 
-## Market Dynamics & Liquidity
+## Trading in Your Sleep
 
-Price formation isn't just about beliefs; it's about the mechanics of trading. We examined how bid-ask spreads evolve across the probability spectrum to understand the cost of providing liquidity.
+One of the most surprising findings is that *when* you trade matters just as much as *what* you trade.
 
-Standard microstructure theory suggests that spreads should be widest where asymmetric information is highest—typically at the extremes. However, we observe an **inverted U-shape** pattern.
+We broke down calibration and volume by hour of day (Eastern Time), and the difference between the "night shift" and the "day shift" is dramatic.
 
-![Bid-Ask Spreads](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/3.svg?fw)
+![Intraday Patterns](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/intraday_weekday_patterns.png?fw)
 
-The spread is tightest at the extremes (near 0 and 100 cents) and widest in the middle (around 50 cents). This likely reflects inventory risk rather than information symmetry. A contract trading at 50 cents has the maximum possible variance ($\sigma^2 = p(1-p)$), exposing market makers to the greatest volatility. To compensate for this risk, they widen their spreads.
+*   **The Graveyard Shift (2 AM - 5 AM):** Calibration falls off a cliff. Returns are at their worst (-2.3% excess return). Liquidity is thin, institutional desks are closed, and the market is dominated by insomniacs and bots engaging in noise trading.
+*   **The Morning Rush (8 AM - 10 AM):** The professionals clock in. Calibration is tightest (-0.7% excess return). If you want fair odds, trade when Wall Street is awake.
+*   **The Evening Surge:** Volume actually peaks in the evening (after 6 PM), but efficiency doesn't match the volume. This is the retail "second shift"—people getting home from work and logging on to trade the news.
 
-## Temporal Convergence
+## Chasing the Action
 
-Finally, we looked at how "correct" the market is as a function of time. Unsurprisingly, prediction markets become more accurate as the event approaches. The excess win rate (a measure of error) improves from -1.8% for trades placed a week out to -0.4% in the final hour.
+Traders don't just trade based on probabilities; they trade based on *price action*. We found strong evidence of **momentum overreaction**.
 
-However, we found that **market reactions are asymmetric**. Traders exhibit a "contrarian advantage." Strategies that bought contracts after their price had dropped significantly (>10%) outperformed, while "momentum" strategies that chased rising prices underperformed. This suggests that prediction markets, like equity markets, are prone to overreaction.
+![Contrarian vs Momentum](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/contrarian_vs_momentum.png?fw)
+
+*   **Momentum Chasers:** Traders who bought contracts after the price had just spiked (>10% increase) did terribly, suffering -5.4% excess returns. They bought the hype at the top.
+*   **The Contrarian Edge:** Traders who bought after a crash avoided this trap. They didn't necessarily get rich, but they lost far less than the momentum crowd.
+
+This pattern—chasing green candles and panic-selling red ones—is the hallmark of inexperienced trading, amplified here by the binary nature of the contracts.
+
+## What Are We Betting On?
+
+Finally, it's worth noting where the money actually goes. While prediction markets are touted for forecasting elections and climate risks, the volume distribution tells a simpler story.
+
+![Volume by Price](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/total_volume_by_price.png?fw)
+
+Volume isn't distributed evenly. It clusters massively at the extremes—particularly at 99 cents. Paradoxically, the highest dollar volume is on "sure things," while the highest *number of contracts* traded is often on penny-priced longshots. We are simultaneously obsessed with safety (parking cash in near-certain yields) and danger (buying cheap lottery tickets). The middle ground—genuine uncertainty—is where liquidity often goes to die.
 
 ## Conclusion
 
-Prediction markets are powerful forecasting tools, but they are not crystal balls. They are markets, populated by humans (and algorithms written by humans) subject to classic behavioral biases.
+Prediction markets are often described as "truth machines." A more accurate description might be "consensus machines." They reflect our collective intelligence, yes, but also our collective biases, our sleep schedules, and our tendency to overreact to the latest headline.
 
-For the casual observer, the lesson is caution: that 5-cent "lottery ticket" is likely worth closer to 3 cents. For the sophisticated trader, the lesson is opportunity: the bias is persistent, predictable, and—with enough capital—exploitable. Use the market's probabilities, but treat them as a raw signal in need of calibration, especially when the odds look long.
+For the aspiring trader, the lesson is clear:
+1.  **Don't be a hero.** Avoid the 5-cent longshots.
+2.  **Size indicates conviction.** Trust the whales, fade the minnows.
+3.  **Sleep at night.** Nothing good happens in the market at 3 AM.
 
 ---
 
 ### Resources & Citations
 
-- Arrow, K. J., et al. "The Promise of Prediction Markets." *Science* 320.5878 (2008): 877-878.
 - Kahneman, D., & Tversky, A. "Prospect theory: An analysis of decision under risk." *Econometrica* 47.2 (1979): 263-291.
-- Prelec, D. "The probability weighting function." *Econometrica* 66.3 (1998): 497-527.
-- Wolfers, J., & Zitzewitz, E. "Prediction markets." *Journal of Economic Perspectives* 18.2 (2004): 107-126.
 - Snowberg, E., & Wolfers, J. "Explaining the favorite–long shot bias: Is it risk-love or misperceptions?" *Journal of Political Economy* 118.4 (2010): 723-746.
+- Prelec, D. "The probability weighting function." *Econometrica* 66.3 (1998): 497-527.
+- Kyle, A. S. "Continuous auctions and insider trading." *Econometrica* 53.6 (1985): 1315-1335.
