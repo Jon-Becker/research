@@ -1,0 +1,39 @@
+{
+  "type": "area",
+  "title": "Trading Volume by Market Lifetime",
+  "data": [
+    {
+      "pct": "0-10%",
+      "volume": 1.7
+    },
+    {
+      "pct": "10-20%",
+      "volume": 2.1
+    },
+    {
+      "pct": "20-40%",
+      "volume": 4.8
+    },
+    {
+      "pct": "40-60%",
+      "volume": 6.2
+    },
+    {
+      "pct": "60-80%",
+      "volume": 8.4
+    },
+    {
+      "pct": "80-90%",
+      "volume": 7.1
+    },
+    {
+      "pct": "90-100%",
+      "volume": 70.6
+    }
+  ],
+  "xKey": "pct",
+  "yKeys": [
+    "volume"
+  ],
+  "yUnit": "percent"
+}

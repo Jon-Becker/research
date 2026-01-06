@@ -1,0 +1,47 @@
+{
+  "type": "bar",
+  "title": "Trading Volume by Hour (ET)",
+  "data": [
+    {
+      "hour": "12am",
+      "trades": 2396954
+    },
+    {
+      "hour": "3am",
+      "trades": 258465
+    },
+    {
+      "hour": "6am",
+      "trades": 234155
+    },
+    {
+      "hour": "9am",
+      "trades": 2445718
+    },
+    {
+      "hour": "12pm",
+      "trades": 3654324
+    },
+    {
+      "hour": "3pm",
+      "trades": 4779570
+    },
+    {
+      "hour": "6pm",
+      "trades": 3624100
+    },
+    {
+      "hour": "9pm",
+      "trades": 5198758
+    },
+    {
+      "hour": "10pm",
+      "trades": 5334192
+    }
+  ],
+  "xKey": "hour",
+  "yKeys": [
+    "trades"
+  ],
+  "yUnit": "number"
+}

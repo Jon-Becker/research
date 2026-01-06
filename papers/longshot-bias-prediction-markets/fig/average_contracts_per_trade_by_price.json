@@ -1,0 +1,407 @@
+{
+  "type": "line",
+  "title": "Average Contracts per Trade by Price",
+  "data": [
+    {
+      "price": 1,
+      "contracts": 548.27
+    },
+    {
+      "price": 2,
+      "contracts": 509.87
+    },
+    {
+      "price": 3,
+      "contracts": 460.27
+    },
+    {
+      "price": 4,
+      "contracts": 383.57
+    },
+    {
+      "price": 5,
+      "contracts": 324.4
+    },
+    {
+      "price": 6,
+      "contracts": 314.8
+    },
+    {
+      "price": 7,
+      "contracts": 299.29
+    },
+    {
+      "price": 8,
+      "contracts": 279.65
+    },
+    {
+      "price": 9,
+      "contracts": 262.14
+    },
+    {
+      "price": 10,
+      "contracts": 259.29
+    },
+    {
+      "price": 11,
+      "contracts": 259.59
+    },
+    {
+      "price": 12,
+      "contracts": 247.79
+    },
+    {
+      "price": 13,
+      "contracts": 246.75
+    },
+    {
+      "price": 14,
+      "contracts": 235.88
+    },
+    {
+      "price": 15,
+      "contracts": 231.65
+    },
+    {
+      "price": 16,
+      "contracts": 233.85
+    },
+    {
+      "price": 17,
+      "contracts": 232.85
+    },
+    {
+      "price": 18,
+      "contracts": 218.43
+    },
+    {
+      "price": 19,
+      "contracts": 218.43
+    },
+    {
+      "price": 20,
+      "contracts": 217.35
+    },
+    {
+      "price": 21,
+      "contracts": 220.22
+    },
+    {
+      "price": 22,
+      "contracts": 216.46
+    },
+    {
+      "price": 23,
+      "contracts": 220.33
+    },
+    {
+      "price": 24,
+      "contracts": 207.98
+    },
+    {
+      "price": 25,
+      "contracts": 212.27
+    },
+    {
+      "price": 26,
+      "contracts": 217.03
+    },
+    {
+      "price": 27,
+      "contracts": 222.84
+    },
+    {
+      "price": 28,
+      "contracts": 212.72
+    },
+    {
+      "price": 29,
+      "contracts": 206.46
+    },
+    {
+      "price": 30,
+      "contracts": 202.83
+    },
+    {
+      "price": 31,
+      "contracts": 217.79
+    },
+    {
+      "price": 32,
+      "contracts": 210.36
+    },
+    {
+      "price": 33,
+      "contracts": 209.63
+    },
+    {
+      "price": 34,
+      "contracts": 212.12
+    },
+    {
+      "price": 35,
+      "contracts": 209.38
+    },
+    {
+      "price": 36,
+      "contracts": 215.05
+    },
+    {
+      "price": 37,
+      "contracts": 204.48
+    },
+    {
+      "price": 38,
+      "contracts": 217.85
+    },
+    {
+      "price": 39,
+      "contracts": 210.86
+    },
+    {
+      "price": 40,
+      "contracts": 214.42
+    },
+    {
+      "price": 41,
+      "contracts": 213.98
+    },
+    {
+      "price": 42,
+      "contracts": 221.71
+    },
+    {
+      "price": 43,
+      "contracts": 242.25
+    },
+    {
+      "price": 44,
+      "contracts": 221.76
+    },
+    {
+      "price": 45,
+      "contracts": 221.09
+    },
+    {
+      "price": 46,
+      "contracts": 221.81
+    },
+    {
+      "price": 47,
+      "contracts": 220.09
+    },
+    {
+      "price": 48,
+      "contracts": 217.12
+    },
+    {
+      "price": 49,
+      "contracts": 220.2
+    },
+    {
+      "price": 50,
+      "contracts": 219.25
+    },
+    {
+      "price": 51,
+      "contracts": 234.58
+    },
+    {
+      "price": 52,
+      "contracts": 235.16
+    },
+    {
+      "price": 53,
+      "contracts": 234.57
+    },
+    {
+      "price": 54,
+      "contracts": 227.63
+    },
+    {
+      "price": 55,
+      "contracts": 233.16
+    },
+    {
+      "price": 56,
+      "contracts": 246.14
+    },
+    {
+      "price": 57,
+      "contracts": 248.47
+    },
+    {
+      "price": 58,
+      "contracts": 248.45
+    },
+    {
+      "price": 59,
+      "contracts": 235.08
+    },
+    {
+      "price": 60,
+      "contracts": 218.06
+    },
+    {
+      "price": 61,
+      "contracts": 230.32
+    },
+    {
+      "price": 62,
+      "contracts": 241.93
+    },
+    {
+      "price": 63,
+      "contracts": 227.05
+    },
+    {
+      "price": 64,
+      "contracts": 220.55
+    },
+    {
+      "price": 65,
+      "contracts": 218.75
+    },
+    {
+      "price": 66,
+      "contracts": 220.34
+    },
+    {
+      "price": 67,
+      "contracts": 221.6
+    },
+    {
+      "price": 68,
+      "contracts": 216.82
+    },
+    {
+      "price": 69,
+      "contracts": 219.73
+    },
+    {
+      "price": 70,
+      "contracts": 218.91
+    },
+    {
+      "price": 71,
+      "contracts": 231.29
+    },
+    {
+      "price": 72,
+      "contracts": 219.97
+    },
+    {
+      "price": 73,
+      "contracts": 227.86
+    },
+    {
+      "price": 74,
+      "contracts": 227.33
+    },
+    {
+      "price": 75,
+      "contracts": 216.06
+    },
+    {
+      "price": 76,
+      "contracts": 232.98
+    },
+    {
+      "price": 77,
+      "contracts": 236.65
+    },
+    {
+      "price": 78,
+      "contracts": 230.23
+    },
+    {
+      "price": 79,
+      "contracts": 237.29
+    },
+    {
+      "price": 80,
+      "contracts": 229.85
+    },
+    {
+      "price": 81,
+      "contracts": 245.3
+    },
+    {
+      "price": 82,
+      "contracts": 236.15
+    },
+    {
+      "price": 83,
+      "contracts": 242.5
+    },
+    {
+      "price": 84,
+      "contracts": 246.0
+    },
+    {
+      "price": 85,
+      "contracts": 242.88
+    },
+    {
+      "price": 86,
+      "contracts": 266.92
+    },
+    {
+      "price": 87,
+      "contracts": 255.35
+    },
+    {
+      "price": 88,
+      "contracts": 255.16
+    },
+    {
+      "price": 89,
+      "contracts": 261.32
+    },
+    {
+      "price": 90,
+      "contracts": 258.0
+    },
+    {
+      "price": 91,
+      "contracts": 276.15
+    },
+    {
+      "price": 92,
+      "contracts": 284.13
+    },
+    {
+      "price": 93,
+      "contracts": 275.67
+    },
+    {
+      "price": 94,
+      "contracts": 287.0
+    },
+    {
+      "price": 95,
+      "contracts": 284.94
+    },
+    {
+      "price": 96,
+      "contracts": 302.36
+    },
+    {
+      "price": 97,
+      "contracts": 315.05
+    },
+    {
+      "price": 98,
+      "contracts": 337.95
+    },
+    {
+      "price": 99,
+      "contracts": 409.98
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "contracts"
+  ],
+  "yUnit": "number"
+}

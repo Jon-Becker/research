@@ -1,0 +1,407 @@
+{
+  "type": "line",
+  "title": "Calibration Error by Price (%)",
+  "data": [
+    {
+      "price": 1,
+      "error": -8.65
+    },
+    {
+      "price": 2,
+      "error": -5.08
+    },
+    {
+      "price": 3,
+      "error": -9.79
+    },
+    {
+      "price": 4,
+      "error": -13.77
+    },
+    {
+      "price": 5,
+      "error": -16.36
+    },
+    {
+      "price": 6,
+      "error": -18.07
+    },
+    {
+      "price": 7,
+      "error": -17.28
+    },
+    {
+      "price": 8,
+      "error": -12.84
+    },
+    {
+      "price": 9,
+      "error": -13.53
+    },
+    {
+      "price": 10,
+      "error": -10.86
+    },
+    {
+      "price": 11,
+      "error": -9.77
+    },
+    {
+      "price": 12,
+      "error": -7.45
+    },
+    {
+      "price": 13,
+      "error": -4.83
+    },
+    {
+      "price": 14,
+      "error": -7.51
+    },
+    {
+      "price": 15,
+      "error": -7.19
+    },
+    {
+      "price": 16,
+      "error": -4.63
+    },
+    {
+      "price": 17,
+      "error": -6.81
+    },
+    {
+      "price": 18,
+      "error": -6.82
+    },
+    {
+      "price": 19,
+      "error": -6.28
+    },
+    {
+      "price": 20,
+      "error": 4.03
+    },
+    {
+      "price": 21,
+      "error": 8.11
+    },
+    {
+      "price": 22,
+      "error": 3.3
+    },
+    {
+      "price": 23,
+      "error": -6.82
+    },
+    {
+      "price": 24,
+      "error": -9.18
+    },
+    {
+      "price": 25,
+      "error": -7.56
+    },
+    {
+      "price": 26,
+      "error": -7.27
+    },
+    {
+      "price": 27,
+      "error": -4.76
+    },
+    {
+      "price": 28,
+      "error": 3.25
+    },
+    {
+      "price": 29,
+      "error": 0.12
+    },
+    {
+      "price": 30,
+      "error": -0.37
+    },
+    {
+      "price": 31,
+      "error": 1.41
+    },
+    {
+      "price": 32,
+      "error": 7.44
+    },
+    {
+      "price": 33,
+      "error": 5.39
+    },
+    {
+      "price": 34,
+      "error": 6.34
+    },
+    {
+      "price": 35,
+      "error": 0.23
+    },
+    {
+      "price": 36,
+      "error": -0.8
+    },
+    {
+      "price": 37,
+      "error": 2.6
+    },
+    {
+      "price": 38,
+      "error": 1.82
+    },
+    {
+      "price": 39,
+      "error": -0.79
+    },
+    {
+      "price": 40,
+      "error": 0.1
+    },
+    {
+      "price": 41,
+      "error": -0.83
+    },
+    {
+      "price": 42,
+      "error": -4.47
+    },
+    {
+      "price": 43,
+      "error": -5.07
+    },
+    {
+      "price": 44,
+      "error": -3.24
+    },
+    {
+      "price": 45,
+      "error": -2.1
+    },
+    {
+      "price": 46,
+      "error": 0.23
+    },
+    {
+      "price": 47,
+      "error": -3.65
+    },
+    {
+      "price": 48,
+      "error": -3.19
+    },
+    {
+      "price": 49,
+      "error": -2.25
+    },
+    {
+      "price": 50,
+      "error": 0.0
+    },
+    {
+      "price": 51,
+      "error": 2.16
+    },
+    {
+      "price": 52,
+      "error": 2.94
+    },
+    {
+      "price": 53,
+      "error": 3.24
+    },
+    {
+      "price": 54,
+      "error": -0.2
+    },
+    {
+      "price": 55,
+      "error": 1.72
+    },
+    {
+      "price": 56,
+      "error": 2.55
+    },
+    {
+      "price": 57,
+      "error": 3.82
+    },
+    {
+      "price": 58,
+      "error": 3.24
+    },
+    {
+      "price": 59,
+      "error": 0.58
+    },
+    {
+      "price": 60,
+      "error": -0.06
+    },
+    {
+      "price": 61,
+      "error": 0.5
+    },
+    {
+      "price": 62,
+      "error": -1.1
+    },
+    {
+      "price": 63,
+      "error": -1.53
+    },
+    {
+      "price": 64,
+      "error": 0.45
+    },
+    {
+      "price": 65,
+      "error": -0.12
+    },
+    {
+      "price": 66,
+      "error": -3.27
+    },
+    {
+      "price": 67,
+      "error": -2.65
+    },
+    {
+      "price": 68,
+      "error": -3.49
+    },
+    {
+      "price": 69,
+      "error": -0.64
+    },
+    {
+      "price": 70,
+      "error": 0.16
+    },
+    {
+      "price": 71,
+      "error": -0.04
+    },
+    {
+      "price": 72,
+      "error": -1.27
+    },
+    {
+      "price": 73,
+      "error": 1.75
+    },
+    {
+      "price": 74,
+      "error": 2.56
+    },
+    {
+      "price": 75,
+      "error": 2.53
+    },
+    {
+      "price": 76,
+      "error": 2.91
+    },
+    {
+      "price": 77,
+      "error": 2.03
+    },
+    {
+      "price": 78,
+      "error": -0.94
+    },
+    {
+      "price": 79,
+      "error": -2.14
+    },
+    {
+      "price": 80,
+      "error": -1.01
+    },
+    {
+      "price": 81,
+      "error": 1.48
+    },
+    {
+      "price": 82,
+      "error": 1.5
+    },
+    {
+      "price": 83,
+      "error": 1.39
+    },
+    {
+      "price": 84,
+      "error": 0.88
+    },
+    {
+      "price": 85,
+      "error": 1.27
+    },
+    {
+      "price": 86,
+      "error": 1.22
+    },
+    {
+      "price": 87,
+      "error": 0.73
+    },
+    {
+      "price": 88,
+      "error": 1.02
+    },
+    {
+      "price": 89,
+      "error": 1.22
+    },
+    {
+      "price": 90,
+      "error": 1.22
+    },
+    {
+      "price": 91,
+      "error": 1.34
+    },
+    {
+      "price": 92,
+      "error": 1.12
+    },
+    {
+      "price": 93,
+      "error": 1.3
+    },
+    {
+      "price": 94,
+      "error": 1.16
+    },
+    {
+      "price": 95,
+      "error": 0.87
+    },
+    {
+      "price": 96,
+      "error": 0.58
+    },
+    {
+      "price": 97,
+      "error": 0.31
+    },
+    {
+      "price": 98,
+      "error": 0.12
+    },
+    {
+      "price": 99,
+      "error": 0.1
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "error"
+  ],
+  "yUnit": "percent"
+}

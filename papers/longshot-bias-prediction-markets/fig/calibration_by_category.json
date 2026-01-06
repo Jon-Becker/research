@@ -1,0 +1,707 @@
+{
+  "type": "line",
+  "title": "Calibration by Category",
+  "data": [
+    {
+      "price": 1,
+      "Sports": -21.24,
+      "Politics": -69.06,
+      "Finance": 80.62,
+      "Crypto": 57.8
+    },
+    {
+      "price": 2,
+      "Sports": 4.12,
+      "Politics": -76.61,
+      "Finance": 15.27,
+      "Crypto": 21.13
+    },
+    {
+      "price": 3,
+      "Sports": -0.69,
+      "Politics": -84.74,
+      "Finance": 10.24,
+      "Crypto": 27.43
+    },
+    {
+      "price": 4,
+      "Sports": -6.84,
+      "Politics": -72.32,
+      "Finance": -8.43,
+      "Crypto": 1.26
+    },
+    {
+      "price": 5,
+      "Sports": -15.37,
+      "Politics": -61.23,
+      "Finance": -6.06,
+      "Crypto": -4.53
+    },
+    {
+      "price": 6,
+      "Sports": -18.43,
+      "Politics": -58.28,
+      "Finance": -13.06,
+      "Crypto": 2.12
+    },
+    {
+      "price": 7,
+      "Sports": -16.06,
+      "Politics": -52.65,
+      "Finance": -12.65,
+      "Crypto": -8.72
+    },
+    {
+      "price": 8,
+      "Sports": -9.29,
+      "Politics": -53.53,
+      "Finance": -11.9,
+      "Crypto": -8.03
+    },
+    {
+      "price": 9,
+      "Sports": -10.77,
+      "Politics": -50.56,
+      "Finance": -8.44,
+      "Crypto": -10.71
+    },
+    {
+      "price": 10,
+      "Sports": -8.59,
+      "Politics": -45.57,
+      "Finance": -7.52,
+      "Crypto": -8.7
+    },
+    {
+      "price": 11,
+      "Sports": -8.44,
+      "Politics": -49.15,
+      "Finance": -11.28,
+      "Crypto": -5.0
+    },
+    {
+      "price": 12,
+      "Sports": -2.91,
+      "Politics": -49.83,
+      "Finance": -10.11,
+      "Crypto": -6.15
+    },
+    {
+      "price": 13,
+      "Sports": 0.25,
+      "Politics": -46.46,
+      "Finance": -8.44,
+      "Crypto": -8.05
+    },
+    {
+      "price": 14,
+      "Sports": -3.88,
+      "Politics": -44.07,
+      "Finance": -10.06,
+      "Crypto": -9.14
+    },
+    {
+      "price": 15,
+      "Sports": -6.05,
+      "Politics": -32.88,
+      "Finance": -8.75,
+      "Crypto": -7.88
+    },
+    {
+      "price": 16,
+      "Sports": -1.1,
+      "Politics": -34.32,
+      "Finance": -13.8,
+      "Crypto": -8.65
+    },
+    {
+      "price": 17,
+      "Sports": -4.82,
+      "Politics": -36.3,
+      "Finance": -11.66,
+      "Crypto": -5.24
+    },
+    {
+      "price": 18,
+      "Sports": -5.6,
+      "Politics": -26.24,
+      "Finance": -10.43,
+      "Crypto": -6.71
+    },
+    {
+      "price": 19,
+      "Sports": -3.51,
+      "Politics": -31.69,
+      "Finance": -11.42,
+      "Crypto": -6.47
+    },
+    {
+      "price": 20,
+      "Sports": 9.94,
+      "Politics": -18.55,
+      "Finance": -10.08,
+      "Crypto": -4.27
+    },
+    {
+      "price": 21,
+      "Sports": 15.17,
+      "Politics": -17.19,
+      "Finance": -9.29,
+      "Crypto": -3.88
+    },
+    {
+      "price": 22,
+      "Sports": 8.85,
+      "Politics": -23.72,
+      "Finance": -10.29,
+      "Crypto": -5.26
+    },
+    {
+      "price": 23,
+      "Sports": -6.63,
+      "Politics": -21.25,
+      "Finance": -8.63,
+      "Crypto": -4.65
+    },
+    {
+      "price": 24,
+      "Sports": -10.78,
+      "Politics": -17.12,
+      "Finance": -8.49,
+      "Crypto": -5.31
+    },
+    {
+      "price": 25,
+      "Sports": -10.64,
+      "Politics": -5.05,
+      "Finance": -6.51,
+      "Crypto": -3.97
+    },
+    {
+      "price": 26,
+      "Sports": -10.19,
+      "Politics": -2.52,
+      "Finance": -7.31,
+      "Crypto": -2.93
+    },
+    {
+      "price": 27,
+      "Sports": -4.96,
+      "Politics": -15.3,
+      "Finance": -9.33,
+      "Crypto": -3.62
+    },
+    {
+      "price": 28,
+      "Sports": 6.92,
+      "Politics": -17.13,
+      "Finance": -7.69,
+      "Crypto": -3.77
+    },
+    {
+      "price": 29,
+      "Sports": 1.93,
+      "Politics": -16.11,
+      "Finance": -6.03,
+      "Crypto": -4.23
+    },
+    {
+      "price": 30,
+      "Sports": 0.89,
+      "Politics": -15.29,
+      "Finance": -3.61,
+      "Crypto": -2.59
+    },
+    {
+      "price": 31,
+      "Sports": 2.42,
+      "Politics": -14.92,
+      "Finance": -1.49,
+      "Crypto": -0.49
+    },
+    {
+      "price": 32,
+      "Sports": 11.79,
+      "Politics": -14.81,
+      "Finance": -3.66,
+      "Crypto": -0.92
+    },
+    {
+      "price": 33,
+      "Sports": 9.13,
+      "Politics": -13.25,
+      "Finance": -3.55,
+      "Crypto": -1.75
+    },
+    {
+      "price": 34,
+      "Sports": 10.96,
+      "Politics": -18.22,
+      "Finance": -2.72,
+      "Crypto": -2.25
+    },
+    {
+      "price": 35,
+      "Sports": 2.22,
+      "Politics": -19.59,
+      "Finance": -1.84,
+      "Crypto": -2.38
+    },
+    {
+      "price": 36,
+      "Sports": 0.26,
+      "Politics": -16.99,
+      "Finance": -1.05,
+      "Crypto": -1.83
+    },
+    {
+      "price": 37,
+      "Sports": 5.55,
+      "Politics": -22.59,
+      "Finance": 1.67,
+      "Crypto": -0.89
+    },
+    {
+      "price": 38,
+      "Sports": 4.55,
+      "Politics": -25.27,
+      "Finance": 1.87,
+      "Crypto": -2.3
+    },
+    {
+      "price": 39,
+      "Sports": 0.47,
+      "Politics": -18.29,
+      "Finance": 1.56,
+      "Crypto": -2.6
+    },
+    {
+      "price": 40,
+      "Sports": 2.1,
+      "Politics": -25.39,
+      "Finance": 1.91,
+      "Crypto": -1.57
+    },
+    {
+      "price": 41,
+      "Sports": 2.32,
+      "Politics": -39.96,
+      "Finance": 1.77,
+      "Crypto": 0.36
+    },
+    {
+      "price": 42,
+      "Sports": -2.09,
+      "Politics": -45.92,
+      "Finance": 1.12,
+      "Crypto": -0.92
+    },
+    {
+      "price": 43,
+      "Sports": -3.07,
+      "Politics": -44.13,
+      "Finance": 1.85,
+      "Crypto": -1.5
+    },
+    {
+      "price": 44,
+      "Sports": -1.53,
+      "Politics": -33.82,
+      "Finance": 0.51,
+      "Crypto": -1.27
+    },
+    {
+      "price": 45,
+      "Sports": -0.9,
+      "Politics": -24.11,
+      "Finance": -0.12,
+      "Crypto": -1.39
+    },
+    {
+      "price": 46,
+      "Sports": 1.69,
+      "Politics": -18.64,
+      "Finance": -0.19,
+      "Crypto": -0.88
+    },
+    {
+      "price": 47,
+      "Sports": -3.94,
+      "Politics": -13.2,
+      "Finance": -1.04,
+      "Crypto": -0.71
+    },
+    {
+      "price": 48,
+      "Sports": -3.44,
+      "Politics": -10.76,
+      "Finance": 0.24,
+      "Crypto": -1.26
+    },
+    {
+      "price": 49,
+      "Sports": -2.53,
+      "Politics": -7.06,
+      "Finance": 0.81,
+      "Crypto": -0.59
+    },
+    {
+      "price": 50,
+      "Sports": 0.01,
+      "Politics": 0.0,
+      "Finance": 0.0,
+      "Crypto": 0.0
+    },
+    {
+      "price": 51,
+      "Sports": 2.43,
+      "Politics": 6.78,
+      "Finance": -0.77,
+      "Crypto": 0.57
+    },
+    {
+      "price": 52,
+      "Sports": 3.17,
+      "Politics": 9.93,
+      "Finance": -0.22,
+      "Crypto": 1.16
+    },
+    {
+      "price": 53,
+      "Sports": 3.5,
+      "Politics": 11.71,
+      "Finance": 0.92,
+      "Crypto": 0.63
+    },
+    {
+      "price": 54,
+      "Sports": -1.44,
+      "Politics": 15.88,
+      "Finance": 0.16,
+      "Crypto": 0.75
+    },
+    {
+      "price": 55,
+      "Sports": 0.74,
+      "Politics": 19.72,
+      "Finance": 0.1,
+      "Crypto": 1.14
+    },
+    {
+      "price": 56,
+      "Sports": 1.21,
+      "Politics": 26.57,
+      "Finance": -0.4,
+      "Crypto": 1.0
+    },
+    {
+      "price": 57,
+      "Sports": 2.31,
+      "Politics": 33.29,
+      "Finance": -1.4,
+      "Crypto": 1.13
+    },
+    {
+      "price": 58,
+      "Sports": 1.52,
+      "Politics": 33.25,
+      "Finance": -0.81,
+      "Crypto": 0.67
+    },
+    {
+      "price": 59,
+      "Sports": -1.61,
+      "Politics": 27.77,
+      "Finance": -1.23,
+      "Crypto": -0.25
+    },
+    {
+      "price": 60,
+      "Sports": -1.39,
+      "Politics": 16.93,
+      "Finance": -1.28,
+      "Crypto": 1.05
+    },
+    {
+      "price": 61,
+      "Sports": -0.31,
+      "Politics": 11.69,
+      "Finance": -1.0,
+      "Crypto": 1.66
+    },
+    {
+      "price": 62,
+      "Sports": -2.77,
+      "Politics": 15.49,
+      "Finance": -1.15,
+      "Crypto": 1.41
+    },
+    {
+      "price": 63,
+      "Sports": -3.27,
+      "Politics": 13.27,
+      "Finance": -0.98,
+      "Crypto": 0.52
+    },
+    {
+      "price": 64,
+      "Sports": -0.14,
+      "Politics": 9.56,
+      "Finance": 0.59,
+      "Crypto": 1.03
+    },
+    {
+      "price": 65,
+      "Sports": -1.19,
+      "Politics": 10.55,
+      "Finance": 0.99,
+      "Crypto": 1.28
+    },
+    {
+      "price": 66,
+      "Sports": -5.65,
+      "Politics": 9.39,
+      "Finance": 1.4,
+      "Crypto": 1.16
+    },
+    {
+      "price": 67,
+      "Sports": -4.49,
+      "Politics": 6.53,
+      "Finance": 1.75,
+      "Crypto": 0.86
+    },
+    {
+      "price": 68,
+      "Sports": -5.53,
+      "Politics": 6.97,
+      "Finance": 1.72,
+      "Crypto": 0.43
+    },
+    {
+      "price": 69,
+      "Sports": -1.09,
+      "Politics": 6.7,
+      "Finance": 0.67,
+      "Crypto": 0.22
+    },
+    {
+      "price": 70,
+      "Sports": -0.38,
+      "Politics": 6.55,
+      "Finance": 1.55,
+      "Crypto": 1.11
+    },
+    {
+      "price": 71,
+      "Sports": -0.77,
+      "Politics": 6.58,
+      "Finance": 2.46,
+      "Crypto": 1.73
+    },
+    {
+      "price": 72,
+      "Sports": -2.69,
+      "Politics": 6.66,
+      "Finance": 2.99,
+      "Crypto": 1.47
+    },
+    {
+      "price": 73,
+      "Sports": 1.82,
+      "Politics": 5.66,
+      "Finance": 3.45,
+      "Crypto": 1.34
+    },
+    {
+      "price": 74,
+      "Sports": 3.59,
+      "Politics": 0.88,
+      "Finance": 2.57,
+      "Crypto": 1.03
+    },
+    {
+      "price": 75,
+      "Sports": 3.55,
+      "Politics": 1.68,
+      "Finance": 2.17,
+      "Crypto": 1.32
+    },
+    {
+      "price": 76,
+      "Sports": 3.42,
+      "Politics": 5.4,
+      "Finance": 2.68,
+      "Crypto": 1.68
+    },
+    {
+      "price": 77,
+      "Sports": 1.98,
+      "Politics": 6.35,
+      "Finance": 2.58,
+      "Crypto": 1.39
+    },
+    {
+      "price": 78,
+      "Sports": -2.51,
+      "Politics": 6.69,
+      "Finance": 2.9,
+      "Crypto": 1.48
+    },
+    {
+      "price": 79,
+      "Sports": -4.01,
+      "Politics": 4.57,
+      "Finance": 2.47,
+      "Crypto": 1.03
+    },
+    {
+      "price": 80,
+      "Sports": -2.49,
+      "Politics": 4.64,
+      "Finance": 2.52,
+      "Crypto": 1.07
+    },
+    {
+      "price": 81,
+      "Sports": 0.83,
+      "Politics": 7.43,
+      "Finance": 2.68,
+      "Crypto": 1.52
+    },
+    {
+      "price": 82,
+      "Sports": 1.24,
+      "Politics": 5.76,
+      "Finance": 2.29,
+      "Crypto": 1.47
+    },
+    {
+      "price": 83,
+      "Sports": 0.99,
+      "Politics": 7.43,
+      "Finance": 2.39,
+      "Crypto": 1.07
+    },
+    {
+      "price": 84,
+      "Sports": 0.21,
+      "Politics": 6.54,
+      "Finance": 2.63,
+      "Crypto": 1.65
+    },
+    {
+      "price": 85,
+      "Sports": 1.07,
+      "Politics": 5.8,
+      "Finance": 1.54,
+      "Crypto": 1.39
+    },
+    {
+      "price": 86,
+      "Sports": 0.63,
+      "Politics": 7.17,
+      "Finance": 1.64,
+      "Crypto": 1.49
+    },
+    {
+      "price": 87,
+      "Sports": -0.03,
+      "Politics": 6.94,
+      "Finance": 1.26,
+      "Crypto": 1.2
+    },
+    {
+      "price": 88,
+      "Sports": 0.41,
+      "Politics": 6.79,
+      "Finance": 1.38,
+      "Crypto": 0.84
+    },
+    {
+      "price": 89,
+      "Sports": 1.05,
+      "Politics": 6.08,
+      "Finance": 1.39,
+      "Crypto": 0.62
+    },
+    {
+      "price": 90,
+      "Sports": 0.97,
+      "Politics": 5.06,
+      "Finance": 0.84,
+      "Crypto": 0.97
+    },
+    {
+      "price": 91,
+      "Sports": 1.07,
+      "Politics": 5.0,
+      "Finance": 0.83,
+      "Crypto": 1.06
+    },
+    {
+      "price": 92,
+      "Sports": 0.82,
+      "Politics": 4.66,
+      "Finance": 1.03,
+      "Crypto": 0.7
+    },
+    {
+      "price": 93,
+      "Sports": 1.21,
+      "Politics": 3.96,
+      "Finance": 0.95,
+      "Crypto": 0.66
+    },
+    {
+      "price": 94,
+      "Sports": 1.19,
+      "Politics": 3.72,
+      "Finance": 0.83,
+      "Crypto": -0.14
+    },
+    {
+      "price": 95,
+      "Sports": 0.83,
+      "Politics": 3.22,
+      "Finance": 0.32,
+      "Crypto": 0.24
+    },
+    {
+      "price": 96,
+      "Sports": 0.3,
+      "Politics": 3.01,
+      "Finance": 0.35,
+      "Crypto": -0.05
+    },
+    {
+      "price": 97,
+      "Sports": 0.04,
+      "Politics": 2.62,
+      "Finance": -0.32,
+      "Crypto": -0.85
+    },
+    {
+      "price": 98,
+      "Sports": -0.05,
+      "Politics": 1.56,
+      "Finance": -0.31,
+      "Crypto": -0.43
+    },
+    {
+      "price": 99,
+      "Sports": 0.23,
+      "Politics": 0.7,
+      "Finance": -0.81,
+      "Crypto": -0.58
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "Sports",
+    "Politics",
+    "Finance",
+    "Crypto"
+  ],
+  "yUnit": "percent"
+}

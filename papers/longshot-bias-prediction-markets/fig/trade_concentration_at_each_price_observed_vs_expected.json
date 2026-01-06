@@ -1,0 +1,407 @@
+{
+  "type": "line",
+  "title": "Trade Concentration at Each Price (Observed vs Expected)",
+  "data": [
+    {
+      "price": 1,
+      "ratio": 1.94
+    },
+    {
+      "price": 2,
+      "ratio": 0.97
+    },
+    {
+      "price": 3,
+      "ratio": 1.19
+    },
+    {
+      "price": 4,
+      "ratio": 1.1
+    },
+    {
+      "price": 5,
+      "ratio": 1.11
+    },
+    {
+      "price": 6,
+      "ratio": 1.04
+    },
+    {
+      "price": 7,
+      "ratio": 1.04
+    },
+    {
+      "price": 8,
+      "ratio": 1.04
+    },
+    {
+      "price": 9,
+      "ratio": 1.01
+    },
+    {
+      "price": 10,
+      "ratio": 1.04
+    },
+    {
+      "price": 11,
+      "ratio": 0.93
+    },
+    {
+      "price": 12,
+      "ratio": 0.92
+    },
+    {
+      "price": 13,
+      "ratio": 0.92
+    },
+    {
+      "price": 14,
+      "ratio": 0.95
+    },
+    {
+      "price": 15,
+      "ratio": 0.99
+    },
+    {
+      "price": 16,
+      "ratio": 0.91
+    },
+    {
+      "price": 17,
+      "ratio": 0.95
+    },
+    {
+      "price": 18,
+      "ratio": 0.93
+    },
+    {
+      "price": 19,
+      "ratio": 0.92
+    },
+    {
+      "price": 20,
+      "ratio": 0.98
+    },
+    {
+      "price": 21,
+      "ratio": 0.92
+    },
+    {
+      "price": 22,
+      "ratio": 0.97
+    },
+    {
+      "price": 23,
+      "ratio": 0.98
+    },
+    {
+      "price": 24,
+      "ratio": 0.97
+    },
+    {
+      "price": 25,
+      "ratio": 1.01
+    },
+    {
+      "price": 26,
+      "ratio": 0.91
+    },
+    {
+      "price": 27,
+      "ratio": 0.96
+    },
+    {
+      "price": 28,
+      "ratio": 0.98
+    },
+    {
+      "price": 29,
+      "ratio": 0.97
+    },
+    {
+      "price": 30,
+      "ratio": 1.05
+    },
+    {
+      "price": 31,
+      "ratio": 1.02
+    },
+    {
+      "price": 32,
+      "ratio": 0.99
+    },
+    {
+      "price": 33,
+      "ratio": 1.01
+    },
+    {
+      "price": 34,
+      "ratio": 1.03
+    },
+    {
+      "price": 35,
+      "ratio": 1.01
+    },
+    {
+      "price": 36,
+      "ratio": 1.02
+    },
+    {
+      "price": 37,
+      "ratio": 1.08
+    },
+    {
+      "price": 38,
+      "ratio": 1.1
+    },
+    {
+      "price": 39,
+      "ratio": 1.12
+    },
+    {
+      "price": 40,
+      "ratio": 1.13
+    },
+    {
+      "price": 41,
+      "ratio": 0.97
+    },
+    {
+      "price": 42,
+      "ratio": 1.0
+    },
+    {
+      "price": 43,
+      "ratio": 1.1
+    },
+    {
+      "price": 44,
+      "ratio": 1.15
+    },
+    {
+      "price": 45,
+      "ratio": 1.14
+    },
+    {
+      "price": 46,
+      "ratio": 1.12
+    },
+    {
+      "price": 47,
+      "ratio": 1.14
+    },
+    {
+      "price": 48,
+      "ratio": 1.24
+    },
+    {
+      "price": 49,
+      "ratio": 1.18
+    },
+    {
+      "price": 50,
+      "ratio": 1.28
+    },
+    {
+      "price": 51,
+      "ratio": 1.15
+    },
+    {
+      "price": 52,
+      "ratio": 1.14
+    },
+    {
+      "price": 53,
+      "ratio": 1.18
+    },
+    {
+      "price": 54,
+      "ratio": 1.14
+    },
+    {
+      "price": 55,
+      "ratio": 1.17
+    },
+    {
+      "price": 56,
+      "ratio": 1.09
+    },
+    {
+      "price": 57,
+      "ratio": 1.09
+    },
+    {
+      "price": 58,
+      "ratio": 1.15
+    },
+    {
+      "price": 59,
+      "ratio": 1.1
+    },
+    {
+      "price": 60,
+      "ratio": 1.1
+    },
+    {
+      "price": 61,
+      "ratio": 0.97
+    },
+    {
+      "price": 62,
+      "ratio": 1.06
+    },
+    {
+      "price": 63,
+      "ratio": 1.01
+    },
+    {
+      "price": 64,
+      "ratio": 1.05
+    },
+    {
+      "price": 65,
+      "ratio": 1.07
+    },
+    {
+      "price": 66,
+      "ratio": 0.92
+    },
+    {
+      "price": 67,
+      "ratio": 0.91
+    },
+    {
+      "price": 68,
+      "ratio": 0.94
+    },
+    {
+      "price": 69,
+      "ratio": 0.94
+    },
+    {
+      "price": 70,
+      "ratio": 0.96
+    },
+    {
+      "price": 71,
+      "ratio": 0.81
+    },
+    {
+      "price": 72,
+      "ratio": 0.84
+    },
+    {
+      "price": 73,
+      "ratio": 0.86
+    },
+    {
+      "price": 74,
+      "ratio": 0.87
+    },
+    {
+      "price": 75,
+      "ratio": 0.92
+    },
+    {
+      "price": 76,
+      "ratio": 0.8
+    },
+    {
+      "price": 77,
+      "ratio": 0.83
+    },
+    {
+      "price": 78,
+      "ratio": 0.84
+    },
+    {
+      "price": 79,
+      "ratio": 0.87
+    },
+    {
+      "price": 80,
+      "ratio": 0.93
+    },
+    {
+      "price": 81,
+      "ratio": 0.77
+    },
+    {
+      "price": 82,
+      "ratio": 0.77
+    },
+    {
+      "price": 83,
+      "ratio": 0.75
+    },
+    {
+      "price": 84,
+      "ratio": 0.82
+    },
+    {
+      "price": 85,
+      "ratio": 0.84
+    },
+    {
+      "price": 86,
+      "ratio": 0.78
+    },
+    {
+      "price": 87,
+      "ratio": 0.75
+    },
+    {
+      "price": 88,
+      "ratio": 0.84
+    },
+    {
+      "price": 89,
+      "ratio": 0.81
+    },
+    {
+      "price": 90,
+      "ratio": 0.88
+    },
+    {
+      "price": 91,
+      "ratio": 0.78
+    },
+    {
+      "price": 92,
+      "ratio": 0.82
+    },
+    {
+      "price": 93,
+      "ratio": 0.85
+    },
+    {
+      "price": 94,
+      "ratio": 0.9
+    },
+    {
+      "price": 95,
+      "ratio": 0.97
+    },
+    {
+      "price": 96,
+      "ratio": 0.94
+    },
+    {
+      "price": 97,
+      "ratio": 1.1
+    },
+    {
+      "price": 98,
+      "ratio": 1.05
+    },
+    {
+      "price": 99,
+      "ratio": 1.43
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "ratio"
+  ],
+  "yUnit": "number"
+}

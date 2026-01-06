@@ -1,0 +1,35 @@
+{
+  "type": "bar",
+  "title": "Taker Performance After Price Movements",
+  "data": [
+    {
+      "change": "<-10\u00a2",
+      "excess": -2.71
+    },
+    {
+      "change": "-5 to -2\u00a2",
+      "excess": -0.67
+    },
+    {
+      "change": "No change",
+      "excess": -0.97
+    },
+    {
+      "change": "+2 to +5\u00a2",
+      "excess": -1.12
+    },
+    {
+      "change": "+5 to +10\u00a2",
+      "excess": -2.04
+    },
+    {
+      "change": ">+10\u00a2",
+      "excess": -5.37
+    }
+  ],
+  "xKey": "change",
+  "yKeys": [
+    "excess"
+  ],
+  "yUnit": "percent"
+}
