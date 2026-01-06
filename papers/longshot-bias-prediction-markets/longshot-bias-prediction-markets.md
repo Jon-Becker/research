@@ -228,7 +228,7 @@ The 3 AM traders are placing smaller bets, suggesting less sophisticated partici
 
 ```chart
 {
-  "type": "bar",
+  "type": "area",
   "title": "Trading Volume by Market Lifetime",
   "data": [
     {"pct": "0-10%", "volume": 1.7},
@@ -299,26 +299,26 @@ The mispricing that does exist follows a predictable pattern:
   "type": "line",
   "title": "Calibration Error by Price (%)",
   "data": [
-    {"price": 1, "error": -9}, {"price": 2, "error": -5}, {"price": 3, "error": -10}, {"price": 4, "error": -14}, {"price": 5, "error": -16},
-    {"price": 6, "error": -18}, {"price": 7, "error": -17}, {"price": 8, "error": -13}, {"price": 9, "error": -14}, {"price": 10, "error": -11},
-    {"price": 11, "error": -10}, {"price": 12, "error": -7}, {"price": 13, "error": -5}, {"price": 14, "error": -8}, {"price": 15, "error": -7},
-    {"price": 16, "error": -5}, {"price": 17, "error": -7}, {"price": 18, "error": -7}, {"price": 19, "error": -6}, {"price": 20, "error": 4},
-    {"price": 21, "error": 8}, {"price": 22, "error": 3}, {"price": 23, "error": -7}, {"price": 24, "error": -9}, {"price": 25, "error": -8},
-    {"price": 26, "error": -7}, {"price": 27, "error": -5}, {"price": 28, "error": 3}, {"price": 29, "error": 0}, {"price": 30, "error": 0},
-    {"price": 31, "error": 1}, {"price": 32, "error": 7}, {"price": 33, "error": 5}, {"price": 34, "error": 6}, {"price": 35, "error": 0},
-    {"price": 36, "error": -1}, {"price": 37, "error": 3}, {"price": 38, "error": 2}, {"price": 39, "error": -1}, {"price": 40, "error": 0},
-    {"price": 41, "error": -1}, {"price": 42, "error": -4}, {"price": 43, "error": -5}, {"price": 44, "error": -3}, {"price": 45, "error": -2},
-    {"price": 46, "error": 0}, {"price": 47, "error": -4}, {"price": 48, "error": -3}, {"price": 49, "error": -2}, {"price": 50, "error": 0},
-    {"price": 51, "error": 2}, {"price": 52, "error": 3}, {"price": 53, "error": 3}, {"price": 54, "error": 0}, {"price": 55, "error": 2},
-    {"price": 56, "error": 3}, {"price": 57, "error": 4}, {"price": 58, "error": 3}, {"price": 59, "error": 1}, {"price": 60, "error": 0},
-    {"price": 61, "error": 1}, {"price": 62, "error": -1}, {"price": 63, "error": -2}, {"price": 64, "error": 0}, {"price": 65, "error": 0},
-    {"price": 66, "error": -3}, {"price": 67, "error": -3}, {"price": 68, "error": -3}, {"price": 69, "error": -1}, {"price": 70, "error": 0},
-    {"price": 71, "error": 0}, {"price": 72, "error": -1}, {"price": 73, "error": 2}, {"price": 74, "error": 3}, {"price": 75, "error": 3},
-    {"price": 76, "error": 3}, {"price": 77, "error": 2}, {"price": 78, "error": -1}, {"price": 79, "error": -2}, {"price": 80, "error": -1},
-    {"price": 81, "error": 1}, {"price": 82, "error": 2}, {"price": 83, "error": 1}, {"price": 84, "error": 1}, {"price": 85, "error": 1},
-    {"price": 86, "error": 1}, {"price": 87, "error": 1}, {"price": 88, "error": 1}, {"price": 89, "error": 1}, {"price": 90, "error": 1},
-    {"price": 91, "error": 1}, {"price": 92, "error": 1}, {"price": 93, "error": 1}, {"price": 94, "error": 1}, {"price": 95, "error": 1},
-    {"price": 96, "error": 1}, {"price": 97, "error": 0}, {"price": 98, "error": 0}, {"price": 99, "error": 0}
+    {"price": 1, "error": -8.65}, {"price": 2, "error": -5.08}, {"price": 3, "error": -9.79}, {"price": 4, "error": -13.77}, {"price": 5, "error": -16.36},
+    {"price": 6, "error": -18.07}, {"price": 7, "error": -17.28}, {"price": 8, "error": -12.84}, {"price": 9, "error": -13.53}, {"price": 10, "error": -10.86},
+    {"price": 11, "error": -9.77}, {"price": 12, "error": -7.45}, {"price": 13, "error": -4.83}, {"price": 14, "error": -7.51}, {"price": 15, "error": -7.19},
+    {"price": 16, "error": -4.63}, {"price": 17, "error": -6.81}, {"price": 18, "error": -6.82}, {"price": 19, "error": -6.28}, {"price": 20, "error": 4.03},
+    {"price": 21, "error": 8.11}, {"price": 22, "error": 3.30}, {"price": 23, "error": -6.82}, {"price": 24, "error": -9.18}, {"price": 25, "error": -7.56},
+    {"price": 26, "error": -7.27}, {"price": 27, "error": -4.76}, {"price": 28, "error": 3.25}, {"price": 29, "error": 0.12}, {"price": 30, "error": -0.37},
+    {"price": 31, "error": 1.41}, {"price": 32, "error": 7.44}, {"price": 33, "error": 5.39}, {"price": 34, "error": 6.34}, {"price": 35, "error": 0.23},
+    {"price": 36, "error": -0.80}, {"price": 37, "error": 2.60}, {"price": 38, "error": 1.82}, {"price": 39, "error": -0.79}, {"price": 40, "error": 0.10},
+    {"price": 41, "error": -0.83}, {"price": 42, "error": -4.47}, {"price": 43, "error": -5.07}, {"price": 44, "error": -3.24}, {"price": 45, "error": -2.10},
+    {"price": 46, "error": 0.23}, {"price": 47, "error": -3.65}, {"price": 48, "error": -3.19}, {"price": 49, "error": -2.25}, {"price": 50, "error": 0.00},
+    {"price": 51, "error": 2.16}, {"price": 52, "error": 2.94}, {"price": 53, "error": 3.24}, {"price": 54, "error": -0.20}, {"price": 55, "error": 1.72},
+    {"price": 56, "error": 2.55}, {"price": 57, "error": 3.82}, {"price": 58, "error": 3.24}, {"price": 59, "error": 0.58}, {"price": 60, "error": -0.06},
+    {"price": 61, "error": 0.50}, {"price": 62, "error": -1.10}, {"price": 63, "error": -1.53}, {"price": 64, "error": 0.45}, {"price": 65, "error": -0.12},
+    {"price": 66, "error": -3.27}, {"price": 67, "error": -2.65}, {"price": 68, "error": -3.49}, {"price": 69, "error": -0.64}, {"price": 70, "error": 0.16},
+    {"price": 71, "error": -0.04}, {"price": 72, "error": -1.27}, {"price": 73, "error": 1.75}, {"price": 74, "error": 2.56}, {"price": 75, "error": 2.53},
+    {"price": 76, "error": 2.91}, {"price": 77, "error": 2.03}, {"price": 78, "error": -0.94}, {"price": 79, "error": -2.14}, {"price": 80, "error": -1.01},
+    {"price": 81, "error": 1.48}, {"price": 82, "error": 1.50}, {"price": 83, "error": 1.39}, {"price": 84, "error": 0.88}, {"price": 85, "error": 1.27},
+    {"price": 86, "error": 1.22}, {"price": 87, "error": 0.73}, {"price": 88, "error": 1.02}, {"price": 89, "error": 1.22}, {"price": 90, "error": 1.22},
+    {"price": 91, "error": 1.34}, {"price": 92, "error": 1.12}, {"price": 93, "error": 1.30}, {"price": 94, "error": 1.16}, {"price": 95, "error": 0.87},
+    {"price": 96, "error": 0.58}, {"price": 97, "error": 0.31}, {"price": 98, "error": 0.12}, {"price": 99, "error": 0.10}
   ],
   "xKey": "price",
   "yKeys": ["error"],
@@ -359,13 +359,58 @@ Not all markets are created equal. While aggregate calibration is impressive, sy
 ```chart
 {
   "type": "line",
-  "title": "Calibration by Category (Selected Prices)",
+  "title": "Calibration by Category",
   "data": [
-    {"price": 10, "Sports": -4.74, "Politics": -8.28, "Finance": -0.57, "Crypto": 4.50},
-    {"price": 30, "Sports": 3.33, "Politics": -15.68, "Finance": -1.24, "Crypto": -7.37},
-    {"price": 50, "Sports": 0.00, "Politics": 0.00, "Finance": 0.00, "Crypto": 0.00},
-    {"price": 70, "Sports": -3.33, "Politics": 15.68, "Finance": 1.24, "Crypto": 7.37},
-    {"price": 90, "Sports": 4.74, "Politics": 8.28, "Finance": 0.57, "Crypto": -4.50}
+    {"price": 1, "Sports": -21.24, "Politics": -69.06, "Finance": 80.62, "Crypto": 57.80}, {"price": 2, "Sports": 4.12, "Politics": -76.61, "Finance": 15.27, "Crypto": 21.13},
+    {"price": 3, "Sports": -0.69, "Politics": -84.74, "Finance": 10.24, "Crypto": 27.43}, {"price": 4, "Sports": -6.84, "Politics": -72.32, "Finance": -8.43, "Crypto": 1.26},
+    {"price": 5, "Sports": -15.37, "Politics": -61.23, "Finance": -6.06, "Crypto": -4.53}, {"price": 6, "Sports": -18.43, "Politics": -58.28, "Finance": -13.06, "Crypto": 2.12},
+    {"price": 7, "Sports": -16.06, "Politics": -52.65, "Finance": -12.65, "Crypto": -8.72}, {"price": 8, "Sports": -9.29, "Politics": -53.53, "Finance": -11.90, "Crypto": -8.03},
+    {"price": 9, "Sports": -10.77, "Politics": -50.56, "Finance": -8.44, "Crypto": -10.71}, {"price": 10, "Sports": -8.59, "Politics": -45.57, "Finance": -7.52, "Crypto": -8.70},
+    {"price": 11, "Sports": -8.44, "Politics": -49.15, "Finance": -11.28, "Crypto": -5.00}, {"price": 12, "Sports": -2.91, "Politics": -49.83, "Finance": -10.11, "Crypto": -6.15},
+    {"price": 13, "Sports": 0.25, "Politics": -46.46, "Finance": -8.44, "Crypto": -8.05}, {"price": 14, "Sports": -3.88, "Politics": -44.07, "Finance": -10.06, "Crypto": -9.14},
+    {"price": 15, "Sports": -6.05, "Politics": -32.88, "Finance": -8.75, "Crypto": -7.88}, {"price": 16, "Sports": -1.10, "Politics": -34.32, "Finance": -13.80, "Crypto": -8.65},
+    {"price": 17, "Sports": -4.82, "Politics": -36.30, "Finance": -11.66, "Crypto": -5.24}, {"price": 18, "Sports": -5.60, "Politics": -26.24, "Finance": -10.43, "Crypto": -6.71},
+    {"price": 19, "Sports": -3.51, "Politics": -31.69, "Finance": -11.42, "Crypto": -6.47}, {"price": 20, "Sports": 9.94, "Politics": -18.55, "Finance": -10.08, "Crypto": -4.27},
+    {"price": 21, "Sports": 15.17, "Politics": -17.19, "Finance": -9.29, "Crypto": -3.88}, {"price": 22, "Sports": 8.85, "Politics": -23.72, "Finance": -10.29, "Crypto": -5.26},
+    {"price": 23, "Sports": -6.63, "Politics": -21.25, "Finance": -8.63, "Crypto": -4.65}, {"price": 24, "Sports": -10.78, "Politics": -17.12, "Finance": -8.49, "Crypto": -5.31},
+    {"price": 25, "Sports": -10.64, "Politics": -5.05, "Finance": -6.51, "Crypto": -3.97}, {"price": 26, "Sports": -10.19, "Politics": -2.52, "Finance": -7.31, "Crypto": -2.93},
+    {"price": 27, "Sports": -4.96, "Politics": -15.30, "Finance": -9.33, "Crypto": -3.62}, {"price": 28, "Sports": 6.92, "Politics": -17.13, "Finance": -7.69, "Crypto": -3.77},
+    {"price": 29, "Sports": 1.93, "Politics": -16.11, "Finance": -6.03, "Crypto": -4.23}, {"price": 30, "Sports": 0.89, "Politics": -15.29, "Finance": -3.61, "Crypto": -2.59},
+    {"price": 31, "Sports": 2.42, "Politics": -14.92, "Finance": -1.49, "Crypto": -0.49}, {"price": 32, "Sports": 11.79, "Politics": -14.81, "Finance": -3.66, "Crypto": -0.92},
+    {"price": 33, "Sports": 9.13, "Politics": -13.25, "Finance": -3.55, "Crypto": -1.75}, {"price": 34, "Sports": 10.96, "Politics": -18.22, "Finance": -2.72, "Crypto": -2.25},
+    {"price": 35, "Sports": 2.22, "Politics": -19.59, "Finance": -1.84, "Crypto": -2.38}, {"price": 36, "Sports": 0.26, "Politics": -16.99, "Finance": -1.05, "Crypto": -1.83},
+    {"price": 37, "Sports": 5.55, "Politics": -22.59, "Finance": 1.67, "Crypto": -0.89}, {"price": 38, "Sports": 4.55, "Politics": -25.27, "Finance": 1.87, "Crypto": -2.30},
+    {"price": 39, "Sports": 0.47, "Politics": -18.29, "Finance": 1.56, "Crypto": -2.60}, {"price": 40, "Sports": 2.10, "Politics": -25.39, "Finance": 1.91, "Crypto": -1.57},
+    {"price": 41, "Sports": 2.32, "Politics": -39.96, "Finance": 1.77, "Crypto": 0.36}, {"price": 42, "Sports": -2.09, "Politics": -45.92, "Finance": 1.12, "Crypto": -0.92},
+    {"price": 43, "Sports": -3.07, "Politics": -44.13, "Finance": 1.85, "Crypto": -1.50}, {"price": 44, "Sports": -1.53, "Politics": -33.82, "Finance": 0.51, "Crypto": -1.27},
+    {"price": 45, "Sports": -0.90, "Politics": -24.11, "Finance": -0.12, "Crypto": -1.39}, {"price": 46, "Sports": 1.69, "Politics": -18.64, "Finance": -0.19, "Crypto": -0.88},
+    {"price": 47, "Sports": -3.94, "Politics": -13.20, "Finance": -1.04, "Crypto": -0.71}, {"price": 48, "Sports": -3.44, "Politics": -10.76, "Finance": 0.24, "Crypto": -1.26},
+    {"price": 49, "Sports": -2.53, "Politics": -7.06, "Finance": 0.81, "Crypto": -0.59}, {"price": 50, "Sports": 0.01, "Politics": 0.00, "Finance": 0.00, "Crypto": 0.00},
+    {"price": 51, "Sports": 2.43, "Politics": 6.78, "Finance": -0.77, "Crypto": 0.57}, {"price": 52, "Sports": 3.17, "Politics": 9.93, "Finance": -0.22, "Crypto": 1.16},
+    {"price": 53, "Sports": 3.50, "Politics": 11.71, "Finance": 0.92, "Crypto": 0.63}, {"price": 54, "Sports": -1.44, "Politics": 15.88, "Finance": 0.16, "Crypto": 0.75},
+    {"price": 55, "Sports": 0.74, "Politics": 19.72, "Finance": 0.10, "Crypto": 1.14}, {"price": 56, "Sports": 1.21, "Politics": 26.57, "Finance": -0.40, "Crypto": 1.00},
+    {"price": 57, "Sports": 2.31, "Politics": 33.29, "Finance": -1.40, "Crypto": 1.13}, {"price": 58, "Sports": 1.52, "Politics": 33.25, "Finance": -0.81, "Crypto": 0.67},
+    {"price": 59, "Sports": -1.61, "Politics": 27.77, "Finance": -1.23, "Crypto": -0.25}, {"price": 60, "Sports": -1.39, "Politics": 16.93, "Finance": -1.28, "Crypto": 1.05},
+    {"price": 61, "Sports": -0.31, "Politics": 11.69, "Finance": -1.00, "Crypto": 1.66}, {"price": 62, "Sports": -2.77, "Politics": 15.49, "Finance": -1.15, "Crypto": 1.41},
+    {"price": 63, "Sports": -3.27, "Politics": 13.27, "Finance": -0.98, "Crypto": 0.52}, {"price": 64, "Sports": -0.14, "Politics": 9.56, "Finance": 0.59, "Crypto": 1.03},
+    {"price": 65, "Sports": -1.19, "Politics": 10.55, "Finance": 0.99, "Crypto": 1.28}, {"price": 66, "Sports": -5.65, "Politics": 9.39, "Finance": 1.40, "Crypto": 1.16},
+    {"price": 67, "Sports": -4.49, "Politics": 6.53, "Finance": 1.75, "Crypto": 0.86}, {"price": 68, "Sports": -5.53, "Politics": 6.97, "Finance": 1.72, "Crypto": 0.43},
+    {"price": 69, "Sports": -1.09, "Politics": 6.70, "Finance": 0.67, "Crypto": 0.22}, {"price": 70, "Sports": -0.38, "Politics": 6.55, "Finance": 1.55, "Crypto": 1.11},
+    {"price": 71, "Sports": -0.77, "Politics": 6.58, "Finance": 2.46, "Crypto": 1.73}, {"price": 72, "Sports": -2.69, "Politics": 6.66, "Finance": 2.99, "Crypto": 1.47},
+    {"price": 73, "Sports": 1.82, "Politics": 5.66, "Finance": 3.45, "Crypto": 1.34}, {"price": 74, "Sports": 3.59, "Politics": 0.88, "Finance": 2.57, "Crypto": 1.03},
+    {"price": 75, "Sports": 3.55, "Politics": 1.68, "Finance": 2.17, "Crypto": 1.32}, {"price": 76, "Sports": 3.42, "Politics": 5.40, "Finance": 2.68, "Crypto": 1.68},
+    {"price": 77, "Sports": 1.98, "Politics": 6.35, "Finance": 2.58, "Crypto": 1.39}, {"price": 78, "Sports": -2.51, "Politics": 6.69, "Finance": 2.90, "Crypto": 1.48},
+    {"price": 79, "Sports": -4.01, "Politics": 4.57, "Finance": 2.47, "Crypto": 1.03}, {"price": 80, "Sports": -2.49, "Politics": 4.64, "Finance": 2.52, "Crypto": 1.07},
+    {"price": 81, "Sports": 0.83, "Politics": 7.43, "Finance": 2.68, "Crypto": 1.52}, {"price": 82, "Sports": 1.24, "Politics": 5.76, "Finance": 2.29, "Crypto": 1.47},
+    {"price": 83, "Sports": 0.99, "Politics": 7.43, "Finance": 2.39, "Crypto": 1.07}, {"price": 84, "Sports": 0.21, "Politics": 6.54, "Finance": 2.63, "Crypto": 1.65},
+    {"price": 85, "Sports": 1.07, "Politics": 5.80, "Finance": 1.54, "Crypto": 1.39}, {"price": 86, "Sports": 0.63, "Politics": 7.17, "Finance": 1.64, "Crypto": 1.49},
+    {"price": 87, "Sports": -0.03, "Politics": 6.94, "Finance": 1.26, "Crypto": 1.20}, {"price": 88, "Sports": 0.41, "Politics": 6.79, "Finance": 1.38, "Crypto": 0.84},
+    {"price": 89, "Sports": 1.05, "Politics": 6.08, "Finance": 1.39, "Crypto": 0.62}, {"price": 90, "Sports": 0.97, "Politics": 5.06, "Finance": 0.84, "Crypto": 0.97},
+    {"price": 91, "Sports": 1.07, "Politics": 5.00, "Finance": 0.83, "Crypto": 1.06}, {"price": 92, "Sports": 0.82, "Politics": 4.66, "Finance": 1.03, "Crypto": 0.70},
+    {"price": 93, "Sports": 1.21, "Politics": 3.96, "Finance": 0.95, "Crypto": 0.66}, {"price": 94, "Sports": 1.19, "Politics": 3.72, "Finance": 0.83, "Crypto": -0.14},
+    {"price": 95, "Sports": 0.83, "Politics": 3.22, "Finance": 0.32, "Crypto": 0.24}, {"price": 96, "Sports": 0.30, "Politics": 3.01, "Finance": 0.35, "Crypto": -0.05},
+    {"price": 97, "Sports": 0.04, "Politics": 2.62, "Finance": -0.32, "Crypto": -0.85}, {"price": 98, "Sports": -0.05, "Politics": 1.56, "Finance": -0.31, "Crypto": -0.43},
+    {"price": 99, "Sports": 0.23, "Politics": 0.70, "Finance": -0.81, "Crypto": -0.58}
   ],
   "xKey": "price",
   "yKeys": ["Sports", "Politics", "Finance", "Crypto"],
@@ -385,35 +430,6 @@ Not all markets are created equal. While aggregate calibration is impressive, sy
 **Sports markets** represent 72% of platform volume but exhibit moderate calibration errors. This makes sense: sports betting is entertainment first, forecasting second. The same traders who buy lottery tickets at 1 cent are disproportionately represented here. The market mechanism still works, just less efficiently.
 
 **Politics markets** show the most variance. At certain price points, calibration errors reach 15-25%. Political beliefs are identity-laden; traders may be willing to pay a premium to express tribal allegiance. "Betting on my candidate" provides utility beyond expected value.
-
-### The Liquidity Connection
-
-```chart
-{
-  "type": "line",
-  "title": "Bid-Ask Spread by Price",
-  "data": [
-    {"price": 5, "spread": 0.05},
-    {"price": 15, "spread": 0.18},
-    {"price": 25, "spread": 0.29},
-    {"price": 35, "spread": 0.33},
-    {"price": 45, "spread": 0.60},
-    {"price": 50, "spread": 0.92},
-    {"price": 55, "spread": 0.85},
-    {"price": 65, "spread": 0.71},
-    {"price": 75, "spread": 0.46},
-    {"price": 85, "spread": 0.29},
-    {"price": 95, "spread": 0.11}
-  ],
-  "xKey": "price",
-  "yKeys": ["spread"],
-  "yUnit": "dollars"
-}
-```
-
-Bid-ask spreads are widest at 50 cents (maximum uncertainty) and narrowest at the extremes. This creates a feedback loop: illiquid markets are harder to arbitrage, so mispricing persists, which discourages liquidity providers, which perpetuates illiquidity.
-
-The correlation between spread and volume is ρ = -0.993 (p < 10⁻¹⁰), nearly perfect negative correlation. Liquid markets are efficient; illiquid markets are not.
 
 ---
 
