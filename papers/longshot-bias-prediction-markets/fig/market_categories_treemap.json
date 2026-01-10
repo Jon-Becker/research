@@ -1,5 +1,6 @@
 {
   "type": "treemap",
+  "caption": "Kalshi USD volume by market category. Click on a category to zoom in.",
   "data": [
     {
       "name": "Sports",

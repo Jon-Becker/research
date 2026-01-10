@@ -1,0 +1,52 @@
+{
+  "type": "bar",
+  "title": "Price Volatility by Category",
+  "xKey": "category",
+  "yKeys": [
+    "volatility"
+  ],
+  "yUnit": "cents",
+  "data": [
+    {
+      "category": "Politics",
+      "volatility": 16.8
+    },
+    {
+      "category": "Sports",
+      "volatility": 15.0
+    },
+    {
+      "category": "Crypto",
+      "volatility": 13.7
+    },
+    {
+      "category": "Finance",
+      "volatility": 12.1
+    },
+    {
+      "category": "Weather",
+      "volatility": 12.0
+    },
+    {
+      "category": "Media",
+      "volatility": 11.1
+    },
+    {
+      "category": "Entertainment",
+      "volatility": 11.0
+    },
+    {
+      "category": "Other",
+      "volatility": 10.6
+    },
+    {
+      "category": "Esports",
+      "volatility": 9.1
+    },
+    {
+      "category": "Science/Tech",
+      "volatility": 6.7
+    }
+  ],
+  "caption": "Standard deviation of yes_price within each market, averaged across all markets in the category. Politics and sports are noisiest; finance and weather are most stable."
+}

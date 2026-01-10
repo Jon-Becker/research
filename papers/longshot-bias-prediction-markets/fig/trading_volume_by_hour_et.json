@@ -7,28 +7,84 @@
       "trades": 2396954
     },
     {
+      "hour": "1am",
+      "trades": 1243095
+    },
+    {
+      "hour": "2am",
+      "trades": 770830
+    },
+    {
       "hour": "3am",
       "trades": 258465
+    },
+    {
+      "hour": "4am",
+      "trades": 197108
+    },
+    {
+      "hour": "5am",
+      "trades": 207396
     },
     {
       "hour": "6am",
       "trades": 234155
     },
     {
+      "hour": "7am",
+      "trades": 316920
+    },
+    {
+      "hour": "8am",
+      "trades": 1796863
+    },
+    {
       "hour": "9am",
       "trades": 2445718
+    },
+    {
+      "hour": "10am",
+      "trades": 3001196
+    },
+    {
+      "hour": "11am",
+      "trades": 3190845
     },
     {
       "hour": "12pm",
       "trades": 3654324
     },
     {
+      "hour": "1pm",
+      "trades": 3919834
+    },
+    {
+      "hour": "2pm",
+      "trades": 4090388
+    },
+    {
       "hour": "3pm",
       "trades": 4779570
     },
     {
+      "hour": "4pm",
+      "trades": 4198369
+    },
+    {
+      "hour": "5pm",
+      "trades": 3410949
+    },
+    {
       "hour": "6pm",
       "trades": 3624100
+    },
+    {
+      "hour": "7pm",
+      "trades": 4468862
+    },
+    {
+      "hour": "8pm",
+      "trades": 4995729
     },
     {
       "hour": "9pm",
@@ -37,6 +93,10 @@
     {
       "hour": "10pm",
       "trades": 5334192
+    },
+    {
+      "hour": "11pm",
+      "trades": 4027728
     }
   ],
   "xKey": "hour",

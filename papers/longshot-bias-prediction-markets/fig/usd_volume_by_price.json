@@ -1,407 +1,408 @@
 {
-  "type": "line",
-  "title": "Average Contracts per Trade by Price",
+  "type": "bar",
+  "title": "USD Volume by Price",
   "data": [
     {
       "price": 1,
-      "contracts": 489.44
+      "volume": 12000000.0
     },
     {
       "price": 2,
-      "contracts": 420.32
+      "volume": 12350000.0
     },
     {
       "price": 3,
-      "contracts": 391.8
+      "volume": 19580000.0
     },
     {
       "price": 4,
-      "contracts": 345.72
+      "volume": 20490000.0
     },
     {
       "price": 5,
-      "contracts": 305.27
+      "volume": 23090000.0
     },
     {
       "price": 6,
-      "contracts": 301.88
+      "volume": 25500000.0
     },
     {
       "price": 7,
-      "contracts": 288.65
+      "volume": 27810000.0
     },
     {
       "price": 8,
-      "contracts": 281.66
+      "volume": 30530000.0
     },
     {
       "price": 9,
-      "contracts": 268.2
+      "volume": 31480000.0
     },
     {
       "price": 10,
-      "contracts": 258.72
+      "volume": 36180000.0
     },
     {
       "price": 11,
-      "contracts": 260.38
+      "volume": 36250000.0
     },
     {
       "price": 12,
-      "contracts": 251.29
+      "volume": 38690000.0
     },
     {
       "price": 13,
-      "contracts": 250.64
+      "volume": 39690000.0
     },
     {
       "price": 14,
-      "contracts": 249.92
+      "volume": 43970000.0
     },
     {
       "price": 15,
-      "contracts": 236.79
+      "volume": 47330000.0
     },
     {
       "price": 16,
-      "contracts": 239.6
+      "volume": 48290000.0
     },
     {
       "price": 17,
-      "contracts": 237.1
+      "volume": 50050000.0
     },
     {
       "price": 18,
-      "contracts": 226.61
+      "volume": 50520000.0
     },
     {
       "price": 19,
-      "contracts": 230.48
+      "volume": 53850000.0
     },
     {
       "price": 20,
-      "contracts": 223.43
+      "volume": 62240000.0
     },
     {
       "price": 21,
-      "contracts": 228.67
+      "volume": 62440000.0
     },
     {
       "price": 22,
-      "contracts": 222.79
+      "volume": 64610000.0
     },
     {
       "price": 23,
-      "contracts": 227.73
+      "volume": 68930000.0
     },
     {
       "price": 24,
-      "contracts": 219.38
+      "volume": 68060000.0
     },
     {
       "price": 25,
-      "contracts": 214.16
+      "volume": 74950000.0
     },
     {
       "price": 26,
-      "contracts": 221.89
+      "volume": 74830000.0
     },
     {
       "price": 27,
-      "contracts": 225.22
+      "volume": 80610000.0
     },
     {
       "price": 28,
-      "contracts": 216.09
+      "volume": 80490000.0
     },
     {
       "price": 29,
-      "contracts": 217.74
+      "volume": 81760000.0
     },
     {
       "price": 30,
-      "contracts": 210.51
+      "volume": 92200000.0
     },
     {
       "price": 31,
-      "contracts": 218.72
+      "volume": 96850000.0
     },
     {
       "price": 32,
-      "contracts": 213.5
+      "volume": 96180000.0
     },
     {
       "price": 33,
-      "contracts": 215.32
+      "volume": 99280000.0
     },
     {
       "price": 34,
-      "contracts": 216.01
+      "volume": 104170000.0
     },
     {
       "price": 35,
-      "contracts": 214.17
+      "volume": 113680000.0
     },
     {
       "price": 36,
-      "contracts": 217.83
+      "volume": 118260000.0
     },
     {
       "price": 37,
-      "contracts": 215.43
+      "volume": 121180000.0
     },
     {
       "price": 38,
-      "contracts": 229.67
+      "volume": 137110000.0
     },
     {
       "price": 39,
-      "contracts": 219.91
+      "volume": 130820000.0
     },
     {
       "price": 40,
-      "contracts": 216.23
+      "volume": 140580000.0
     },
     {
       "price": 41,
-      "contracts": 225.17
+      "volume": 139430000.0
     },
     {
       "price": 42,
-      "contracts": 236.07
+      "volume": 155470000.0
     },
     {
       "price": 43,
-      "contracts": 245.34
+      "volume": 168600000.0
     },
     {
       "price": 44,
-      "contracts": 233.6
+      "volume": 167740000.0
     },
     {
       "price": 45,
-      "contracts": 227.21
+      "volume": 172550000.0
     },
     {
       "price": 46,
-      "contracts": 224.74
+      "volume": 170440000.0
     },
     {
       "price": 47,
-      "contracts": 227.46
+      "volume": 180560000.0
     },
     {
       "price": 48,
-      "contracts": 225.81
+      "volume": 188240000.0
     },
     {
       "price": 49,
-      "contracts": 227.28
+      "volume": 188880000.0
     },
     {
       "price": 50,
-      "contracts": 219.26
+      "volume": 204580000.0
     },
     {
       "price": 51,
-      "contracts": 227.29
+      "volume": 196580000.0
     },
     {
       "price": 52,
-      "contracts": 225.8
+      "volume": 203940000.0
     },
     {
       "price": 53,
-      "contracts": 227.46
+      "volume": 203600000.0
     },
     {
       "price": 54,
-      "contracts": 224.73
+      "volume": 200080000.0
     },
     {
       "price": 55,
-      "contracts": 227.22
+      "volume": 210900000.0
     },
     {
       "price": 56,
-      "contracts": 233.6
+      "volume": 213500000.0
     },
     {
       "price": 57,
-      "contracts": 245.34
+      "volume": 223480000.0
     },
     {
       "price": 58,
-      "contracts": 236.05
+      "volume": 214690000.0
     },
     {
       "price": 59,
-      "contracts": 225.17
+      "volume": 200630000.0
     },
     {
       "price": 60,
-      "contracts": 216.26
+      "volume": 210890000.0
     },
     {
       "price": 61,
-      "contracts": 219.86
+      "volume": 204600000.0
     },
     {
       "price": 62,
-      "contracts": 229.67
+      "volume": 223710000.0
     },
     {
       "price": 63,
-      "contracts": 215.4
+      "volume": 206300000.0
     },
     {
       "price": 64,
-      "contracts": 217.88
+      "volume": 210290000.0
     },
     {
       "price": 65,
-      "contracts": 214.19
+      "volume": 211140000.0
     },
     {
       "price": 66,
-      "contracts": 216.01
+      "volume": 202230000.0
     },
     {
       "price": 67,
-      "contracts": 215.31
+      "volume": 201610000.0
     },
     {
       "price": 68,
-      "contracts": 213.5
+      "volume": 204420000.0
     },
     {
       "price": 69,
-      "contracts": 218.73
+      "volume": 215520000.0
     },
     {
       "price": 70,
-      "contracts": 210.5
+      "volume": 215160000.0
     },
     {
       "price": 71,
-      "contracts": 217.72
+      "volume": 200180000.0
     },
     {
       "price": 72,
-      "contracts": 216.05
+      "volume": 206980000.0
     },
     {
       "price": 73,
-      "contracts": 225.26
+      "volume": 217970000.0
     },
     {
       "price": 74,
-      "contracts": 222.13
+      "volume": 213180000.0
     },
     {
       "price": 75,
-      "contracts": 214.02
+      "volume": 224690000.0
     },
     {
       "price": 76,
-      "contracts": 219.43
+      "volume": 215660000.0
     },
     {
       "price": 77,
-      "contracts": 227.72
+      "volume": 230770000.0
     },
     {
       "price": 78,
-      "contracts": 223.12
+      "volume": 229340000.0
     },
     {
       "price": 79,
-      "contracts": 228.29
+      "volume": 234470000.0
     },
     {
       "price": 80,
-      "contracts": 223.47
+      "volume": 248980000.0
     },
     {
       "price": 81,
-      "contracts": 230.78
+      "volume": 230100000.0
     },
     {
       "price": 82,
-      "contracts": 226.33
+      "volume": 229790000.0
     },
     {
       "price": 83,
-      "contracts": 237.05
+      "volume": 244280000.0
     },
     {
       "price": 84,
-      "contracts": 239.7
+      "volume": 253680000.0
     },
     {
       "price": 85,
-      "contracts": 236.78
+      "volume": 268240000.0
     },
     {
       "price": 86,
-      "contracts": 249.97
+      "volume": 270150000.0
     },
     {
       "price": 87,
-      "contracts": 250.64
+      "volume": 265630000.0
     },
     {
       "price": 88,
-      "contracts": 251.34
+      "volume": 283800000.0
     },
     {
       "price": 89,
-      "contracts": 260.62
+      "volume": 293620000.0
     },
     {
       "price": 90,
-      "contracts": 258.62
+      "volume": 326220000.0
     },
     {
       "price": 91,
-      "contracts": 268.18
+      "volume": 318620000.0
     },
     {
       "price": 92,
-      "contracts": 282.0
+      "volume": 352060000.0
     },
     {
       "price": 93,
-      "contracts": 288.71
+      "volume": 369260000.0
     },
     {
       "price": 94,
-      "contracts": 302.42
+      "volume": 400470000.0
     },
     {
       "price": 95,
-      "contracts": 306.87
+      "volume": 442760000.0
     },
     {
       "price": 96,
-      "contracts": 347.66
+      "volume": 495850000.0
     },
     {
       "price": 97,
-      "contracts": 390.95
+      "volume": 633310000.0
     },
     {
       "price": 98,
-      "contracts": 426.3
+      "volume": 616720000.0
     },
     {
       "price": 99,
-      "contracts": 500.55
+      "volume": 1219880000.0
     }
   ],
   "xKey": "price",
   "yKeys": [
-    "contracts"
+    "volume"
   ],
-  "yUnit": "number"
+  "xUnit": "dollars",
+  "yUnit": "dollars"
 }
