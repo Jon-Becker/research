@@ -2,5 +2,6 @@
   "title": "The Microstructure of Wealth Transfer in Prediction Markets",
   "summary": "Slot machines on the Las Vegas Strip return about 93 cents on the dollar. This is widely considered some of the worst odds in gambling. Yet on Kalshi, a CFTC-regulated prediction market, traders have wagered vast sums on longshot contracts with historical returns as low as 43 cents on the dollar. Thousands of participants are voluntarily accepting expected values far lower than a casino slot machine to bet on their convictions.",
   "date": "Jan 17, 2026",
+  "ignore": true,
   "tags": ["prediction markets", "finance", "efficiency", "economics", "data", "markets", "behavioral economics", "statistics"]
 }
