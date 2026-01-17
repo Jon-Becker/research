@@ -186,7 +186,7 @@ The analysis of 72.1 million trades on Kalshi reveals a distinct market microstr
 
 A central question in zero-sum market analysis is whether profitable participants win through superior information (forecasting) or superior structure (market making). Our data strongly supports the latter. When decomposing maker returns by position direction, the performance gap is negligible: makers buying "YES" earn an excess return of +0.77%, while those buying "NO" earn +1.25% (Cohen’s d ≈ 0.02). This statistical symmetry indicates that makers do not possess a significant ability to pick winners. Instead, they profit via a structural arbitrage: providing liquidity to a taker population that exhibits a costly preference for affirmative, longshot outcomes.
 
-![mechanism diagram](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/prediction-market-microstructure/fig/mechanism.png?fw)
+![mechanism diagram](https://raw.githubusercontent.com/Jon-Becker/research/refs/heads/main/papers/prediction-market-microstructure/fig/mechanism.png?fw)
 
 This extraction mechanism relies on the "Optimism Tax." Takers disproportionately purchase "YES" contracts at longshot prices, accounting for nearly half of all volume in that range, despite "YES" longshots underperforming "NO" longshots by up to 64 percentage points. Makers, therefore, do not need to predict the future; they simply need to act as the counterparty to optimism. This aligns with findings by [Reichenbach and Walther (2025)](https://ssrn.com/abstract=5910522) on Polymarket and [Whelan (2025)](https://mpra.ub.uni-muenchen.de/126351/1/MPRA_paper_126351.pdf) on Betfair, suggesting that in prediction markets, makers accommodate biased flow rather than out-forecast it.
 
