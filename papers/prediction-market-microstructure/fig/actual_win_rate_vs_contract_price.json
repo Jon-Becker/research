@@ -1,0 +1,513 @@
+{
+  "type": "line",
+  "title": "Actual Win Rate vs Contract Price",
+  "data": [
+    {
+      "price": 1,
+      "actual": 0.91,
+      "implied": 1
+    },
+    {
+      "price": 2,
+      "actual": 1.9,
+      "implied": 2
+    },
+    {
+      "price": 3,
+      "actual": 2.71,
+      "implied": 3
+    },
+    {
+      "price": 4,
+      "actual": 3.45,
+      "implied": 4
+    },
+    {
+      "price": 5,
+      "actual": 4.18,
+      "implied": 5
+    },
+    {
+      "price": 6,
+      "actual": 4.92,
+      "implied": 6
+    },
+    {
+      "price": 7,
+      "actual": 5.79,
+      "implied": 7
+    },
+    {
+      "price": 8,
+      "actual": 6.97,
+      "implied": 8
+    },
+    {
+      "price": 9,
+      "actual": 7.78,
+      "implied": 9
+    },
+    {
+      "price": 10,
+      "actual": 8.91,
+      "implied": 10
+    },
+    {
+      "price": 11,
+      "actual": 9.93,
+      "implied": 11
+    },
+    {
+      "price": 12,
+      "actual": 11.11,
+      "implied": 12
+    },
+    {
+      "price": 13,
+      "actual": 12.37,
+      "implied": 13
+    },
+    {
+      "price": 14,
+      "actual": 12.95,
+      "implied": 14
+    },
+    {
+      "price": 15,
+      "actual": 13.92,
+      "implied": 15
+    },
+    {
+      "price": 16,
+      "actual": 15.26,
+      "implied": 16
+    },
+    {
+      "price": 17,
+      "actual": 15.84,
+      "implied": 17
+    },
+    {
+      "price": 18,
+      "actual": 16.77,
+      "implied": 18
+    },
+    {
+      "price": 19,
+      "actual": 17.81,
+      "implied": 19
+    },
+    {
+      "price": 20,
+      "actual": 20.81,
+      "implied": 20
+    },
+    {
+      "price": 21,
+      "actual": 22.7,
+      "implied": 21
+    },
+    {
+      "price": 22,
+      "actual": 22.73,
+      "implied": 22
+    },
+    {
+      "price": 23,
+      "actual": 21.43,
+      "implied": 23
+    },
+    {
+      "price": 24,
+      "actual": 21.8,
+      "implied": 24
+    },
+    {
+      "price": 25,
+      "actual": 23.11,
+      "implied": 25
+    },
+    {
+      "price": 26,
+      "actual": 24.11,
+      "implied": 26
+    },
+    {
+      "price": 27,
+      "actual": 25.71,
+      "implied": 27
+    },
+    {
+      "price": 28,
+      "actual": 28.91,
+      "implied": 28
+    },
+    {
+      "price": 29,
+      "actual": 29.03,
+      "implied": 29
+    },
+    {
+      "price": 30,
+      "actual": 29.89,
+      "implied": 30
+    },
+    {
+      "price": 31,
+      "actual": 31.44,
+      "implied": 31
+    },
+    {
+      "price": 32,
+      "actual": 34.38,
+      "implied": 32
+    },
+    {
+      "price": 33,
+      "actual": 34.78,
+      "implied": 33
+    },
+    {
+      "price": 34,
+      "actual": 36.16,
+      "implied": 34
+    },
+    {
+      "price": 35,
+      "actual": 35.08,
+      "implied": 35
+    },
+    {
+      "price": 36,
+      "actual": 35.71,
+      "implied": 36
+    },
+    {
+      "price": 37,
+      "actual": 37.96,
+      "implied": 37
+    },
+    {
+      "price": 38,
+      "actual": 38.69,
+      "implied": 38
+    },
+    {
+      "price": 39,
+      "actual": 38.69,
+      "implied": 39
+    },
+    {
+      "price": 40,
+      "actual": 40.04,
+      "implied": 40
+    },
+    {
+      "price": 41,
+      "actual": 40.66,
+      "implied": 41
+    },
+    {
+      "price": 42,
+      "actual": 40.12,
+      "implied": 42
+    },
+    {
+      "price": 43,
+      "actual": 40.82,
+      "implied": 43
+    },
+    {
+      "price": 44,
+      "actual": 42.58,
+      "implied": 44
+    },
+    {
+      "price": 45,
+      "actual": 44.06,
+      "implied": 45
+    },
+    {
+      "price": 46,
+      "actual": 46.11,
+      "implied": 46
+    },
+    {
+      "price": 47,
+      "actual": 45.29,
+      "implied": 47
+    },
+    {
+      "price": 48,
+      "actual": 46.47,
+      "implied": 48
+    },
+    {
+      "price": 49,
+      "actual": 47.9,
+      "implied": 49
+    },
+    {
+      "price": 50,
+      "actual": 50.0,
+      "implied": 50
+    },
+    {
+      "price": 51,
+      "actual": 52.1,
+      "implied": 51
+    },
+    {
+      "price": 52,
+      "actual": 53.53,
+      "implied": 52
+    },
+    {
+      "price": 53,
+      "actual": 54.72,
+      "implied": 53
+    },
+    {
+      "price": 54,
+      "actual": 53.89,
+      "implied": 54
+    },
+    {
+      "price": 55,
+      "actual": 55.95,
+      "implied": 55
+    },
+    {
+      "price": 56,
+      "actual": 57.43,
+      "implied": 56
+    },
+    {
+      "price": 57,
+      "actual": 59.18,
+      "implied": 57
+    },
+    {
+      "price": 58,
+      "actual": 59.88,
+      "implied": 58
+    },
+    {
+      "price": 59,
+      "actual": 59.34,
+      "implied": 59
+    },
+    {
+      "price": 60,
+      "actual": 59.96,
+      "implied": 60
+    },
+    {
+      "price": 61,
+      "actual": 61.31,
+      "implied": 61
+    },
+    {
+      "price": 62,
+      "actual": 61.32,
+      "implied": 62
+    },
+    {
+      "price": 63,
+      "actual": 62.03,
+      "implied": 63
+    },
+    {
+      "price": 64,
+      "actual": 64.29,
+      "implied": 64
+    },
+    {
+      "price": 65,
+      "actual": 64.92,
+      "implied": 65
+    },
+    {
+      "price": 66,
+      "actual": 63.84,
+      "implied": 66
+    },
+    {
+      "price": 67,
+      "actual": 65.22,
+      "implied": 67
+    },
+    {
+      "price": 68,
+      "actual": 65.63,
+      "implied": 68
+    },
+    {
+      "price": 69,
+      "actual": 68.56,
+      "implied": 69
+    },
+    {
+      "price": 70,
+      "actual": 70.11,
+      "implied": 70
+    },
+    {
+      "price": 71,
+      "actual": 70.97,
+      "implied": 71
+    },
+    {
+      "price": 72,
+      "actual": 71.09,
+      "implied": 72
+    },
+    {
+      "price": 73,
+      "actual": 74.28,
+      "implied": 73
+    },
+    {
+      "price": 74,
+      "actual": 75.89,
+      "implied": 74
+    },
+    {
+      "price": 75,
+      "actual": 76.89,
+      "implied": 75
+    },
+    {
+      "price": 76,
+      "actual": 78.21,
+      "implied": 76
+    },
+    {
+      "price": 77,
+      "actual": 78.57,
+      "implied": 77
+    },
+    {
+      "price": 78,
+      "actual": 77.27,
+      "implied": 78
+    },
+    {
+      "price": 79,
+      "actual": 77.31,
+      "implied": 79
+    },
+    {
+      "price": 80,
+      "actual": 79.19,
+      "implied": 80
+    },
+    {
+      "price": 81,
+      "actual": 82.2,
+      "implied": 81
+    },
+    {
+      "price": 82,
+      "actual": 83.23,
+      "implied": 82
+    },
+    {
+      "price": 83,
+      "actual": 84.16,
+      "implied": 83
+    },
+    {
+      "price": 84,
+      "actual": 84.74,
+      "implied": 84
+    },
+    {
+      "price": 85,
+      "actual": 86.08,
+      "implied": 85
+    },
+    {
+      "price": 86,
+      "actual": 87.05,
+      "implied": 86
+    },
+    {
+      "price": 87,
+      "actual": 87.63,
+      "implied": 87
+    },
+    {
+      "price": 88,
+      "actual": 88.9,
+      "implied": 88
+    },
+    {
+      "price": 89,
+      "actual": 90.08,
+      "implied": 89
+    },
+    {
+      "price": 90,
+      "actual": 91.1,
+      "implied": 90
+    },
+    {
+      "price": 91,
+      "actual": 92.22,
+      "implied": 91
+    },
+    {
+      "price": 92,
+      "actual": 93.03,
+      "implied": 92
+    },
+    {
+      "price": 93,
+      "actual": 94.21,
+      "implied": 93
+    },
+    {
+      "price": 94,
+      "actual": 95.09,
+      "implied": 94
+    },
+    {
+      "price": 95,
+      "actual": 95.83,
+      "implied": 95
+    },
+    {
+      "price": 96,
+      "actual": 96.56,
+      "implied": 96
+    },
+    {
+      "price": 97,
+      "actual": 97.3,
+      "implied": 97
+    },
+    {
+      "price": 98,
+      "actual": 98.12,
+      "implied": 98
+    },
+    {
+      "price": 99,
+      "actual": 99.09,
+      "implied": 99
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "actual",
+    "implied"
+  ],
+  "strokeDasharrays": [
+    null,
+    "5 5"
+  ],
+  "yUnit": "percent",
+  "xLabel": "Contract Price (%)",
+  "yLabel": "Actual Win Rate (%)"
+}

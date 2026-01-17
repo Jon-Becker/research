@@ -1,0 +1,1 @@
+We analyzed 72 million trades expecting to find broken markets. Instead, we found something stranger: individual traders exhibit every behavioral bias in the book, yet the crowd still produces remarkably accurate forecasts.

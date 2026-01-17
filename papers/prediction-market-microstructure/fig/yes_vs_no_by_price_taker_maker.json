@@ -1,0 +1,713 @@
+{
+  "type": "stacked-area-100",
+  "title": "YES vs NO Volume by Price",
+  "xKey": "price",
+  "xLabel": "YES Contract Price",
+  "yKeys": [
+    "taker_yes",
+    "maker_yes",
+    "taker_no",
+    "maker_no"
+  ],
+  "yLabels": [
+    "Taker YES",
+    "Maker YES",
+    "Taker NO",
+    "Maker NO"
+  ],
+  "data": [
+    {
+      "price": 1,
+      "taker_yes": 41.05,
+      "maker_yes": 23.69,
+      "taker_no": 23.37,
+      "maker_no": 11.89
+    },
+    {
+      "price": 2,
+      "taker_yes": 44.89,
+      "maker_yes": 24.29,
+      "taker_no": 13.29,
+      "maker_no": 17.53
+    },
+    {
+      "price": 3,
+      "taker_yes": 43.5,
+      "maker_yes": 23.3,
+      "taker_no": 17.76,
+      "maker_no": 15.44
+    },
+    {
+      "price": 4,
+      "taker_yes": 47.06,
+      "maker_yes": 22.7,
+      "taker_no": 12.77,
+      "maker_no": 17.47
+    },
+    {
+      "price": 5,
+      "taker_yes": 44.57,
+      "maker_yes": 23.01,
+      "taker_no": 11.95,
+      "maker_no": 20.47
+    },
+    {
+      "price": 6,
+      "taker_yes": 44.69,
+      "maker_yes": 22.03,
+      "taker_no": 11.24,
+      "maker_no": 22.04
+    },
+    {
+      "price": 7,
+      "taker_yes": 45.16,
+      "maker_yes": 20.68,
+      "taker_no": 11.8,
+      "maker_no": 22.36
+    },
+    {
+      "price": 8,
+      "taker_yes": 43.3,
+      "maker_yes": 20.41,
+      "taker_no": 11.98,
+      "maker_no": 24.32
+    },
+    {
+      "price": 9,
+      "taker_yes": 43.07,
+      "maker_yes": 19.97,
+      "taker_no": 12.27,
+      "maker_no": 24.69
+    },
+    {
+      "price": 10,
+      "taker_yes": 41.76,
+      "maker_yes": 20.98,
+      "taker_no": 12.58,
+      "maker_no": 24.68
+    },
+    {
+      "price": 11,
+      "taker_yes": 42.12,
+      "maker_yes": 20.48,
+      "taker_no": 11.03,
+      "maker_no": 26.36
+    },
+    {
+      "price": 12,
+      "taker_yes": 40.78,
+      "maker_yes": 19.83,
+      "taker_no": 10.83,
+      "maker_no": 28.56
+    },
+    {
+      "price": 13,
+      "taker_yes": 42.19,
+      "maker_yes": 18.98,
+      "taker_no": 11.88,
+      "maker_no": 26.95
+    },
+    {
+      "price": 14,
+      "taker_yes": 40.33,
+      "maker_yes": 19.06,
+      "taker_no": 11.43,
+      "maker_no": 29.18
+    },
+    {
+      "price": 15,
+      "taker_yes": 40.68,
+      "maker_yes": 19.85,
+      "taker_no": 12.16,
+      "maker_no": 27.32
+    },
+    {
+      "price": 16,
+      "taker_yes": 40.49,
+      "maker_yes": 18.89,
+      "taker_no": 11.02,
+      "maker_no": 29.6
+    },
+    {
+      "price": 17,
+      "taker_yes": 42.7,
+      "maker_yes": 18.12,
+      "taker_no": 12.13,
+      "maker_no": 27.06
+    },
+    {
+      "price": 18,
+      "taker_yes": 41.12,
+      "maker_yes": 18.33,
+      "taker_no": 11.62,
+      "maker_no": 28.93
+    },
+    {
+      "price": 19,
+      "taker_yes": 39.92,
+      "maker_yes": 17.5,
+      "taker_no": 11.83,
+      "maker_no": 30.75
+    },
+    {
+      "price": 20,
+      "taker_yes": 37.42,
+      "maker_yes": 17.97,
+      "taker_no": 12.57,
+      "maker_no": 32.04
+    },
+    {
+      "price": 21,
+      "taker_yes": 38.46,
+      "maker_yes": 17.37,
+      "taker_no": 11.08,
+      "maker_no": 33.09
+    },
+    {
+      "price": 22,
+      "taker_yes": 40.72,
+      "maker_yes": 17.14,
+      "taker_no": 11.1,
+      "maker_no": 31.04
+    },
+    {
+      "price": 23,
+      "taker_yes": 41.23,
+      "maker_yes": 16.46,
+      "taker_no": 11.1,
+      "maker_no": 31.2
+    },
+    {
+      "price": 24,
+      "taker_yes": 40.75,
+      "maker_yes": 16.94,
+      "taker_no": 11.21,
+      "maker_no": 31.1
+    },
+    {
+      "price": 25,
+      "taker_yes": 39.91,
+      "maker_yes": 17.74,
+      "taker_no": 11.94,
+      "maker_no": 30.42
+    },
+    {
+      "price": 26,
+      "taker_yes": 39.09,
+      "maker_yes": 16.98,
+      "taker_no": 11.08,
+      "maker_no": 32.85
+    },
+    {
+      "price": 27,
+      "taker_yes": 40.82,
+      "maker_yes": 14.77,
+      "taker_no": 11.43,
+      "maker_no": 32.99
+    },
+    {
+      "price": 28,
+      "taker_yes": 40.59,
+      "maker_yes": 15.24,
+      "taker_no": 12.36,
+      "maker_no": 31.81
+    },
+    {
+      "price": 29,
+      "taker_yes": 39.31,
+      "maker_yes": 15.82,
+      "taker_no": 12.33,
+      "maker_no": 32.55
+    },
+    {
+      "price": 30,
+      "taker_yes": 37.63,
+      "maker_yes": 16.11,
+      "taker_no": 12.76,
+      "maker_no": 33.5
+    },
+    {
+      "price": 31,
+      "taker_yes": 39.83,
+      "maker_yes": 15.33,
+      "taker_no": 11.8,
+      "maker_no": 33.04
+    },
+    {
+      "price": 32,
+      "taker_yes": 39.08,
+      "maker_yes": 15.14,
+      "taker_no": 11.5,
+      "maker_no": 34.28
+    },
+    {
+      "price": 33,
+      "taker_yes": 39.13,
+      "maker_yes": 15.08,
+      "taker_no": 12.05,
+      "maker_no": 33.73
+    },
+    {
+      "price": 34,
+      "taker_yes": 39.35,
+      "maker_yes": 13.73,
+      "taker_no": 12.62,
+      "maker_no": 34.3
+    },
+    {
+      "price": 35,
+      "taker_yes": 34.86,
+      "maker_yes": 14.98,
+      "taker_no": 12.61,
+      "maker_no": 37.56
+    },
+    {
+      "price": 36,
+      "taker_yes": 37.18,
+      "maker_yes": 14.5,
+      "taker_no": 11.54,
+      "maker_no": 36.78
+    },
+    {
+      "price": 37,
+      "taker_yes": 37.62,
+      "maker_yes": 14.0,
+      "taker_no": 11.29,
+      "maker_no": 37.09
+    },
+    {
+      "price": 38,
+      "taker_yes": 35.76,
+      "maker_yes": 14.57,
+      "taker_no": 12.56,
+      "maker_no": 37.11
+    },
+    {
+      "price": 39,
+      "taker_yes": 39.08,
+      "maker_yes": 13.62,
+      "taker_no": 12.22,
+      "maker_no": 35.08
+    },
+    {
+      "price": 40,
+      "taker_yes": 36.92,
+      "maker_yes": 14.73,
+      "taker_no": 13.22,
+      "maker_no": 35.13
+    },
+    {
+      "price": 41,
+      "taker_yes": 32.97,
+      "maker_yes": 14.64,
+      "taker_no": 11.54,
+      "maker_no": 40.86
+    },
+    {
+      "price": 42,
+      "taker_yes": 32.48,
+      "maker_yes": 15.17,
+      "taker_no": 11.09,
+      "maker_no": 41.26
+    },
+    {
+      "price": 43,
+      "taker_yes": 37.45,
+      "maker_yes": 13.62,
+      "taker_no": 12.06,
+      "maker_no": 36.87
+    },
+    {
+      "price": 44,
+      "taker_yes": 37.09,
+      "maker_yes": 13.56,
+      "taker_no": 11.74,
+      "maker_no": 37.61
+    },
+    {
+      "price": 45,
+      "taker_yes": 35.21,
+      "maker_yes": 14.36,
+      "taker_no": 12.86,
+      "maker_no": 37.56
+    },
+    {
+      "price": 46,
+      "taker_yes": 36.98,
+      "maker_yes": 13.75,
+      "taker_no": 11.89,
+      "maker_no": 37.38
+    },
+    {
+      "price": 47,
+      "taker_yes": 35.17,
+      "maker_yes": 13.73,
+      "taker_no": 12.29,
+      "maker_no": 38.8
+    },
+    {
+      "price": 48,
+      "taker_yes": 37.21,
+      "maker_yes": 13.61,
+      "taker_no": 12.81,
+      "maker_no": 36.37
+    },
+    {
+      "price": 49,
+      "taker_yes": 35.66,
+      "maker_yes": 14.98,
+      "taker_no": 13.39,
+      "maker_no": 35.97
+    },
+    {
+      "price": 50,
+      "taker_yes": 34.93,
+      "maker_yes": 15.07,
+      "taker_no": 15.07,
+      "maker_no": 34.94
+    },
+    {
+      "price": 51,
+      "taker_yes": 35.98,
+      "maker_yes": 13.39,
+      "taker_no": 14.98,
+      "maker_no": 35.65
+    },
+    {
+      "price": 52,
+      "taker_yes": 36.35,
+      "maker_yes": 12.81,
+      "taker_no": 13.61,
+      "maker_no": 37.22
+    },
+    {
+      "price": 53,
+      "taker_yes": 38.8,
+      "maker_yes": 12.3,
+      "taker_no": 13.73,
+      "maker_no": 35.17
+    },
+    {
+      "price": 54,
+      "taker_yes": 37.39,
+      "maker_yes": 11.89,
+      "taker_no": 13.75,
+      "maker_no": 36.97
+    },
+    {
+      "price": 55,
+      "taker_yes": 37.56,
+      "maker_yes": 12.86,
+      "taker_no": 14.36,
+      "maker_no": 35.22
+    },
+    {
+      "price": 56,
+      "taker_yes": 37.61,
+      "maker_yes": 11.74,
+      "taker_no": 13.56,
+      "maker_no": 37.09
+    },
+    {
+      "price": 57,
+      "taker_yes": 36.88,
+      "maker_yes": 12.06,
+      "taker_no": 13.62,
+      "maker_no": 37.44
+    },
+    {
+      "price": 58,
+      "taker_yes": 41.25,
+      "maker_yes": 11.08,
+      "taker_no": 15.17,
+      "maker_no": 32.49
+    },
+    {
+      "price": 59,
+      "taker_yes": 40.87,
+      "maker_yes": 11.54,
+      "taker_no": 14.64,
+      "maker_no": 32.95
+    },
+    {
+      "price": 60,
+      "taker_yes": 35.12,
+      "maker_yes": 13.22,
+      "taker_no": 14.73,
+      "maker_no": 36.94
+    },
+    {
+      "price": 61,
+      "taker_yes": 35.09,
+      "maker_yes": 12.22,
+      "taker_no": 13.62,
+      "maker_no": 39.06
+    },
+    {
+      "price": 62,
+      "taker_yes": 37.1,
+      "maker_yes": 12.56,
+      "taker_no": 14.57,
+      "maker_no": 35.77
+    },
+    {
+      "price": 63,
+      "taker_yes": 37.1,
+      "maker_yes": 11.29,
+      "taker_no": 14.0,
+      "maker_no": 37.61
+    },
+    {
+      "price": 64,
+      "taker_yes": 36.77,
+      "maker_yes": 11.54,
+      "taker_no": 14.49,
+      "maker_no": 37.2
+    },
+    {
+      "price": 65,
+      "taker_yes": 37.56,
+      "maker_yes": 12.6,
+      "taker_no": 14.97,
+      "maker_no": 34.86
+    },
+    {
+      "price": 66,
+      "taker_yes": 34.29,
+      "maker_yes": 12.62,
+      "taker_no": 13.73,
+      "maker_no": 39.36
+    },
+    {
+      "price": 67,
+      "taker_yes": 33.73,
+      "maker_yes": 12.05,
+      "taker_no": 15.08,
+      "maker_no": 39.14
+    },
+    {
+      "price": 68,
+      "taker_yes": 34.28,
+      "maker_yes": 11.5,
+      "taker_no": 15.13,
+      "maker_no": 39.09
+    },
+    {
+      "price": 69,
+      "taker_yes": 33.04,
+      "maker_yes": 11.8,
+      "taker_no": 15.33,
+      "maker_no": 39.83
+    },
+    {
+      "price": 70,
+      "taker_yes": 33.5,
+      "maker_yes": 12.76,
+      "taker_no": 16.11,
+      "maker_no": 37.64
+    },
+    {
+      "price": 71,
+      "taker_yes": 32.56,
+      "maker_yes": 12.33,
+      "taker_no": 15.82,
+      "maker_no": 39.3
+    },
+    {
+      "price": 72,
+      "taker_yes": 31.8,
+      "maker_yes": 12.36,
+      "taker_no": 15.24,
+      "maker_no": 40.6
+    },
+    {
+      "price": 73,
+      "taker_yes": 32.99,
+      "maker_yes": 11.43,
+      "taker_no": 14.77,
+      "maker_no": 40.82
+    },
+    {
+      "price": 74,
+      "taker_yes": 32.82,
+      "maker_yes": 11.07,
+      "taker_no": 17.04,
+      "maker_no": 39.07
+    },
+    {
+      "price": 75,
+      "taker_yes": 30.44,
+      "maker_yes": 11.95,
+      "taker_no": 17.71,
+      "maker_no": 39.91
+    },
+    {
+      "price": 76,
+      "taker_yes": 31.09,
+      "maker_yes": 11.2,
+      "taker_no": 16.9,
+      "maker_no": 40.8
+    },
+    {
+      "price": 77,
+      "taker_yes": 31.2,
+      "maker_yes": 11.1,
+      "taker_no": 16.51,
+      "maker_no": 41.19
+    },
+    {
+      "price": 78,
+      "taker_yes": 31.01,
+      "maker_yes": 11.09,
+      "taker_no": 17.14,
+      "maker_no": 40.76
+    },
+    {
+      "price": 79,
+      "taker_yes": 33.14,
+      "maker_yes": 11.1,
+      "taker_no": 17.32,
+      "maker_no": 38.43
+    },
+    {
+      "price": 80,
+      "taker_yes": 32.04,
+      "maker_yes": 12.56,
+      "taker_no": 17.97,
+      "maker_no": 37.43
+    },
+    {
+      "price": 81,
+      "taker_yes": 30.69,
+      "maker_yes": 11.8,
+      "taker_no": 17.54,
+      "maker_no": 39.97
+    },
+    {
+      "price": 82,
+      "taker_yes": 28.97,
+      "maker_yes": 11.64,
+      "taker_no": 18.28,
+      "maker_no": 41.11
+    },
+    {
+      "price": 83,
+      "taker_yes": 27.07,
+      "maker_yes": 12.13,
+      "taker_no": 18.13,
+      "maker_no": 42.67
+    },
+    {
+      "price": 84,
+      "taker_yes": 29.58,
+      "maker_yes": 11.01,
+      "taker_no": 18.88,
+      "maker_no": 40.53
+    },
+    {
+      "price": 85,
+      "taker_yes": 27.31,
+      "maker_yes": 12.16,
+      "taker_no": 19.85,
+      "maker_no": 40.68
+    },
+    {
+      "price": 86,
+      "taker_yes": 29.17,
+      "maker_yes": 11.42,
+      "taker_no": 19.04,
+      "maker_no": 40.36
+    },
+    {
+      "price": 87,
+      "taker_yes": 26.95,
+      "maker_yes": 11.88,
+      "taker_no": 18.97,
+      "maker_no": 42.2
+    },
+    {
+      "price": 88,
+      "taker_yes": 28.56,
+      "maker_yes": 10.83,
+      "taker_no": 19.83,
+      "maker_no": 40.79
+    },
+    {
+      "price": 89,
+      "taker_yes": 26.33,
+      "maker_yes": 11.02,
+      "taker_no": 20.47,
+      "maker_no": 42.18
+    },
+    {
+      "price": 90,
+      "taker_yes": 24.63,
+      "maker_yes": 12.56,
+      "taker_no": 20.94,
+      "maker_no": 41.88
+    },
+    {
+      "price": 91,
+      "taker_yes": 24.66,
+      "maker_yes": 12.26,
+      "taker_no": 19.95,
+      "maker_no": 43.13
+    },
+    {
+      "price": 92,
+      "taker_yes": 24.25,
+      "maker_yes": 11.94,
+      "taker_no": 20.35,
+      "maker_no": 43.46
+    },
+    {
+      "price": 93,
+      "taker_yes": 22.37,
+      "maker_yes": 11.81,
+      "taker_no": 20.69,
+      "maker_no": 45.14
+    },
+    {
+      "price": 94,
+      "taker_yes": 21.99,
+      "maker_yes": 11.22,
+      "taker_no": 21.99,
+      "maker_no": 44.8
+    },
+    {
+      "price": 95,
+      "taker_yes": 20.29,
+      "maker_yes": 11.84,
+      "taker_no": 23.05,
+      "maker_no": 44.82
+    },
+    {
+      "price": 96,
+      "taker_yes": 17.32,
+      "maker_yes": 12.67,
+      "taker_no": 22.68,
+      "maker_no": 47.33
+    },
+    {
+      "price": 97,
+      "taker_yes": 15.44,
+      "maker_yes": 17.76,
+      "taker_no": 23.07,
+      "maker_no": 43.74
+    },
+    {
+      "price": 98,
+      "taker_yes": 17.21,
+      "maker_yes": 13.04,
+      "taker_no": 23.78,
+      "maker_no": 45.97
+    },
+    {
+      "price": 99,
+      "taker_yes": 11.57,
+      "maker_yes": 22.76,
+      "taker_no": 23.05,
+      "maker_no": 42.62
+    }
+  ]
+}

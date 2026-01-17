@@ -1,0 +1,21 @@
+{
+  "type": "bar",
+  "title": "Trades by Price Bucket",
+  "data": [
+    {"price": "1-10¢", "trades": 8348807},
+    {"price": "11-20¢", "trades": 6846851},
+    {"price": "21-30¢", "trades": 7073673},
+    {"price": "31-40¢", "trades": 7650541},
+    {"price": "41-50¢", "trades": 8249027},
+    {"price": "51-60¢", "trades": 8253634},
+    {"price": "61-70¢", "trades": 7160752},
+    {"price": "71-80¢", "trades": 6241682},
+    {"price": "81-90¢", "trades": 5834543},
+    {"price": "91-99¢", "trades": 6433598}
+  ],
+  "xKey": "price",
+  "yKeys": ["trades"],
+  "yUnit": "number",
+  "yLabel": "Number of Trades",
+  "xLabel": "Contract Price"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "bar",
+  "title": "Trade Size by Role",
+  "data": [
+    {"role": "Taker", "Mean": 120.31, "Median": 13.68},
+    {"role": "Maker", "Mean": 133.95, "Median": 15.75}
+  ],
+  "xKey": "role",
+  "yKeys": ["Mean", "Median"],
+  "yUnit": "usd"
+}

@@ -1,0 +1,32 @@
+{
+  "trade_size_consistency": {
+    "bins_maker_larger": 5,
+    "bins_total": 10,
+    "bins_significant_p05": 5,
+    "overall_ratio": 3.9163378338254367
+  },
+  "yes_no_asymmetry": {
+    "prices_no_better": 14,
+    "prices_total": 19,
+    "prices_significant": 19,
+    "avg_ev_diff": 8.452272371163492
+  },
+  "category_comparisons": {
+    "all_significant_vs_finance": 10,
+    "total_comparisons": 10,
+    "max_cohens_d": 0.089103786795417
+  },
+  "trade_size_regression": {
+    "pearson_r": 0.0026994056283655065,
+    "pearson_p": 0.006946313150869979,
+    "spearman_r": 0.024562667768425573,
+    "spearman_p": 2.8932838790295716e-133,
+    "slope_pp_per_log10": 0.18136957224256933,
+    "r_squared": 0.41322063047402047
+  },
+  "maker_direction": {
+    "ranges_no_better": 3,
+    "ranges_total": 6,
+    "ranges_significant": 3
+  }
+}
