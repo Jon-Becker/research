@@ -1,0 +1,512 @@
+{
+  "type": "line",
+  "title": "Historical Return by Contract Price: YES vs NO",
+  "xKey": "price",
+  "xLabel": "Contract Price (cents)",
+  "yKeys": [
+    "yes_return",
+    "no_return"
+  ],
+  "yLabels": [
+    "YES Bet",
+    "NO Bet"
+  ],
+  "yUnit": "percent",
+  "data": [
+    {
+      "price": 1,
+      "yes_return": -40.71,
+      "no_return": 22.79
+    },
+    {
+      "price": 2,
+      "yes_return": -48.65,
+      "no_return": -8.56
+    },
+    {
+      "price": 3,
+      "yes_return": -34.98,
+      "no_return": -29.84
+    },
+    {
+      "price": 4,
+      "yes_return": -33.83,
+      "no_return": -6.34
+    },
+    {
+      "price": 5,
+      "yes_return": -35.7,
+      "no_return": -25.78
+    },
+    {
+      "price": 6,
+      "yes_return": -34.51,
+      "no_return": -21.18
+    },
+    {
+      "price": 7,
+      "yes_return": -28.18,
+      "no_return": -23.79
+    },
+    {
+      "price": 8,
+      "yes_return": -21.34,
+      "no_return": -11.34
+    },
+    {
+      "price": 9,
+      "yes_return": -21.56,
+      "no_return": -13.52
+    },
+    {
+      "price": 10,
+      "yes_return": -21.48,
+      "no_return": -14.2
+    },
+    {
+      "price": 11,
+      "yes_return": -27.09,
+      "no_return": -8.78
+    },
+    {
+      "price": 12,
+      "yes_return": -18.36,
+      "no_return": -2.43
+    },
+    {
+      "price": 13,
+      "yes_return": -11.31,
+      "no_return": -10.42
+    },
+    {
+      "price": 14,
+      "yes_return": -9.42,
+      "no_return": -10.72
+    },
+    {
+      "price": 15,
+      "yes_return": -13.26,
+      "no_return": -2.91
+    },
+    {
+      "price": 16,
+      "yes_return": -10.02,
+      "no_return": -8.64
+    },
+    {
+      "price": 17,
+      "yes_return": -9.39,
+      "no_return": -15.09
+    },
+    {
+      "price": 18,
+      "yes_return": -12.73,
+      "no_return": -10.84
+    },
+    {
+      "price": 19,
+      "yes_return": -8.07,
+      "no_return": -1.39
+    },
+    {
+      "price": 20,
+      "yes_return": -3.58,
+      "no_return": 14.7
+    },
+    {
+      "price": 21,
+      "yes_return": 10.96,
+      "no_return": 18.7
+    },
+    {
+      "price": 22,
+      "yes_return": 13.91,
+      "no_return": -6.8
+    },
+    {
+      "price": 23,
+      "yes_return": 0.88,
+      "no_return": -15.5
+    },
+    {
+      "price": 24,
+      "yes_return": -8.3,
+      "no_return": -18.4
+    },
+    {
+      "price": 25,
+      "yes_return": -9.95,
+      "no_return": -11.04
+    },
+    {
+      "price": 26,
+      "yes_return": -7.76,
+      "no_return": -10.33
+    },
+    {
+      "price": 27,
+      "yes_return": -3.56,
+      "no_return": 0.32
+    },
+    {
+      "price": 28,
+      "yes_return": 1.03,
+      "no_return": 14.24
+    },
+    {
+      "price": 29,
+      "yes_return": 0.8,
+      "no_return": -0.44
+    },
+    {
+      "price": 30,
+      "yes_return": -1.31,
+      "no_return": 3.53
+    },
+    {
+      "price": 31,
+      "yes_return": -3.79,
+      "no_return": 9.39
+    },
+    {
+      "price": 32,
+      "yes_return": 10.92,
+      "no_return": 9.78
+    },
+    {
+      "price": 33,
+      "yes_return": 8.43,
+      "no_return": 10.31
+    },
+    {
+      "price": 34,
+      "yes_return": 8.9,
+      "no_return": 8.79
+    },
+    {
+      "price": 35,
+      "yes_return": -1.3,
+      "no_return": -1.05
+    },
+    {
+      "price": 36,
+      "yes_return": -1.72,
+      "no_return": -3.78
+    },
+    {
+      "price": 37,
+      "yes_return": 1.24,
+      "no_return": 2.0
+    },
+    {
+      "price": 38,
+      "yes_return": -7.99,
+      "no_return": 0.5
+    },
+    {
+      "price": 39,
+      "yes_return": -5.23,
+      "no_return": -0.43
+    },
+    {
+      "price": 40,
+      "yes_return": -4.66,
+      "no_return": -3.49
+    },
+    {
+      "price": 41,
+      "yes_return": -7.18,
+      "no_return": -7.75
+    },
+    {
+      "price": 42,
+      "yes_return": -12.89,
+      "no_return": -13.29
+    },
+    {
+      "price": 43,
+      "yes_return": -17.57,
+      "no_return": -11.68
+    },
+    {
+      "price": 44,
+      "yes_return": -12.27,
+      "no_return": -6.98
+    },
+    {
+      "price": 45,
+      "yes_return": -8.04,
+      "no_return": -9.04
+    },
+    {
+      "price": 46,
+      "yes_return": -1.36,
+      "no_return": 0.82
+    },
+    {
+      "price": 47,
+      "yes_return": -6.57,
+      "no_return": -2.53
+    },
+    {
+      "price": 48,
+      "yes_return": -3.57,
+      "no_return": -3.93
+    },
+    {
+      "price": 49,
+      "yes_return": -4.36,
+      "no_return": -0.63
+    },
+    {
+      "price": 50,
+      "yes_return": -2.04,
+      "no_return": 2.06
+    },
+    {
+      "price": 51,
+      "yes_return": 0.59,
+      "no_return": 4.19
+    },
+    {
+      "price": 52,
+      "yes_return": 3.64,
+      "no_return": 3.3
+    },
+    {
+      "price": 53,
+      "yes_return": 2.25,
+      "no_return": 5.84
+    },
+    {
+      "price": 54,
+      "yes_return": -0.71,
+      "no_return": 1.16
+    },
+    {
+      "price": 55,
+      "yes_return": 7.41,
+      "no_return": 6.54
+    },
+    {
+      "price": 56,
+      "yes_return": 5.48,
+      "no_return": 9.68
+    },
+    {
+      "price": 57,
+      "yes_return": 8.82,
+      "no_return": 13.23
+    },
+    {
+      "price": 58,
+      "yes_return": 9.63,
+      "no_return": 9.36
+    },
+    {
+      "price": 59,
+      "yes_return": 5.4,
+      "no_return": 4.98
+    },
+    {
+      "price": 60,
+      "yes_return": 2.32,
+      "no_return": 3.11
+    },
+    {
+      "price": 61,
+      "yes_return": 0.25,
+      "no_return": 3.36
+    },
+    {
+      "price": 62,
+      "yes_return": -0.29,
+      "no_return": 4.9
+    },
+    {
+      "price": 63,
+      "yes_return": -1.17,
+      "no_return": -0.75
+    },
+    {
+      "price": 64,
+      "yes_return": 2.12,
+      "no_return": 1.0
+    },
+    {
+      "price": 65,
+      "yes_return": 0.54,
+      "no_return": 0.71
+    },
+    {
+      "price": 66,
+      "yes_return": -4.5,
+      "no_return": -4.58
+    },
+    {
+      "price": 67,
+      "yes_return": -5.08,
+      "no_return": -4.17
+    },
+    {
+      "price": 68,
+      "yes_return": -4.6,
+      "no_return": -5.11
+    },
+    {
+      "price": 69,
+      "yes_return": -4.22,
+      "no_return": 1.67
+    },
+    {
+      "price": 70,
+      "yes_return": -1.52,
+      "no_return": 0.59
+    },
+    {
+      "price": 71,
+      "yes_return": 0.16,
+      "no_return": -0.32
+    },
+    {
+      "price": 72,
+      "yes_return": -5.51,
+      "no_return": -0.4
+    },
+    {
+      "price": 73,
+      "yes_return": -0.12,
+      "no_return": 1.3
+    },
+    {
+      "price": 74,
+      "yes_return": 3.63,
+      "no_return": 2.74
+    },
+    {
+      "price": 75,
+      "yes_return": 3.68,
+      "no_return": 3.32
+    },
+    {
+      "price": 76,
+      "yes_return": 5.81,
+      "no_return": 2.63
+    },
+    {
+      "price": 77,
+      "yes_return": 4.63,
+      "no_return": -0.26
+    },
+    {
+      "price": 78,
+      "yes_return": 1.92,
+      "no_return": -3.93
+    },
+    {
+      "price": 79,
+      "yes_return": -4.97,
+      "no_return": -2.89
+    },
+    {
+      "price": 80,
+      "yes_return": -3.68,
+      "no_return": 0.89
+    },
+    {
+      "price": 81,
+      "yes_return": 0.33,
+      "no_return": 1.89
+    },
+    {
+      "price": 82,
+      "yes_return": 2.38,
+      "no_return": 2.82
+    },
+    {
+      "price": 83,
+      "yes_return": 3.09,
+      "no_return": 1.92
+    },
+    {
+      "price": 84,
+      "yes_return": 1.64,
+      "no_return": 1.92
+    },
+    {
+      "price": 85,
+      "yes_return": 0.51,
+      "no_return": 2.35
+    },
+    {
+      "price": 86,
+      "yes_return": 1.75,
+      "no_return": 1.52
+    },
+    {
+      "price": 87,
+      "yes_return": 1.56,
+      "no_return": 1.71
+    },
+    {
+      "price": 88,
+      "yes_return": 0.33,
+      "no_return": 2.5
+    },
+    {
+      "price": 89,
+      "yes_return": 1.08,
+      "no_return": 3.36
+    },
+    {
+      "price": 90,
+      "yes_return": 1.58,
+      "no_return": 2.41
+    },
+    {
+      "price": 91,
+      "yes_return": 1.34,
+      "no_return": 2.14
+    },
+    {
+      "price": 92,
+      "yes_return": 0.99,
+      "no_return": 1.89
+    },
+    {
+      "price": 93,
+      "yes_return": 1.79,
+      "no_return": 2.12
+    },
+    {
+      "price": 94,
+      "yes_return": 1.35,
+      "no_return": 2.22
+    },
+    {
+      "price": 95,
+      "yes_return": 1.36,
+      "no_return": 1.87
+    },
+    {
+      "price": 96,
+      "yes_return": 0.26,
+      "no_return": 1.43
+    },
+    {
+      "price": 97,
+      "yes_return": 0.92,
+      "no_return": 1.1
+    },
+    {
+      "price": 98,
+      "yes_return": 0.17,
+      "no_return": 1.02
+    },
+    {
+      "price": 99,
+      "yes_return": -0.23,
+      "no_return": 0.43
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "type": "line",
+  "title": "Excess Win Rate by Trade Size",
+  "data": [
+    {
+      "trade_size": 0.01,
+      "Excess Win Rate": -0.11,
+      "95% CI Lower": -0.16,
+      "95% CI Upper": -0.07
+    },
+    {
+      "trade_size": 0.02,
+      "Excess Win Rate": -0.87,
+      "95% CI Lower": -0.94,
+      "95% CI Upper": -0.81
+    },
+    {
+      "trade_size": 0.03,
+      "Excess Win Rate": -1.13,
+      "95% CI Lower": -1.21,
+      "95% CI Upper": -1.04
+    },
+    {
+      "trade_size": 0.06,
+      "Excess Win Rate": -1.58,
+      "95% CI Lower": -1.65,
+      "95% CI Upper": -1.5
+    },
+    {
+      "trade_size": 0.1,
+      "Excess Win Rate": -1.47,
+      "95% CI Lower": -1.54,
+      "95% CI Upper": -1.4
+    },
+    {
+      "trade_size": 0.18,
+      "Excess Win Rate": -1.22,
+      "95% CI Lower": -1.28,
+      "95% CI Upper": -1.15
+    },
+    {
+      "trade_size": 0.32,
+      "Excess Win Rate": -1.2,
+      "95% CI Lower": -1.26,
+      "95% CI Upper": -1.14
+    },
+    {
+      "trade_size": 0.56,
+      "Excess Win Rate": -1.16,
+      "95% CI Lower": -1.2,
+      "95% CI Upper": -1.13
+    },
+    {
+      "trade_size": 1,
+      "Excess Win Rate": -1.24,
+      "95% CI Lower": -1.28,
+      "95% CI Upper": -1.19
+    },
+    {
+      "trade_size": 1.78,
+      "Excess Win Rate": -1.38,
+      "95% CI Lower": -1.41,
+      "95% CI Upper": -1.34
+    },
+    {
+      "trade_size": 3.16,
+      "Excess Win Rate": -1.38,
+      "95% CI Lower": -1.41,
+      "95% CI Upper": -1.34
+    },
+    {
+      "trade_size": 5.62,
+      "Excess Win Rate": -1.26,
+      "95% CI Lower": -1.29,
+      "95% CI Upper": -1.23
+    },
+    {
+      "trade_size": 10,
+      "Excess Win Rate": -1.08,
+      "95% CI Lower": -1.11,
+      "95% CI Upper": -1.05
+    },
+    {
+      "trade_size": 17.78,
+      "Excess Win Rate": -1.2,
+      "95% CI Lower": -1.23,
+      "95% CI Upper": -1.17
+    },
+    {
+      "trade_size": 31.62,
+      "Excess Win Rate": -1.02,
+      "95% CI Lower": -1.05,
+      "95% CI Upper": -0.98
+    },
+    {
+      "trade_size": 56.23,
+      "Excess Win Rate": -1.03,
+      "95% CI Lower": -1.07,
+      "95% CI Upper": -1
+    },
+    {
+      "trade_size": 100,
+      "Excess Win Rate": -0.87,
+      "95% CI Lower": -0.91,
+      "95% CI Upper": -0.83
+    },
+    {
+      "trade_size": 177.83,
+      "Excess Win Rate": -0.85,
+      "95% CI Lower": -0.9,
+      "95% CI Upper": -0.81
+    },
+    {
+      "trade_size": 316.23,
+      "Excess Win Rate": -0.79,
+      "95% CI Lower": -0.85,
+      "95% CI Upper": -0.74
+    },
+    {
+      "trade_size": 562.34,
+      "Excess Win Rate": -0.52,
+      "95% CI Lower": -0.59,
+      "95% CI Upper": -0.44
+    },
+    {
+      "trade_size": 1000,
+      "Excess Win Rate": -0.35,
+      "95% CI Lower": -0.47,
+      "95% CI Upper": -0.24
+    },
+    {
+      "trade_size": 1778.28,
+      "Excess Win Rate": -0.37,
+      "95% CI Lower": -0.5,
+      "95% CI Upper": -0.25
+    },
+    {
+      "trade_size": 3162.28,
+      "Excess Win Rate": -0.4,
+      "95% CI Lower": -0.57,
+      "95% CI Upper": -0.23
+    },
+    {
+      "trade_size": 5623.41,
+      "Excess Win Rate": 0.39,
+      "95% CI Lower": 0.15,
+      "95% CI Upper": 0.63
+    },
+    {
+      "trade_size": 10000,
+      "Excess Win Rate": 0.51,
+      "95% CI Lower": 0.04,
+      "95% CI Upper": 0.98
+    },
+    {
+      "trade_size": 17782.79,
+      "Excess Win Rate": 0.03,
+      "95% CI Lower": -0.62,
+      "95% CI Upper": 0.68
+    },
+    {
+      "trade_size": 31622.78,
+      "Excess Win Rate": 0.4,
+      "95% CI Lower": -0.66,
+      "95% CI Upper": 1.45
+    },
+    {
+      "trade_size": 56234.13,
+      "Excess Win Rate": 2.57,
+      "95% CI Lower": 0.8,
+      "95% CI Upper": 4.35
+    },
+    {
+      "trade_size": 100000,
+      "Excess Win Rate": 9.59,
+      "95% CI Lower": 5.95,
+      "95% CI Upper": 13.24
+    },
+    {
+      "trade_size": 177827.94,
+      "Excess Win Rate": 5.14,
+      "95% CI Lower": 1.83,
+      "95% CI Upper": 8.44
+    }
+  ],
+  "xKey": "trade_size",
+  "yKeys": [
+    "Excess Win Rate",
+    "95% CI Lower",
+    "95% CI Upper"
+  ],
+  "yUnit": "percent",
+  "strokeDasharrays": [
+    null,
+    "2 2",
+    "2 2"
+  ]
+}

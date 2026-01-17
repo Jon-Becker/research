@@ -1,1 +1,0 @@
-We analyzed 72 million trades to uncover the psychology of prediction markets. From the pervasive 'longshot bias' to the nocturnal habits of bad traders, this paper explores how human behavior shapes market odds.

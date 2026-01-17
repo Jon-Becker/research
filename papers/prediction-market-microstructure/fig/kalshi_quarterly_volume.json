@@ -1,0 +1,86 @@
+{
+  "type": "bar",
+  "title": "Kalshi Quarterly Volume",
+  "data": [
+    {
+      "quarter": "Q3 '21",
+      "volume": 3858544
+    },
+    {
+      "quarter": "Q4 '21",
+      "volume": 6501536
+    },
+    {
+      "quarter": "Q1 '22",
+      "volume": 8067126
+    },
+    {
+      "quarter": "Q2 '22",
+      "volume": 20319677
+    },
+    {
+      "quarter": "Q3 '22",
+      "volume": 27130484
+    },
+    {
+      "quarter": "Q4 '22",
+      "volume": 20844852
+    },
+    {
+      "quarter": "Q1 '23",
+      "volume": 20003769
+    },
+    {
+      "quarter": "Q2 '23",
+      "volume": 51627909
+    },
+    {
+      "quarter": "Q3 '23",
+      "volume": 51209287
+    },
+    {
+      "quarter": "Q4 '23",
+      "volume": 60302423
+    },
+    {
+      "quarter": "Q1 '24",
+      "volume": 65556361
+    },
+    {
+      "quarter": "Q2 '24",
+      "volume": 93440094
+    },
+    {
+      "quarter": "Q3 '24",
+      "volume": 74388655
+    },
+    {
+      "quarter": "Q4 '24",
+      "volume": 1725471947
+    },
+    {
+      "quarter": "Q1 '25",
+      "volume": 881915077
+    },
+    {
+      "quarter": "Q2 '25",
+      "volume": 1905784739
+    },
+    {
+      "quarter": "Q3 '25",
+      "volume": 4477512018
+    },
+    {
+      "quarter": "Q4 '25",
+      "volume": 8770938574
+    }
+  ],
+  "xKey": "quarter",
+  "yKeys": [
+    "volume"
+  ],
+  "xLabel": "Quarter",
+  "yLabel": "Volume (USD)",
+  "yUnit": "dollars",
+  "yScale": "log"
+}
