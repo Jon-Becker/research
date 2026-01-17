@@ -4,6 +4,8 @@
   "xKey": "price",
   "yKeys": ["Taker", "Maker", "Combined"],
   "yUnit": "percent",
+  "xLabel": "Contract Price (cents)",
+  "yLabel": "Mispricing (pp)",
   "colors": {"Taker": "#ef4444", "Maker": "#10b981", "Combined": "#6366f1"},
   "data": [
     {"price": 1, "Taker": -57.48, "Maker": 57.20, "Combined": -8.65},

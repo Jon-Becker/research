@@ -15,6 +15,7 @@
     "Taker NO",
     "Maker NO"
   ],
+  "yLabel": "Share of Volume (%)",
   "data": [
     {
       "price": 1,

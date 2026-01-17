@@ -116,5 +116,7 @@
     "Taker Return",
     "Maker Return"
   ],
-  "yUnit": "percent"
+  "yUnit": "percent",
+  "xLabel": "Quarter",
+  "yLabel": "Excess Return (%)"
 }

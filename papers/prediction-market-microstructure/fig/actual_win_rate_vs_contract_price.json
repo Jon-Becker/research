@@ -508,6 +508,6 @@
     "5 5"
   ],
   "yUnit": "percent",
-  "xLabel": "Contract Price (%)",
+  "xLabel": "Contract Price (cents)",
   "yLabel": "Actual Win Rate (%)"
 }

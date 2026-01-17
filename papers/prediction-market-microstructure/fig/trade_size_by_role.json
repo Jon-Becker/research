@@ -7,5 +7,7 @@
   ],
   "xKey": "role",
   "yKeys": ["Mean", "Median"],
-  "yUnit": "usd"
+  "yUnit": "usd",
+  "xLabel": "Role",
+  "yLabel": "Trade Size (USD)"
 }

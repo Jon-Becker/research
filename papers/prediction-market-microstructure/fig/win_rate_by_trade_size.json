@@ -194,5 +194,7 @@
     null,
     "2 2",
     "2 2"
-  ]
+  ],
+  "xLabel": "Trade Size (USD)",
+  "yLabel": "Excess Win Rate (%)"
 }

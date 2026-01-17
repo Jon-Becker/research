@@ -26,6 +26,8 @@
     "81-90\u00a2",
     "91-99\u00a2"
   ],
+  "xLabel": "Quarter",
+  "yLabel": "Share of Taker Volume (%)",
   "data": [
     {
       "quarter": "2021 Q3",

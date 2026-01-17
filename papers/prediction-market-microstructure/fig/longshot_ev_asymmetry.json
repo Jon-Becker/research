@@ -2,7 +2,7 @@
   "type": "line",
   "title": "Historical Return by Contract Price: YES vs NO",
   "xKey": "price",
-  "xLabel": "Contract Price (cents)",
+  "xLabel": "Cost Basis (cents)",
   "yKeys": [
     "yes_return",
     "no_return"
@@ -12,6 +12,7 @@
     "NO Bet"
   ],
   "yUnit": "percent",
+  "yLabel": "Historical Return (%)",
   "data": [
     {
       "price": 1,

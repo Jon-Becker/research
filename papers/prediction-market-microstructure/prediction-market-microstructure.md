@@ -34,13 +34,15 @@ The dataset, [available on GitHub](https://github.com/jon-becker/prediction-mark
 
 - **Role assignment:** Each trade identifies the liquidity taker. The maker took the opposite position. If `taker_side = yes` at 10 cents, the taker bought YES at 10¢; the maker bought NO at 90¢.
 
+- **Cost Basis ($C_b$)**: To compare asymmetries between YES and NO contracts, we normalize all trades by capital risked. For a standard YES trade at 5 cents, $C_b = 5$. For a NO trade at 5 cents, $C_b = 5$. All references to "Price" in this paper refer to this Cost Basis unless otherwise noted.
+
 - **Mispricing** ($\delta_S$) measures the divergence between actual win rate and implied probability for a subset of trades $S$:
 
 $$
 \delta_S = \frac{1}{|S|} \sum_{i \in S} o_i - \frac{1}{|S|} \sum_{i \in S} \frac{p_i}{100}
 $$
 
-- **Excess return** ($r_i$) is the return relative to cost, where $p_i$ is price in cents and $o_i \in \{0, 1\}$ is the outcome:
+- **Gross Excess return** ($r_i$) is the return relative to cost, gross of platform fees, where $p_i$ is price in cents and $o_i \in \{0, 1\}$ is the outcome:
 
 $$
 r_i = \frac{(100 \cdot o_i - p_i)}{p_i}
@@ -56,7 +58,7 @@ Calculations derive from **resolved markets** only. Markets that were voided, de
 
 ## The Longshot Bias on Kalshi
 
-First documented by [Griffith (1949)](https://www.jstor.org/stable/1418469) in horse racing, the longshot bias describes the tendency for bettors to overpay for low-probability outcomes. In efficient markets, a contract priced at $p$ cents should win approximately $p$\% of the time. In markets exhibiting longshot bias, low-priced contracts win *less* than their implied probability, while high-priced contracts win *more*.
+First documented by [Griffith (1949)](https://www.jstor.org/stable/1418469) in horse racing and later formalized by [Thaler & Ziemba (1988)](https://www.aeaweb.org/articles?id=10.1257/jep.2.2.161) in their analysis of parimutuel betting markets, the longshot bias describes the tendency for bettors to overpay for low-probability outcomes. In efficient markets, a contract priced at $p$ cents should win approximately $p$\% of the time. In markets exhibiting longshot bias, low-priced contracts win *less* than their implied probability, while high-priced contracts win *more*.
 
 The data confirms this pattern on Kalshi. Contracts trading at **5 cents** win only <context title="Combined maker+taker win rate at 5¢; n=1,407,530 trades">**4.18%**</context> of the time, implying mispricing of **-16.36%**. Conversely, contracts at **95 cents** win <context title="Combined maker+taker win rate at 95¢; n=TODO trades">**95.83%**</context> of the time. This pattern is consistent; all contracts priced below 20 cents underperform their odds, while those above 80 cents outperform.
 
@@ -184,6 +186,8 @@ The analysis of 72.1 million trades on Kalshi reveals a distinct market microstr
 
 A central question in zero-sum market analysis is whether profitable participants win through superior information (forecasting) or superior structure (market making). Our data strongly supports the latter. When decomposing maker returns by position direction, the performance gap is negligible: makers buying "YES" earn an excess return of +0.77%, while those buying "NO" earn +1.25% (Cohen’s d ≈ 0.02). This statistical symmetry indicates that makers do not possess a significant ability to pick winners. Instead, they profit via a structural arbitrage: providing liquidity to a taker population that exhibits a costly preference for affirmative, longshot outcomes.
 
+![mechanism diagram](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/prediction-market-microstructure/fig/mechanism.png?fw)
+
 This extraction mechanism relies on the "Optimism Tax." Takers disproportionately purchase "YES" contracts at longshot prices, accounting for nearly half of all volume in that range, despite "YES" longshots underperforming "NO" longshots by up to 64 percentage points. Makers, therefore, do not need to predict the future; they simply need to act as the counterparty to optimism. This aligns with findings by [Reichenbach and Walther (2025)](https://ssrn.com/abstract=5910522) on Polymarket and [Whelan (2025)](https://mpra.ub.uni-muenchen.de/126351/1/MPRA_paper_126351.pdf) on Betfair, suggesting that in prediction markets, makers accommodate biased flow rather than out-forecast it.
 
 ### The Professionalization of Liquidity
@@ -223,5 +227,6 @@ The market is split into two distinct populations: a taker class that systematic
 -   Fama, E.F., "Efficient Capital Markets: A Review of Theory and Empirical Work", Journal of Finance, 1970. Available: https://www.jstor.org/stable/2325486
 -   Griffith, R.M., "Odds Adjustments by American Horse-Race Bettors", American Journal of Psychology, 1949. Available: https://www.jstor.org/stable/1418469
 -   Reichenbach, F. & Walther, M., "Exploring Decentralized Prediction Markets: Accuracy, Skill, and Bias on Polymarket", SSRN, 2025. Available: https://ssrn.com/abstract=5910522
+-   Thaler, R.H. & Ziemba, W.T., "Anomalies: Parimutuel Betting Markets: Racetracks and Lotteries", Journal of Economic Perspectives, 1988. Available: https://www.aeaweb.org/articles?id=10.1257/jep.2.2.161
 -   Whelan, K., "Agreeing to Disagree: The Economics of Betting Exchanges", MPRA, 2025. Available: https://mpra.ub.uni-muenchen.de/126351/1/MPRA_paper_126351.pdf
 -   U.S. Court of Appeals for the D.C. Circuit, "Kalshi, Inc. v. CFTC", Oct 2024. Available: https://media.cadc.uscourts.gov/opinions/docs/2024/10/24-5205-2077790.pdf

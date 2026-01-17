@@ -17,5 +17,5 @@
   "yKeys": ["trades"],
   "yUnit": "number",
   "yLabel": "Number of Trades",
-  "xLabel": "Contract Price"
+  "xLabel": "Contract Price (cents)"
 }
