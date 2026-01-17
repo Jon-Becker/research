@@ -1,6 +1,6 @@
 # The Microstructure of Wealth Transfer in Prediction Markets
 
-![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/longshot-bias-prediction-markets/preview.png?fw)
+![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/prediction-market-microstructure/preview.png?fw)
 
 Slot machines on the Las Vegas Strip return about 93 cents on the dollar. This is widely considered some of the worst odds in gambling. Yet on Kalshi, a CFTC-regulated prediction market, traders have wagered vast sums on longshot contracts with historical returns as low as 43 cents on the dollar. Thousands of participants are voluntarily accepting expected values far lower than a casino slot machine to bet on their convictions.
 
