@@ -50,7 +50,7 @@ $$
 
 ### Sample
 
-Calculations derive from **resolved markets** only. Markets that were voided, delisted, or remain open are excluded. The dataset remains robust across all price levels; the sparsest bin (81-90¢) contains 5.8 million trades.
+Calculations derive from **resolved markets** only. Markets that were voided, delisted, or remain open are excluded. Additionally, trades from markets with less than \$100 in notional volume were excluded. The dataset remains robust across all price levels; the sparsest bin (81-90¢) contains 5.8 million trades.
 
 ```chart
 @include fig/sample_size_by_price.json
