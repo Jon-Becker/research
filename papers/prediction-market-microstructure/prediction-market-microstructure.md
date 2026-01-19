@@ -66,6 +66,8 @@ The data confirms this pattern on Kalshi. Contracts trading at **5 cents** win o
 @include fig/actual_win_rate_vs_contract_price.json
 ```
 
+> **Note:** The calibration curve demonstrates that prediction markets are extremely efficient and accurate, with the slight exception of the tails. The close alignment between implied and actual probabilities confirms that prediction markets are well-calibrated price discovery mechanisms.
+
 The existence of the longshot bias raises a question unique to zero-sum markets: if some traders systematically overpay, who captures the surplus?
 
 ## The Maker-Taker Wealth Transfer
