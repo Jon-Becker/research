@@ -2,7 +2,7 @@
   "type": "stacked-area-100",
   "title": "YES vs NO Volume by Price",
   "xKey": "price",
-  "xLabel": "YES Contract Price",
+  "xLabel": "Cost Basis (cents)",
   "yKeys": [
     "taker_yes",
     "maker_yes",
