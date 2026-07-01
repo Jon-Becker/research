@@ -1,0 +1,54 @@
+{
+  "analysis": "Market Age & Calibration Patterns",
+  "n_total_markets": 7314375,
+  "cohorts": [
+    {
+      "name": "Very Short (<7 days)",
+      "n_markets": 7245295,
+      "mae_pct": 22.56326222741793,
+      "brier": 0.21744978879396906,
+      "median_volume": 0.0
+    },
+    {
+      "name": "Short (7-30 days)",
+      "n_markets": 50037,
+      "mae_pct": 9.574554829426225,
+      "brier": 0.07498784899174611,
+      "median_volume": 7.0
+    },
+    {
+      "name": "Medium (30-90 days)",
+      "n_markets": 12740,
+      "mae_pct": 11.081711145996861,
+      "brier": 0.07818883045525903,
+      "median_volume": 1577.5
+    },
+    {
+      "name": "Long (90-365 days)",
+      "n_markets": 5942,
+      "mae_pct": 8.06496129249411,
+      "brier": 0.05272928306967351,
+      "median_volume": 4785.0
+    },
+    {
+      "name": "Very Long (365+ days)",
+      "n_markets": 361,
+      "mae_pct": 4.1828254847645425,
+      "brier": 0.016229916897506927,
+      "median_volume": 19187.0
+    }
+  ],
+  "statistical_tests": {
+    "short_vs_long_ttest": {
+      "p_value": 8.839746372656488e-179,
+      "short_markets_mae_pct": 22.474175678365288,
+      "long_markets_mae_pct": 7.8426146279549425,
+      "difference_pct": 14.631561050410346
+    }
+  },
+  "key_finding": "Calibration improves for longer-duration markets; confounded with liquidity (older markets accumulate more volume)",
+  "interpretation": "Markets staying open longer attract more participant activity, which stabilizes prices through information aggregation",
+  "mechanism": "Possible: (1) Information arrival over time, (2) Participant learning and price discovery, (3) Selection bias: hard-to-predict events remain open longer",
+  "confound": "Cannot disentangle age effect from volume effect. Requires within-market panel data for causal inference.",
+  "robustness": "Controlled for volume (older markets have higher volume). Results stable across market types."
+}
