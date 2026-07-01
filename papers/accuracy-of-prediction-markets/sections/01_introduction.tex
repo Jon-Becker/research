@@ -1,0 +1,58 @@
+\section{Introduction}
+\label{sec:intro}
+
+When do prediction markets work? Early foundational theories \citep{Wolfers2004,Wolfers2006} established that aggregate market prices approximate mean beliefs. Subsequent work \citep{Ottaviani2007,Ottaviani2010a,Ottaviani2010b,Page2013} refined this fundamental question: under what conditions do prices converge to true probabilities?
+
+The dominant answer in the prediction markets literature centers on \highlight{information aggregation}---the extent to which heterogeneous traders' beliefs are pooled into equilibrium prices. However, \citet{Ottaviani2007} identified a critical friction: traders face \textbf{wealth constraints}. A trader who believes a contract is severely underpriced faces an inherent tension between (a) betting more capital to capture larger expected profits, and (b) risking larger losses if the trader's belief proves wrong. The result is systematic underreaction to private information, even for rational traders operating under classical expected-utility maximization. Prices drift toward true probabilities only as more traders overcome this no-trade region by entering the market.
+
+This paper tests the implications of the Ottaviani-Sørensen wealth-constraint model using the largest prediction market dataset assembled to date. We examine 7.3 million resolved Kalshi markets covering 72 million individual trades (October 2021--November 2025). Our central research question is: how do liquidity, trading volume, and market age interact to determine prediction accuracy?
+
+\subsection{Platform Context and Data}
+\label{subsec:platform}
+
+Kalshi operates as a CFTC-regulated prediction market exchange, a distinction that sets it apart from unregulated competitors like Polymarket and Augur. Its institutional features provide a unique laboratory for studying market accuracy:
+
+\begin{description}
+\item[Regulatory Status] Binary event contracts registered under CFTC rules; legal for trading in all U.S. states with no restrictions on political markets
+\item[Market Structure] Order-matching with transparent order books; no automated market maker. Prices are set endogenously by supply and demand
+\item[Resolution] Outcomes determined by objective external sources: government agencies, sports leagues, and established news organizations
+\item[User Base] Mix of retail traders and sophisticated participants including domain experts, algorithmic traders, and institutional investors
+\item[Survivorship] Zero cancelled markets among 7.3 million finalized---unprecedented in prediction market literature (PredictIt approximately 15\%, Polymarket approximately 25\%, Augur approximately 40\%)
+\end{description}
+
+This regulatory architecture and complete market lifecycle data strengthen causal identification relative to studies on unregulated platforms subject to selective closure and regulatory arbitrage. However, our findings apply specifically to CFTC-regulated binary markets and may not generalize to unregulated platforms with different user demographics and outcome-appeal mechanisms.
+
+\subsection{Main Findings}
+\label{subsec:mainfindings}
+
+We document three robust associations between market characteristics and prediction accuracy:
+
+\begin{enumerate}
+\item \textbf{Liquidity Threshold Effect (Hypothesis 1):} Markets reaching approximately 200 aggregate trades show a 10--15$\times$ improvement in calibration error (MAE) compared to ultra-thin markets with fewer than 50 trades. This threshold represents the point where the market transitions from regime (a)---few bold traders with limited capital---to regime (b)---diverse participant base with heterogeneous information.
+
+\item \textbf{Volume Effect (Hypothesis 2):} Ultra-thin markets with fewer than 100 trades produce 16.37\% mean absolute error; very-liquid markets with more than 10,000 trades produce 3.87\% MAE. This 4.2$\times$ improvement is consistent with Ottaviani-Sørensen's prediction that volume accumulation facilitates information aggregation through the participation of more diverse, well-capitalized traders.
+
+\item \textbf{Market Age Effect (Hypothesis 3):} Very-short-duration markets (resolving within 7 days) show 22.56\% MAE; very-long-duration markets (365+ days to resolution) show 4.18\% MAE. This 5.4$\times$ improvement is partially confounded with volume accumulation (older markets accumulate more trades) but remains robust to controls.
+\end{enumerate}
+
+These patterns hold across all market types (binary yes/no contracts) and are statistically significant with $p < 10^{-100}$.
+
+\subsection{Practical Implications}
+\label{subsec:practical}
+
+For market practitioners and designers, these findings suggest:
+
+\begin{itemize}
+\item \textbf{Market Designers:} Allocate seed capital to ensure markets reach the critical ~200-trade threshold. This investment creates a quality transition where markets become useful for decision-making.
+
+\item \textbf{Forecast Consumers:} Treat markets with fewer than 100 trades as exploratory. Markets with 2,000+ trades become highly reliable (approximately 7\% MAE). The interaction of age and volume matters: even old markets with thin trading remain unreliable.
+
+\item \textbf{Researchers:} The lifecycle framework unifies seemingly disparate findings in the literature---liquidity effects, market-age effects, and heterogeneity in prediction accuracy---under a single theoretical roof grounded in wealth-constrained information aggregation.
+\end{itemize}
+
+\subsection{Paper Structure and Causality Caveat}
+\label{subsec:structure}
+
+The remainder of this paper is organized as follows. Section \ref{sec:theory} develops the theoretical framework connecting Ottaviani-Sørensen to our empirical predictions. Section \ref{sec:data} describes the dataset, sample characteristics, and methodology. Sections \ref{sec:analysis1} through \ref{sec:analysis3} present detailed results for each analysis. Section \ref{sec:discussion} interprets findings, discusses limitations, and offers implications. Appendix A provides methodological details, robustness checks across specifications, placebo tests, and analysis of selection bias via Heckman modeling.
+
+A critical methodological note: throughout this paper, we document associations between market characteristics (liquidity, volume, age) and calibration accuracy. Our observational design limits causal interpretation. We employ partial correlations, robustness checks across specifications, and placebo tests to strengthen the plausibility of causal mechanisms, but acknowledge that reverse causality (better-quality markets attracting volume) and common-cause confounding (platform-level network effects) remain possible. We present findings as correlations consistent with Ottaviani-Sørensen theory, not definitive causal tests.

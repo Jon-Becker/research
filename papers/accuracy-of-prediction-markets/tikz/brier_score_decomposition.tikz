@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Brier Score Decomposition by Category},
+    xlabel={Category},
+    ylabel={Score Component},
+    \end{axis}
+  \end{tikzpicture}

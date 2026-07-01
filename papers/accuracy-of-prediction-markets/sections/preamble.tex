@@ -1,0 +1,101 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[sort&compress,numbers,square]{natbib}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{floatrow}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usetikzlibrary{
+    arrows.meta,
+    positioning,
+    shapes.geometric,
+    fit,
+    backgrounds,
+    matrix,
+    calc,
+    intersections,
+    patterns,
+    decorations.pathreplacing
+}
+
+\pgfplotsset{
+    compat=1.18,
+    every axis/.append style={
+        font=\small,
+        tick label style={font=\footnotesize},
+        label style={font=\small},
+        legend style={font=\footnotesize}
+    }
+}
+
+% Set line spacing
+\onehalfspacing
+
+% Configure hyperref
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black,
+    anchorcolor=black,
+    citecolor=darkblue,
+    pdfauthor={Jonathan Becker},
+    pdftitle={Are Prediction Markets Accurate? Resolving Information Aggregation Through a Lifecycle Lens},
+    pdfsubject={Prediction markets, calibration, information aggregation, lifecycle model},
+    pdfkeywords={prediction markets, Kalshi, calibration, Ottaviani-Sørensen, information aggregation, liquidity threshold},
+    pdfproducer={pdflatex},
+    pdfcreator={pdflatex}
+}
+
+% Define colors
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{lightblue}{rgb}{0.7,0.85,1}
+\definecolor{darkred}{rgb}{0.7,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+
+% Theorem styles
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Graphics path
+\graphicspath{{fig/}{figures/}{sections/figures/}}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\chead{Prediction Markets: Accuracy Over Market Lifecycle}
+\rfoot{Page \thepage\ of \pageref{LastPage}}
+\lfoot{Becker (2026)}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Custom commands
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\highlight}[1]{\textcolor{darkblue}{\textbf{#1}}}
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{[TODO: #1]}}}
+
+\begin{document}

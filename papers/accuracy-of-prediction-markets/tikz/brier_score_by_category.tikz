@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Brier Score by Category},
+    xlabel={Category},
+    ylabel={Brier Score},
+    ybar,
+    bar width=0.7cm,
+    width=0.85\textwidth,
+    height=0.5\textwidth,
+    legend pos=outer north east,
+    xtick={1,2,3,4,5,6,7,8,9,10},
+    xticklabels={Sports,Crypto,Politics,Weather,Finance,Entertainment,Other,Media,World Events,Science/Tech},
+    x tick label style={rotate=45,anchor=east,font=\tiny},
+    ]
+    \addplot[fill=blue!60] coordinates {
+      (1, 0.1773)
+      (2, 0.1643)
+      (3, 0.1192)
+      (4, 0.1596)
+      (5, 0.15)
+      (6, 0.1452)
+      (7, 0.1487)
+      (8, 0.1506)
+      (9, 0.1732)
+      (10, 0.1519)
+    };
+    \addlegend{Brier Score}
+    \end{axis}
+  \end{tikzpicture}
