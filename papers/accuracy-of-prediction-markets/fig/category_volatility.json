@@ -1,0 +1,56 @@
+{
+  "type": "bar",
+  "data": [
+    {
+      "category": "Sports",
+      "Avg Volatility": 15.3
+    },
+    {
+      "category": "Crypto",
+      "Avg Volatility": 14.8
+    },
+    {
+      "category": "Politics",
+      "Avg Volatility": 14.7
+    },
+    {
+      "category": "Weather",
+      "Avg Volatility": 12.7
+    },
+    {
+      "category": "Finance",
+      "Avg Volatility": 12.4
+    },
+    {
+      "category": "Entertainment",
+      "Avg Volatility": 11.9
+    },
+    {
+      "category": "Other",
+      "Avg Volatility": 13.0
+    },
+    {
+      "category": "Media",
+      "Avg Volatility": 13.4
+    },
+    {
+      "category": "World Events",
+      "Avg Volatility": 10.7
+    },
+    {
+      "category": "Science/Tech",
+      "Avg Volatility": 13.0
+    }
+  ],
+  "xKey": "category",
+  "yKeys": [
+    "Avg Volatility"
+  ],
+  "title": "Price Volatility by Category",
+  "yUnit": "number",
+  "colors": {
+    "Avg Volatility": "#4C72B0"
+  },
+  "xLabel": "Category",
+  "yLabel": "Avg Intra-Market Std Dev (cents)"
+}

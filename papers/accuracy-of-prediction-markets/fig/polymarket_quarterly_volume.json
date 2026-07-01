@@ -1,0 +1,105 @@
+{
+  "type": "bar",
+  "data": [
+    {
+      "quarter": "Q4 '20",
+      "volume": 49073014
+    },
+    {
+      "quarter": "Q1 '21",
+      "volume": 56862127
+    },
+    {
+      "quarter": "Q2 '21",
+      "volume": 24357052
+    },
+    {
+      "quarter": "Q3 '21",
+      "volume": 17336602
+    },
+    {
+      "quarter": "Q4 '21",
+      "volume": 22643879
+    },
+    {
+      "quarter": "Q1 '22",
+      "volume": 22792131
+    },
+    {
+      "quarter": "Q2 '22",
+      "volume": 25471446
+    },
+    {
+      "quarter": "Q3 '22",
+      "volume": 12108538
+    },
+    {
+      "quarter": "Q4 '22",
+      "volume": 8618541
+    },
+    {
+      "quarter": "Q1 '23",
+      "volume": 21536212
+    },
+    {
+      "quarter": "Q2 '23",
+      "volume": 35697968
+    },
+    {
+      "quarter": "Q3 '23",
+      "volume": 34616802
+    },
+    {
+      "quarter": "Q4 '23",
+      "volume": 45248321
+    },
+    {
+      "quarter": "Q1 '24",
+      "volume": 513068019
+    },
+    {
+      "quarter": "Q2 '24",
+      "volume": 752990518
+    },
+    {
+      "quarter": "Q3 '24",
+      "volume": 5029252415
+    },
+    {
+      "quarter": "Q4 '24",
+      "volume": 21950341463
+    },
+    {
+      "quarter": "Q1 '25",
+      "volume": 11185096367
+    },
+    {
+      "quarter": "Q2 '25",
+      "volume": 7962920658
+    },
+    {
+      "quarter": "Q3 '25",
+      "volume": 8055543656
+    },
+    {
+      "quarter": "Q4 '25",
+      "volume": 27486997559
+    },
+    {
+      "quarter": "Q1 '26",
+      "volume": 11561720071
+    }
+  ],
+  "xKey": "quarter",
+  "yKeys": [
+    "volume"
+  ],
+  "colors": [
+    "#1f77b4"
+  ],
+  "title": "Polymarket Quarterly Notional Volume",
+  "yScale": "log",
+  "yUnit": "dollars",
+  "xLabel": "Quarter",
+  "yLabel": "Volume (USD)"
+}

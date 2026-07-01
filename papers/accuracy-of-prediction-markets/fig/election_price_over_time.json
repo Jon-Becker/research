@@ -1,0 +1,563 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "date": "2024-10-04",
+      "Trump": 49,
+      "Harris": 51
+    },
+    {
+      "date": "2024-10-05",
+      "Trump": 50,
+      "Harris": 51
+    },
+    {
+      "date": "2024-10-06",
+      "Trump": 49,
+      "Harris": 51
+    },
+    {
+      "date": "2024-10-07",
+      "Trump": 50,
+      "Harris": 50
+    },
+    {
+      "date": "2024-10-08",
+      "Trump": 50,
+      "Harris": 50
+    },
+    {
+      "date": "2024-10-09",
+      "Trump": 50,
+      "Harris": 50
+    },
+    {
+      "date": "2024-10-10",
+      "Trump": 51,
+      "Harris": 49
+    },
+    {
+      "date": "2024-10-11",
+      "Trump": 52,
+      "Harris": 47
+    },
+    {
+      "date": "2024-10-12",
+      "Trump": 53,
+      "Harris": 47
+    },
+    {
+      "date": "2024-10-13",
+      "Trump": 54,
+      "Harris": 47
+    },
+    {
+      "date": "2024-10-14",
+      "Trump": 54,
+      "Harris": 46
+    },
+    {
+      "date": "2024-10-15",
+      "Trump": 55,
+      "Harris": 45
+    },
+    {
+      "date": "2024-10-16",
+      "Trump": 56,
+      "Harris": 44
+    },
+    {
+      "date": "2024-10-17",
+      "Trump": 56,
+      "Harris": 43
+    },
+    {
+      "date": "2024-10-18",
+      "Trump": 57,
+      "Harris": 43
+    },
+    {
+      "date": "2024-10-19",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "date": "2024-10-20",
+      "Trump": 57,
+      "Harris": 43
+    },
+    {
+      "date": "2024-10-21",
+      "Trump": 57,
+      "Harris": 43
+    },
+    {
+      "date": "2024-10-22",
+      "Trump": 60,
+      "Harris": 40
+    },
+    {
+      "date": "2024-10-23",
+      "Trump": 59,
+      "Harris": 41
+    },
+    {
+      "date": "2024-10-24",
+      "Trump": 61,
+      "Harris": 39
+    },
+    {
+      "date": "2024-10-25",
+      "Trump": 62,
+      "Harris": 38
+    },
+    {
+      "date": "2024-10-26",
+      "Trump": 61,
+      "Harris": 39
+    },
+    {
+      "date": "2024-10-27",
+      "Trump": 62,
+      "Harris": 38
+    },
+    {
+      "date": "2024-10-28",
+      "Trump": 63,
+      "Harris": 38
+    },
+    {
+      "date": "2024-10-29",
+      "Trump": 64,
+      "Harris": 36
+    },
+    {
+      "date": "2024-10-30",
+      "Trump": 62,
+      "Harris": 39
+    },
+    {
+      "date": "2024-10-31",
+      "Trump": 59,
+      "Harris": 41
+    },
+    {
+      "date": "2024-11-01",
+      "Trump": 55,
+      "Harris": 45
+    },
+    {
+      "date": "2024-11-02",
+      "Trump": 53,
+      "Harris": 48
+    },
+    {
+      "date": "2024-11-03",
+      "Trump": 52,
+      "Harris": 48
+    },
+    {
+      "date": "2024-11-04",
+      "Trump": 56,
+      "Harris": 45
+    },
+    {
+      "date": "2024-11-05",
+      "Trump": 70,
+      "Harris": 25
+    },
+    {
+      "date": "2024-11-06",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-07",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-08",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-09",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-10",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-11",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-12",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-13",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-14",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-16",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-17",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-18",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-19",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-20",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-21",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-22",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-23",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-24",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-25",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-26",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-27",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "date": "2024-11-28",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-29",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-11-30",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-01",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-02",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-03",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "date": "2024-12-04",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-05",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-06",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-07",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-08",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-09",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-10",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-11",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-12",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-13",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-14",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-15",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-16",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-17",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-18",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-19",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-20",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-21",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-22",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-23",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-24",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-25",
+      "Trump": 99,
+      "Harris": 2
+    },
+    {
+      "date": "2024-12-26",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-27",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-28",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "date": "2024-12-29",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-30",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2024-12-31",
+      "Trump": 99,
+      "Harris": 2
+    },
+    {
+      "date": "2025-01-01",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-02",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "date": "2025-01-03",
+      "Trump": 99,
+      "Harris": 2
+    },
+    {
+      "date": "2025-01-04",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-05",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-06",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-07",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-08",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-09",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-10",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-11",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-12",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-13",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-14",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-15",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-16",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-17",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-18",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-19",
+      "Trump": 99,
+      "Harris": 1
+    },
+    {
+      "date": "2025-01-20",
+      "Trump": 99,
+      "Harris": 1
+    }
+  ],
+  "xKey": "date",
+  "yKeys": [
+    "Trump",
+    "Harris"
+  ],
+  "title": "2024 Presidential Election: Trump vs Harris Price",
+  "yUnit": "cents",
+  "colors": {
+    "Trump": "#e74c3c",
+    "Harris": "#3498db"
+  },
+  "xLabel": "Date",
+  "yLabel": "Price (cents)"
+}

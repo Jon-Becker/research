@@ -1,0 +1,43 @@
+{
+  "type": "bar",
+  "data": [
+    {
+      "bucket": ">30d",
+      "MAD (%)": 5.39,
+      "Brier Score": 0.1296
+    },
+    {
+      "bucket": "7\u201330d",
+      "MAD (%)": 3.39,
+      "Brier Score": 0.1397
+    },
+    {
+      "bucket": "1\u20137d",
+      "MAD (%)": 2.24,
+      "Brier Score": 0.1608
+    },
+    {
+      "bucket": "1h\u20131d",
+      "MAD (%)": 1.19,
+      "Brier Score": 0.1856
+    },
+    {
+      "bucket": "<1h",
+      "MAD (%)": 1.23,
+      "Brier Score": 0.148
+    }
+  ],
+  "xKey": "bucket",
+  "yKeys": [
+    "MAD (%)",
+    "Brier Score"
+  ],
+  "title": "Calibration by Time to Resolution",
+  "yUnit": "number",
+  "colors": {
+    "MAD (%)": "#4C72B0",
+    "Brier Score": "#D65F5F"
+  },
+  "xLabel": "Time to Resolution",
+  "yLabel": "Score"
+}

@@ -1,0 +1,64 @@
+{
+  "type": "bar",
+  "data": [
+    {
+      "bucket": "1\u201310",
+      "MAD (%)": 5.91,
+      "Brier Score": 0.0745,
+      "Markets": 336788
+    },
+    {
+      "bucket": "11\u201350",
+      "MAD (%)": 4.02,
+      "Brier Score": 0.1218,
+      "Markets": 108588
+    },
+    {
+      "bucket": "51\u2013200",
+      "MAD (%)": 3.19,
+      "Brier Score": 0.136,
+      "Markets": 62941
+    },
+    {
+      "bucket": "201\u20131K",
+      "MAD (%)": 0.39,
+      "Brier Score": 0.1624,
+      "Markets": 36831
+    },
+    {
+      "bucket": "1K\u20135K",
+      "MAD (%)": 0.5,
+      "Brier Score": 0.1649,
+      "Markets": 7066
+    },
+    {
+      "bucket": "5K\u201325K",
+      "MAD (%)": 1.67,
+      "Brier Score": 0.1725,
+      "Markets": 1776
+    },
+    {
+      "bucket": "25K\u2013100K",
+      "MAD (%)": 5.74,
+      "Brier Score": 0.2158,
+      "Markets": 229
+    },
+    {
+      "bucket": "100K+",
+      "MAD (%)": 16.32,
+      "Brier Score": 0.1515,
+      "Markets": 4
+    }
+  ],
+  "xKey": "bucket",
+  "yKeys": [
+    "MAD (%)"
+  ],
+  "title": "Calibration Accuracy by Market Liquidity",
+  "yUnit": "number",
+  "colors": {
+    "MAD (%)": "#4C72B0"
+  },
+  "xLabel": "Market Liquidity (Trade Count)",
+  "yLabel": "MAD (%)"
+}

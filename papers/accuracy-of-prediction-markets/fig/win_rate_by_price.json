@@ -1,0 +1,619 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "price": 1,
+      "Polymarket (actual)": 0.53,
+      "Kalshi (actual)": 0.91,
+      "implied": 1
+    },
+    {
+      "price": 2,
+      "Polymarket (actual)": 2.65,
+      "Kalshi (actual)": 1.9,
+      "implied": 2
+    },
+    {
+      "price": 3,
+      "Polymarket (actual)": 2.23,
+      "Kalshi (actual)": 2.71,
+      "implied": 3
+    },
+    {
+      "price": 4,
+      "Polymarket (actual)": 2.55,
+      "Kalshi (actual)": 3.45,
+      "implied": 4
+    },
+    {
+      "price": 5,
+      "Polymarket (actual)": 3.5,
+      "Kalshi (actual)": 4.18,
+      "implied": 5
+    },
+    {
+      "price": 6,
+      "Polymarket (actual)": 4.78,
+      "Kalshi (actual)": 4.92,
+      "implied": 6
+    },
+    {
+      "price": 7,
+      "Polymarket (actual)": 5.73,
+      "Kalshi (actual)": 5.79,
+      "implied": 7
+    },
+    {
+      "price": 8,
+      "Polymarket (actual)": 6.4,
+      "Kalshi (actual)": 6.97,
+      "implied": 8
+    },
+    {
+      "price": 9,
+      "Polymarket (actual)": 7.3,
+      "Kalshi (actual)": 7.78,
+      "implied": 9
+    },
+    {
+      "price": 10,
+      "Polymarket (actual)": 8.63,
+      "Kalshi (actual)": 8.91,
+      "implied": 10
+    },
+    {
+      "price": 11,
+      "Polymarket (actual)": 9.63,
+      "Kalshi (actual)": 9.93,
+      "implied": 11
+    },
+    {
+      "price": 12,
+      "Polymarket (actual)": 10.38,
+      "Kalshi (actual)": 11.11,
+      "implied": 12
+    },
+    {
+      "price": 13,
+      "Polymarket (actual)": 11.48,
+      "Kalshi (actual)": 12.37,
+      "implied": 13
+    },
+    {
+      "price": 14,
+      "Polymarket (actual)": 12.68,
+      "Kalshi (actual)": 12.95,
+      "implied": 14
+    },
+    {
+      "price": 15,
+      "Polymarket (actual)": 14.1,
+      "Kalshi (actual)": 13.92,
+      "implied": 15
+    },
+    {
+      "price": 16,
+      "Polymarket (actual)": 15.02,
+      "Kalshi (actual)": 15.26,
+      "implied": 16
+    },
+    {
+      "price": 17,
+      "Polymarket (actual)": 15.94,
+      "Kalshi (actual)": 15.84,
+      "implied": 17
+    },
+    {
+      "price": 18,
+      "Polymarket (actual)": 16.84,
+      "Kalshi (actual)": 16.77,
+      "implied": 18
+    },
+    {
+      "price": 19,
+      "Polymarket (actual)": 17.75,
+      "Kalshi (actual)": 17.81,
+      "implied": 19
+    },
+    {
+      "price": 20,
+      "Polymarket (actual)": 18.94,
+      "Kalshi (actual)": 20.81,
+      "implied": 20
+    },
+    {
+      "price": 21,
+      "Polymarket (actual)": 19.92,
+      "Kalshi (actual)": 22.7,
+      "implied": 21
+    },
+    {
+      "price": 22,
+      "Polymarket (actual)": 21.33,
+      "Kalshi (actual)": 22.73,
+      "implied": 22
+    },
+    {
+      "price": 23,
+      "Polymarket (actual)": 22.51,
+      "Kalshi (actual)": 21.43,
+      "implied": 23
+    },
+    {
+      "price": 24,
+      "Polymarket (actual)": 23.22,
+      "Kalshi (actual)": 21.8,
+      "implied": 24
+    },
+    {
+      "price": 25,
+      "Polymarket (actual)": 24.85,
+      "Kalshi (actual)": 23.11,
+      "implied": 25
+    },
+    {
+      "price": 26,
+      "Polymarket (actual)": 26.49,
+      "Kalshi (actual)": 24.11,
+      "implied": 26
+    },
+    {
+      "price": 27,
+      "Polymarket (actual)": 27.55,
+      "Kalshi (actual)": 25.71,
+      "implied": 27
+    },
+    {
+      "price": 28,
+      "Polymarket (actual)": 28.87,
+      "Kalshi (actual)": 28.91,
+      "implied": 28
+    },
+    {
+      "price": 29,
+      "Polymarket (actual)": 29.38,
+      "Kalshi (actual)": 29.03,
+      "implied": 29
+    },
+    {
+      "price": 30,
+      "Polymarket (actual)": 30.0,
+      "Kalshi (actual)": 29.89,
+      "implied": 30
+    },
+    {
+      "price": 31,
+      "Polymarket (actual)": 31.0,
+      "Kalshi (actual)": 31.44,
+      "implied": 31
+    },
+    {
+      "price": 32,
+      "Polymarket (actual)": 32.15,
+      "Kalshi (actual)": 34.38,
+      "implied": 32
+    },
+    {
+      "price": 33,
+      "Polymarket (actual)": 31.35,
+      "Kalshi (actual)": 34.78,
+      "implied": 33
+    },
+    {
+      "price": 34,
+      "Polymarket (actual)": 29.94,
+      "Kalshi (actual)": 36.16,
+      "implied": 34
+    },
+    {
+      "price": 35,
+      "Polymarket (actual)": 32.9,
+      "Kalshi (actual)": 35.08,
+      "implied": 35
+    },
+    {
+      "price": 36,
+      "Polymarket (actual)": 30.83,
+      "Kalshi (actual)": 35.71,
+      "implied": 36
+    },
+    {
+      "price": 37,
+      "Polymarket (actual)": 35.1,
+      "Kalshi (actual)": 37.96,
+      "implied": 37
+    },
+    {
+      "price": 38,
+      "Polymarket (actual)": 35.44,
+      "Kalshi (actual)": 38.69,
+      "implied": 38
+    },
+    {
+      "price": 39,
+      "Polymarket (actual)": 36.05,
+      "Kalshi (actual)": 38.69,
+      "implied": 39
+    },
+    {
+      "price": 40,
+      "Polymarket (actual)": 38.17,
+      "Kalshi (actual)": 40.04,
+      "implied": 40
+    },
+    {
+      "price": 41,
+      "Polymarket (actual)": 39.84,
+      "Kalshi (actual)": 40.66,
+      "implied": 41
+    },
+    {
+      "price": 42,
+      "Polymarket (actual)": 40.38,
+      "Kalshi (actual)": 40.12,
+      "implied": 42
+    },
+    {
+      "price": 43,
+      "Polymarket (actual)": 42.35,
+      "Kalshi (actual)": 40.82,
+      "implied": 43
+    },
+    {
+      "price": 44,
+      "Polymarket (actual)": 42.52,
+      "Kalshi (actual)": 42.58,
+      "implied": 44
+    },
+    {
+      "price": 45,
+      "Polymarket (actual)": 42.86,
+      "Kalshi (actual)": 44.06,
+      "implied": 45
+    },
+    {
+      "price": 46,
+      "Polymarket (actual)": 44.33,
+      "Kalshi (actual)": 46.11,
+      "implied": 46
+    },
+    {
+      "price": 47,
+      "Polymarket (actual)": 46.57,
+      "Kalshi (actual)": 45.29,
+      "implied": 47
+    },
+    {
+      "price": 48,
+      "Polymarket (actual)": 47.75,
+      "Kalshi (actual)": 46.47,
+      "implied": 48
+    },
+    {
+      "price": 49,
+      "Polymarket (actual)": 48.54,
+      "Kalshi (actual)": 47.9,
+      "implied": 49
+    },
+    {
+      "price": 50,
+      "Polymarket (actual)": 50.02,
+      "Kalshi (actual)": 50.0,
+      "implied": 50
+    },
+    {
+      "price": 51,
+      "Polymarket (actual)": 51.41,
+      "Kalshi (actual)": 52.1,
+      "implied": 51
+    },
+    {
+      "price": 52,
+      "Polymarket (actual)": 52.26,
+      "Kalshi (actual)": 53.53,
+      "implied": 52
+    },
+    {
+      "price": 53,
+      "Polymarket (actual)": 53.35,
+      "Kalshi (actual)": 54.72,
+      "implied": 53
+    },
+    {
+      "price": 54,
+      "Polymarket (actual)": 55.68,
+      "Kalshi (actual)": 53.89,
+      "implied": 54
+    },
+    {
+      "price": 55,
+      "Polymarket (actual)": 57.09,
+      "Kalshi (actual)": 55.95,
+      "implied": 55
+    },
+    {
+      "price": 56,
+      "Polymarket (actual)": 57.55,
+      "Kalshi (actual)": 57.43,
+      "implied": 56
+    },
+    {
+      "price": 57,
+      "Polymarket (actual)": 57.63,
+      "Kalshi (actual)": 59.18,
+      "implied": 57
+    },
+    {
+      "price": 58,
+      "Polymarket (actual)": 59.54,
+      "Kalshi (actual)": 59.88,
+      "implied": 58
+    },
+    {
+      "price": 59,
+      "Polymarket (actual)": 60.21,
+      "Kalshi (actual)": 59.34,
+      "implied": 59
+    },
+    {
+      "price": 60,
+      "Polymarket (actual)": 61.83,
+      "Kalshi (actual)": 59.96,
+      "implied": 60
+    },
+    {
+      "price": 61,
+      "Polymarket (actual)": 63.89,
+      "Kalshi (actual)": 61.31,
+      "implied": 61
+    },
+    {
+      "price": 62,
+      "Polymarket (actual)": 64.53,
+      "Kalshi (actual)": 61.32,
+      "implied": 62
+    },
+    {
+      "price": 63,
+      "Polymarket (actual)": 64.88,
+      "Kalshi (actual)": 62.03,
+      "implied": 63
+    },
+    {
+      "price": 64,
+      "Polymarket (actual)": 69.25,
+      "Kalshi (actual)": 64.29,
+      "implied": 64
+    },
+    {
+      "price": 65,
+      "Polymarket (actual)": 67.05,
+      "Kalshi (actual)": 64.92,
+      "implied": 65
+    },
+    {
+      "price": 66,
+      "Polymarket (actual)": 69.83,
+      "Kalshi (actual)": 63.84,
+      "implied": 66
+    },
+    {
+      "price": 67,
+      "Polymarket (actual)": 69.03,
+      "Kalshi (actual)": 65.22,
+      "implied": 67
+    },
+    {
+      "price": 68,
+      "Polymarket (actual)": 67.82,
+      "Kalshi (actual)": 65.63,
+      "implied": 68
+    },
+    {
+      "price": 69,
+      "Polymarket (actual)": 69.02,
+      "Kalshi (actual)": 68.56,
+      "implied": 69
+    },
+    {
+      "price": 70,
+      "Polymarket (actual)": 70.0,
+      "Kalshi (actual)": 70.11,
+      "implied": 70
+    },
+    {
+      "price": 71,
+      "Polymarket (actual)": 70.69,
+      "Kalshi (actual)": 70.97,
+      "implied": 71
+    },
+    {
+      "price": 72,
+      "Polymarket (actual)": 71.11,
+      "Kalshi (actual)": 71.09,
+      "implied": 72
+    },
+    {
+      "price": 73,
+      "Polymarket (actual)": 72.4,
+      "Kalshi (actual)": 74.28,
+      "implied": 73
+    },
+    {
+      "price": 74,
+      "Polymarket (actual)": 73.49,
+      "Kalshi (actual)": 75.89,
+      "implied": 74
+    },
+    {
+      "price": 75,
+      "Polymarket (actual)": 75.13,
+      "Kalshi (actual)": 76.89,
+      "implied": 75
+    },
+    {
+      "price": 76,
+      "Polymarket (actual)": 76.74,
+      "Kalshi (actual)": 78.21,
+      "implied": 76
+    },
+    {
+      "price": 77,
+      "Polymarket (actual)": 77.45,
+      "Kalshi (actual)": 78.57,
+      "implied": 77
+    },
+    {
+      "price": 78,
+      "Polymarket (actual)": 78.7,
+      "Kalshi (actual)": 77.27,
+      "implied": 78
+    },
+    {
+      "price": 79,
+      "Polymarket (actual)": 80.06,
+      "Kalshi (actual)": 77.31,
+      "implied": 79
+    },
+    {
+      "price": 80,
+      "Polymarket (actual)": 81.05,
+      "Kalshi (actual)": 79.19,
+      "implied": 80
+    },
+    {
+      "price": 81,
+      "Polymarket (actual)": 82.25,
+      "Kalshi (actual)": 82.2,
+      "implied": 81
+    },
+    {
+      "price": 82,
+      "Polymarket (actual)": 83.15,
+      "Kalshi (actual)": 83.23,
+      "implied": 82
+    },
+    {
+      "price": 83,
+      "Polymarket (actual)": 84.04,
+      "Kalshi (actual)": 84.16,
+      "implied": 83
+    },
+    {
+      "price": 84,
+      "Polymarket (actual)": 84.99,
+      "Kalshi (actual)": 84.74,
+      "implied": 84
+    },
+    {
+      "price": 85,
+      "Polymarket (actual)": 85.89,
+      "Kalshi (actual)": 86.08,
+      "implied": 85
+    },
+    {
+      "price": 86,
+      "Polymarket (actual)": 87.31,
+      "Kalshi (actual)": 87.05,
+      "implied": 86
+    },
+    {
+      "price": 87,
+      "Polymarket (actual)": 88.48,
+      "Kalshi (actual)": 87.63,
+      "implied": 87
+    },
+    {
+      "price": 88,
+      "Polymarket (actual)": 89.63,
+      "Kalshi (actual)": 88.9,
+      "implied": 88
+    },
+    {
+      "price": 89,
+      "Polymarket (actual)": 90.34,
+      "Kalshi (actual)": 90.08,
+      "implied": 89
+    },
+    {
+      "price": 90,
+      "Polymarket (actual)": 91.36,
+      "Kalshi (actual)": 91.1,
+      "implied": 90
+    },
+    {
+      "price": 91,
+      "Polymarket (actual)": 92.69,
+      "Kalshi (actual)": 92.22,
+      "implied": 91
+    },
+    {
+      "price": 92,
+      "Polymarket (actual)": 93.56,
+      "Kalshi (actual)": 93.03,
+      "implied": 92
+    },
+    {
+      "price": 93,
+      "Polymarket (actual)": 94.27,
+      "Kalshi (actual)": 94.21,
+      "implied": 93
+    },
+    {
+      "price": 94,
+      "Polymarket (actual)": 95.17,
+      "Kalshi (actual)": 95.09,
+      "implied": 94
+    },
+    {
+      "price": 95,
+      "Polymarket (actual)": 96.47,
+      "Kalshi (actual)": 95.83,
+      "implied": 95
+    },
+    {
+      "price": 96,
+      "Polymarket (actual)": 97.41,
+      "Kalshi (actual)": 96.56,
+      "implied": 96
+    },
+    {
+      "price": 97,
+      "Polymarket (actual)": 97.76,
+      "Kalshi (actual)": 97.3,
+      "implied": 97
+    },
+    {
+      "price": 98,
+      "Polymarket (actual)": 97.26,
+      "Kalshi (actual)": 98.12,
+      "implied": 98
+    },
+    {
+      "price": 99,
+      "Polymarket (actual)": 99.4,
+      "Kalshi (actual)": 99.09,
+      "implied": 99
+    }
+  ],
+  "xKey": "price",
+  "yKeys": [
+    "Polymarket (actual)",
+    "Kalshi (actual)",
+    "implied"
+  ],
+  "colors": {
+    "Polymarket (actual)": "#2E5CFF",
+    "Kalshi (actual)": "#09C285",
+    "implied": "#6b7280"
+  },
+  "title": "Polymarket: Actual Win Rate vs Contract Price",
+  "yUnit": "percent",
+  "strokeDasharrays": [
+    null,
+    null,
+    "5 5"
+  ],
+  "xLabel": "Contract Price (cents)",
+  "yLabel": "Actual Win Rate (%)"
+}

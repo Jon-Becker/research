@@ -1,0 +1,1 @@
+Prediction markets are accurate — contracts at 50 cents win exactly 50% of the time. But accuracy varies dramatically by category. Sports markets produce the highest Brier Scores, Finance the lowest. The apparent paradox of rising Brier Scores alongside improving calibration dissolves when you account for what the market is being asked to predict.

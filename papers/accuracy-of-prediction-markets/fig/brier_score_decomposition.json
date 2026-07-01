@@ -1,0 +1,76 @@
+{
+  "type": "stacked-bar",
+  "data": [
+    {
+      "category": "Sports",
+      "Uncertainty": 0.248,
+      "Reliability": 0.0073,
+      "Resolution": -0.078,
+      "Brier Score": 0.1773
+    },
+    {
+      "category": "Crypto",
+      "Uncertainty": 0.2482,
+      "Reliability": 0.0048,
+      "Resolution": -0.0886,
+      "Brier Score": 0.1643
+    },
+    {
+      "category": "Politics",
+      "Uncertainty": 0.246,
+      "Reliability": 0.0533,
+      "Resolution": -0.1802,
+      "Brier Score": 0.1192
+    },
+    {
+      "category": "Weather",
+      "Uncertainty": 0.2253,
+      "Reliability": 0.0024,
+      "Resolution": -0.0681,
+      "Brier Score": 0.1596
+    },
+    {
+      "category": "Finance",
+      "Uncertainty": 0.2374,
+      "Reliability": 0.0096,
+      "Resolution": -0.0969,
+      "Brier Score": 0.15
+    },
+    {
+      "category": "Entertainment",
+      "Uncertainty": 0.2448,
+      "Reliability": 0.0616,
+      "Resolution": -0.1613,
+      "Brier Score": 0.1452
+    },
+    {
+      "category": "Other",
+      "Uncertainty": 0.2419,
+      "Reliability": 0.0952,
+      "Resolution": -0.1883,
+      "Brier Score": 0.1487
+    },
+    {
+      "category": "Media",
+      "Uncertainty": 0.227,
+      "Reliability": 0.0368,
+      "Resolution": -0.1131,
+      "Brier Score": 0.1506
+    }
+  ],
+  "xKey": "category",
+  "yKeys": [
+    "Uncertainty",
+    "Reliability",
+    "Resolution"
+  ],
+  "title": "Brier Score Decomposition by Category",
+  "yUnit": "number",
+  "colors": {
+    "Uncertainty": "#aec7e8",
+    "Reliability": "#d62728",
+    "Resolution": "#2ca02c"
+  },
+  "xLabel": "Category",
+  "yLabel": "Score Component"
+}

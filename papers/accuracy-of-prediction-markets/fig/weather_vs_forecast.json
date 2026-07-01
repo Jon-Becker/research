@@ -1,0 +1,33 @@
+{
+  "type": "bar",
+  "data": [
+    {
+      "source": "Model (7d)",
+      "MAE (\u00b0F)": 2.7
+    },
+    {
+      "source": "Model (3d)",
+      "MAE (\u00b0F)": 2.44
+    },
+    {
+      "source": "Model (1d)",
+      "MAE (\u00b0F)": 2.18
+    },
+    {
+      "source": "Kalshi (prev. day)",
+      "MAE (\u00b0F)": 1.09
+    }
+  ],
+  "xKey": "source",
+  "yKeys": [
+    "MAE (\u00b0F)"
+  ],
+  "title": "Weather Market vs. Model Forecast Accuracy",
+  "yUnit": "number",
+  "caption": "Mean Absolute Error against NWS station observations (Kalshi bracket resolution) across 7 cities and 1,976 events. Market estimate is the highest-VWAP bracket from previous-day trades. Model brackets are the GFS forecast mapped to the nearest Kalshi bracket.",
+  "colors": {
+    "MAE (\u00b0F)": "#4C72B0"
+  },
+  "xLabel": "Forecast Source",
+  "yLabel": "MAE (\u00b0F)"
+}

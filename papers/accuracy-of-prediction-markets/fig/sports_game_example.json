@@ -1,0 +1,5178 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "time": "09-26 23:35",
+      "San Francisco": 56,
+      "Los Angeles R": 44
+    },
+    {
+      "time": "09-27 00:40",
+      "San Francisco": 42,
+      "Los Angeles R": 58
+    },
+    {
+      "time": "09-27 03:15",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 03:55",
+      "San Francisco": 42,
+      "Los Angeles R": 58
+    },
+    {
+      "time": "09-27 09:35",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 13:30",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 15:30",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 16:15",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 16:20",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 17:20",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 18:50",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 19:15",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 20:10",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 20:40",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-27 21:15",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 21:20",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 21:25",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 23:00",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 23:25",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 23:30",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 23:45",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 23:50",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-27 23:55",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 01:05",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 01:25",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 01:50",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 02:15",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 03:00",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 10:45",
+      "San Francisco": 42,
+      "Los Angeles R": 58
+    },
+    {
+      "time": "09-28 11:30",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 12:10",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 12:45",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 13:10",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 13:40",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 13:50",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 14:05",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 14:25",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 15:45",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:00",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:05",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:15",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:20",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:25",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:30",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:40",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 16:50",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 17:25",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 17:35",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 17:45",
+      "San Francisco": 41,
+      "Los Angeles R": 59
+    },
+    {
+      "time": "09-28 18:00",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 18:05",
+      "San Francisco": 42,
+      "Los Angeles R": 58
+    },
+    {
+      "time": "09-28 18:30",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 18:35",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 18:55",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 19:00",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 19:10",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 19:15",
+      "San Francisco": 39,
+      "Los Angeles R": 61
+    },
+    {
+      "time": "09-28 19:20",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 19:25",
+      "San Francisco": 40,
+      "Los Angeles R": 60
+    },
+    {
+      "time": "09-28 19:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 19:35",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 19:40",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 19:45",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 19:55",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:05",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:15",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:20",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:35",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:40",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:50",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 20:55",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 21:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 21:50",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:15",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:20",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:35",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:40",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:45",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 22:50",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:15",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:20",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-28 23:35",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:15",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:20",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:40",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:45",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:50",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 00:55",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 01:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 01:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 01:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 01:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 01:40",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 01:50",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:05",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:40",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 02:55",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 03:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 03:45",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 03:50",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 04:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 04:15",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 04:45",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 05:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 07:00",
+      "San Francisco": 37,
+      "Los Angeles R": 63
+    },
+    {
+      "time": "09-29 07:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 08:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 08:35",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 08:45",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 09:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 09:05",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 09:10",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 09:20",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 09:25",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "09-29 09:30",
+      "San Francisco": 37,
+      "Los Angeles R": 63
+    },
+    {
+      "time": "09-29 09:35",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 09:45",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 09:50",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:00",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:05",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:10",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:15",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:25",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:40",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:45",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:50",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 10:55",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:00",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:05",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:15",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:30",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:35",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:40",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "09-29 11:50",
+      "San Francisco": 35,
+      "Los Angeles R": 65
+    },
+    {
+      "time": "09-29 11:55",
+      "San Francisco": 35,
+      "Los Angeles R": 65
+    },
+    {
+      "time": "09-29 12:00",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:05",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:10",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:15",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:20",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:25",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:35",
+      "San Francisco": 35,
+      "Los Angeles R": 65
+    },
+    {
+      "time": "09-29 12:40",
+      "San Francisco": 35,
+      "Los Angeles R": 65
+    },
+    {
+      "time": "09-29 12:50",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 12:55",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:00",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:05",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:10",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:15",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:20",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 13:25",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:30",
+      "San Francisco": 34,
+      "Los Angeles R": 66
+    },
+    {
+      "time": "09-29 13:35",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 13:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 13:45",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 13:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 13:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 14:45",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:00",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 15:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 15:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:00",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 16:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:00",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:25",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 17:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 17:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 18:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:00",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 19:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:45",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 20:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:00",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:45",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 21:55",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:00",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:30",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 22:35",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 22:40",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 22:45",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 22:50",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 22:55",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "09-29 23:00",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 23:05",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 23:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-29 23:15",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:20",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:25",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:30",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:35",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:40",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:45",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:50",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-29 23:55",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 00:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 00:05",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 00:10",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:15",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:20",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:25",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:30",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:35",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:40",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:45",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:50",
+      "San Francisco": 32,
+      "Los Angeles R": 68
+    },
+    {
+      "time": "09-30 00:55",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 01:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 01:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 02:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 03:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 03:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 03:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 03:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 03:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 04:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 04:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 04:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 04:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 04:50",
+      "San Francisco": 29,
+      "Los Angeles R": 71
+    },
+    {
+      "time": "09-30 05:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 05:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 05:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 05:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 05:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 05:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 06:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 06:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 06:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 06:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 07:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 07:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 07:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 07:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 07:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 07:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 08:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 09:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 10:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 11:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 12:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 12:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 12:10",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:15",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:20",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:25",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:30",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:35",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:40",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:45",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:50",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 12:55",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:00",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:05",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:10",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:15",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:20",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:25",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "09-30 13:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 13:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 13:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 13:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 13:50",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 13:55",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:00",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:05",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:10",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:15",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:20",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:25",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:30",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:35",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:40",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:45",
+      "San Francisco": 30,
+      "Los Angeles R": 70
+    },
+    {
+      "time": "09-30 14:50",
+      "San Francisco": 29,
+      "Los Angeles R": 71
+    },
+    {
+      "time": "09-30 14:55",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:00",
+      "San Francisco": 29,
+      "Los Angeles R": 71
+    },
+    {
+      "time": "09-30 15:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:25",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:30",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 15:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 15:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 15:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 15:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 15:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 16:40",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 16:45",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 16:50",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 16:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 17:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 17:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 17:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 17:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 17:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 17:25",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 17:30",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 17:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 17:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 17:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 17:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 17:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 18:45",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "09-30 18:50",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "09-30 18:55",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:25",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:30",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:35",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:40",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:45",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:50",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 19:55",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:25",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:30",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:35",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:40",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:45",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:50",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 20:55",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 21:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 21:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 21:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 21:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 21:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 22:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 22:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 22:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:25",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:30",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:35",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:40",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:45",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:50",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 22:55",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 23:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "09-30 23:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "09-30 23:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 00:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 00:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:25",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:30",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:35",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:40",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:45",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:50",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 00:55",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 01:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 01:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 01:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 01:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 01:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 01:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 01:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 01:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 01:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 01:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 01:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 01:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 02:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 03:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 03:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 03:35",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 03:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 03:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 03:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 04:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 04:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 04:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 05:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 05:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 05:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 05:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 05:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 05:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 06:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 06:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 06:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 06:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 07:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 07:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 07:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 07:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 08:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:00",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 09:05",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 09:10",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 09:15",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 09:20",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-01 09:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 09:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:20",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:25",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:30",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:35",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:40",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:45",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:50",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 10:55",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 11:00",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 11:05",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 11:10",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 11:15",
+      "San Francisco": 27,
+      "Los Angeles R": 73
+    },
+    {
+      "time": "10-01 11:20",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 11:25",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 11:30",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 11:35",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 11:40",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 11:45",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 11:50",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 11:55",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 12:00",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 12:05",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 12:10",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 12:15",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 12:20",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 12:25",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 12:30",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 12:35",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 12:40",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 12:45",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 12:50",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 12:55",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:00",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:05",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:10",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:15",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 13:20",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 13:25",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:30",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:35",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 13:40",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:45",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 13:50",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 13:55",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:00",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:05",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:10",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:15",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:20",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:25",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:30",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:35",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:40",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:45",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:50",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 14:55",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:00",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:05",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:10",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:15",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:20",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:25",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:30",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:35",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:40",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:45",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:50",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 15:55",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 16:00",
+      "San Francisco": 26,
+      "Los Angeles R": 74
+    },
+    {
+      "time": "10-01 16:05",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 16:10",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 16:15",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 16:20",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 16:25",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 16:30",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-01 16:35",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 16:40",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 16:45",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 16:50",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 16:55",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:00",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:05",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:10",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:15",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:20",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:25",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:30",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:35",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:40",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:45",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:50",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 17:55",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:00",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:05",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:10",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:15",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:20",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:25",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:30",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:35",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:40",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:45",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 18:50",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 18:55",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 19:00",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 19:05",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:10",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:15",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 19:20",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 19:25",
+      "San Francisco": 24,
+      "Los Angeles R": 76
+    },
+    {
+      "time": "10-01 19:30",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:35",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:40",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:45",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:50",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 19:55",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:00",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:05",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:10",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:15",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:20",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:25",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:30",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:35",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:40",
+      "San Francisco": 23,
+      "Los Angeles R": 77
+    },
+    {
+      "time": "10-01 20:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 20:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 20:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 21:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 21:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 21:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 21:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 21:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 21:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 22:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 22:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 22:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 22:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 22:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 22:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 23:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 23:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 23:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 23:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-01 23:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-01 23:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:40",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 00:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 00:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:40",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 01:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:40",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 02:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:40",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 05:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 06:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 06:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 07:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 07:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 07:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 07:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 07:50",
+      "San Francisco": 20,
+      "Los Angeles R": 80
+    },
+    {
+      "time": "10-02 07:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 08:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 08:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 09:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 09:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 10:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 10:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 11:00",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 11:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 11:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 11:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 11:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 11:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 11:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 11:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 11:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 11:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 11:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 11:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 12:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 12:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:15",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:20",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:25",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:30",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 12:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 12:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 12:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 12:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 13:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 14:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 15:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 16:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 17:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:35",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:40",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:45",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:50",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 18:55",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:05",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:10",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:15",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:20",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:25",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:30",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 19:35",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 19:40",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 19:45",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 19:50",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 19:55",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 20:00",
+      "San Francisco": 21,
+      "Los Angeles R": 79
+    },
+    {
+      "time": "10-02 20:05",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 20:10",
+      "San Francisco": 22,
+      "Los Angeles R": 78
+    },
+    {
+      "time": "10-02 20:15",
+      "San Francisco": 25,
+      "Los Angeles R": 75
+    },
+    {
+      "time": "10-02 20:20",
+      "San Francisco": 31,
+      "Los Angeles R": 69
+    },
+    {
+      "time": "10-02 20:25",
+      "San Francisco": 33,
+      "Los Angeles R": 67
+    },
+    {
+      "time": "10-02 20:30",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "10-02 20:35",
+      "San Francisco": 43,
+      "Los Angeles R": 57
+    },
+    {
+      "time": "10-02 20:40",
+      "San Francisco": 45,
+      "Los Angeles R": 55
+    },
+    {
+      "time": "10-02 20:45",
+      "San Francisco": 51,
+      "Los Angeles R": 49
+    },
+    {
+      "time": "10-02 20:50",
+      "San Francisco": 56,
+      "Los Angeles R": 44
+    },
+    {
+      "time": "10-02 20:55",
+      "San Francisco": 59,
+      "Los Angeles R": 41
+    },
+    {
+      "time": "10-02 21:00",
+      "San Francisco": 67,
+      "Los Angeles R": 33
+    },
+    {
+      "time": "10-02 21:05",
+      "San Francisco": 63,
+      "Los Angeles R": 37
+    },
+    {
+      "time": "10-02 21:10",
+      "San Francisco": 55,
+      "Los Angeles R": 45
+    },
+    {
+      "time": "10-02 21:15",
+      "San Francisco": 48,
+      "Los Angeles R": 52
+    },
+    {
+      "time": "10-02 21:20",
+      "San Francisco": 49,
+      "Los Angeles R": 51
+    },
+    {
+      "time": "10-02 21:25",
+      "San Francisco": 53,
+      "Los Angeles R": 47
+    },
+    {
+      "time": "10-02 21:30",
+      "San Francisco": 56,
+      "Los Angeles R": 44
+    },
+    {
+      "time": "10-02 21:35",
+      "San Francisco": 56,
+      "Los Angeles R": 44
+    },
+    {
+      "time": "10-02 21:40",
+      "San Francisco": 57,
+      "Los Angeles R": 43
+    },
+    {
+      "time": "10-02 21:45",
+      "San Francisco": 56,
+      "Los Angeles R": 44
+    },
+    {
+      "time": "10-02 21:50",
+      "San Francisco": 67,
+      "Los Angeles R": 33
+    },
+    {
+      "time": "10-02 21:55",
+      "San Francisco": 75,
+      "Los Angeles R": 25
+    },
+    {
+      "time": "10-02 22:00",
+      "San Francisco": 70,
+      "Los Angeles R": 30
+    },
+    {
+      "time": "10-02 22:05",
+      "San Francisco": 66,
+      "Los Angeles R": 34
+    },
+    {
+      "time": "10-02 22:10",
+      "San Francisco": 54,
+      "Los Angeles R": 46
+    },
+    {
+      "time": "10-02 22:15",
+      "San Francisco": 51,
+      "Los Angeles R": 49
+    },
+    {
+      "time": "10-02 22:20",
+      "San Francisco": 57,
+      "Los Angeles R": 43
+    },
+    {
+      "time": "10-02 22:25",
+      "San Francisco": 56,
+      "Los Angeles R": 44
+    },
+    {
+      "time": "10-02 22:30",
+      "San Francisco": 43,
+      "Los Angeles R": 57
+    },
+    {
+      "time": "10-02 22:35",
+      "San Francisco": 35,
+      "Los Angeles R": 65
+    },
+    {
+      "time": "10-02 22:40",
+      "San Francisco": 28,
+      "Los Angeles R": 72
+    },
+    {
+      "time": "10-02 22:45",
+      "San Francisco": 29,
+      "Los Angeles R": 71
+    },
+    {
+      "time": "10-02 22:50",
+      "San Francisco": 36,
+      "Los Angeles R": 64
+    },
+    {
+      "time": "10-02 22:55",
+      "San Francisco": 45,
+      "Los Angeles R": 55
+    },
+    {
+      "time": "10-02 23:00",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "10-02 23:05",
+      "San Francisco": 37,
+      "Los Angeles R": 63
+    },
+    {
+      "time": "10-02 23:10",
+      "San Francisco": 65,
+      "Los Angeles R": 35
+    },
+    {
+      "time": "10-02 23:15",
+      "San Francisco": 54,
+      "Los Angeles R": 46
+    },
+    {
+      "time": "10-02 23:20",
+      "San Francisco": 38,
+      "Los Angeles R": 62
+    },
+    {
+      "time": "10-02 23:25",
+      "San Francisco": 54,
+      "Los Angeles R": 46
+    },
+    {
+      "time": "10-02 23:30",
+      "San Francisco": 35,
+      "Los Angeles R": 65
+    },
+    {
+      "time": "10-02 23:35",
+      "San Francisco": 72,
+      "Los Angeles R": 28
+    },
+    {
+      "time": "10-02 23:40",
+      "San Francisco": 99,
+      "Los Angeles R": 1
+    }
+  ],
+  "xKey": "time",
+  "yKeys": [
+    "San Francisco",
+    "Los Angeles R"
+  ],
+  "title": "San Francisco at Los Angeles R: Win Probability",
+  "yUnit": "cents",
+  "colors": {
+    "San Francisco": "#aa0000",
+    "Los Angeles R": "#003594"
+  },
+  "xLabel": "Time",
+  "yLabel": "Price (cents)"
+}

@@ -1,0 +1,1346 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "date": "2020-10-19",
+      "polymarket": 23.16
+    },
+    {
+      "date": "2020-10-26",
+      "polymarket": 23.24
+    },
+    {
+      "date": "2020-11-02",
+      "polymarket": 10.99
+    },
+    {
+      "date": "2020-11-09",
+      "polymarket": 10.65
+    },
+    {
+      "date": "2020-11-16",
+      "polymarket": 9.96
+    },
+    {
+      "date": "2020-11-23",
+      "polymarket": 9.71
+    },
+    {
+      "date": "2020-11-30",
+      "polymarket": 9.96
+    },
+    {
+      "date": "2020-12-07",
+      "polymarket": 10.08
+    },
+    {
+      "date": "2020-12-14",
+      "polymarket": 10.38
+    },
+    {
+      "date": "2020-12-21",
+      "polymarket": 10.6
+    },
+    {
+      "date": "2020-12-28",
+      "polymarket": 10.86
+    },
+    {
+      "date": "2021-01-04",
+      "polymarket": 10.58
+    },
+    {
+      "date": "2021-01-11",
+      "polymarket": 10.37
+    },
+    {
+      "date": "2021-01-18",
+      "polymarket": 7.81
+    },
+    {
+      "date": "2021-01-25",
+      "polymarket": 5.35
+    },
+    {
+      "date": "2021-02-01",
+      "polymarket": 4.83
+    },
+    {
+      "date": "2021-02-08",
+      "polymarket": 4.21
+    },
+    {
+      "date": "2021-02-15",
+      "polymarket": 3.72
+    },
+    {
+      "date": "2021-02-22",
+      "polymarket": 3.86
+    },
+    {
+      "date": "2021-03-01",
+      "polymarket": 3.95
+    },
+    {
+      "date": "2021-03-08",
+      "polymarket": 3.88
+    },
+    {
+      "date": "2021-03-15",
+      "polymarket": 3.74
+    },
+    {
+      "date": "2021-03-22",
+      "polymarket": 3.66
+    },
+    {
+      "date": "2021-03-29",
+      "polymarket": 3.27
+    },
+    {
+      "date": "2021-04-05",
+      "polymarket": 3.22
+    },
+    {
+      "date": "2021-04-12",
+      "polymarket": 3.36
+    },
+    {
+      "date": "2021-04-19",
+      "polymarket": 3.14
+    },
+    {
+      "date": "2021-04-26",
+      "polymarket": 3.38
+    },
+    {
+      "date": "2021-05-03",
+      "polymarket": 3.39
+    },
+    {
+      "date": "2021-05-10",
+      "polymarket": 3.29
+    },
+    {
+      "date": "2021-05-17",
+      "polymarket": 3.27
+    },
+    {
+      "date": "2021-05-24",
+      "polymarket": 3.42
+    },
+    {
+      "date": "2021-05-31",
+      "polymarket": 3.51
+    },
+    {
+      "date": "2021-06-07",
+      "polymarket": 3.34
+    },
+    {
+      "date": "2021-06-14",
+      "polymarket": 3.3
+    },
+    {
+      "date": "2021-06-21",
+      "polymarket": 3.24
+    },
+    {
+      "date": "2021-06-28",
+      "polymarket": 3.4
+    },
+    {
+      "date": "2021-07-05",
+      "polymarket": 3.33
+    },
+    {
+      "date": "2021-07-12",
+      "kalshi": 18.05,
+      "polymarket": 3.26
+    },
+    {
+      "date": "2021-07-19",
+      "kalshi": 11.67,
+      "polymarket": 3.18
+    },
+    {
+      "date": "2021-07-26",
+      "kalshi": 8.2,
+      "polymarket": 3.12
+    },
+    {
+      "date": "2021-08-02",
+      "kalshi": 8.0,
+      "polymarket": 3.04
+    },
+    {
+      "date": "2021-08-09",
+      "kalshi": 5.16,
+      "polymarket": 3.03
+    },
+    {
+      "date": "2021-08-16",
+      "kalshi": 3.8,
+      "polymarket": 3.03
+    },
+    {
+      "date": "2021-08-23",
+      "kalshi": 3.1,
+      "polymarket": 2.91
+    },
+    {
+      "date": "2021-08-30",
+      "kalshi": 2.95,
+      "polymarket": 2.99
+    },
+    {
+      "date": "2021-09-06",
+      "kalshi": 2.53,
+      "polymarket": 2.98
+    },
+    {
+      "date": "2021-09-13",
+      "kalshi": 2.74,
+      "polymarket": 2.93
+    },
+    {
+      "date": "2021-09-20",
+      "kalshi": 2.38,
+      "polymarket": 2.85
+    },
+    {
+      "date": "2021-09-27",
+      "kalshi": 2.11,
+      "polymarket": 2.68
+    },
+    {
+      "date": "2021-10-04",
+      "kalshi": 2.02,
+      "polymarket": 2.58
+    },
+    {
+      "date": "2021-10-11",
+      "kalshi": 2.5,
+      "polymarket": 2.5
+    },
+    {
+      "date": "2021-10-18",
+      "kalshi": 2.54,
+      "polymarket": 2.74
+    },
+    {
+      "date": "2021-10-25",
+      "kalshi": 2.34,
+      "polymarket": 2.64
+    },
+    {
+      "date": "2021-11-01",
+      "kalshi": 2.18,
+      "polymarket": 2.47
+    },
+    {
+      "date": "2021-11-08",
+      "kalshi": 2.12,
+      "polymarket": 2.36
+    },
+    {
+      "date": "2021-11-15",
+      "kalshi": 1.93,
+      "polymarket": 2.17
+    },
+    {
+      "date": "2021-11-22",
+      "kalshi": 1.96,
+      "polymarket": 2.06
+    },
+    {
+      "date": "2021-11-29",
+      "kalshi": 1.77,
+      "polymarket": 1.93
+    },
+    {
+      "date": "2021-12-06",
+      "kalshi": 1.69,
+      "polymarket": 1.73
+    },
+    {
+      "date": "2021-12-13",
+      "kalshi": 1.66,
+      "polymarket": 1.63
+    },
+    {
+      "date": "2021-12-20",
+      "kalshi": 1.74,
+      "polymarket": 1.54
+    },
+    {
+      "date": "2021-12-27",
+      "kalshi": 1.76,
+      "polymarket": 1.44
+    },
+    {
+      "date": "2022-01-03",
+      "kalshi": 1.65,
+      "polymarket": 1.42
+    },
+    {
+      "date": "2022-01-10",
+      "kalshi": 1.51,
+      "polymarket": 1.42
+    },
+    {
+      "date": "2022-01-17",
+      "kalshi": 1.48,
+      "polymarket": 1.38
+    },
+    {
+      "date": "2022-01-24",
+      "kalshi": 1.42,
+      "polymarket": 1.36
+    },
+    {
+      "date": "2022-01-31",
+      "kalshi": 1.3,
+      "polymarket": 1.27
+    },
+    {
+      "date": "2022-02-07",
+      "kalshi": 1.14,
+      "polymarket": 1.2
+    },
+    {
+      "date": "2022-02-14",
+      "kalshi": 1.08,
+      "polymarket": 1.17
+    },
+    {
+      "date": "2022-02-21",
+      "kalshi": 1.15,
+      "polymarket": 1.19
+    },
+    {
+      "date": "2022-02-28",
+      "kalshi": 1.22,
+      "polymarket": 1.17
+    },
+    {
+      "date": "2022-03-07",
+      "kalshi": 1.28,
+      "polymarket": 1.14
+    },
+    {
+      "date": "2022-03-14",
+      "kalshi": 1.3,
+      "polymarket": 1.12
+    },
+    {
+      "date": "2022-03-21",
+      "kalshi": 1.29,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2022-03-28",
+      "kalshi": 1.21,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2022-04-04",
+      "kalshi": 1.2,
+      "polymarket": 1.1
+    },
+    {
+      "date": "2022-04-11",
+      "kalshi": 1.17,
+      "polymarket": 1.12
+    },
+    {
+      "date": "2022-04-18",
+      "kalshi": 1.2,
+      "polymarket": 1.3
+    },
+    {
+      "date": "2022-04-25",
+      "kalshi": 1.26,
+      "polymarket": 1.29
+    },
+    {
+      "date": "2022-05-02",
+      "kalshi": 1.28,
+      "polymarket": 1.3
+    },
+    {
+      "date": "2022-05-09",
+      "kalshi": 1.25,
+      "polymarket": 1.29
+    },
+    {
+      "date": "2022-05-16",
+      "kalshi": 1.2,
+      "polymarket": 1.21
+    },
+    {
+      "date": "2022-05-23",
+      "kalshi": 1.22,
+      "polymarket": 1.25
+    },
+    {
+      "date": "2022-05-30",
+      "kalshi": 1.16,
+      "polymarket": 1.2
+    },
+    {
+      "date": "2022-06-06",
+      "kalshi": 1.12,
+      "polymarket": 1.25
+    },
+    {
+      "date": "2022-06-13",
+      "kalshi": 0.94,
+      "polymarket": 1.26
+    },
+    {
+      "date": "2022-06-20",
+      "kalshi": 0.81,
+      "polymarket": 1.24
+    },
+    {
+      "date": "2022-06-27",
+      "kalshi": 0.84,
+      "polymarket": 1.22
+    },
+    {
+      "date": "2022-07-04",
+      "kalshi": 0.87,
+      "polymarket": 1.23
+    },
+    {
+      "date": "2022-07-11",
+      "kalshi": 0.69,
+      "polymarket": 1.13
+    },
+    {
+      "date": "2022-07-18",
+      "kalshi": 0.65,
+      "polymarket": 1.14
+    },
+    {
+      "date": "2022-07-25",
+      "kalshi": 0.62,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2022-08-01",
+      "kalshi": 0.7,
+      "polymarket": 1.07
+    },
+    {
+      "date": "2022-08-08",
+      "kalshi": 0.6,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2022-08-15",
+      "kalshi": 0.57,
+      "polymarket": 1.07
+    },
+    {
+      "date": "2022-08-22",
+      "kalshi": 0.6,
+      "polymarket": 0.94
+    },
+    {
+      "date": "2022-08-29",
+      "kalshi": 0.65,
+      "polymarket": 0.96
+    },
+    {
+      "date": "2022-09-05",
+      "kalshi": 0.66,
+      "polymarket": 0.96
+    },
+    {
+      "date": "2022-09-12",
+      "kalshi": 0.67,
+      "polymarket": 0.96
+    },
+    {
+      "date": "2022-09-19",
+      "kalshi": 0.58,
+      "polymarket": 0.97
+    },
+    {
+      "date": "2022-09-26",
+      "kalshi": 0.58,
+      "polymarket": 0.97
+    },
+    {
+      "date": "2022-10-03",
+      "kalshi": 0.59,
+      "polymarket": 0.97
+    },
+    {
+      "date": "2022-10-10",
+      "kalshi": 0.56,
+      "polymarket": 0.98
+    },
+    {
+      "date": "2022-10-17",
+      "kalshi": 0.53,
+      "polymarket": 0.99
+    },
+    {
+      "date": "2022-10-24",
+      "kalshi": 0.5,
+      "polymarket": 1.01
+    },
+    {
+      "date": "2022-10-31",
+      "kalshi": 0.48,
+      "polymarket": 1.03
+    },
+    {
+      "date": "2022-11-07",
+      "kalshi": 0.52,
+      "polymarket": 1.06
+    },
+    {
+      "date": "2022-11-14",
+      "kalshi": 0.48,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2022-11-21",
+      "kalshi": 0.52,
+      "polymarket": 1.07
+    },
+    {
+      "date": "2022-11-28",
+      "kalshi": 0.48,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2022-12-05",
+      "kalshi": 0.47,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2022-12-12",
+      "kalshi": 0.45,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2022-12-19",
+      "kalshi": 0.45,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2022-12-26",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-01-02",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-01-09",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-01-16",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-01-23",
+      "kalshi": 0.46,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-01-30",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-02-06",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-02-13",
+      "kalshi": 0.45,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-02-20",
+      "kalshi": 0.44,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-02-27",
+      "kalshi": 0.44,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-03-06",
+      "kalshi": 0.46,
+      "polymarket": 1.11
+    },
+    {
+      "date": "2023-03-13",
+      "kalshi": 0.45,
+      "polymarket": 1.11
+    },
+    {
+      "date": "2023-03-20",
+      "kalshi": 0.45,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2023-03-27",
+      "kalshi": 0.45,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2023-04-03",
+      "kalshi": 0.45,
+      "polymarket": 1.1
+    },
+    {
+      "date": "2023-04-10",
+      "kalshi": 0.42,
+      "polymarket": 1.09
+    },
+    {
+      "date": "2023-04-17",
+      "kalshi": 0.43,
+      "polymarket": 1.07
+    },
+    {
+      "date": "2023-04-24",
+      "kalshi": 0.43,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-05-01",
+      "kalshi": 0.44,
+      "polymarket": 1.03
+    },
+    {
+      "date": "2023-05-08",
+      "kalshi": 0.43,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-05-15",
+      "kalshi": 0.42,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-05-22",
+      "kalshi": 0.41,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-05-29",
+      "kalshi": 0.43,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-06-05",
+      "kalshi": 0.45,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-06-12",
+      "kalshi": 0.44,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-06-19",
+      "kalshi": 0.42,
+      "polymarket": 1.02
+    },
+    {
+      "date": "2023-06-26",
+      "kalshi": 0.43,
+      "polymarket": 1.02
+    },
+    {
+      "date": "2023-07-03",
+      "kalshi": 0.4,
+      "polymarket": 1.03
+    },
+    {
+      "date": "2023-07-10",
+      "kalshi": 0.41,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-07-17",
+      "kalshi": 0.41,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-07-24",
+      "kalshi": 0.52,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-07-31",
+      "kalshi": 0.54,
+      "polymarket": 1.02
+    },
+    {
+      "date": "2023-08-07",
+      "kalshi": 0.57,
+      "polymarket": 1.03
+    },
+    {
+      "date": "2023-08-14",
+      "kalshi": 0.57,
+      "polymarket": 1.03
+    },
+    {
+      "date": "2023-08-21",
+      "kalshi": 0.6,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-08-28",
+      "kalshi": 0.63,
+      "polymarket": 1.03
+    },
+    {
+      "date": "2023-09-04",
+      "kalshi": 0.63,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-09-11",
+      "kalshi": 0.64,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-09-18",
+      "kalshi": 0.64,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-09-25",
+      "kalshi": 0.64,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-10-02",
+      "kalshi": 0.63,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-10-09",
+      "kalshi": 0.64,
+      "polymarket": 1.04
+    },
+    {
+      "date": "2023-10-16",
+      "kalshi": 0.61,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2023-10-23",
+      "kalshi": 0.64,
+      "polymarket": 1.07
+    },
+    {
+      "date": "2023-10-30",
+      "kalshi": 0.64,
+      "polymarket": 1.06
+    },
+    {
+      "date": "2023-11-06",
+      "kalshi": 0.61,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2023-11-13",
+      "kalshi": 0.62,
+      "polymarket": 1.1
+    },
+    {
+      "date": "2023-11-20",
+      "kalshi": 0.63,
+      "polymarket": 1.1
+    },
+    {
+      "date": "2023-11-27",
+      "kalshi": 0.6,
+      "polymarket": 1.1
+    },
+    {
+      "date": "2023-12-04",
+      "kalshi": 0.53,
+      "polymarket": 1.1
+    },
+    {
+      "date": "2023-12-11",
+      "kalshi": 0.54,
+      "polymarket": 1.12
+    },
+    {
+      "date": "2023-12-18",
+      "kalshi": 0.51,
+      "polymarket": 1.12
+    },
+    {
+      "date": "2023-12-25",
+      "kalshi": 0.5,
+      "polymarket": 1.13
+    },
+    {
+      "date": "2024-01-01",
+      "kalshi": 0.49,
+      "polymarket": 1.16
+    },
+    {
+      "date": "2024-01-08",
+      "kalshi": 0.5,
+      "polymarket": 1.19
+    },
+    {
+      "date": "2024-01-15",
+      "kalshi": 0.5,
+      "polymarket": 1.18
+    },
+    {
+      "date": "2024-01-22",
+      "kalshi": 0.53,
+      "polymarket": 1.15
+    },
+    {
+      "date": "2024-01-29",
+      "kalshi": 0.52,
+      "polymarket": 1.11
+    },
+    {
+      "date": "2024-02-05",
+      "kalshi": 0.53,
+      "polymarket": 1.07
+    },
+    {
+      "date": "2024-02-12",
+      "kalshi": 0.52,
+      "polymarket": 1.13
+    },
+    {
+      "date": "2024-02-19",
+      "kalshi": 0.5,
+      "polymarket": 1.14
+    },
+    {
+      "date": "2024-02-26",
+      "kalshi": 0.46,
+      "polymarket": 1.18
+    },
+    {
+      "date": "2024-03-04",
+      "kalshi": 0.46,
+      "polymarket": 1.13
+    },
+    {
+      "date": "2024-03-11",
+      "kalshi": 0.48,
+      "polymarket": 1.14
+    },
+    {
+      "date": "2024-03-18",
+      "kalshi": 0.45,
+      "polymarket": 1.13
+    },
+    {
+      "date": "2024-03-25",
+      "kalshi": 0.44,
+      "polymarket": 1.13
+    },
+    {
+      "date": "2024-04-01",
+      "kalshi": 0.43,
+      "polymarket": 1.12
+    },
+    {
+      "date": "2024-04-08",
+      "kalshi": 0.43,
+      "polymarket": 1.12
+    },
+    {
+      "date": "2024-04-15",
+      "kalshi": 0.41,
+      "polymarket": 1.08
+    },
+    {
+      "date": "2024-04-22",
+      "kalshi": 0.41,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2024-04-29",
+      "kalshi": 0.43,
+      "polymarket": 0.99
+    },
+    {
+      "date": "2024-05-06",
+      "kalshi": 0.43,
+      "polymarket": 0.96
+    },
+    {
+      "date": "2024-05-13",
+      "kalshi": 0.42,
+      "polymarket": 0.94
+    },
+    {
+      "date": "2024-05-20",
+      "kalshi": 0.41,
+      "polymarket": 1.05
+    },
+    {
+      "date": "2024-05-27",
+      "kalshi": 0.41,
+      "polymarket": 1.19
+    },
+    {
+      "date": "2024-06-03",
+      "kalshi": 0.41,
+      "polymarket": 1.35
+    },
+    {
+      "date": "2024-06-10",
+      "kalshi": 0.41,
+      "polymarket": 1.4
+    },
+    {
+      "date": "2024-06-17",
+      "kalshi": 0.42,
+      "polymarket": 1.52
+    },
+    {
+      "date": "2024-06-24",
+      "kalshi": 0.41,
+      "polymarket": 1.66
+    },
+    {
+      "date": "2024-07-01",
+      "kalshi": 0.41,
+      "polymarket": 1.77
+    },
+    {
+      "date": "2024-07-08",
+      "kalshi": 0.42,
+      "polymarket": 1.96
+    },
+    {
+      "date": "2024-07-15",
+      "kalshi": 0.43,
+      "polymarket": 1.91
+    },
+    {
+      "date": "2024-07-22",
+      "kalshi": 0.44,
+      "polymarket": 2.12
+    },
+    {
+      "date": "2024-07-29",
+      "kalshi": 0.43,
+      "polymarket": 2.37
+    },
+    {
+      "date": "2024-08-05",
+      "kalshi": 0.43,
+      "polymarket": 2.45
+    },
+    {
+      "date": "2024-08-12",
+      "kalshi": 0.42,
+      "polymarket": 2.35
+    },
+    {
+      "date": "2024-08-19",
+      "kalshi": 0.41,
+      "polymarket": 2.51
+    },
+    {
+      "date": "2024-08-26",
+      "kalshi": 0.41,
+      "polymarket": 2.95
+    },
+    {
+      "date": "2024-09-02",
+      "kalshi": 0.39,
+      "polymarket": 3.4
+    },
+    {
+      "date": "2024-09-09",
+      "kalshi": 0.38,
+      "polymarket": 3.49
+    },
+    {
+      "date": "2024-09-16",
+      "kalshi": 0.45,
+      "polymarket": 3.33
+    },
+    {
+      "date": "2024-09-23",
+      "kalshi": 0.45,
+      "polymarket": 3.88
+    },
+    {
+      "date": "2024-09-30",
+      "kalshi": 0.46,
+      "polymarket": 3.96
+    },
+    {
+      "date": "2024-10-07",
+      "kalshi": 0.49,
+      "polymarket": 7.33
+    },
+    {
+      "date": "2024-10-14",
+      "kalshi": 0.7,
+      "polymarket": 9.82
+    },
+    {
+      "date": "2024-10-21",
+      "kalshi": 1.12,
+      "polymarket": 9.66
+    },
+    {
+      "date": "2024-10-28",
+      "kalshi": 2.01,
+      "polymarket": 10.98
+    },
+    {
+      "date": "2024-11-04",
+      "kalshi": 3.57,
+      "polymarket": 11.11
+    },
+    {
+      "date": "2024-11-11",
+      "kalshi": 3.34,
+      "polymarket": 10.58
+    },
+    {
+      "date": "2024-11-18",
+      "kalshi": 3.16,
+      "polymarket": 10.17
+    },
+    {
+      "date": "2024-11-25",
+      "kalshi": 3.13,
+      "polymarket": 9.67
+    },
+    {
+      "date": "2024-12-02",
+      "kalshi": 2.98,
+      "polymarket": 9.02
+    },
+    {
+      "date": "2024-12-09",
+      "kalshi": 2.91,
+      "polymarket": 8.73
+    },
+    {
+      "date": "2024-12-16",
+      "kalshi": 2.8,
+      "polymarket": 8.44
+    },
+    {
+      "date": "2024-12-23",
+      "kalshi": 2.75,
+      "polymarket": 8.0
+    },
+    {
+      "date": "2024-12-30",
+      "kalshi": 2.64,
+      "polymarket": 7.64
+    },
+    {
+      "date": "2025-01-06",
+      "kalshi": 2.53,
+      "polymarket": 7.17
+    },
+    {
+      "date": "2025-01-13",
+      "kalshi": 2.41,
+      "polymarket": 6.87
+    },
+    {
+      "date": "2025-01-20",
+      "kalshi": 2.41,
+      "polymarket": 6.54
+    },
+    {
+      "date": "2025-01-27",
+      "kalshi": 2.28,
+      "polymarket": 6.33
+    },
+    {
+      "date": "2025-02-03",
+      "kalshi": 2.36,
+      "polymarket": 6.14
+    },
+    {
+      "date": "2025-02-10",
+      "kalshi": 2.26,
+      "polymarket": 6.08
+    },
+    {
+      "date": "2025-02-17",
+      "kalshi": 2.12,
+      "polymarket": 5.94
+    },
+    {
+      "date": "2025-02-24",
+      "kalshi": 1.99,
+      "polymarket": 5.82
+    },
+    {
+      "date": "2025-03-03",
+      "kalshi": 1.83,
+      "polymarket": 5.71
+    },
+    {
+      "date": "2025-03-10",
+      "kalshi": 1.79,
+      "polymarket": 5.62
+    },
+    {
+      "date": "2025-03-17",
+      "kalshi": 1.87,
+      "polymarket": 5.54
+    },
+    {
+      "date": "2025-03-24",
+      "kalshi": 2.27,
+      "polymarket": 5.48
+    },
+    {
+      "date": "2025-03-31",
+      "kalshi": 2.1,
+      "polymarket": 5.44
+    },
+    {
+      "date": "2025-04-07",
+      "kalshi": 2.08,
+      "polymarket": 5.35
+    },
+    {
+      "date": "2025-04-14",
+      "kalshi": 2.08,
+      "polymarket": 5.27
+    },
+    {
+      "date": "2025-04-21",
+      "kalshi": 2.06,
+      "polymarket": 5.23
+    },
+    {
+      "date": "2025-04-28",
+      "kalshi": 1.98,
+      "polymarket": 5.11
+    },
+    {
+      "date": "2025-05-05",
+      "kalshi": 1.82,
+      "polymarket": 4.99
+    },
+    {
+      "date": "2025-05-12",
+      "kalshi": 1.82,
+      "polymarket": 4.89
+    },
+    {
+      "date": "2025-05-19",
+      "kalshi": 1.48,
+      "polymarket": 4.8
+    },
+    {
+      "date": "2025-05-26",
+      "kalshi": 1.69,
+      "polymarket": 4.7
+    },
+    {
+      "date": "2025-06-02",
+      "kalshi": 1.5,
+      "polymarket": 4.5
+    },
+    {
+      "date": "2025-06-09",
+      "kalshi": 1.37,
+      "polymarket": 4.43
+    },
+    {
+      "date": "2025-06-16",
+      "kalshi": 1.44,
+      "polymarket": 4.3
+    },
+    {
+      "date": "2025-06-23",
+      "kalshi": 1.44,
+      "polymarket": 4.23
+    },
+    {
+      "date": "2025-06-30",
+      "kalshi": 1.46,
+      "polymarket": 4.15
+    },
+    {
+      "date": "2025-07-07",
+      "kalshi": 1.42,
+      "polymarket": 4.1
+    },
+    {
+      "date": "2025-07-14",
+      "kalshi": 1.39,
+      "polymarket": 4.02
+    },
+    {
+      "date": "2025-07-21",
+      "kalshi": 1.37,
+      "polymarket": 3.92
+    },
+    {
+      "date": "2025-07-28",
+      "kalshi": 1.32,
+      "polymarket": 3.83
+    },
+    {
+      "date": "2025-08-04",
+      "kalshi": 1.27,
+      "polymarket": 3.75
+    },
+    {
+      "date": "2025-08-11",
+      "kalshi": 1.17,
+      "polymarket": 3.68
+    },
+    {
+      "date": "2025-08-18",
+      "kalshi": 1.2,
+      "polymarket": 3.6
+    },
+    {
+      "date": "2025-08-25",
+      "kalshi": 1.16,
+      "polymarket": 3.53
+    },
+    {
+      "date": "2025-09-01",
+      "kalshi": 1.08,
+      "polymarket": 3.46
+    },
+    {
+      "date": "2025-09-08",
+      "kalshi": 0.91,
+      "polymarket": 3.4
+    },
+    {
+      "date": "2025-09-15",
+      "kalshi": 0.96,
+      "polymarket": 3.3
+    },
+    {
+      "date": "2025-09-22",
+      "kalshi": 0.85,
+      "polymarket": 3.22
+    },
+    {
+      "date": "2025-09-29",
+      "kalshi": 0.99,
+      "polymarket": 3.13
+    },
+    {
+      "date": "2025-10-06",
+      "kalshi": 1.13,
+      "polymarket": 3.03
+    },
+    {
+      "date": "2025-10-13",
+      "kalshi": 1.17,
+      "polymarket": 2.94
+    },
+    {
+      "date": "2025-10-20",
+      "kalshi": 1.17,
+      "polymarket": 2.84
+    },
+    {
+      "date": "2025-10-27",
+      "kalshi": 1.15,
+      "polymarket": 2.72
+    },
+    {
+      "date": "2025-11-03",
+      "kalshi": 1.07,
+      "polymarket": 2.55
+    },
+    {
+      "date": "2025-11-10",
+      "kalshi": 1.09,
+      "polymarket": 2.37
+    },
+    {
+      "date": "2025-11-17",
+      "kalshi": 1.01,
+      "polymarket": 2.25
+    },
+    {
+      "date": "2025-11-24",
+      "polymarket": 2.12
+    },
+    {
+      "date": "2025-12-01",
+      "polymarket": 2.05
+    },
+    {
+      "date": "2025-12-08",
+      "polymarket": 1.92
+    },
+    {
+      "date": "2025-12-15",
+      "polymarket": 1.85
+    },
+    {
+      "date": "2025-12-22",
+      "polymarket": 1.74
+    },
+    {
+      "date": "2025-12-29",
+      "polymarket": 1.63
+    },
+    {
+      "date": "2026-01-05",
+      "polymarket": 1.5
+    },
+    {
+      "date": "2026-01-12",
+      "polymarket": 1.34
+    },
+    {
+      "date": "2026-01-19",
+      "polymarket": 1.25
+    }
+  ],
+  "xKey": "date",
+  "yKeys": [
+    "kalshi",
+    "polymarket"
+  ],
+  "title": "Calibration Accuracy Over Time: Polymarket vs Kalshi",
+  "yUnit": "percent",
+  "colors": {
+    "kalshi": "#4C72B0",
+    "polymarket": "#55A868"
+  },
+  "xLabel": "Date",
+  "yLabel": "Mean Absolute Deviation (%)"
+}

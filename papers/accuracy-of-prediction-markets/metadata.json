@@ -1,0 +1,7 @@
+{
+  "title": "Are Prediction Markets Accurate?",
+  "summary": "We evaluated the calibration of Polymarket and Kalshi across 135 million trade positions. Both markets are remarkably accurate: contracts at 50 cents resolve YES exactly 50% of the time. But accuracy varies by category — Sports (Brier Score: 0.1773) lags Finance (0.1500) and Politics (0.1192). The apparent deterioration in Brier Score since 2024 is a measurement artifact: the market is forecasting harder questions, not getting worse at forecasting.",
+  "date": "Jul 19, 2026",
+  "tags": ["prediction markets", "polymarket", "kalshi", "market efficiency", "calibration", "data analysis", "behavioral economics", "elections", "brier score"],
+  "ignore": true
+}

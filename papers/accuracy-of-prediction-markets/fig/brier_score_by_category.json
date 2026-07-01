@@ -1,0 +1,56 @@
+{
+  "type": "bar",
+  "data": [
+    {
+      "category": "Sports",
+      "Brier Score": 0.1773
+    },
+    {
+      "category": "Crypto",
+      "Brier Score": 0.1643
+    },
+    {
+      "category": "Politics",
+      "Brier Score": 0.1192
+    },
+    {
+      "category": "Weather",
+      "Brier Score": 0.1596
+    },
+    {
+      "category": "Finance",
+      "Brier Score": 0.15
+    },
+    {
+      "category": "Entertainment",
+      "Brier Score": 0.1452
+    },
+    {
+      "category": "Other",
+      "Brier Score": 0.1487
+    },
+    {
+      "category": "Media",
+      "Brier Score": 0.1506
+    },
+    {
+      "category": "World Events",
+      "Brier Score": 0.1732
+    },
+    {
+      "category": "Science/Tech",
+      "Brier Score": 0.1519
+    }
+  ],
+  "xKey": "category",
+  "yKeys": [
+    "Brier Score"
+  ],
+  "title": "Brier Score by Category",
+  "yUnit": "number",
+  "colors": {
+    "Brier Score": "#4C72B0"
+  },
+  "xLabel": "Category",
+  "yLabel": "Brier Score"
+}

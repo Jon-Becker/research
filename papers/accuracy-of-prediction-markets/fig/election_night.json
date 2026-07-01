@@ -1,0 +1,1458 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "time": "12:00",
+      "Trump": 57,
+      "Harris": 44
+    },
+    {
+      "time": "12:05",
+      "Trump": 58,
+      "Harris": 44
+    },
+    {
+      "time": "12:10",
+      "Trump": 58,
+      "Harris": 44
+    },
+    {
+      "time": "12:15",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "12:20",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "12:25",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "12:30",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "12:35",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "12:40",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "12:45",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "12:50",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "12:55",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "13:00",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "13:05",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "13:10",
+      "Trump": 57,
+      "Harris": 43
+    },
+    {
+      "time": "13:15",
+      "Trump": 57,
+      "Harris": 44
+    },
+    {
+      "time": "13:20",
+      "Trump": 57,
+      "Harris": 44
+    },
+    {
+      "time": "13:25",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "13:30",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "13:35",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "13:40",
+      "Trump": 58,
+      "Harris": 42
+    },
+    {
+      "time": "13:45",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "13:50",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "13:55",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:00",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:05",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:10",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "14:15",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "14:20",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "14:25",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "14:30",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:35",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "14:40",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:45",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:50",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "14:55",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "15:00",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:05",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "15:10",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "15:15",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "15:20",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:25",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:30",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:35",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:40",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:45",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:50",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "15:55",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "16:00",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "16:05",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "16:10",
+      "Trump": 58,
+      "Harris": 42
+    },
+    {
+      "time": "16:15",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "16:20",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "16:25",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "16:30",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "16:35",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "16:40",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "16:45",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "16:50",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "16:55",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:00",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:05",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:10",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:15",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:20",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:25",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:30",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:35",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "17:40",
+      "Trump": 60,
+      "Harris": 41
+    },
+    {
+      "time": "17:45",
+      "Trump": 60,
+      "Harris": 42
+    },
+    {
+      "time": "17:50",
+      "Trump": 60,
+      "Harris": 42
+    },
+    {
+      "time": "17:55",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "18:00",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "18:05",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "18:10",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "18:15",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "18:20",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "18:25",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "18:30",
+      "Trump": 59,
+      "Harris": 43
+    },
+    {
+      "time": "18:35",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "18:40",
+      "Trump": 57,
+      "Harris": 44
+    },
+    {
+      "time": "18:45",
+      "Trump": 56,
+      "Harris": 45
+    },
+    {
+      "time": "18:50",
+      "Trump": 56,
+      "Harris": 45
+    },
+    {
+      "time": "18:55",
+      "Trump": 57,
+      "Harris": 45
+    },
+    {
+      "time": "19:00",
+      "Trump": 56,
+      "Harris": 45
+    },
+    {
+      "time": "19:05",
+      "Trump": 57,
+      "Harris": 43
+    },
+    {
+      "time": "19:10",
+      "Trump": 57,
+      "Harris": 44
+    },
+    {
+      "time": "19:15",
+      "Trump": 56,
+      "Harris": 44
+    },
+    {
+      "time": "19:20",
+      "Trump": 57,
+      "Harris": 44
+    },
+    {
+      "time": "19:25",
+      "Trump": 58,
+      "Harris": 43
+    },
+    {
+      "time": "19:30",
+      "Trump": 59,
+      "Harris": 42
+    },
+    {
+      "time": "19:35",
+      "Trump": 64,
+      "Harris": 38
+    },
+    {
+      "time": "19:40",
+      "Trump": 66,
+      "Harris": 35
+    },
+    {
+      "time": "19:45",
+      "Trump": 66,
+      "Harris": 36
+    },
+    {
+      "time": "19:50",
+      "Trump": 65,
+      "Harris": 36
+    },
+    {
+      "time": "19:55",
+      "Trump": 66,
+      "Harris": 34
+    },
+    {
+      "time": "20:00",
+      "Trump": 69,
+      "Harris": 33
+    },
+    {
+      "time": "20:05",
+      "Trump": 68,
+      "Harris": 33
+    },
+    {
+      "time": "20:10",
+      "Trump": 67,
+      "Harris": 34
+    },
+    {
+      "time": "20:15",
+      "Trump": 67,
+      "Harris": 35
+    },
+    {
+      "time": "20:20",
+      "Trump": 65,
+      "Harris": 35
+    },
+    {
+      "time": "20:25",
+      "Trump": 66,
+      "Harris": 35
+    },
+    {
+      "time": "20:30",
+      "Trump": 67,
+      "Harris": 34
+    },
+    {
+      "time": "20:35",
+      "Trump": 68,
+      "Harris": 33
+    },
+    {
+      "time": "20:40",
+      "Trump": 68,
+      "Harris": 32
+    },
+    {
+      "time": "20:45",
+      "Trump": 70,
+      "Harris": 30
+    },
+    {
+      "time": "20:50",
+      "Trump": 71,
+      "Harris": 31
+    },
+    {
+      "time": "20:55",
+      "Trump": 70,
+      "Harris": 32
+    },
+    {
+      "time": "21:00",
+      "Trump": 68,
+      "Harris": 33
+    },
+    {
+      "time": "21:05",
+      "Trump": 68,
+      "Harris": 33
+    },
+    {
+      "time": "21:10",
+      "Trump": 69,
+      "Harris": 32
+    },
+    {
+      "time": "21:15",
+      "Trump": 70,
+      "Harris": 31
+    },
+    {
+      "time": "21:20",
+      "Trump": 73,
+      "Harris": 27
+    },
+    {
+      "time": "21:25",
+      "Trump": 74,
+      "Harris": 26
+    },
+    {
+      "time": "21:30",
+      "Trump": 74,
+      "Harris": 27
+    },
+    {
+      "time": "21:35",
+      "Trump": 75,
+      "Harris": 26
+    },
+    {
+      "time": "21:40",
+      "Trump": 74,
+      "Harris": 27
+    },
+    {
+      "time": "21:45",
+      "Trump": 75,
+      "Harris": 25
+    },
+    {
+      "time": "21:50",
+      "Trump": 78,
+      "Harris": 22
+    },
+    {
+      "time": "21:55",
+      "Trump": 81,
+      "Harris": 19
+    },
+    {
+      "time": "22:00",
+      "Trump": 84,
+      "Harris": 16
+    },
+    {
+      "time": "22:05",
+      "Trump": 84,
+      "Harris": 17
+    },
+    {
+      "time": "22:10",
+      "Trump": 85,
+      "Harris": 15
+    },
+    {
+      "time": "22:15",
+      "Trump": 86,
+      "Harris": 15
+    },
+    {
+      "time": "22:20",
+      "Trump": 83,
+      "Harris": 17
+    },
+    {
+      "time": "22:25",
+      "Trump": 84,
+      "Harris": 18
+    },
+    {
+      "time": "22:30",
+      "Trump": 86,
+      "Harris": 17
+    },
+    {
+      "time": "22:35",
+      "Trump": 87,
+      "Harris": 14
+    },
+    {
+      "time": "22:40",
+      "Trump": 89,
+      "Harris": 11
+    },
+    {
+      "time": "22:45",
+      "Trump": 89,
+      "Harris": 11
+    },
+    {
+      "time": "22:50",
+      "Trump": 90,
+      "Harris": 10
+    },
+    {
+      "time": "22:55",
+      "Trump": 90,
+      "Harris": 10
+    },
+    {
+      "time": "23:00",
+      "Trump": 91,
+      "Harris": 10
+    },
+    {
+      "time": "23:05",
+      "Trump": 91,
+      "Harris": 10
+    },
+    {
+      "time": "23:10",
+      "Trump": 91,
+      "Harris": 9
+    },
+    {
+      "time": "23:15",
+      "Trump": 91,
+      "Harris": 9
+    },
+    {
+      "time": "23:20",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "23:25",
+      "Trump": 94,
+      "Harris": 7
+    },
+    {
+      "time": "23:30",
+      "Trump": 93,
+      "Harris": 6
+    },
+    {
+      "time": "23:35",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "23:40",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "23:45",
+      "Trump": 93,
+      "Harris": 6
+    },
+    {
+      "time": "23:50",
+      "Trump": 94,
+      "Harris": 6
+    },
+    {
+      "time": "23:55",
+      "Trump": 94,
+      "Harris": 6
+    },
+    {
+      "time": "00:00",
+      "Trump": 94,
+      "Harris": 6
+    },
+    {
+      "time": "00:05",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "00:10",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "00:15",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "00:20",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "00:25",
+      "Trump": 93,
+      "Harris": 7
+    },
+    {
+      "time": "00:30",
+      "Trump": 94,
+      "Harris": 6
+    },
+    {
+      "time": "00:35",
+      "Trump": 94,
+      "Harris": 6
+    },
+    {
+      "time": "00:40",
+      "Trump": 94,
+      "Harris": 5
+    },
+    {
+      "time": "00:45",
+      "Trump": 95,
+      "Harris": 5
+    },
+    {
+      "time": "00:50",
+      "Trump": 95,
+      "Harris": 4
+    },
+    {
+      "time": "00:55",
+      "Trump": 96,
+      "Harris": 4
+    },
+    {
+      "time": "01:00",
+      "Trump": 96,
+      "Harris": 3
+    },
+    {
+      "time": "01:05",
+      "Trump": 96,
+      "Harris": 4
+    },
+    {
+      "time": "01:10",
+      "Trump": 96,
+      "Harris": 3
+    },
+    {
+      "time": "01:15",
+      "Trump": 96,
+      "Harris": 3
+    },
+    {
+      "time": "01:20",
+      "Trump": 96,
+      "Harris": 3
+    },
+    {
+      "time": "01:25",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "01:30",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "time": "01:35",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "time": "01:40",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "01:45",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "time": "01:50",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "01:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:40",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "02:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "02:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:35",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "03:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "03:55",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "04:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "04:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "04:10",
+      "Trump": 98,
+      "Harris": 2
+    },
+    {
+      "time": "04:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "04:20",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "04:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "04:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "04:35",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "04:40",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "04:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "04:50",
+      "Trump": 97,
+      "Harris": 2
+    },
+    {
+      "time": "04:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:10",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "05:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "05:55",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "06:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:25",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "06:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "06:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:15",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "07:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "07:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:05",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "08:10",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "08:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "08:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:15",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "09:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:40",
+      "Trump": 98,
+      "Harris": 1
+    },
+    {
+      "time": "09:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "09:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "10:55",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:00",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:05",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:10",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:15",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:20",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:25",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:30",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:35",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:40",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:45",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:50",
+      "Trump": 97,
+      "Harris": 1
+    },
+    {
+      "time": "11:55",
+      "Trump": 97,
+      "Harris": 1
+    }
+  ],
+  "xKey": "time",
+  "yKeys": [
+    "Trump",
+    "Harris"
+  ],
+  "title": "Election Night: Trump vs Harris (Nov 5-6)",
+  "yUnit": "cents",
+  "colors": {
+    "Trump": "#e74c3c",
+    "Harris": "#3498db"
+  },
+  "xLabel": "Time (ET)",
+  "yLabel": "Price (cents)"
+}

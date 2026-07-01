@@ -1,0 +1,188 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "date": "2024-10-04",
+      "Kalshi": 49.2,
+      "Polymarket": 49.6
+    },
+    {
+      "date": "2024-10-05",
+      "Kalshi": 49.8,
+      "Polymarket": 49.8
+    },
+    {
+      "date": "2024-10-06",
+      "Kalshi": 49.5,
+      "Polymarket": 50.5
+    },
+    {
+      "date": "2024-10-07",
+      "Kalshi": 49.7,
+      "Polymarket": 51.4
+    },
+    {
+      "date": "2024-10-08",
+      "Kalshi": 49.9,
+      "Polymarket": 52.9
+    },
+    {
+      "date": "2024-10-09",
+      "Kalshi": 50.0,
+      "Polymarket": 53.2
+    },
+    {
+      "date": "2024-10-10",
+      "Kalshi": 51.4,
+      "Polymarket": 54.4
+    },
+    {
+      "date": "2024-10-11",
+      "Kalshi": 52.5,
+      "Polymarket": 55.4
+    },
+    {
+      "date": "2024-10-12",
+      "Kalshi": 53.3,
+      "Polymarket": 54.8
+    },
+    {
+      "date": "2024-10-13",
+      "Kalshi": 53.7,
+      "Polymarket": 54.6
+    },
+    {
+      "date": "2024-10-14",
+      "Kalshi": 54.2,
+      "Polymarket": 54.1
+    },
+    {
+      "date": "2024-10-15",
+      "Kalshi": 55.4,
+      "Polymarket": 56.4
+    },
+    {
+      "date": "2024-10-16",
+      "Kalshi": 55.8,
+      "Polymarket": 58.9
+    },
+    {
+      "date": "2024-10-17",
+      "Kalshi": 56.5,
+      "Polymarket": 60.6
+    },
+    {
+      "date": "2024-10-18",
+      "Kalshi": 57.4,
+      "Polymarket": 60.7
+    },
+    {
+      "date": "2024-10-19",
+      "Kalshi": 57.5,
+      "Polymarket": 59.7
+    },
+    {
+      "date": "2024-10-20",
+      "Kalshi": 56.7,
+      "Polymarket": 59.6
+    },
+    {
+      "date": "2024-10-21",
+      "Kalshi": 57.5,
+      "Polymarket": 61.9
+    },
+    {
+      "date": "2024-10-22",
+      "Kalshi": 59.9,
+      "Polymarket": 64.0
+    },
+    {
+      "date": "2024-10-23",
+      "Kalshi": 58.9,
+      "Polymarket": 62.9
+    },
+    {
+      "date": "2024-10-24",
+      "Kalshi": 61.0,
+      "Polymarket": 62.2
+    },
+    {
+      "date": "2024-10-25",
+      "Kalshi": 61.9,
+      "Polymarket": 64.3
+    },
+    {
+      "date": "2024-10-26",
+      "Kalshi": 61.2,
+      "Polymarket": 64.1
+    },
+    {
+      "date": "2024-10-27",
+      "Kalshi": 62.2,
+      "Polymarket": 65.1
+    },
+    {
+      "date": "2024-10-28",
+      "Kalshi": 62.5,
+      "Polymarket": 66.2
+    },
+    {
+      "date": "2024-10-29",
+      "Kalshi": 63.7,
+      "Polymarket": 66.4
+    },
+    {
+      "date": "2024-10-30",
+      "Kalshi": 61.8,
+      "Polymarket": 66.2
+    },
+    {
+      "date": "2024-10-31",
+      "Kalshi": 59.2,
+      "Polymarket": 63.7
+    },
+    {
+      "date": "2024-11-01",
+      "Kalshi": 55.5,
+      "Polymarket": 61.2
+    },
+    {
+      "date": "2024-11-02",
+      "Kalshi": 53.0,
+      "Polymarket": 57.3
+    },
+    {
+      "date": "2024-11-03",
+      "Kalshi": 52.1,
+      "Polymarket": 55.0
+    },
+    {
+      "date": "2024-11-04",
+      "Kalshi": 56.1,
+      "Polymarket": 58.0
+    },
+    {
+      "date": "2024-11-05",
+      "Kalshi": 69.7,
+      "Polymarket": 61.8
+    },
+    {
+      "date": "2024-11-06",
+      "Kalshi": 96.9,
+      "Polymarket": 92.1
+    }
+  ],
+  "xKey": "date",
+  "yKeys": [
+    "Kalshi",
+    "Polymarket"
+  ],
+  "title": "2024 Election: Cross-Platform Price Comparison",
+  "yUnit": "cents",
+  "colors": {
+    "Kalshi": "#4C72B0",
+    "Polymarket": "#55A868"
+  },
+  "xLabel": "Date",
+  "yLabel": "Trump YES Price (cents)"
+}

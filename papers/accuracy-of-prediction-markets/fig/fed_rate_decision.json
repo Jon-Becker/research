@@ -1,0 +1,326 @@
+{
+  "type": "line",
+  "data": [
+    {
+      "date": "2024-07-30",
+      "Cut >25bps": 14,
+      "Cut 25bps": 76,
+      "Hold": 10
+    },
+    {
+      "date": "2024-07-31",
+      "Cut >25bps": 12,
+      "Cut 25bps": 73,
+      "Hold": 16
+    },
+    {
+      "date": "2024-08-01",
+      "Cut >25bps": 16,
+      "Cut 25bps": 71,
+      "Hold": 10
+    },
+    {
+      "date": "2024-08-02",
+      "Cut >25bps": 54,
+      "Cut 25bps": 44,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-03",
+      "Cut >25bps": 45,
+      "Cut 25bps": 58,
+      "Hold": 1
+    },
+    {
+      "date": "2024-08-04",
+      "Cut >25bps": 50,
+      "Cut 25bps": 49,
+      "Hold": 2
+    },
+    {
+      "date": "2024-08-05",
+      "Cut >25bps": 63,
+      "Cut 25bps": 33,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-06",
+      "Cut >25bps": 53,
+      "Cut 25bps": 46,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-07",
+      "Cut >25bps": 46,
+      "Cut 25bps": 50,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-08",
+      "Cut >25bps": 40,
+      "Cut 25bps": 57,
+      "Hold": 3
+    },
+    {
+      "date": "2024-08-09",
+      "Cut >25bps": 36,
+      "Cut 25bps": 59,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-10",
+      "Cut >25bps": 26,
+      "Cut 25bps": 65,
+      "Hold": 6
+    },
+    {
+      "date": "2024-08-11",
+      "Cut >25bps": 32,
+      "Cut 25bps": 65,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-12",
+      "Cut >25bps": 34,
+      "Cut 25bps": 63,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-13",
+      "Cut >25bps": 35,
+      "Cut 25bps": 65,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-14",
+      "Cut >25bps": 26,
+      "Cut 25bps": 73,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-15",
+      "Cut >25bps": 14,
+      "Cut 25bps": 79,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-16",
+      "Cut >25bps": 17,
+      "Cut 25bps": 84,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-17",
+      "Cut >25bps": 19,
+      "Cut 25bps": 84,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-18",
+      "Cut >25bps": 19,
+      "Cut 25bps": 86,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-19",
+      "Cut >25bps": 17,
+      "Cut 25bps": 82,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-20",
+      "Cut >25bps": 19,
+      "Cut 25bps": 77,
+      "Hold": 6
+    },
+    {
+      "date": "2024-08-21",
+      "Cut >25bps": 22,
+      "Cut 25bps": 81,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-22",
+      "Cut >25bps": 18,
+      "Cut 25bps": 78,
+      "Hold": 5
+    },
+    {
+      "date": "2024-08-23",
+      "Cut >25bps": 22,
+      "Cut 25bps": 78,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-24",
+      "Cut >25bps": 28,
+      "Cut 25bps": 79,
+      "Hold": 3
+    },
+    {
+      "date": "2024-08-25",
+      "Cut >25bps": 24,
+      "Cut 25bps": 79,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-26",
+      "Cut >25bps": 23,
+      "Cut 25bps": 77,
+      "Hold": 3
+    },
+    {
+      "date": "2024-08-27",
+      "Cut >25bps": 24,
+      "Cut 25bps": 73,
+      "Hold": 3
+    },
+    {
+      "date": "2024-08-28",
+      "Cut >25bps": 28,
+      "Cut 25bps": 73,
+      "Hold": 4
+    },
+    {
+      "date": "2024-08-29",
+      "Cut >25bps": 24,
+      "Cut 25bps": 75,
+      "Hold": 3
+    },
+    {
+      "date": "2024-08-30",
+      "Cut >25bps": 25,
+      "Cut 25bps": 77,
+      "Hold": 2
+    },
+    {
+      "date": "2024-08-31",
+      "Cut >25bps": 25,
+      "Cut 25bps": 79,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-01",
+      "Cut >25bps": 25,
+      "Cut 25bps": 79,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-02",
+      "Cut >25bps": 21,
+      "Cut 25bps": 83,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-03",
+      "Cut >25bps": 25,
+      "Cut 25bps": 75,
+      "Hold": 3
+    },
+    {
+      "date": "2024-09-04",
+      "Cut >25bps": 38,
+      "Cut 25bps": 66,
+      "Hold": 3
+    },
+    {
+      "date": "2024-09-05",
+      "Cut >25bps": 38,
+      "Cut 25bps": 62,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-06",
+      "Cut >25bps": 36,
+      "Cut 25bps": 63,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-07",
+      "Cut >25bps": 29,
+      "Cut 25bps": 76,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-08",
+      "Cut >25bps": 26,
+      "Cut 25bps": 72,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-09",
+      "Cut >25bps": 21,
+      "Cut 25bps": 77,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-10",
+      "Cut >25bps": 24,
+      "Cut 25bps": 76,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-11",
+      "Cut >25bps": 8,
+      "Cut 25bps": 91,
+      "Hold": 3
+    },
+    {
+      "date": "2024-09-12",
+      "Cut >25bps": 24,
+      "Cut 25bps": 80,
+      "Hold": 3
+    },
+    {
+      "date": "2024-09-13",
+      "Cut >25bps": 37,
+      "Cut 25bps": 64,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-14",
+      "Cut >25bps": 29,
+      "Cut 25bps": 67,
+      "Hold": 3
+    },
+    {
+      "date": "2024-09-15",
+      "Cut >25bps": 43,
+      "Cut 25bps": 57,
+      "Hold": 3
+    },
+    {
+      "date": "2024-09-16",
+      "Cut >25bps": 56,
+      "Cut 25bps": 45,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-17",
+      "Cut >25bps": 55,
+      "Cut 25bps": 46,
+      "Hold": 2
+    },
+    {
+      "date": "2024-09-18",
+      "Cut >25bps": 45,
+      "Cut 25bps": 53,
+      "Hold": 1
+    }
+  ],
+  "xKey": "date",
+  "yKeys": [
+    "Cut >25bps",
+    "Cut 25bps",
+    "Hold"
+  ],
+  "title": "September 2024 FOMC: Rate Decision Prices",
+  "yUnit": "cents",
+  "colors": {
+    "Cut >25bps": "#2ecc71",
+    "Cut 25bps": "#3498db",
+    "Hold": "#e74c3c"
+  },
+  "xLabel": "Date",
+  "yLabel": "Price (cents)"
+}
