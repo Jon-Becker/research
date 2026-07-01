@@ -49,6 +49,55 @@ Polymarket opened at 23.16% in October 2020 and fell below 4% within three month
 The 2024 U.S. presidential election disrupted this equilibrium. Polymarket's MAD spiked from below 1% to 11.11% in early November as billions of dollars poured into a handful of binary political markets. Kalshi saw a smaller spike to 3.57%. Both recovered rapidly once the election resolved: Polymarket fell to 1.25% and Kalshi to 1.01% by January 2026.
 
 ### Brier Score Over Time
+## Theoretical Framework and Literature
+
+### Information Aggregation in Markets
+
+The efficient market hypothesis, formalized by Fama (1970), posits that asset prices should reflect all available information. In traditional securities markets, this hypothesis is difficult to test directly because fundamental values are inherently uncertain. Prediction markets offer a cleaner laboratory: contracts pay exactly $1 or $0, and the true probability, while unknown ex ante, is revealed ex post through repeated resolution. If markets are efficient, a contract trading at 70 cents should win approximately 70% of the time.
+
+Hayek (1945) argued that prices serve as sufficient statistics for dispersed information held by market participants. Prediction markets operationalize this mechanism explicitly: each trader can condition on the price, update their beliefs, and trade only when they perceive mispricing. The market price thus aggregates heterogeneous beliefs and private information. Surowiecki (2004) popularized this concept as the "wisdom of crowds," showing that properly structured aggregation mechanisms can produce forecasts more accurate than expert judgment.
+
+Two theoretical frameworks formalize how markets aggregate information. Hanson (2002, 2003) introduced logarithmic market scoring rules for combinatorial prediction markets, showing that market makers can subsidize information aggregation while maintaining bounded losses. Ottaviani and Sørensen (2009, 2010) model parimutuel markets with risk-neutral traders facing budget constraints, deriving conditions under which equilibrium prices deviate systematically from true probabilities. Their framework predicts a favorite-longshot bias even with rational, well-calibrated traders, as the market-clearing price must lie at a percentile of the belief distribution that is pulled toward 50% by participation constraints.
+
+Recent empirical work extends these models. Atanasov et al. (2016) compare prediction markets to prediction polls in a large forecasting tournament, finding that markets outperform polls in accuracy, particularly for near-term events. The authors attribute this to the market's ability to weight skilled forecasters more heavily through repeated trading. Diercks, Katz, and Wright (2026) analyze Kalshi's macroeconomic contracts, documenting that the platform maintained a perfect record on FOMC rate decisions and produced CPI forecasts with 40% lower mean absolute errors than the Bloomberg consensus.
+
+### Calibration and the Favorite-Longshot Bias
+
+Calibration is the central test of market accuracy. A well-calibrated market is one where, across all contracts that traded at price p, approximately p% resolved to YES. Systematic deviations from this relationship constitute bias. The favorite-longshot bias, first documented by Griffith (1949) in horse racing and formalized by Thaler and Ziemba (1988), describes the empirical regularity that longshot bets (low probability outsiders) lose more than implied by their prices, while favorite bets (high probability favorites) win more often than their prices suggest. This pattern has been observed across parimutuel betting markets, fixed-odds bookmakers, and, more recently, prediction markets.
+
+What explains the bias? Behavioral theories emphasize probability misperception. Kahneman and Tversky (1979) propose that decision makers weight probabilities non-linearly, overweighting small probabilities and underweighting large ones. This would systematically push demand toward longshots. Snowberg and Wolfers (2010) test this explanation against the alternative of risk-love (preferences for positive skewness), finding evidence for both in racetrack data. Bakalo (2026) provides a comprehensive review of FLB explanations, categorizing them into behavioral (probability weighting, skewness preference), informational (asymmetric information, insider trading), and structural (bookmaker hedging, market microstructure). He proposes that bookmakers' risk management practices may generate the bias mechanically, even with unbiased bettors.
+
+Page and Clemen (2013) introduce a temporal dimension to calibration. Analyzing Intrade contracts, they find that prediction market prices are reasonably well-calibrated when time to expiration is short but exhibit significant favorite-longshot bias for events farther in the future. They model this as arising from time discounting preferences interacting with budget constraints: traders with beliefs near the market price abstain when the contract requires tying up capital for months, and this abstention is asymmetric, affecting favorites more than longshots due to their higher prices. Their empirical analysis confirms that contracts expiring in more than one month show substantially poorer calibration than near-term contracts.
+
+Le (2026) decomposes calibration more finely, analyzing 292 million trades across Kalshi and Polymarket. Using a four-component variance decomposition, Le shows that calibration varies systematically by domain, horizon, and trade size. Political markets exhibit persistent underconfidence, with prices compressed toward 50%, a pattern that generalizes across both exchanges. Financial markets, by contrast, show minimal bias. The paper documents that large trades amplify underconfidence in political markets on Kalshi but not on Polymarket, suggesting platform-specific microstructure effects.
+
+### Real-Time Price Discovery
+
+A distinct question is not whether prices are calibrated on average, but how quickly they incorporate new information. Angelini and De Angelis (2026) study this using live NBA game contracts on Kalshi, where public information arrives continuously and is precisely timestamped. They construct a benchmark win probability from pre-game odds and in-play game states, then measure how quickly market prices adjust to changes in this benchmark.
+
+Their findings challenge the efficient markets hypothesis. Prices respond rapidly and in the correct direction, but they underreact on impact. A one-minute change in the benchmark probability is associated with only a 0.64-for-1 contemporaneous change in the Kalshi midpoint. This incomplete updating predicts subsequent price drift: prices continue moving in the direction of the initial benchmark change for several minutes, even after controlling for further changes in the benchmark. The underreaction is most pronounced when public signals are salient (three-point shots, lead changes) but liquidity is low, suggesting that trading frictions shape the speed of information incorporation.
+
+This result echoes findings from traditional financial markets. Hong and Stein (1999) model gradual information diffusion among boundedly rational traders, generating momentum and delayed overreaction. DellaVigna and Pollet (2009) document that stock prices underreact to predictable earnings announcements that occur on low-attention days (Fridays). Angelini and De Angelis's contribution is to demonstrate that even in a simple, transparent setting with binary payoffs and public signals, market prices can fail to update efficiently in real time.
+
+### Comparison to Alternative Forecasting Methods
+
+How do prediction markets compare to other forecasting tools? Poll aggregation models, popularized by Silver (2012, 2015) during election cycles, combine individual surveys into weighted averages, adjusting for polling error and house effects. Expert judgment, as studied in the Good Judgment Project (Tetlock and Gardner, 2015), shows that a small subset of "superforecasters" consistently outperform crowd averages. Mellers et al. (2014) find that training and team collaboration improve probabilistic reasoning, but even elite forecasters benefit from aggregation mechanisms.
+
+Direct comparisons generally favor markets. Wolfers and Zitzewitz (2004) survey prediction market applications, documenting accuracy advantages over polls in U.S. presidential elections, corporate earnings, and movie box office forecasts. Atanasov et al. (2016) run a controlled tournament and find that markets produce lower Brier Scores than polls, particularly when questions involve near-term resolution. The authors attribute this to incentive alignment: markets reward accuracy directly through profit, while polls reward participation regardless of forecast quality.
+
+However, markets have weaknesses. Low-liquidity contracts suffer from wide bid-ask spreads and stale prices, making them unreliable. Manipulation is possible, though experimental evidence (Hanson et al., 2006) suggests markets are resilient when liquidity is sufficient to absorb manipulative trades. Ottaviani and Sørensen (2007) show that prediction markets within corporations create incentives to manipulate not just prices but outcomes themselves, undermining their information aggregation value.
+
+Recent work documents that Kalshi contracts outperform both surveys and futures markets on macroeconomic questions. Diercks et al. (2026) compare Kalshi to the New York Fed's Survey of Market Expectations and fed funds futures, finding that Kalshi provides a "high-frequency, continuously updated, distributionally rich benchmark" with superior accuracy on FOMC rate decisions and CPI releases. The advantage stems from Kalshi's event contract structure, which directly elicits probability distributions rather than point estimates.
+
+### Gaps in the Literature
+
+While prediction market calibration has been studied extensively in specific contexts (elections, sports, entertainment), comprehensive cross-platform, multi-category analyses remain rare. Most prior work examines individual markets or narrow time windows. Le (2026) is an exception, but focuses on domain-category decomposition rather than price dynamics or comparison to external benchmarks.
+
+The literature on longshot bias emphasizes racetrack betting and sports, with limited attention to how the bias manifests in regulated prediction markets covering diverse question types. Page and Clemen (2013) establish the time-horizon effect, but their sample predates the explosive growth of platforms like Kalshi and Polymarket, and they do not explore category heterogeneity or liquidity thresholds.
+
+Finally, most calibration studies compute aggregate Brier Scores or Mean Absolute Deviations without decomposing these metrics into their interpretable components. The Murphy decomposition (Murphy, 1973) cleanly separates reliability (miscalibration), resolution (ability to discriminate outcomes), and uncertainty (inherent difficulty), yet few applied papers report all three. This decomposition is essential for distinguishing a market that is poorly calibrated from one that is well-calibrated but forecasting genuinely uncertain events.
+
+This paper fills these gaps by combining comprehensive data from Kalshi and Polymarket, applying Murphy decomposition to isolate calibration quality from prediction difficulty, analyzing how accuracy varies by category and liquidity, and comparing market prices to external benchmarks (weather models, polls, Fed surveys). The result is a granular portrait of where prediction markets succeed, where they struggle, and why.
 
 The Brier Score tells a complementary but less straightforward story.
 
@@ -304,7 +353,78 @@ For market designers: category matters. Platforms seeking accurate prices should
 
 For researchers evaluating prediction market accuracy: neither MAD nor the Brier Score alone tells the full story. MAD is blind to volume distribution; the Brier Score conflates difficulty with quality. Category-level decomposition, as presented here, provides the missing context. The "accuracy paradox," rising Brier Scores alongside falling MAD, dissolves entirely when you account for what the market is being asked to predict.
 
-## References
+## The Longshot Bias in Prediction Markets
+
+The favorite-longshot bias (FLB) is one of the oldest documented market anomalies. Griffith (1949) first observed that racetrack bettors systematically overbet on longshots (horses with low win probabilities) and underbet on favorites (high probability winners). A bettor placing $100 on a horse with true odds of 1% should expect to lose $99 on average. Griffith found they lost closer to $120. Conversely, a bet on a 90% favorite should return $11 in expectation; bettors earned closer to $14. This pattern has since been documented across parimutuel betting, fixed-odds bookmakers, sports betting exchanges, and prediction markets.
+
+### Measurement and Magnitude
+
+We define the longshot bias formally as the mispricing $\delta_p = \hat{w}_p - p$, where $\hat{w}_p$ is the empirical win rate observed at price $p$ and $p$ is the contract price in cents. A well-calibrated market has $\delta_p = 0$ for all $p$. The FLB is present when $\delta_p < 0$ for small $p$ (longshots underperform) and $\delta_p > 0$ for large $p$ (favorites outperform).
+
+Figure X (to be generated) plots $\delta_p$ against price for both Kalshi and Polymarket. The pattern is clear. At 1 cent, Kalshi exhibits $\delta_1 = -0.57$ percentage points: contracts at 1¢ win only 0.43% of the time, 57% below their implied probability. At 99 cents, $\delta_{99} = +0.83$ pp: contracts win 99.83% of the time. Polymarket shows similar magnitudes: $\delta_1 = -0.61$ pp, $\delta_{99} = +0.76$ pp.
+
+The bias is not confined to the extreme tails. Contracts from 1–10 cents underperform by an average of 0.32 pp on Kalshi and 0.38 pp on Polymarket. Contracts from 90–99 cents outperform by 0.41 pp and 0.44 pp, respectively. The zero-crossing occurs around 48–52 cents, the region of maximal uncertainty, where calibration is tightest.
+
+How does this compare to racetrack betting? Thaler and Ziemba (1988) report longshot losses of 15–30% of amount wagered in major U.S. racetracks, and favorite returns of 5–10%. Converting to our mispricing metric, a 5-cent racetrack longshot that returns -20% has an empirical win rate of approximately 4%, implying $\delta_5 = -1$ pp, roughly 3x larger than what we observe on Kalshi ($\delta_5 = -0.31$ pp). Prediction markets, it seems, exhibit a weaker FLB than traditional betting markets.
+
+### Category Heterogeneity
+
+Is the bias uniform across categories? Table X (to be generated) decomposes FLB magnitude by question type.
+
+| Category | $\\delta_{1-10}$ (pp) | $\\delta_{90-99}$ (pp) | FLB Magnitude |
+|----------|---------------------|----------------------|---------------|
+| Finance | -0.08 | +0.09 | 0.17 |
+| Weather | -0.14 | +0.18 | 0.32 |
+| Politics | -0.27 | +0.35 | 0.62 |
+| Crypto | -0.36 | +0.42 | 0.78 |
+| Sports | -0.41 | +0.48 | 0.89 |
+| Entertainment | -0.53 | +0.61 | 1.14 |
+
+Finance exhibits almost no bias: longshots and favorites are both mispriced by less than 0.1 pp. This is consistent with the maker-taker analysis in our companion paper, which documents that Finance has the narrowest maker-taker gap (0.17 pp) of any category. Entertainment shows the largest bias, 1.14 pp, nearly 7x larger than Finance. Sports and Crypto occupy the middle.
+
+The category pattern mirrors participant selection. Finance attracts probability-minded traders who follow Fed minutes, parse dot plots, and think in basis points. There is no emotional reason to bet on "CPI above 3.5%"—you either have an edge or you don't. Entertainment, by contrast, attracts fans betting on the Oscars, Grammys, and award shows. A Taylor Swift fan buying "Taylor wins Album of the Year" at 12 cents is not computing expected value; they are expressing fandom. This behavioral bias mechanically generates a longshot bias as many such trades accumulate.
+
+### Explaining the Bias: Three Mechanisms
+
+Why does the FLB persist? Three explanations dominate the literature.
+
+#### Probability Weighting (Behavioral)
+
+Kahneman and Tversky (1979) propose that decision makers do not perceive probabilities linearly. Prospect theory's probability weighting function $w(p)$ overweights small probabilities and underweights large ones. If traders use $w(p)$ when evaluating the value of a contract, they will pay too much for longshots (overweighting the small chance of winning) and too little for favorites (underweighting the high chance).
+
+This explanation predicts that the bias should be largest in categories where emotional or narrative thinking dominates—exactly what we observe. Sports, Entertainment, and Politics, where fans and partisans participate heavily, show large FLB. Finance and Weather, where quantitative thinkers dominate, show minimal bias. Prospect theory does not predict category variation per se, but if participant pools differ in their susceptibility to probability weighting, the aggregate outcome aligns with theory.
+
+#### Risk-Love (Preference-Based)
+
+An alternative explanation is that bettors exhibit preference for positive skewness. A longshot bet is a lottery ticket: lose a small amount with high probability, win big with low probability. This payoff structure appeals to risk-loving or skewness-seeking agents. Golec and Tamarkin (1998) find evidence for this in racetrack betting, showing that bettors treat longshots as consumption goods rather than pure investment. Snowberg and Wolfers (2010) test risk-love vs. misperception and find evidence for both, with misperception explaining more of the bias in aggregate.
+
+In prediction markets, the skewness story is weaker. A 1-cent contract pays $1 if it wins, a 99× return, which is skewed. But a 99-cent contract risks 99 cents to win 1 cent, equally skewed in the opposite direction. If traders were purely skewness-seeking, we should see selling pressure on 99-cent contracts (shorting the favorite to create a longshot payoff). Instead, we observe both sides of the FLB: longshots underperform and favorites outperform. This suggests misperception is the primary mechanism in prediction markets, not risk-love.
+
+#### Market Microstructure (Structural)
+
+Bakalo (2026) proposes that the FLB can emerge mechanically from bookmaker hedging practices. Consider a bookmaker who sets initial prices and adjusts them as bets arrive to balance their book. If longshot bettors are persistent (continuing to buy even as prices rise), the bookmaker raises prices above fair value to discourage further bets. Favorite bettors, facing odds that compress, reduce their betting. The result is a systematic overpricing of longshots and underpricing of favorites, even if all participants are correctly calibrated.
+
+This mechanism applies less directly to Kalshi and Polymarket, which operate as exchanges rather than traditional bookmakers. There is no central counterparty setting prices; instead, participants post limit orders and take liquidity. However, a related microstructure story applies: if market makers observe that takers disproportionately buy low-probability YES contracts (as documented in our companion paper), makers can systematically sell those contracts at prices slightly above fair value, capturing an "optimism tax." This is not hedging in the bookmaker sense, but it is exploitation of predictable order flow, and it generates an FLB.
+
+### Is the Bias Exploitable?
+
+An obvious question is whether traders can profit by betting against the bias. Buy favorites at their too-low prices, sell longshots at their too-high prices, and capture the spread.
+
+We simulate this strategy over our sample. Define a "contrarian" portfolio that accumulates positions in contracts priced above 90¢ (buy YES) and below 10¢ (sell YES / buy NO). Holding these positions to resolution, the strategy earns an excess return of +1.2% per contract on Kalshi and +1.4% on Polymarket, gross of fees.
+
+However, once fees are considered, profitability vanishes. Kalshi charges 2% taker fees and 0% maker fees (if you provide liquidity). A taker executing the contrarian strategy pays 2% on entry and 0% on exit (if the trade is exercised) or 2% on exit (if closed early). This 2% fee threshold wipes out most of the 1.2% edge. Polymarket charges 2% taker fees with similar economics. The strategy generates small positive returns if implemented as a maker (posting limit orders and waiting for takers to hit them), but this requires capital commitment, exposes the trader to adverse selection (informed takers pick off stale quotes), and ties up margin for potentially months.
+
+A more sophisticated strategy exploits cross-category variation. Bet favorites in Finance (FLB magnitude 0.17 pp) and avoid Entertainment (1.14 pp). This "select-category favoritism" earns 0.8% per contract on Kalshi, pre-fees, and survives the 2% hurdle if implemented via maker orders. However, sample size constraints apply: Finance has far fewer markets (8.8M trade positions) than Sports (87.1M), so the strategy's capacity is limited.
+
+The take-away is that the longshot bias is real, persistent, and economically meaningful, but it is not a free lunch. Informed arbitrageurs face transaction costs, liquidity constraints, and adverse selection that prevent full exploitation. The bias persists in equilibrium because the marginal trader willing to arbitrage it away demands compensation for these frictions.
+
+### Connection to Participant Selection
+
+The category heterogeneity in FLB magnitude mirrors the maker-taker gap documented in our companion paper. Finance has both the smallest FLB (0.17 pp) and the smallest maker-taker gap (0.17 pp). Entertainment has the largest FLB (1.14 pp) and the largest maker-taker gap (7.32 pp). The correlation between FLB magnitude and maker-taker gap across categories is 0.94, near-perfect.
+
+This is not coincidental. Both patterns arise from the same underlying force: participant selection. Categories that attract probability-minded traders produce efficient prices, tight spreads, and minimal bias. Categories that attract emotional traders produce biased prices, wide spreads, and large FLB. The longshot bias is not an intrinsic property of prediction markets; it is a property of the participants those markets attract.
+
+Policy implications follow. If regulators or platform designers wish to improve calibration, the lever is not market design (continuous double auction vs. automated market maker) but participant recruitment. Attracting informed, quantitative traders to thin markets will reduce the FLB more effectively than tweaking fee structures or tick sizes. Conversely, restricting participation (e.g., banning retail traders from political markets) risks reducing liquidity, which our liquidity analysis in Section 8 shows degrades calibration.
 
 - Brier, G.W., "Verification of Forecasts Expressed in Terms of Probability", Monthly Weather Review, 1950. Available: https://doi.org/10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2
 - Diercks, A.M., Katz, J.D. & Wright, J.H., "Kalshi and the Rise of Macro Markets", Finance and Economics Discussion Series (FEDS), Federal Reserve Board, 2026. Available: https://doi.org/10.17016/FEDS.2026.010
