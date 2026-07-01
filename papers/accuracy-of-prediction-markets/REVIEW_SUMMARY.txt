@@ -1,0 +1,38 @@
+SECOND OPINION REVIEW COMPLETE
+===============================
+
+Review by: GPT-5.5
+Date: July 1, 2026
+Status: CONSTRUCTIVE SECOND PASS (after Opus critical review)
+
+VERDICT: Paper is significantly improved and approaching publishable quality.
+
+KEY FINDINGS:
+
+✅ WHAT OPUS FIXED (4 major improvements):
+1. Phantom citations (Angelini, Le) removed
+2. "50.00%" claim softened to "approximately... within 3-4 pp"
+3. "Perfect accuracy" on FOMC → "consistently accurate" with caveats
+4. Bloated literature review cut entirely
+
+🔧 REMAINING ISSUES (5 substantive, all addressable):
+1. Murphy decomposition: needs explicit two-sided market clarification
+2. Category stats: missing confidence intervals for small-sample categories
+3. Time-to-resolution: doesn't rule out compositional bias (fast vs slow markets)
+4. Cross-platform: only one event analyzed (2024 election)
+5. "Trade position" terminology never defined
+
+✅ CORE THESIS HOLDS:
+- Markets are well-calibrated (MAD <1% after 2022)
+- Category variation explained by participant selection
+- Murphy decomposition cleanly separates miscalibration from difficulty
+- "Accuracy paradox" (rising Brier + falling MAD) properly explained
+
+RECOMMENDED NEXT STEPS:
+- Tier 1 (blocking, 2 hrs): Murphy clarification + trade position definition
+- Tier 2 (high priority, 4-6 hrs): confidence intervals + generalizability caveats
+- Tier 3 (nice to have, 2-3 hrs): methodology notes
+
+PUBLICATION READINESS: 1-2 days of focused revision
+
+Detailed review: ~/github/research/papers/accuracy-of-prediction-markets/GPT5.5_REVIEW.md
