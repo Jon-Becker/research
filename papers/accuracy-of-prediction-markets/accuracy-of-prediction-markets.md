@@ -16,7 +16,11 @@ Several findings emerge. First, both platforms are well-calibrated by any standa
 
 ## Data and Methodology
 
-The Polymarket dataset comprises all trades on the platform from October 2020 through January 2026, resolved against final market outcomes. The Kalshi dataset contains 72.1 million trades across 7.68 million markets, resolved against CFTC-regulated settlement outcomes. Both datasets are [publicly available](https://github.com/jon-becker/prediction-market-analysis).
+### Dataset
+
+The Kalshi dataset (covers July 2021 through November 2025) comprises 72.1 million trades across 7.68 million resolved markets, representing every market that has settled with clear YES or NO outcomes. The dataset includes order details (timestamp, price, volume, taker side), market metadata (category, description, settlement source), and final outcomes.
+
+A **trade** is a single matched transaction between two participants. A **trade position** is one contract within that trade. For example, if a single trade matches 50 contracts at 60 cents, that trade generates 50 trade positions. In our analysis, the 72.1 million trades comprise approximately 135 million trade positions; each position contributes one observation to calibration and Brier Score calculations.
 
 We use two metrics. **Mean Absolute Deviation (MAD)** measures bin-level calibration: for $K$ price bins, $\text{MAD} = \frac{1}{K} \sum_{k=1}^{K} |\hat{w}_k - p_k|$, where $\hat{w}_k$ is the empirical win rate at price $p_k$. Each price level contributes equally regardless of volume. A MAD of 0.02 means prices are off by 2 percentage points on average.
 
@@ -97,7 +101,7 @@ The Brier Score can be formally decomposed into three additive components using 
 
 **Resolution** ($\text{RES} = \frac{1}{N} \sum_k n_k (o_k - \bar{o})^2$) measures discrimination: how well the market separates events that happen from events that don't. Higher resolution means the market's conditional YES rates at different price levels diverge more from the overall base rate, indicating genuine predictive signal.
 
-Each trade contributes one observation evaluated from the YES perspective: the YES price is the forecast, and the outcome is whether the market resolved YES. This ensures the base rate $\bar{o}$ reflects the actual YES resolution rate per category, and the Murphy identity $\text{BS} = \text{REL} - \text{RES} + \text{UNC}$ holds exactly.
+Each trade contributes one observation evaluated from the YES perspective: the YES price is the forecast, and the outcome is whether the market resolved YES. In a two-sided market, this means we normalize all trades to the YES perspective; a trade on the NO side at YES price $p$ is treated as a forecast of $1-p$ for YES resolution. This ensures the base rate $\bar{o}$ reflects the actual YES resolution rate per category, and the Murphy identity $\text{BS} = \text{REL} - \text{RES} + \text{UNC}$ holds exactly without double-counting either side of the market.
 
 ```chart
 @include fig/brier_score_decomposition.json
@@ -149,6 +153,8 @@ How far in advance can the market get prices right? Bucketing Kalshi trades by t
 | < 1 hour | 1.23 | 0.1480 | 37.6M |
 
 MAD falls steadily as resolution approaches: 5.39% at 30+ days, 3.39% at 7–30 days, 2.24% at 1–7 days, and 1.19% in the final 24 hours. The pattern is intuitive; the closer an event is to resolving, the more information is available and the less room there is for prices to deviate from true probabilities. Markets are roughly five times more accurate in the final day than they are a month out.
+
+However, this finding reflects compositional effects as much as genuine information arrival. Markets that resolve quickly (e.g., daily sports games) are systematically different from markets that stay open for months (e.g., long-term political predictions or weather forecasts). The time-to-resolution pattern could therefore reflect either that prices converge as information arrives, or simply that fast-resolving markets have fundamentally more predictable outcomes. A definitive test would require tracking individual markets over time (within-market panel analysis), but this requires order-level timestamps with precise resolution-relative timing not in the current dataset. The temporal pattern is consistent with information arrival, but we cannot definitively rule out compositional explanations.
 
 The Brier Score tells the complementary story. It rises from 0.1296 at 30+ days to 0.1856 at 1 hour–1 day, then drops to 0.1480 under 1 hour. The rise reflects the same difficulty composition documented in the accuracy paradox: trades far from resolution tend to occur in markets with clear favorites (extreme prices, low $p(1-p)$), while trades in the final hours are dominated by live sports and real-time events where prices sit in the uncertain middle. The drop under 1 hour captures the final convergence, where prices collapse toward 0 or 1 as the outcome becomes known.
 
@@ -224,6 +230,8 @@ Over 34 overlapping trading days, the daily volume-weighted average prices on Ka
 The largest divergence occurred on election day itself (November 5): Kalshi's Trump VWAP hit 70 cents while Polymarket lagged at 62, a 7.9-cent gap. This likely reflects the speed at which Kalshi's election-night live markets processed incoming vote tallies versus the staggered settlement mechanics of Polymarket's on-chain order book. By November 6, both platforms had converged above 92 cents.
 
 The tight agreement across platforms operating under different regulatory regimes, with different user bases, and with different market microstructures is evidence of a unified information equilibrium. The prices are not artifacts of a single platform's quirks; they reflect a shared probabilistic consensus that emerges independently wherever money is put at stake on the same question.
+
+**Note on generalizability:** This analysis is based on a single high-volume event (the 2024 U.S. presidential election). The election is an outlier in liquidity and media attention, ensuring arbitrage across platforms. Other markets may show wider divergences due to settlement rule differences (e.g., Kalshi and Polymarket use different final score sources for sports), liquidity asymmetries (one platform may have more activity than the other on a given event), or regulatory restrictions limiting cross-platform trading. Cross-platform convergence likely holds for major events with standardized settlement but may not generalize to all market types. A more comprehensive analysis across 10+ events, categories, and liquidity levels would be required to assess the scope of unified information equilibrium.
 
 ### Comparison to External Forecasts
 
