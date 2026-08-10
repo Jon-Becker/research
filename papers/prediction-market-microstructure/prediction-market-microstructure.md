@@ -2,6 +2,8 @@
 
 ![preview](https://raw.githubusercontent.com/Jon-Becker/research/main/papers/prediction-market-microstructure/preview.png?fw)
 
+> **Note:** A formalized version of this paper is available on [SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7217640), published August 1, 2026.
+
 Slot machines on the Las Vegas Strip return about 93 cents on the dollar. This is widely considered some of the worst odds in gambling. Yet on Kalshi, a CFTC-regulated prediction market, traders have wagered vast sums on longshot contracts with historical returns as low as 43 cents on the dollar. Thousands of participants are voluntarily accepting expected values far lower than a casino slot machine to bet on their convictions.
 
 The [efficient market hypothesis](https://www.jstor.org/stable/2325486) suggests that asset prices should perfectly aggregate all available information. Prediction markets theoretically provide the purest test of this theory. Unlike equities, there is no ambiguity about intrinsic value. A contract either pays \$1 or it does not. A price of 5 cents should imply exactly a 5% probability.
