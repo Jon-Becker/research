@@ -56,6 +56,8 @@ Read the [new-research-paper skill](.agents/skills/new-research-paper/SKILL.md) 
 
 GitHub Actions runs `make verify` and `make test` on pull requests and pushes to `main`, using Python 3.9 and 3.13.
 
+For consequential prose edits, the optional [revision review](docs/revision-review.md) captures one file at two Git commits and creates a record of the intended improvement, observed benefits, unintended effects, and review decision. It helps preserve the reasons for revisions; reviewers still assess the writing and evidence.
+
 ## Credits
 
 Research and writing by [Jonathan Becker](https://jbecker.dev).
