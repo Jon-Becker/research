@@ -40,6 +40,22 @@ A collection of research papers, security audits, and technical write-ups focuse
 
 If you've found an error or have suggestions for improvement, please open an issue or pull request.
 
+To add a paper, use Python 3.9+ and Make from the repository root:
+
+```sh
+make new-paper SLUG=example-research TITLE='Example Research' TAGS='evm,research'
+make verify SLUG=example-research
+make verify
+```
+
+The generator creates `papers/example-research/` with a Markdown manuscript, metadata, and a starter preview image. New papers begin with `ignore: true`. Supply optional `SUMMARY='A concise overview.'` and `DATE=2026-10-18`; otherwise the summary starts empty and the date defaults to today. Existing paper directories are never overwritten.
+
+Read the [new-research-paper skill](.agents/skills/new-research-paper/SKILL.md) for required metadata fields, writing and reproducibility standards, figure conventions, and the publication checklist. Codex can use it as `$new-research-paper`. The editable templates are in [`templates/paper/`](templates/paper/).
+
+`make verify` checks every paper, including drafts, for structural and metadata errors; it does not replace editorial or rendering review. Run `make test` when changing the tooling. Without Make, use `python3 scripts/papers.py new --slug example-research --title 'Example Research' --tags 'evm,research'` and `python3 scripts/papers.py verify [--slug example-research]` (omit the brackets).
+
+GitHub Actions runs `make verify` and `make test` on pull requests and pushes to `main`, using Python 3.9 and 3.13.
+
 ## Credits
 
 Research and writing by [Jonathan Becker](https://jbecker.dev).
